@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "공부/정보처리기사/정보처리기사 실기/🥇정보처리 기사 실기 키워드.md",
+                "file": "개발 및 공부 히스토리.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🥇정보처리 기사 실기 키워드"
+              "title": "개발 및 공부 히스토리"
             }
           }
         ]
@@ -173,13 +173,16 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "webpage-html-export:Export Vault to HTML": false
     }
   },
   "active": "114c04a1f6cd9923",
   "lastOpenFiles": [
-    "사진 및 문서/output (5)_0.png",
+    "개발 및 공부 히스토리.md",
     "공부/정보처리기사/정보처리기사 실기/🥇정보처리 기사 실기 키워드.md",
+    "사진 및 문서/output (5)_0.png",
     "사진 및 문서/Spring Batch Tasklet 예치금 잔액 비교 잘못된 차액발생 인식 타임라인.png",
     "사진 및 문서/Spring Batch Tasklet 예치금 잔액 비교 1.png",
     "사진 및 문서/Pasted image 20250213105222.png",
@@ -189,7 +192,6 @@
     "사진 및 문서/Pasted image 20250122111223.png",
     "사진 및 문서/Pasted image 20250120115302.png",
     "사진 및 문서/Pasted image 20250117134318.png",
-    "사진 및 문서/Pasted image 20250116115505.png",
     "사진 및 문서",
     "공부/정보처리 기사.md",
     "공부/정보처리기사/정보처리기사 실기",
