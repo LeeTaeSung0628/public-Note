@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiProportions",
       "LiBookOpenCheck",
       "LiImages",
       "LiFormInput",
-      "LiAirplay",
-      "LiBookA"
+      "LiAirplay"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -34,8 +34,9 @@
     "debugMode": false,
     "useInternalPlugins": false
   },
-  "공부": "LiBookA",
   "index.md": "LiFormInput",
   "사진 및 문서": "LiImages",
-  "공부/정보처리기사": "LiBookOpenCheck"
+  "study": "LiBookA",
+  "study/정보처리기사": "LiBookOpenCheck",
+  "project": "LiProportions"
 }
