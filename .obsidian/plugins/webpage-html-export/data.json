@@ -1,6 +1,6 @@
 {
   "settingsVersion": "1.8.01",
-  "makeOfflineCompatible": false,
+  "makeOfflineCompatible": true,
   "inlineAssets": false,
   "includePluginCSS": "emoji-shortcodes",
   "includeSvelteCSS": true,
@@ -8,7 +8,7 @@
   "customHeadContentPath": "",
   "faviconPath": "",
   "documentWidth": "60em",
-  "sidebarWidth": "20em",
+  "sidebarWidth": "30em",
   "minOutlineCollapse": 2,
   "startOutlineCollapsed": false,
   "allowFoldingHeadings": true,
