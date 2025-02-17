@@ -2,5 +2,6 @@
   "promptDelete": false,
   "attachmentFolderPath": "사진 및 문서",
   "showLineNumber": false,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true
 }
