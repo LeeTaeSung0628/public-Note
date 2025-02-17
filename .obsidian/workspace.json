@@ -143,13 +143,23 @@
               "icon": "lucide-list",
               "title": "개요"
             }
+          },
+          {
+            "id": "2e958c9dd4f388f9",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,7 +168,8 @@
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false
+      "command-palette:명령어 팔레트 열기": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "114c04a1f6cd9923",
