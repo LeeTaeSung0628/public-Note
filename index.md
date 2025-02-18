@@ -3,8 +3,8 @@ icon: LiFormInput
 ---
 
 
-# 🌍옵시디언 배포 과정
-- [[옵시디언 정적호스팅 CICD 과정]]
+# 🌍`Obsidian` 배포 과정
+- [[Obsidian 정적호스팅 CICD 과정]]
 
 # 💻 프로젝트
 ## *Spring Batch*
