@@ -622,5 +622,6 @@ public class JobTimerExecutionListener implements JobExecutionListener {
 ![[Spring Batch Tasklet 예치금 잔액 비교 1.png]]
 ![[Spring Batch Tasklet 예치금 잔액 비교 잘못된 차액발생 인식 타임라인.png]]
 
+---
 
-[[Batch - 예치금차액내역 리펙토링 부록]]
+🙇‍♂[[Spring Batch 트러블 슈팅 부록]]

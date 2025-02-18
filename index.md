@@ -18,6 +18,13 @@ icon: LiFormInput
 - 👩‍👧‍👦[[유입 통계 ADMIN용 테이블 설계 과정]]
 
 # 📕 공부
+## *프로그래밍*
+- ☕[[JAVA , OOP]]
+- 🍃[[Spring]]
+- 🧰[[DevOps]]
+- 🗒[[DataBase]]
+- 📭[[Server]]
+- 🐞[[etc]]
 
 ## *정보처리기사 대비*
 ### 정보처리기사 필기
