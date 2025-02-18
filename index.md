@@ -7,6 +7,11 @@ icon: LiFormInput
 - 💜[[옵시디언 연동 Blog CICD]]
 
 # 💻 프로젝트
+## *Spring Batch*
+### 트러블 슈팅
+- 🙇‍♂[[Spring Batch 트러블 슈팅]]
+- 🙇‍♂[[Spring Batch 트러블 슈팅 부록]]
+- 🙇‍♂[[배치 리팩토링 구조 드로잉]]
 ## *hello marketing*
 ### 유입통계
 - 👩‍👧‍👦[[유입 통계 APP__SPRING AOP에 관하여]]
