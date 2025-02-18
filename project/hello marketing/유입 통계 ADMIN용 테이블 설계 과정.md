@@ -1,25 +1,13 @@
 
-# 👩‍👧‍👦유입 통계 ADMIN
+# 👩‍👧‍👦유입 통계 ADMIN용 테이블 설계 과정
 
-#프로젝트 #개발
-
----
-
-# Hit_Code / Page_url 맵핑 하기?
- ![[Pasted image 20241230154602.png]]
-
-## 고려사항 1. hit_code는 유효하지 않은 값이 들어갈 수 있다. ( 추후 추가 가능 )
-## 고려사항 2. page_url, page_type 의 쌍으로 외래키와 같이, 고유한 동작을 나타낸다.
-
-# 설계 1
-### 날짜 별 hit_code => 광고종류 / page_url => 동작종류
-![[do-messenger_screenshot_2024-12-30_15_52_09.png]]
-![[Pasted image 20241226171158.png]]
+#프로젝트 #개발 #SPRING #AOP
 
 ---
+
 # DB에서 관리? -> ADMIN페이지로 생성?
 
-hf_marketing_code
+*hf_marketing_code*
 
 | KEY `hitCode` | `codeName` |
 | ------------- | ---------- |
@@ -27,7 +15,7 @@ hf_marketing_code
 | naver2nd      | 네이버광고      |
 | google1st     | 구글광고       |
 
-hf_marketing_target
+*hf_marketing_target*
 
 | KEY `idx` | `targetClass`          | `targetMethod`              | `methodParameters`             | `pageName` |
 | --------- | ---------------------- | --------------------------- | ------------------------------ | ---------- |
@@ -35,7 +23,7 @@ hf_marketing_target
 | 2         | LoanController         | noticeView                  | ""                             | 한도조회 버튼    |
 | 1         | LoanController         | identityVerificationRequest | "G5Member"                     | 한도조회 확인버튼  |
 
-hf_marketing_hit_log
+*hf_marketing_hit_log*
 
 | KEY `idx` | `hitCode` | `hit_uid`                            | `targetMethodKey` | `insert_date`       |
 | --------- | --------- | ------------------------------------ | ----------------- | ------------------- |
@@ -48,7 +36,6 @@ hf_marketing_hit_log
 # 1. enum객체의 상수값들을 빌드시에 DB에서 셋팅할 수 있는지?
 # 2. pageURL/pageType 과 targetClass/targetMethod/methodParameters중 하나로 특정
 # 3. DB 최적화를 진행하자 -> 중복데이터 제거
--> hit로그 테이블에는 동작을 동작 key로써만 저장할 수 있다.
 
 ---
 
@@ -74,6 +61,7 @@ hf_marketing_hit_log
 # repositoty에서 세부데이터를 List형태로 받을 수 있도록 쿼리 작성
 -> 그 후 페이지에 뿌려주기
 
+```
 Date: 01-02
 Ad Type: 구글광고
 Total Inflow: 4
@@ -85,8 +73,4 @@ Detail Information:
   Hit: 12
   Page Name: 이용안내 페이지
   Hit: 6
-
----
-# 구현 화면
-![[Pasted image 20250107173902.png]]
-
+```

@@ -10,7 +10,7 @@ icon: LiFormInput
 ## hello marketing
 ### 유입통계
 - 👩‍👧‍👦[[유입 통계 APP]]
-- 👩‍👧‍👦[[유입 통계 ADMIN]]
+- 👩‍👧‍👦[[유입 통계 ADMIN용 테이블 설계 과정]]
 
 # 📕 공부
 

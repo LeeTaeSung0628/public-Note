@@ -34,7 +34,6 @@
     "debugMode": false,
     "useInternalPlugins": false
   },
-  "index.md": "LiFormInput",
   "사진 및 문서": "LiImages",
   "study": "LiBookA",
   "study/정보처리기사": "LiBookOpenCheck",
