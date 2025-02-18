@@ -2,7 +2,7 @@
   "settingsVersion": "1.8.01",
   "makeOfflineCompatible": true,
   "inlineAssets": false,
-  "includePluginCSS": "emoji-shortcodes",
+  "includePluginCSS": "emoji-shortcodes\nobsidian-advanced-codeblock",
   "includeSvelteCSS": true,
   "titleProperty": "title",
   "customHeadContentPath": "",

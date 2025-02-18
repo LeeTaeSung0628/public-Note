@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "6c24b114d0da95ab",
+        "id": "9322bee01f1678af",
         "type": "tabs",
         "children": [
           {
-            "id": "114c04a1f6cd9923",
+            "id": "6522f43d783c2298",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "project/hello marketing/유입 통계 APP__SPRING AOP에 관하여.md",
-                "mode": "source",
-                "source": false
+                "file": "project/hello Batch/배치 리팩토링 구조 드로잉.md"
               },
-              "icon": "lucide-file",
-              "title": "유입 통계 APP__SPRING AOP에 관하여"
+              "icon": "excalidraw-icon",
+              "title": "배치 리팩토링 구조 드로잉"
             }
           }
         ]
@@ -175,20 +173,19 @@
       "command-palette:명령어 팔레트 열기": false,
       "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
-      "webpage-html-export:Export Vault to HTML": false
+      "webpage-html-export:Export Vault to HTML": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "114c04a1f6cd9923",
+  "active": "6522f43d783c2298",
   "lastOpenFiles": [
-    "index.md",
     "study/note CI_CD/옵시디언 연동 Blog CICD.md",
-    "study/정보처리기사/정보처리기사 필기/필기 5과목 - 정보시스템 구축관리.md",
-    "study/정보처리기사/정보처리기사 필기/필기 4과목 - 프로그래밍 언어 활용.md",
-    "study/정보처리기사/정보처리기사 필기/필기 3과목 - 데이터베이스 구축.md",
-    "study/정보처리기사/정보처리기사 필기/필기 2과목 - 소프트웨어 개발.md",
-    "study/정보처리기사/정보처리기사 실기/정보처리 기사 실기 키워드.md",
+    "project/hello Batch/Spring Batch 트러블 슈팅.md",
+    "project/hello Batch/Spring Batch 트러블 슈팅 부록.md",
+    "project/hello Batch/배치 리팩토링 구조 드로잉.md",
     "project/hello marketing/유입 통계 APP__SPRING AOP에 관하여.md",
     "project/hello marketing/유입 통계 ADMIN용 테이블 설계 과정.md",
+    "예치금 배치 리팩토링 구조 드로잉.md",
     "사진 및 문서/Spring Batch Tasklet 예치금 잔액 비교 잘못된 차액발생 인식 타임라인.png",
     "사진 및 문서/Spring Batch Tasklet 예치금 잔액 비교 1.png",
     "사진 및 문서/Pasted image 20250213105222.png",
@@ -199,11 +196,18 @@
     "사진 및 문서/Pasted image 20250120115302.png",
     "사진 및 문서/Pasted image 20250117134318.png",
     "사진 및 문서/Pasted image 20250116115505.png",
+    "index.md",
+    "project/hello Batch",
+    "study/정보처리기사/정보처리기사 필기/필기 3과목 - 데이터베이스 구축.md",
+    "study/정보처리기사/정보처리기사 필기/필기 2과목 - 소프트웨어 개발.md",
+    "study/정보처리기사/정보처리기사 필기/필기 1과목 - 소프트웨어 설계.md",
+    "study/정보처리기사/정보처리기사 실기/정보처리 기사 실기 키워드.md",
+    "study/정보처리기사/정보처리기사 필기/필기 5과목 - 정보시스템 구축관리.md",
+    "study/정보처리기사/정보처리기사 필기/필기 4과목 - 프로그래밍 언어 활용.md",
     "사진 및 문서/do-messenger_screenshot_2024-12-30_15_52_09.png.~tmp",
     "study/note CI_CD",
     "project/hello marketing",
     "project",
-    "study/정보처리기사/정보처리기사 필기/필기 1과목 - 소프트웨어 설계.md",
     "개발 및 공부 히스토리.md",
     "사진 및 문서",
     "공부/정보처리 기사.md",
