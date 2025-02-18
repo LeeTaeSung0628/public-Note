@@ -572,7 +572,7 @@ public class JobTimerExecutionListener implements JobExecutionListener {
 ---
 # **예치금 배치 구조도**
 
-## [[배치 리팩토링 구조 드로잉]]
+## [[Spring Batch 구조 드로잉]]
 
 ---
 
