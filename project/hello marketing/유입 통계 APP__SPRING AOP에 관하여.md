@@ -346,3 +346,7 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 ## 결론
 - 참조를 갱신하기 위해서는 Java리플렉션을 사용하여 강제로 참조를 갱신하거나, AspectJ의 런타임 위빙 방식을 활용해야 한다.
 - 따라서, 서버 Kill을 하는 것과 진배 없다.
+
+---
+
+[[유입 통계 ADMIN용 테이블 설계 과정]]

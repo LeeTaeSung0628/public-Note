@@ -45,6 +45,10 @@
   "defaultMediaIcon": "lucide//file-image",
   "exportPath": "C:\\\\Users\\Hello\\Desktop\\obsidian\\export_HTML",
   "filesToExport": [
-    []
+    [
+      "project",
+      "study",
+      "index.md"
+    ]
   ]
 }
