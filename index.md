@@ -1,7 +1,7 @@
 
 # 🏚Home
 
-#홈 #index #blog 
+#home #index #blog 
 
 ---
 
