@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/hello marketing/유입 통계 ADMIN용 테이블 설계 과정.md",
+                "file": "project/hello marketing/유입 통계 APP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "유입 통계 ADMIN용 테이블 설계 과정"
+              "title": "유입 통계 APP"
             }
           }
         ]
@@ -180,8 +180,8 @@
   },
   "active": "114c04a1f6cd9923",
   "lastOpenFiles": [
-    "project/hello marketing/유입 통계 APP.md",
     "project/hello marketing/유입 통계 ADMIN용 테이블 설계 과정.md",
+    "project/hello marketing/유입 통계 APP.md",
     "study/note CI_CD/옵시디언 연동 Blog CICD.md",
     "사진 및 문서/Spring Batch Tasklet 예치금 잔액 비교 잘못된 차액발생 인식 타임라인.png",
     "사진 및 문서/Spring Batch Tasklet 예치금 잔액 비교 1.png",
