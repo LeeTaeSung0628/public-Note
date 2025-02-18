@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/hello marketing/유입 통계 APP.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "유입 통계 APP"
+              "title": "index"
             }
           }
         ]
@@ -180,9 +180,15 @@
   },
   "active": "114c04a1f6cd9923",
   "lastOpenFiles": [
-    "project/hello marketing/유입 통계 ADMIN용 테이블 설계 과정.md",
-    "project/hello marketing/유입 통계 APP.md",
     "study/note CI_CD/옵시디언 연동 Blog CICD.md",
+    "project/hello marketing/유입 통계 ADMIN용 테이블 설계 과정.md",
+    "project/hello marketing/유입 통계 APP (SPRING AOP에 관하여).md",
+    "index.md",
+    "study/정보처리기사/정보처리기사 필기/필기 5과목 - 정보시스템 구축관리.md",
+    "study/정보처리기사/정보처리기사 필기/필기 4과목 - 프로그래밍 언어 활용.md",
+    "study/정보처리기사/정보처리기사 필기/필기 3과목 - 데이터베이스 구축.md",
+    "study/정보처리기사/정보처리기사 필기/필기 2과목 - 소프트웨어 개발.md",
+    "study/정보처리기사/정보처리기사 실기/정보처리 기사 실기 키워드.md",
     "사진 및 문서/Spring Batch Tasklet 예치금 잔액 비교 잘못된 차액발생 인식 타임라인.png",
     "사진 및 문서/Spring Batch Tasklet 예치금 잔액 비교 1.png",
     "사진 및 문서/Pasted image 20250213105222.png",
@@ -194,12 +200,6 @@
     "사진 및 문서/Pasted image 20250117134318.png",
     "사진 및 문서/Pasted image 20250116115505.png",
     "사진 및 문서/do-messenger_screenshot_2024-12-30_15_52_09.png.~tmp",
-    "index.md",
-    "study/정보처리기사/정보처리기사 필기/필기 5과목 - 정보시스템 구축관리.md",
-    "study/정보처리기사/정보처리기사 필기/필기 4과목 - 프로그래밍 언어 활용.md",
-    "study/정보처리기사/정보처리기사 필기/필기 3과목 - 데이터베이스 구축.md",
-    "study/정보처리기사/정보처리기사 필기/필기 2과목 - 소프트웨어 개발.md",
-    "study/정보처리기사/정보처리기사 실기/정보처리 기사 실기 키워드.md",
     "study/note CI_CD",
     "project/hello marketing",
     "project",
