@@ -277,7 +277,7 @@ new QuerydslPagingItemReader<>(
 - job 레벨에서의 스레드 세이프한 전역 변수를 생성하였다.
 - 그 후, 각 파티션 별 리더에 인자값으로 넘긴다.
 
-```
+``` java
 long currentExecutionOrder = executionOrder.getAndIncrement();  
 long startIndex = (currentExecutionOrder) * getPageSize();  
 int totalRecords = stepContext.getInt("totalRecords");  
