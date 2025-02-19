@@ -1,6 +1,3 @@
----
-icon: 📭
----
 # 📭 Server
 
 #공부 #Server

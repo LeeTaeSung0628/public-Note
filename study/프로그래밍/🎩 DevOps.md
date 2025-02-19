@@ -1,7 +1,4 @@
----
-icon: 🧰
----
-# 🧰 DevOps
+# 🎩 DevOps
 
 #공부 #DevOps #CI/CD
 

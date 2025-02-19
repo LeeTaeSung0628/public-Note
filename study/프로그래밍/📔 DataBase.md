@@ -1,7 +1,4 @@
----
-icon: 🗒
----
-# 🗒 DataBase
+# 📔 DataBase
 
 #공부 #DB #DataBase
 
