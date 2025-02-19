@@ -1,7 +1,9 @@
 {
   "cssTheme": "Things",
   "theme": "obsidian",
-  "interfaceFontFamily": "Hack",
-  "textFontFamily": "Hack",
-  "monospaceFontFamily": "Hack"
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": "",
+  "baseFontSize": 15,
+  "accentColor": ""
 }
