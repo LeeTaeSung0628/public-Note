@@ -257,7 +257,8 @@ org.springframework.web.bind.annotation.GetMapping
 
 ---
 
-# 서비스 저장시 동시성 이슈가 발생할 수 있다?
+>[!caution] 서비스 저장시 동시성 이슈가 발생할 수 있다?
+
 ``` java
 @Override  
 @Transactional  

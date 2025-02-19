@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여"
             }
           }
         ]
@@ -187,35 +187,36 @@
       "oz-clear-unused-images:Clear Unused Images": false,
       "webpage-html-export:Export Vault to HTML": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian42-brat:BRAT": false
+      "obsidian42-brat:BRAT": false,
+      "callout-manager:Insert Callout": false
     }
   },
   "active": "627e38f4394fefbf",
   "lastOpenFiles": [
+    "index.md",
+    "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
+    "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
+    "project/hello Batch/🏹 Spring Batch 트러블 슈팅.md",
+    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
+    "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
+    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
     "study/Dev Seminar/🥗 Spring Security_토큰_세션_쿠키_JWT 에 대하여.md",
     "study/Dev Seminar/🪕 JPA 에 대한 고찰.md",
-    "index.md",
     "study/Dev Seminar/🔻 Redis 캐쉬 전략 - hello 서비스에 적용하여 성능개선 가능성.md",
     "study/Dev Seminar/🔹 TDD에 대하여.md",
     "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
     "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
-    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
     "study/CS/☕ JAVA , OOP.md",
     "study/CS/🎵 Obsidian.md",
     "study/CS/📭 Server.md",
     "study/CS/🍃 Spring.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
-    "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
-    "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
     "study/CS/📔 DataBase.md",
     "study/CS/🎩 DevOps.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
-    "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
-    "project/hello Batch/🏹 Spring Batch 트러블 슈팅.md",
-    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
     "사진 및 문서/Pasted image 20250110144021.png",
     "사진 및 문서/Pasted image 20241220113315.png",
     "사진 및 문서/Pasted image 20241220113308.png",
