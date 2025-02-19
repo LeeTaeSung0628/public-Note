@@ -66,7 +66,7 @@
       "enabled": true,
       "unavailable": false,
       "alwaysEnabled": false,
-      "displayTitle": "",
+      "displayTitle": "LTS_Blog",
       "featurePlacement": {
         "selector": "#left-sidebar-content",
         "type": "end"
@@ -85,7 +85,7 @@
       "enabled": true,
       "unavailable": false,
       "alwaysEnabled": false,
-      "displayTitle": "Search...",
+      "displayTitle": "검색..",
       "featurePlacement": {
         "selector": "#left-sidebar .topbar-content",
         "type": "start"
@@ -120,7 +120,7 @@
       "enabled": true,
       "unavailable": false,
       "alwaysEnabled": false,
-      "displayTitle": "Graph View",
+      "displayTitle": "그래프 뷰",
       "featurePlacement": {
         "selector": "#right-sidebar-content",
         "type": "start"
@@ -144,7 +144,7 @@
       "alwaysEnabled": false,
       "allowResizing": true,
       "allowCollapsing": true,
-      "rightDefaultWidth": "20em",
+      "rightDefaultWidth": "30em",
       "leftDefaultWidth": "20em"
     },
     "customHeadOptions": {
@@ -167,7 +167,7 @@
       "alwaysEnabled": true,
       "allowFoldingLists": true,
       "allowFoldingHeadings": true,
-      "documentWidth": "40em"
+      "documentWidth": "65em"
     },
     "rssOptions": {
       "featureId": "obsidian-document",
