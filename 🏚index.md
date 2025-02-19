@@ -1,6 +1,3 @@
-
-# 🏚**Home**
-
 #home #index #blog 
 
 ---

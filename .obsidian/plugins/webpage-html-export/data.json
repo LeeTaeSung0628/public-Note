@@ -214,7 +214,7 @@
     "autoDisposeWebpages": true
   },
   "logLevel": "warning",
-  "titleProperty": "title",
+  "titleProperty": "LtsBlog",
   "rssDateProperty": "date",
   "onlyExportModified": true,
   "deleteOldFiles": true,
