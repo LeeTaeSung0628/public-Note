@@ -47,7 +47,7 @@
   "defaultFileIcon": "lucide//file",
   "defaultFolderIcon": "lucide//folder",
   "defaultMediaIcon": "lucide//file-image",
-  "exportPath": "",
+  "exportPath": "C:\\Users\\Hello\\Desktop\\obsidian\\export_HTML",
   "filesToExport": [
     []
   ],

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "👻 Obsidian 정적호스팅 CICD 과정"
+              "title": "index"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,72 +187,31 @@
       "oz-clear-unused-images:Clear Unused Images": false,
       "webpage-html-export:Export Vault to HTML": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian42-brat:BRAT": false,
-      "webpage-html-export:Export as HTML": false
+      "obsidian42-brat:BRAT": false
     }
   },
-  "floating": {
-    "id": "8eb4ed0718a52206",
-    "type": "floating",
-    "children": [
-      {
-        "id": "79594c25eb7764a2",
-        "type": "window",
-        "children": [
-          {
-            "id": "09590be8fa739185",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "e31a6e785b2efe1e",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://github.com/KosmosisDire/obsidian-webpage-export/tree/1.8.1-2b",
-                    "title": "GitHub - KosmosisDire/obsidian-webpage-export at 1.8.1-2b",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "GitHub - KosmosisDire/obsidian-webpage-export at 1.8.1-2b"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2053,
-        "y": 22,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "e31a6e785b2efe1e",
+  "active": "b8053e38ddc9b918",
   "lastOpenFiles": [
-    "study/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 5과목 - 정보시스템 구축관리.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+    "study/프로그래밍/etc.md",
+    "study/프로그래밍/DataBase.md",
+    "study/정보처리기사/정보처리기사 실기/정보처리 기사 실기 키워드.md",
+    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
     "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
     "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
-    "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
     "project/hello Batch/🏹 Spring Batch 트러블 슈팅.md",
-    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
-    "study/프로그래밍/🍃 Spring.md",
-    "study/프로그래밍/🗒 DataBase.md",
-    "study/프로그래밍/🧰 DevOps.md",
-    "study/프로그래밍/🐞 etc.md",
-    "study/프로그래밍/☕ JAVA , OOP.md",
-    "study/프로그래밍/🎵 Obsidian.md",
-    "study/프로그래밍/📭 Server.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
-    "index.md",
+    "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
     "study/프로그래밍/DevOps.md",
+    "study/프로그래밍/Server.md",
+    "study/프로그래밍/Obsidian.md",
+    "study/note CI_CD/Obsidian 정적호스팅 CICD 과정.md",
+    "study/프로그래밍/Spring.md",
+    "study/프로그래밍/JAVA , OOP.md",
+    "study/정보처리기사/정보처리기사 필기/필기 4과목 - 프로그래밍 언어 활용.md",
+    "study/정보처리기사/정보처리기사 필기/필기 3과목 - 데이터베이스 구축.md",
+    "study/정보처리기사/정보처리기사 필기/필기 2과목 - 소프트웨어 개발.md",
+    "index.md",
+    "study/정보처리기사/정보처리기사 필기/필기 1과목 - 소프트웨어 설계.md",
+    "study/정보처리기사/정보처리기사 필기/필기 5과목 - 정보시스템 구축관리.md",
     "사진 및 문서/Pasted image 20250218162355.png",
     "사진 및 문서/Pasted image 20250218162232.png",
     "사진 및 문서/Pasted image 20250218161937.png",

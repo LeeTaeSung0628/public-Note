@@ -1,3 +1,8 @@
+---
+icon: 🎵
+---
+# 🎵 Obsidian
+
 #공부 #메모 #Obsidian
 
 ---
