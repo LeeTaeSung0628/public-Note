@@ -11,7 +11,11 @@
     "displayProgress": true,
     "inlineHTML": false,
     "exportPath": "C:\\Users\\Hello\\Desktop\\obsidian\\export_HTML",
-    "filesToExport": [],
+    "filesToExport": [
+      "project",
+      "study",
+      "index.md"
+    ],
     "addBodyClasses": true,
     "addMathjaxStyles": true,
     "addHeadTag": true,
@@ -52,7 +56,7 @@
     },
     "propertiesOptions": {
       "featureId": "properties",
-      "enabled": true,
+      "enabled": false,
       "unavailable": false,
       "alwaysEnabled": false,
       "displayTitle": "Properties",
@@ -144,12 +148,12 @@
       "alwaysEnabled": false,
       "allowResizing": true,
       "allowCollapsing": true,
-      "rightDefaultWidth": "30em",
-      "leftDefaultWidth": "40em"
+      "rightDefaultWidth": "25em",
+      "leftDefaultWidth": "30em"
     },
     "customHeadOptions": {
       "featureId": "custom-head",
-      "enabled": true,
+      "enabled": false,
       "unavailable": false,
       "alwaysEnabled": false,
       "displayTitle": "",
@@ -171,7 +175,7 @@
     },
     "rssOptions": {
       "featureId": "obsidian-document",
-      "enabled": true,
+      "enabled": false,
       "unavailable": false,
       "alwaysEnabled": false,
       "siteUrl": "",
@@ -187,7 +191,7 @@
     "inlineFonts": false,
     "inlineOther": false,
     "combineAsSingleFile": false,
-    "offlineResources": false,
+    "offlineResources": true,
     "themeName": "",
     "slugifyPaths": true,
     "flattenExportPaths": false,
@@ -204,12 +208,10 @@
       "svelte-1wbh8tp"
     ],
     "includeStyleCssIds": [
-      "emoji-shortcodes",
-      "obsidian-advanced-codeblock",
-      "excalidraw-embedded-dark",
       "excalidraw-embedded-light",
-      "svelte-11adhly",
-      "svelte-1wbh8tp"
+      "excalidraw-embedded-dark",
+      "emoji-shortcodes",
+      "obsidian-advanced-codeblock"
     ],
     "autoDisposeWebpages": true
   },
@@ -219,7 +221,7 @@
   "onlyExportModified": true,
   "deleteOldFiles": true,
   "exportPreset": "online",
-  "openAfterExport": false,
+  "openAfterExport": true,
   "filePickerBlacklist": [
     "(^|\\/)node_modules\\/",
     "(^|\\/)dist\\/",
