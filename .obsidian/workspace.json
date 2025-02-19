@@ -173,13 +173,13 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
       "webpage-html-export:Export Vault to HTML": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "46154ce4c9d8ab2e",
+  "active": "4ddf07855a3830ea",
   "lastOpenFiles": [
     "index.md",
     "study/note CI_CD/Obsidian 정적호스팅 CICD 과정.md",
