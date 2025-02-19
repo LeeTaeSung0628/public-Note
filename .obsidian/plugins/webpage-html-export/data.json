@@ -32,7 +32,7 @@
   "addRSSFeed": true,
   "siteURL": "",
   "authorName": "",
-  "vaultTitle": "Vault_md_public",
+  "vaultTitle": "taesunglog",
   "exportPreset": "website",
   "openAfterExport": false,
   "graphAttractionForce": 1,
@@ -52,6 +52,7 @@
     [
       "project",
       "study",
+      "Tools",
       "index.md"
     ]
   ],
