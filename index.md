@@ -21,7 +21,7 @@
 
 # 📕 공부
 ## *프로그래밍*
-- [[☕JAVA , OOP]]
+- [[☕ JAVA , OOP]]
 - [[🍃 Spring]]
 - [[🧰 DevOps]]
 - [[🗒 DataBase]]

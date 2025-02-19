@@ -101,8 +101,8 @@
         "selector": "#right-sidebar-content",
         "type": "end"
       },
-      "startCollapsed": false,
-      "minCollapseDepth": 0
+      "startCollapsed": true,
+      "minCollapseDepth": "2"
     },
     "themeToggleOptions": {
       "featureId": "theme-toggle",
@@ -145,7 +145,7 @@
       "allowResizing": true,
       "allowCollapsing": true,
       "rightDefaultWidth": "30em",
-      "leftDefaultWidth": "20em"
+      "leftDefaultWidth": "40em"
     },
     "customHeadOptions": {
       "featureId": "custom-head",
