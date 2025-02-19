@@ -1,9 +1,10 @@
 {
-  "cssTheme": "Mado Miniflow",
+  "cssTheme": "Things",
   "theme": "obsidian",
   "interfaceFontFamily": "Hack",
   "textFontFamily": "Hack",
   "monospaceFontFamily": "Hack",
   "baseFontSize": 15,
-  "accentColor": ""
+  "accentColor": "",
+  "baseFontSizeAction": true
 }
