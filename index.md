@@ -54,5 +54,8 @@
 ---
 
 # 🪓 Tools
-### 옵시디언 / plugin
+### *옵시디언 / 옵시디언 plugin*
+### 옵시디언 APP
 - [[🎵 Obsidian]]
+### plugin
+- 🩹추가예정!!
