@@ -1,6 +1,6 @@
 # 🎵 Obsidian
 
-#공부 #메모 #Obsidian
+#Tools #메모 #Obsidian
 
 ---
 
