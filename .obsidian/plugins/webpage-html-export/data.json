@@ -1,227 +1,56 @@
 {
-  "settingsVersion": "0.0.0",
-  "exportOptions": {
-    "createDocumentContainer": true,
-    "keepModHeaderFooter": false,
-    "addPageIcon": true,
-    "unifyTitleFormat": true,
-    "createPusherElement": true,
-    "makeHeadersTrees": true,
-    "postProcess": true,
-    "displayProgress": true,
-    "inlineHTML": false,
-    "exportPath": "C:\\Users\\Hello\\Desktop\\obsidian\\export_HTML",
-    "filesToExport": [
-      "project",
-      "study",
-      "index.md"
-    ],
-    "addBodyClasses": true,
-    "addMathjaxStyles": true,
-    "addHeadTag": true,
-    "backlinkOptions": {
-      "featureId": "backlinks",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "Backlinks",
-      "featurePlacement": {
-        "selector": ".footer",
-        "type": "start"
-      }
-    },
-    "tagOptions": {
-      "featureId": "tags",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "",
-      "featurePlacement": {
-        "selector": ".header .data-bar",
-        "type": "end"
-      },
-      "showInlineTags": true,
-      "showFrontmatterTags": true
-    },
-    "aliasOptions": {
-      "featureId": "aliases",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "",
-      "featurePlacement": {
-        "selector": ".header .data-bar",
-        "type": "start"
-      }
-    },
-    "propertiesOptions": {
-      "featureId": "properties",
-      "enabled": false,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "Properties",
-      "featurePlacement": {
-        "selector": ".header",
-        "type": "start"
-      }
-    },
-    "fileNavigationOptions": {
-      "featureId": "file-navigation",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "LTS_Blog",
-      "featurePlacement": {
-        "selector": "#left-sidebar-content",
-        "type": "end"
-      },
-      "showCustomIcons": false,
-      "showDefaultFolderIcons": false,
-      "showDefaultFileIcons": false,
-      "defaultFolderIcon": "lucide//folder",
-      "defaultFileIcon": "lucide//file",
-      "defaultMediaIcon": "lucide//file-image",
-      "exposeStartingPath": true,
-      "includePath": "site-lib/html/file-tree.html"
-    },
-    "searchOptions": {
-      "featureId": "search",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "검색..",
-      "featurePlacement": {
-        "selector": "#left-sidebar .topbar-content",
-        "type": "start"
-      }
-    },
-    "outlineOptions": {
-      "featureId": "outline",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "Outline",
-      "featurePlacement": {
-        "selector": "#right-sidebar-content",
-        "type": "end"
-      },
-      "startCollapsed": true,
-      "minCollapseDepth": "2"
-    },
-    "themeToggleOptions": {
-      "featureId": "theme-toggle",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "",
-      "featurePlacement": {
-        "selector": "#right-sidebar .topbar-content",
-        "type": "start"
-      }
-    },
-    "graphViewOptions": {
-      "featureId": "graph-view",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "그래프 뷰",
-      "featurePlacement": {
-        "selector": "#right-sidebar-content",
-        "type": "start"
-      },
-      "showOrphanNodes": true,
-      "showAttachments": false,
-      "allowGlobalGraph": true,
-      "allowExpand": true,
-      "attractionForce": 1,
-      "linkLength": 15,
-      "repulsionForce": 80,
-      "centralForce": 2,
-      "edgePruning": 100,
-      "minNodeRadius": 3,
-      "maxNodeRadius": 7
-    },
-    "sidebarOptions": {
-      "featureId": "sidebar",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "allowResizing": true,
-      "allowCollapsing": true,
-      "rightDefaultWidth": "25em",
-      "leftDefaultWidth": "30em"
-    },
-    "customHeadOptions": {
-      "featureId": "custom-head",
-      "enabled": false,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "displayTitle": "",
-      "featurePlacement": {
-        "selector": "head",
-        "type": "end"
-      },
-      "sourcePath": "",
-      "includePath": "site-lib/html/custom-head.html"
-    },
-    "documentOptions": {
-      "featureId": "obsidian-document",
-      "enabled": true,
-      "unavailable": false,
-      "alwaysEnabled": true,
-      "allowFoldingLists": true,
-      "allowFoldingHeadings": true,
-      "documentWidth": "65em"
-    },
-    "rssOptions": {
-      "featureId": "obsidian-document",
-      "enabled": false,
-      "unavailable": false,
-      "alwaysEnabled": false,
-      "siteUrl": "",
-      "siteName": "Vault_md_public",
-      "authorName": ""
-    },
-    "relativeHeaderLinks": false,
-    "includeJS": true,
-    "includeCSS": true,
-    "inlineMedia": false,
-    "inlineCSS": false,
-    "inlineJS": false,
-    "inlineFonts": false,
-    "inlineOther": false,
-    "combineAsSingleFile": false,
-    "offlineResources": true,
-    "themeName": "",
-    "slugifyPaths": true,
-    "flattenExportPaths": false,
-    "fixLinks": true,
-    "faviconPath": "",
-    "iconEmojiStyle": "Native",
-    "exportRoot": "",
-    "includePluginCss": [
-      "emoji-shortcodes",
-      "obsidian-advanced-codeblock",
-      "excalidraw-embedded-dark",
-      "excalidraw-embedded-light",
-      "svelte-11adhly",
-      "svelte-1wbh8tp"
-    ],
-    "includeStyleCssIds": [
-      "excalidraw-embedded-light",
-      "excalidraw-embedded-dark",
-      "emoji-shortcodes",
-      "obsidian-advanced-codeblock"
-    ],
-    "autoDisposeWebpages": true
-  },
+  "settingsVersion": "1.9.0-3b",
+  "makeOfflineCompatible": false,
+  "inlineAssets": false,
+  "includePluginCSS": [
+    "emoji-shortcodes",
+    "obsidian-advanced-codeblock"
+  ],
+  "includeSvelteCSS": true,
+  "titleProperty": "title",
+  "customHeadContentPath": "",
+  "faviconPath": "",
+  "documentWidth": "55em",
+  "sidebarWidth": "30em",
+  "minOutlineCollapse": 2,
+  "startOutlineCollapsed": false,
+  "relativeOutlineLinks": false,
+  "allowFoldingHeadings": true,
+  "allowFoldingLists": true,
+  "allowResizingSidebars": true,
   "logLevel": "warning",
-  "titleProperty": "LtsBlog",
-  "rssDateProperty": "date",
-  "onlyExportModified": true,
+  "minifyHTML": true,
+  "makeNamesWebStyle": true,
+  "onlyExportModified": false,
   "deleteOldFiles": true,
-  "exportPreset": "online",
-  "openAfterExport": true,
+  "addThemeToggle": true,
+  "addOutline": true,
+  "addFileNav": true,
+  "addSearchBar": true,
+  "addGraphView": true,
+  "addTitle": true,
+  "addRSSFeed": true,
+  "siteURL": "",
+  "authorName": "",
+  "vaultTitle": "Vault_md_public",
+  "exportPreset": "website",
+  "openAfterExport": false,
+  "graphAttractionForce": 1,
+  "graphLinkLength": 10,
+  "graphRepulsionForce": 150,
+  "graphCentralForce": 3,
+  "graphEdgePruning": 100,
+  "graphMinNodeSize": 3,
+  "graphMaxNodeSize": 7,
+  "showDefaultTreeIcons": true,
+  "emojiStyle": "Native",
+  "defaultFileIcon": "lucide//file",
+  "defaultFolderIcon": "lucide//folder",
+  "defaultMediaIcon": "lucide//file-image",
+  "exportPath": "",
+  "filesToExport": [
+    []
+  ],
   "filePickerBlacklist": [
     "(^|\\/)node_modules\\/",
     "(^|\\/)dist\\/",
