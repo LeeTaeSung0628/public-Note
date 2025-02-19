@@ -1,12 +1,8 @@
-# 👻 Obsidian 정적호스팅 CICD 과정
-
-#블로그 #연동 #CI/CD #옵시디언 #Git #Netlify
-
----
 
 # 개요
  먼저 옵시디언(Obsidian)에 대한 정보를 확인하고 싶다면.
-# → **여기로** [[🎵 Obsidian]] 
+# → **여기로** [[👻 Obsidian 정적호스팅 CICD 과정]]
+
 
 현재 보고있는 해당 사이트는 **Obsidian**앱의 지속적인 통합(CI), 지속적인 배포(CD)를 통해 구현된 사이트이다.
 - 아주 기본적인 셋팅이므로, 이후 커스텀은 각자의 취향대로 진행하면 될 것이다.
@@ -133,7 +129,7 @@ Control + P -> export 를 검색
 - 폴더 생성 후 익스포트 한다.
 *이때 처음엔 index페이지를 생성하고, 추후 삭제하는 것을 추천(Netlify는 index가 필수)*
 ![[Pasted image 20250218160428.png]]![[Pasted image 20250218160532.png]]
-- 하댕 디렉토리에 정상적으로 생성된것을 볼 수 있다.
+- 생성한 새 디렉토리에 정상적으로 생성된것을 볼 수 있다.
 
 ---
 
@@ -188,4 +184,13 @@ https://www.netlify.com/
 # 최종
 
 *이렇게 사이트 배포가 완료되었다!*
-![[do-messenger_screenshot_2025-02-18_16_25_42.png]]
+![[do-messenger_screenshot_2025-02-19_16_19_04.png]]
+
+---
+
+# *+ 추가*
+
+- 현재 Export HTML 1.8.01 버전 기준으로 export된 HTML css에 오류가 있다.
+*BRAT 플러그인을 사용하여 버전 업(베타) 하여 해결*
+![[Pasted image 20250219154331.png]]
+![[Pasted image 20250219154315.png]]
