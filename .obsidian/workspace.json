@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🏚index.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🏚index"
+              "title": "index"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#DataBase",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🏚index.md",
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "🏚index 의 개요"
+              "title": "index 의 개요"
             }
           },
           {
@@ -192,100 +192,29 @@
       "webpage-html-export:Export as HTML": false
     }
   },
-  "floating": {
-    "id": "8eb4ed0718a52206",
-    "type": "floating",
-    "children": [
-      {
-        "id": "ca48fa88ffdb7799",
-        "type": "window",
-        "children": [
-          {
-            "id": "967f3e3c5868213e",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "375aa11adf2806dd",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://docs.obsidianweb.net/",
-                    "title": "Home",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "Home"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2033,
-        "y": 51,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "ac0a29804d2fa3cd",
-        "type": "window",
-        "children": [
-          {
-            "id": "6582244566a59a78",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "3bc12f20b712bbbb",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://codeload.github.com/KosmosisDire/obsidian-webpage-export/zip/refs/heads/1.9.0",
-                    "title": "codeload.github.com/KosmosisDire/obsidian-webpage-export/zip/refs/heads/1.9.0",
-                    "mode": "error"
-                  },
-                  "icon": "globe-2",
-                  "title": "codeload.github.com/KosmosisDire/obsidian-webpage-export/zip/refs/heads/1.9.0"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2082,
-        "y": 88,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "b8053e38ddc9b918",
   "lastOpenFiles": [
-    "study/note CI_CD/Obsidian 정적호스팅 CICD 과정.md",
-    "study/프로그래밍/JAVA , OOP.md",
+    "project/hello Batch/🖱 Spring Batch 트러블 슈팅 부록.md",
+    "project/hello Batch/🖱 Spring Batch 트러블 슈팅.md",
+    "project/hello Batch/🖱 Spring Batch 구조 드로잉.md",
+    "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
+    "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 5과목 - 정보시스템 구축관리.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
+    "study/프로그래밍/📭 Server.md",
+    "study/프로그래밍/🎵 Obsidian.md",
+    "study/프로그래밍/☕JAVA , OOP.md",
+    "study/프로그래밍/🐞 etc.md",
+    "study/프로그래밍/🧰 DevOps.md",
+    "study/프로그래밍/🗒 DataBase.md",
     "study/프로그래밍/DevOps.md",
-    "study/프로그래밍/DataBase.md",
-    "study/프로그래밍/Spring.md",
-    "study/프로그래밍/Server.md",
-    "study/프로그래밍/etc.md",
-    "project/hello marketing/유입 통계 APP__SPRING AOP에 관하여.md",
-    "study/정보처리기사/정보처리기사 필기/필기 1과목 - 소프트웨어 설계.md",
-    "study/정보처리기사/정보처리기사 필기/필기 2과목 - 소프트웨어 개발.md",
-    "study/정보처리기사/정보처리기사 필기/필기 3과목 - 데이터베이스 구축.md",
-    "study/정보처리기사/정보처리기사 필기/필기 4과목 - 프로그래밍 언어 활용.md",
-    "study/정보처리기사/정보처리기사 필기/필기 5과목 - 정보시스템 구축관리.md",
-    "study/프로그래밍/Obsidian.md",
-    "🏚index.md",
-    "project/hello Batch/Spring Batch 트러블 슈팅.md",
-    "study/정보처리기사/정보처리기사 실기/정보처리 기사 실기 키워드.md",
-    "project/hello marketing/유입 통계 ADMIN용 테이블 설계 과정.md",
-    "project/hello Batch/Spring Batch 트러블 슈팅 부록.md",
-    "project/hello Batch/Spring Batch 구조 드로잉.md",
+    "study/프로그래밍/🍃 Spring.md",
+    "study/note CI_CD/🟣 Obsidian 정적호스팅 CICD 과정.md",
+    "index.md",
     "사진 및 문서/Pasted image 20250218162355.png",
     "사진 및 문서/Pasted image 20250218162232.png",
     "사진 및 문서/Pasted image 20250218161937.png",

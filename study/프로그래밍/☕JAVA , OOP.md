@@ -1,6 +1,3 @@
-
-# ☕JAVA , OOP
-
 #공부 #Java #OOP
 
 ---

@@ -1,9 +1,6 @@
 ---
 
 ---
-
-# 👩‍👧‍👦유입 통계 APP__SPRING AOP에 관하여
-
 #프로젝트 #개발 #DB
 
 ---
@@ -349,4 +346,4 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 
 ---
 
-[[유입 통계 ADMIN용 테이블 설계 과정]]
+[[👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정]]
