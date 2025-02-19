@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "77673dcd24aedefa",
+        "id": "04bbe03876c87c39",
         "type": "tabs",
         "children": [
           {
-            "id": "b8053e38ddc9b918",
+            "id": "627e38f4394fefbf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "👻 Obsidian 정적호스팅 CICD 과정"
+              "title": "index"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:",
+                "query": "tag:#OOP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -190,52 +190,53 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "b8053e38ddc9b918",
+  "active": "627e38f4394fefbf",
   "lastOpenFiles": [
-    "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
-    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
-    "study/CS/📭 Server.md",
-    "study/CS/📔 DataBase.md",
-    "study/CS/🎵 Obsidian.md",
-    "study/CS/🐞 etc.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
-    "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
-    "project/hello Batch/🏹 Spring Batch 트러블 슈팅.md",
-    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
-    "study/CS/🎩 DevOps.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 5과목 - 정보시스템 구축관리.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
-    "사진 및 문서/Pasted image 20250219154315.png",
-    "사진 및 문서/do-messenger_screenshot_2025-02-19_16_19_04.png",
-    "사진 및 문서/Pasted image 20250219154331.png",
-    "study/CS/☕ JAVA , OOP.md",
-    "study/CS/🍃 Spring.md",
-    "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
+    "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock.md",
+    "study/Dev Seminar/🔻 Redis 캐쉬 전략 - hello 서비스에 적용하여 성능개선 가능성.md",
+    "study/Dev Seminar/🔹 TDD에 대하여.md",
+    "study/Dev Seminar/🥗 Spring Security_토큰_세션_쿠키_JWT 에 대하여.md",
     "index.md",
-    "사진 및 문서/Pasted image 20250218162355.png",
+    "study/Dev Seminar/🪕 JPA 에 대한 고찰.md",
+    "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
+    "study/CS/🎵 Obsidian.md",
+    "study/CS/📭 Server.md",
+    "study/CS/🍃 Spring.md",
+    "study/CS/☕ JAVA , OOP.md",
+    "사진 및 문서/Pasted image 20250110144021.png",
+    "사진 및 문서/Pasted image 20241220113315.png",
+    "사진 및 문서/Pasted image 20241220113308.png",
+    "사진 및 문서/Pasted image 20241206140822.png",
+    "사진 및 문서/Pasted image 20241206140739.png",
+    "사진 및 문서/Pasted image 20250219154331.png",
+    "사진 및 문서/Pasted image 20250219154315.png",
     "사진 및 문서/Pasted image 20250218162232.png",
-    "사진 및 문서/Pasted image 20250218161937.png",
-    "사진 및 문서/Pasted image 20250218161847.png",
-    "사진 및 문서/Pasted image 20250218161824.png",
-    "사진 및 문서/Pasted image 20250218161728.png",
-    "사진 및 문서/Pasted image 20250218161515.png",
+    "사진 및 문서/Pasted image 20250218154631.png",
+    "사진 및 문서/Pasted image 20250218153323.png",
+    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
+    "study/Dev Seminar",
+    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+    "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
+    "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
+    "study/CS/📔 DataBase.md",
+    "study/CS/🎩 DevOps.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
+    "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
+    "project/hello Batch/🏹 Spring Batch 트러블 슈팅.md",
+    "study/CS/🐞 etc.md",
     "무제.canvas",
     "study/CS",
-    "예치금 배치 리팩토링 구조 드로잉.md",
     "project/hello Batch",
     "사진 및 문서/do-messenger_screenshot_2024-12-30_15_52_09.png.~tmp",
     "project/note CI_CD",
     "project/hello marketing",
     "project",
-    "개발 및 공부 히스토리.md",
     "사진 및 문서",
-    "공부/정보처리 기사.md",
     "study/정보처리기사/정보처리기사 실기",
-    "study/정보처리기사/정보처리기사 필기",
-    "study/정보처리기사",
-    "환영합니다!.md"
+    "study/정보처리기사/정보처리기사 필기"
   ]
 }

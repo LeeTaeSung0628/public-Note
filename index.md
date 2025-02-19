@@ -30,7 +30,13 @@
 - [[📭 Server]]
 - [[🎵 Obsidian]]
 - [[🐞 etc]]
-
+## *Dev Seminar*
+- [[🔻 Redis 캐쉬 전략 - hello 서비스에 적용하여 성능개선 가능성]]
+- [[🍂 JPA, Mybatis , Dead Lock]]
+- [[🔹 TDD에 대하여]]
+- [[🪕 JPA 에 대한 고찰]]
+- [[🥗 Spring Security_토큰_세션_쿠키_JWT 에 대하여]]
+- [[📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가]]
 ## *자격증*
 ### 정보처리기사 필기
 - [[🥈 필기 1과목 - 소프트웨어 설계]]
