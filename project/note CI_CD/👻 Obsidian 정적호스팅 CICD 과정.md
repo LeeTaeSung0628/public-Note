@@ -1,3 +1,8 @@
+# 👻 Obsidian 정적호스팅 CICD 과정
+
+#프로젝트 #개발 #Hosting #Obsidian #CI/CD
+
+---
 
 # 개요
  먼저 옵시디언(Obsidian)에 대한 정보를 확인하고 싶다면.
