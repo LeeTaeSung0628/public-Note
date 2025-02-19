@@ -33,7 +33,6 @@
 - [[🎩 DevOps]]
 - [[📔 DataBase]]
 - [[📭 Server]]
-- [[🎵 Obsidian]]
 - [[🐞 etc]]
 ## *Dev Seminar*
 - [[🔻 Redis 캐쉬 전략 - hello 서비스에 적용하여 성능개선 가능성]]
@@ -55,4 +54,5 @@
 ---
 
 # 🪓 Tools
-### 추가예정..
+### 옵시디언
+- [[🎵 Obsidian]]
