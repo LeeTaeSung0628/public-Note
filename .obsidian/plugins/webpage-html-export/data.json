@@ -4,11 +4,14 @@
   "inlineAssets": false,
   "includePluginCSS": [
     "emoji-shortcodes",
-    "obsidian-advanced-codeblock"
+    "obsidian-advanced-codeblock",
+    "buttons",
+    "obsidian-completr",
+    "callout-manager"
   ],
   "includeSvelteCSS": true,
   "titleProperty": "title",
-  "customHeadContentPath": "",
+  "customHeadContentPath": "C:\\Users\\Hello\\Desktop\\obsidian\\Vault_md_public\\defaultHeaderContents.html",
   "faviconPath": "",
   "documentWidth": "55em",
   "sidebarWidth": "65em",
@@ -47,7 +50,7 @@
   "defaultFileIcon": "lucide//file",
   "defaultFolderIcon": "lucide//folder",
   "defaultMediaIcon": "lucide//file-image",
-  "exportPath": "C:\\Users\\Hello\\Desktop\\obsidian\\export_HTML",
+  "exportPath": "C:\\Users\\Hello\\Desktop\\obsidian\\static_HTML",
   "filesToExport": [
     [
       "project",

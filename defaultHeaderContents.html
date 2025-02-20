@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        /* 댓글 창 스타일 */
+        #comment-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+        }
+
+        #comment-header {
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #comment-list {
+            max-height: 150px;
+            overflow-y: auto;
+            padding: 5px;
+        }
+
+        #comment-input {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #comment-button {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #comment-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 댓글 창 -->
+    <div id="comment-container">
+        <div id="comment-header">댓글</div>
+        <div id="comment-list"></div>
+        <input type="text" id="comment-input" placeholder="댓글을 입력하세요">
+        <button id="comment-button">등록</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const commentList = document.getElementById("comment-list");
+            const commentInput = document.getElementById("comment-input");
+            const commentButton = document.getElementById("comment-button");
+
+            commentButton.addEventListener("click", function () {
+                const commentText = commentInput.value.trim();
+                if (commentText) {
+                    const newComment = document.createElement("div");
+                    newComment.textContent = commentText;
+                    newComment.style.padding = "5px";
+                    newComment.style.borderBottom = "1px solid #ddd";
+                    commentList.appendChild(newComment);
+                    commentInput.value = ""; // 입력 필드 초기화
+                }
+            });
+
+            commentInput.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    commentButton.click();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
