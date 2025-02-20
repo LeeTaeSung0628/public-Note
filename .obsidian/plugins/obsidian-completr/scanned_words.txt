@@ -81,6 +81,7 @@ SVN
 SqlSession
 Specific
 SERIALIZABLE
+SCM
 JWT
 Java
 Join
@@ -106,6 +107,9 @@ JIT
 JAP
 JPA
 JDBC
+Jenkins
+Jenkinsfile
+Jenkin
 Tokken
 Token
 Tone
@@ -184,6 +188,11 @@ Connection
 Connectivity
 Connector
 Child
+Container
+Continuous
+CS
+Coding
+CodingTest
 Authentication
 Authorization
 AOP
@@ -229,6 +238,8 @@ AS
 ARM
 APT
 Array
+ArgoCD
+Argo
 HTTP
 HttpOnly
 HTTPS
@@ -258,6 +269,8 @@ Hacktivism
 Haddoop
 HikariCP
 Hibernate
+HF
+Hello
 OAuth
 Obsidian
 Out
@@ -277,6 +290,7 @@ OSPF
 OSIV
 ODBC
 ORM
+Opertation
 LDAP
 Light
 List
@@ -303,6 +317,10 @@ Lambda
 Linked
 LOD
 Locking
+LXC
+Lab
+Loki
+Logstash
 Bean
 Bearer
 Batch
@@ -321,6 +339,9 @@ Buffur
 Basic
 BGP
 Blockchain
+Build
+Baekjoon
+Bronze
 URL
 UtEHFOT
 UUFF
@@ -372,6 +393,9 @@ Pharming
 Parity
 Persistence
 Parent
+Pod
+Pull
+Programmers
 Filter
 Fingers
 ForkJoinPool
@@ -467,6 +491,7 @@ ISMS
 Independent
 Immediate
 In
+Image
 DB
 Dev
 Deploy
@@ -500,6 +525,9 @@ DeadLock
 Database
 DSL
 Domain
+DevOps
+Docker
+Deployment
 KB
 KEY
 Kill
@@ -574,6 +602,7 @@ iOS
 int
 impliments
 interface
+id
 blog
 balanceJob
 batch
@@ -616,6 +645,7 @@ txt
 type
 trace
 timeout
+tool
 src
 site
 step
@@ -644,6 +674,9 @@ str
 string
 static
 stack
+scm
+stg
+search
 alt
 app
 api
@@ -697,6 +730,8 @@ map
 micro
 mac
 method
+manifest
+merge
 Git
 GitDesktop
 Grid
@@ -711,6 +746,8 @@ GRANT
 GM
 GOF
 GC
+GitOps
+Grafana
 Netlify
 New
 Native
@@ -738,6 +775,7 @@ refresh
 ricest
 rwx
 reference
+runtime
 pc
 public
 parallelStream
@@ -762,6 +800,9 @@ port
 primitive
 pool
 properties
+pod
+push
+prod
 git
 gitignore
 gridSize
@@ -807,6 +848,7 @@ enterprise
 exe
 equals
 effectively
+elastic
 Vault
 VARIABLES
 VIEW
@@ -848,6 +890,7 @@ Entity
 Expression
 EGP
 EntityManager
+ELK
 update
 under
 uzJl
@@ -895,6 +938,7 @@ Manger
 MySQL
 MVCC
 Multi
+MSA
 vs
 void
 var
@@ -931,6 +975,7 @@ dfxdfw
 destination
 dst
 dsl
+docker
 limit
 list
 long
@@ -941,6 +986,8 @@ loan
 loanerLoginPage
 linux
 lock
+local
+logstash
 final
 forkJoinPool
 fail
@@ -956,6 +1003,8 @@ kakao
 kLMRW
 kqAzM
 kjCCqFYF
+kubelet
+kibana
 of
 only
 oqk
@@ -964,6 +1013,7 @@ orURL
 org
 You
 YZV
+YALM
 yn
 ydiM
 yeHyk

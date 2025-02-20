@@ -13,7 +13,7 @@
 https://www.hellofunding.co.kr/sp/loan/gtLoan?p=a2FrYW8xc3QK
 https://www.hellofunding.co.kr/sp/loan/gtLoan?p=a2FrYW8xc222
 
-# 구상
+# *계획*
 ## 1. 광고 url 진입자, 파라미터(CODE) 쿠키 저장
 - 통계 필요 페이지 내에서(프론트), 쿠키 데이터 페이지 별 최초 진입 확인?
 ## 2. Hit체크 하고싶은 페이지에서, CODE별 최초 진입 확인시 Hit로그 저장 controller 호출
@@ -23,7 +23,7 @@ https://www.hellofunding.co.kr/sp/loan/gtLoan?p=a2FrYW8xc222
 ---
 
 
-# 데이터 테이블 구상
+# *데이터 테이블 구상*
 
 | KEY `idx` | `hitDate`              | `hitCode`    | `hitUid`                             | `pageURL`               | `pageType` |
 | --------- | ---------------------- | ------------ | ------------------------------------ | ----------------------- | ---------- |
@@ -31,7 +31,9 @@ https://www.hellofunding.co.kr/sp/loan/gtLoan?p=a2FrYW8xc222
 | 2         | 2024-12-10 12-40-11.22 | AAA22dfxdfw2 | 94107590-2b39-478f-9bb3-32f4a8ef68cb | sp/loan/mortgage/notice | GET        |
 | 1         | 2024-12-09 12-40-11.22 | aWfeYW8xc222 | 3eac413b-a95b-44f8-8f12-32ec4be98e39 | sp/marketing/hitTest1   | POST       |
 
-# 고려사항
+---
+
+# *고려사항*
 ## 1. 추적을 얼마나 디테일하게 저장할지?
 - 해당 진입시점부터 특정 동작에 대한 모든 타임라인 로그
 ## 2. 디테일에 대한 부하분산은 어떻게 할지?
