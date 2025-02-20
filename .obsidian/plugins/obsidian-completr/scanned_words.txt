@@ -78,6 +78,9 @@ State
 Smurfing
 Stripe
 SVN
+SqlSession
+Specific
+SERIALIZABLE
 JWT
 Java
 Join
@@ -102,6 +105,7 @@ JVM
 JIT
 JAP
 JPA
+JDBC
 Tokken
 Token
 Tone
@@ -132,6 +136,8 @@ Translation
 Typosquatting
 Tvishing
 Trustzone
+TOOL
+Transactional
 Cookie
 Chain
 Claim
@@ -174,6 +180,10 @@ Compile
 Code
 CSRF
 Concurrency
+Connection
+Connectivity
+Connector
+Child
 Authentication
 Authorization
 AOP
@@ -246,6 +256,8 @@ HttpServletRequestWrapper
 HOP
 Hacktivism
 Haddoop
+HikariCP
+Hibernate
 OAuth
 Obsidian
 Out
@@ -262,6 +274,9 @@ OS
 On
 Open
 OSPF
+OSIV
+ODBC
+ORM
 LDAP
 Light
 List
@@ -355,6 +370,8 @@ Pool
 Peer
 Pharming
 Parity
+Persistence
+Parent
 Filter
 Fingers
 ForkJoinPool
@@ -371,6 +388,8 @@ First
 FLSM
 FX
 Field
+FROM
+Fetch
 Refresh
 Redis
 RSA
@@ -409,6 +428,10 @@ RAID
 Redundant
 Recovery
 Redo
+RDB
+Repository
+REPEATABLE
+READ
 ID
 ItemReader
 IP
@@ -443,6 +466,7 @@ IGP
 ISMS
 Independent
 Immediate
+In
 DB
 Dev
 Deploy
@@ -471,6 +495,11 @@ Datagram
 Development
 Da
 Disks
+Dead
+DeadLock
+Database
+DSL
+Domain
 KB
 KEY
 Kill
@@ -565,6 +594,7 @@ bind
 bean
 bool
 booolean
+by
 there
 this
 text
@@ -584,6 +614,8 @@ tG
 trigger
 txt
 type
+trace
+timeout
 src
 site
 step
@@ -634,6 +666,7 @@ abstract
 aa
 aspect
 anonymous
+alias
 with
 width
 writer
@@ -641,6 +674,7 @@ working
 web
 window
 weaving
+where
 marketing
 md
 main
@@ -688,6 +722,7 @@ NIST
 Network
 Notation
 NAT
+Nested
 repository
 return
 reader
@@ -726,6 +761,7 @@ protocol
 port
 primitive
 pool
+properties
 git
 gitignore
 gridSize
@@ -736,6 +772,7 @@ gateLoanView
 grJugypC
 gS
 gQx
+group
 name
 newMemberBalance
 naver
@@ -780,6 +817,7 @@ VS
 Virtual
 Value
 VPN
+Version
 Export
 ExecutionContext
 Exception
@@ -809,6 +847,7 @@ Environment
 Entity
 Expression
 EGP
+EntityManager
 update
 under
 uzJl
@@ -850,6 +889,12 @@ Masquerade
 Mirroring
 MapReduce
 Mining
+Mybatis
+MyBatis
+Manger
+MySQL
+MVCC
+Multi
 vs
 void
 var
@@ -867,6 +912,7 @@ javadoc
 jar
 java
 jvm
+jpa
 dto
 dtoList
 double
@@ -884,6 +930,7 @@ de
 dfxdfw
 destination
 dst
+dsl
 limit
 list
 long
@@ -893,6 +940,7 @@ lHiJI
 loan
 loanerLoginPage
 linux
+lock
 final
 forkJoinPool
 fail
@@ -903,6 +951,7 @@ faf
 file
 finished
 function
+feat
 kakao
 kLMRW
 kqAzM
@@ -929,3 +978,4 @@ xml
 xUnit
 ZaCmNrTx
 qo
+query
