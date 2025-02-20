@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "🥇 정보처리 기사 실기 키워드"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 485.5
   },
   "right": {
     "id": "f9f8508c398bcd94",
@@ -193,14 +193,19 @@
   },
   "active": "627e38f4394fefbf",
   "lastOpenFiles": [
-    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
     "index.md",
+    "study/커리큘럼/🆕 Dev 커리큘럼.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+    "project/hello Batch/🏹 Spring Batch 트러블 슈팅.md",
+    "study/CS/☕ JAVA , OOP.md",
+    "study/커리큘럼",
+    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
+    "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
+    "study/정보처리기사/정보처리기사 실기/무제.md",
+    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
+    "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
     "Tools/🎵 Obsidian.md",
     "Tools",
-    "project/hello marketing/👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여.md",
-    "project/hello Batch/🏹 Spring Batch 트러블 슈팅.md",
-    "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
-    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
     "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
     "study/Dev Seminar/🥗 Spring Security_토큰_세션_쿠키_JWT 에 대하여.md",
     "study/Dev Seminar/🪕 JPA 에 대한 고찰.md",
@@ -209,10 +214,8 @@
     "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
     "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
-    "study/CS/☕ JAVA , OOP.md",
     "study/CS/📭 Server.md",
     "study/CS/🍃 Spring.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
     "study/CS/📔 DataBase.md",
     "study/CS/🎩 DevOps.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
@@ -229,7 +232,6 @@
     "사진 및 문서/Pasted image 20250218154631.png",
     "사진 및 문서/Pasted image 20250218153323.png",
     "study/Dev Seminar",
-    "study/CS/🐞 etc.md",
     "무제.canvas",
     "study/CS",
     "project/hello Batch",
@@ -237,7 +239,6 @@
     "project/note CI_CD",
     "project/hello marketing",
     "project",
-    "사진 및 문서",
-    "study/정보처리기사/정보처리기사 실기"
+    "사진 및 문서"
   ]
 }
