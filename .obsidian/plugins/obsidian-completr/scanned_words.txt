@@ -77,6 +77,7 @@ Sign
 State
 Smurfing
 Stripe
+SVN
 JWT
 Java
 Join
@@ -172,6 +173,7 @@ Constant
 Compile
 Code
 CSRF
+Concurrency
 Authentication
 Authorization
 AOP
@@ -285,6 +287,7 @@ Loading
 Lambda
 Linked
 LOD
+Locking
 Bean
 Bearer
 Batch
@@ -316,6 +319,7 @@ User
 Unit
 UNIX
 URI
+Undo
 Pointcut
 Point
 Payload
@@ -403,6 +407,8 @@ RIP
 Ransomware
 RAID
 Redundant
+Recovery
+Redo
 ID
 ItemReader
 IP
@@ -436,6 +442,7 @@ IDE
 IGP
 ISMS
 Independent
+Immediate
 DB
 Dev
 Deploy
@@ -842,6 +849,7 @@ Mapping
 Masquerade
 Mirroring
 MapReduce
+Mining
 vs
 void
 var
