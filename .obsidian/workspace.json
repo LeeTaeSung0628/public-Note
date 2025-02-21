@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "study/Dev Seminar/🥗 Spring Security_토큰-세션-쿠키-JWT 에 대하여.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "🥗 Spring Security_토큰-세션-쿠키-JWT 에 대하여"
             }
           }
         ]
@@ -193,9 +193,9 @@
   },
   "active": "23e7f2994bc98e9b",
   "lastOpenFiles": [
+    "index.md",
     "lectur/1. 객체 지향 설계와 스프링.md",
     "lectur/🏫 강의.md",
-    "index.md",
     "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
     "project/hello marketing/👩‍👧‍👦 유입 통계 APP_SPRING AOP에 관하여.md",
     "project/hello Batch/🏹 Spring Batch 트러블 슈팅.md",
@@ -211,7 +211,7 @@
     "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
-    "study/Dev Seminar/🥗 Spring Security_토큰_세션_쿠키_JWT 에 대하여.md",
+    "study/Dev Seminar/🥗 Spring Security_토큰-세션-쿠키-JWT 에 대하여.md",
     "Tools/aws/🍊 aws EC2란.md",
     "study/CS/🍃 Spring.md",
     "Tools/docker/🐋 docker.md",
