@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "0b39f03e4b3596e4",
+        "id": "04bbe03876c87c39",
         "type": "tabs",
         "children": [
           {
-            "id": "4dd3c1aaf70ceea9",
+            "id": "627e38f4394fefbf",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
+                "aFile": ".obsidian/community-plugins.json",
+                "bFile": ".obsidian/community-plugins.json",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: workspace.json"
-            }
-          },
-          {
-            "id": "ce0714df28d01402",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🌥 aws(EC2)셋팅부터 배포까지"
+              "title": "Diff: community-plugins.json"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#OOP",
+                "query": "tag:#프로젝트",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 485.5
   },
   "right": {
     "id": "f9f8508c398bcd94",
@@ -188,11 +173,10 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "callout-manager:Insert Callout": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -203,18 +187,12 @@
       "oz-clear-unused-images:Clear Unused Images": false,
       "webpage-html-export:Export Vault to HTML": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian42-brat:BRAT": false
+      "obsidian42-brat:BRAT": false,
+      "callout-manager:Insert Callout": false
     }
   },
-  "active": "ce0714df28d01402",
+  "active": "2e958c9dd4f388f9",
   "lastOpenFiles": [
-    "Tools/🪓 Tools.md",
-    "index.md",
-    "conflict-files-obsidian-git.md",
-    "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
-    "Tools/docker/🐋 docker.md",
-    "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
-    "Tools/aws/🍊 aws EC2란.md",
     "사진 및 문서/Pasted image 20250221115232.png",
     "사진 및 문서/Pasted image 20250221115228.png",
     "사진 및 문서/Pasted image 20250221115224.png",
@@ -223,37 +201,44 @@
     "사진 및 문서/Pasted image 20250221115201.png",
     "사진 및 문서/Pasted image 20250221115157.png",
     "사진 및 문서/Pasted image 20250221115151.png",
-    "사진 및 문서/Pasted image 20250221115146.png",
-    "사진 및 문서/Pasted image 20250221115140.png",
+    "사진 및 문서/Pasted image 20250221114638.png",
+    "사진 및 문서/Pasted image 20250221114633.png",
+    "사진 및 문서/Pasted image 20250221114628.png",
+    "index.md",
     "project/💻 프로젝트.md",
-    "study/Coding Test/👽 Algorithm.md",
-    "study/📕 공부.md",
-    "Tools/aws/⛈ aws 셋팅_관리.md",
-    "Tools/🎵 Obsidian.md",
+    "study/CS/🎩 DevOps.md",
+    "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
+    "Tools/docker/🐋 docker.md",
     "Tools/docker",
+    "Tools/aws/🍊 aws EC2란.md",
+    "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
     "Tools/aws",
-    "study/커리큘럼/🆕 Dev 커리큘럼.md",
-    "study/커리큘럼",
-    "study/Coding Test/🤠 Coding Test 풀이 모음.md",
-    "study/Coding Test",
+    "Tools/⛈ aws 셋팅_관리.md",
+    "project/무제",
+    "Tools/🎵 Obsidian.md",
+    "Tools/🪓 Tools.md",
     "project/note CI_CD/⛈ Obsidian-AWS연동.md",
-    "defaultHeaderContents.html",
-    "Tools",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 5과목 - 정보시스템 구축관리.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
+    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
     "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
     "study/CS/☕ JAVA , OOP.md",
-    "study/CS/🎵 Obsidian.md",
     "study/CS/📭 Server.md",
     "study/CS/🍃 Spring.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
     "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
     "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
     "study/CS/📔 DataBase.md",
-    "study/Dev Seminar",
-    "무제.canvas",
-    "study/CS",
-    "project/hello Batch",
-    "사진 및 문서/do-messenger_screenshot_2024-12-30_15_52_09.png.~tmp"
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
+    "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
+    "study/Dev Seminar/🔻 Redis 캐쉬 전략 - hello 서비스에 적용하여 성능개선 가능성.md",
+    "defaultHeaderContents.html",
+    "study/Coding Test/Bronze/2446. 별 찍기 － 9/별 찍기 － 9.py",
+    "study/Coding Test/Bronze/15596. 정수 N개의 합/정수 N개의 합.py",
+    "study/Coding Test/Bronze/12813. 이진수 연산/이진수 연산.py",
+    "study/Coding Test/Bronze/10810. 공 넣기/공 넣기.py",
+    "study/Coding Test/Bronze/2446. 별 찍기 － 9",
+    "study/Coding Test/Bronze/15596. 정수 N개의 합",
+    "무제.canvas"
   ]
 }
