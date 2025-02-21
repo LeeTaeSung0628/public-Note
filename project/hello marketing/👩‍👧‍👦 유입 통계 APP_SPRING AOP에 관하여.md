@@ -1,17 +1,15 @@
 ---
 
 ---
-# 👩‍👧‍👦 유입 통계 APP__SPRING AOP에 관하여
+# 👩‍👧‍👦 유입 통계 APP_**SPRING AOP**에 관하여
 
-#프로젝트 #개발 #DB
+#프로젝트 #개발 #DB #SPRING #AOP 
+
+# 개요
+	Hello Service의 유입/동작 통계 모듈의 공통화 작업이다.
+	Spring AOP를 사용하여 구성하였다.
 
 ---
-
-
-# 인입 페이지 주소 예시
-
-https://www.hellofunding.co.kr/sp/loan/gtLoan?p=a2FrYW8xc3QK
-https://www.hellofunding.co.kr/sp/loan/gtLoan?p=a2FrYW8xc222
 
 # *계획*
 ## 1. 광고 url 진입자, 파라미터(CODE) 쿠키 저장
@@ -21,7 +19,6 @@ https://www.hellofunding.co.kr/sp/loan/gtLoan?p=a2FrYW8xc222
 ## 3. 파라미터로 CODE 및 현재 페이지 주소(ex. /sp/loan) 저장
 
 ---
-
 
 # *데이터 테이블 구상*
 
@@ -69,8 +66,7 @@ https://www.hellofunding.co.kr/sp/loan/gtLoan?p=a2FrYW8xc222
 
 ---
 
-# AOP에서 Front-end 단의 특정 동작 필터링 하기
-
+>[!note] AOP에서 Front-end 단의 특정 동작 필터링 하기
 
 ## 1. Pointcut 객체에 동적으로 enum에서 미리 선언한 값 execution으로 삽입하기
 ### **(이후 ADMIN 관리를 위해 enum객체 -> DB로 데이터 이전)**
@@ -171,7 +167,7 @@ public class AopConfig {
 
 ---
 
-# 위 방법의 문제점? 
+>[!bug] 위 방법의 문제점? 
 ## 클래스에 인터페이스가 있으면 JDK 동적 프록시, 인터페이스가 없으면 CGLIB 프록시
 - 이렇게 맵핑이 되어야 하나, 이를 동적으로 탐지하지 못한다.
 ``` java
@@ -350,5 +346,5 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 - 따라서, 서버 Kill을 하는 것과 진배 없다.
 
 ---
-
+[부록]
 [[👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정]]

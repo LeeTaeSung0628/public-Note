@@ -15,7 +15,13 @@
 3. 추가한 Job 기능에 문제없다면 기존 balanceJob 삭제
 
 ---
+## + **플로우 차트**
 
+![[회사 은행 서비스1111.png]]
+![[Spring Batch Tasklet 예치금 잔액 비교 1.png]]
+![[Spring Batch Tasklet 예치금 잔액 비교 잘못된 차액발생 인식 타임라인.png]]
+
+---
 # 예치금차액비교 Batch Job 기존 소요시간 그래프
 
 ## 2024-10-28 ~ 2024-11-19 (주말제외)
@@ -621,14 +627,6 @@ public class JobTimerExecutionListener implements JobExecutionListener {
 ![[Pasted image 20241224093159.png]]
 ![[Pasted image 20241224093207.png]]
 ![[Pasted image 20241224093225.png]]
-
----
-
-# + 플로우 차트 추가
-
-![[회사 은행 서비스1111.png]]
-![[Spring Batch Tasklet 예치금 잔액 비교 1.png]]
-![[Spring Batch Tasklet 예치금 잔액 비교 잘못된 차액발생 인식 타임라인.png]]
 
 ---
 

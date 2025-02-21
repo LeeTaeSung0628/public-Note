@@ -1,9 +1,9 @@
-# 🏠 Home
+# 🏠 taesung's Blog
 
 #home #index #blog #공부
 
-
 ---
+
 [![[Pasted image 20250220144552.png|220]]](https://github.com/LeeTaeSung0628)
 [<font color="#ffffff">🔗git Hub 이동</font>](https://github.com/LeeTaeSung0628)
 
@@ -30,10 +30,15 @@
 
 ---
 
-# [[🪓 Tools]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
+# [[🪓 도구]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
 >- ## 🐻 **Obsidian**
 >- ## ☁ **AWS**
 >- ## 🐋 **docker**
+
+---
+
+# [[🏫 강의]]
+>- ## 🐊 **Spring Core Basic**
 
 ---
 
