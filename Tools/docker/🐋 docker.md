@@ -4,7 +4,6 @@
 
 ---
 ![[Pasted image 20250221114743.png]]
-![](https://blog.kakaocdn.net/dn/TI6A6/btsBo7OZmsc/uN1Tqw5nAyynakpyEGhDAk/img.png)
 
 aws의 설명에 의하면
 

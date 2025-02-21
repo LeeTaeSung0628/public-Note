@@ -11,14 +11,14 @@
             "id": "627e38f4394fefbf",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/community-plugins.json",
-                "bFile": ".obsidian/community-plugins.json",
-                "aRef": ""
+                "file": "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: community-plugins.json"
+              "icon": "lucide-file",
+              "title": "🌥 aws(EC2)셋팅부터 배포까지"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#프로젝트",
+                "query": "!",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "북마크"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -191,32 +192,31 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "2e958c9dd4f388f9",
+  "active": "819af4f14b5b76e4",
   "lastOpenFiles": [
-    "사진 및 문서/Pasted image 20250221115232.png",
-    "사진 및 문서/Pasted image 20250221115228.png",
-    "사진 및 문서/Pasted image 20250221115224.png",
-    "사진 및 문서/Pasted image 20250221115220.png",
-    "사진 및 문서/Pasted image 20250221115214.png",
-    "사진 및 문서/Pasted image 20250221115201.png",
-    "사진 및 문서/Pasted image 20250221115157.png",
-    "사진 및 문서/Pasted image 20250221115151.png",
-    "사진 및 문서/Pasted image 20250221114638.png",
-    "사진 및 문서/Pasted image 20250221114633.png",
-    "사진 및 문서/Pasted image 20250221114628.png",
+    "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
+    "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
+    "Tools/aws/🍊 aws EC2란.md",
+    "Tools/docker/🐋 docker.md",
+    "Tools/🪓 Tools.md",
     "index.md",
+    "사진 및 문서/Pasted image 20250221114856.png",
+    "사진 및 문서/Pasted image 20250221114901.png",
+    "사진 및 문서/Pasted image 20250221114152.png",
+    "사진 및 문서/Pasted image 20250221114208.png",
+    "사진 및 문서/Pasted image 20250221114220.png",
+    "사진 및 문서/Pasted image 20250221114306.png",
+    "사진 및 문서/Pasted image 20250221114324.png",
+    "사진 및 문서/Pasted image 20250221114334.png",
+    "사진 및 문서/Pasted image 20250221114327.png",
+    "사진 및 문서/Pasted image 20250221114339.png",
     "project/💻 프로젝트.md",
     "study/CS/🎩 DevOps.md",
-    "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
-    "Tools/docker/🐋 docker.md",
     "Tools/docker",
-    "Tools/aws/🍊 aws EC2란.md",
-    "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
     "Tools/aws",
     "Tools/⛈ aws 셋팅_관리.md",
     "project/무제",
     "Tools/🎵 Obsidian.md",
-    "Tools/🪓 Tools.md",
     "project/note CI_CD/⛈ Obsidian-AWS연동.md",
     "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
     "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
