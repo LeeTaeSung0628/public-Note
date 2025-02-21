@@ -16,7 +16,7 @@
 >- ## 🌍 **Obsidian CI/CD**
 >- ## 🍃 **Spring Batch**
 >- ## 〽 **hello marketing**
->- ## 💁 **infra**
+>- ## 💁 **infra settings***
 
 ---
 
