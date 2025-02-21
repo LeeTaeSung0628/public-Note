@@ -26,9 +26,9 @@ AWS의 EC2는 무엇이며, 왜 사용하는가? 에 대해 알아보겠다.
 
 _먼저  프로젝트가 설치된 경로에서 ' mvn install '명령어를 사용하여 jar 파일을 생성한다_
 
-![](https://blog.kakaocdn.net/dn/b9ZU9n/btsGl2bu6x1/PPjZqkWj0MhFYuEvzbIdj1/img.png)
+![[Pasted image 20250221114856.png]]
 
-![](https://blog.kakaocdn.net/dn/bdZuvE/btsGjJ5xLZc/vSfeHptjbk0AFsbwPeHhj0/img.png)
+![[Pasted image 20250221114901.png]]
 
 ### _1.2 Docker파일로 image 생성_
 
@@ -36,24 +36,27 @@ _먼저  프로젝트가 설치된 경로에서 ' mvn install '명령어를 사
 docker build -t [이미지 이름]:[태그] [dockerfile이 저장된 경로]
 ```
 
+![[Pasted image 20250221114932.png]]
 ![](https://blog.kakaocdn.net/dn/bqBiGp/btsGlUktwa3/kG0RtaUEXK7cFxGT3udVk0/img.png)
 
 ### _1.3 생성한 image를 dockerhub에 **push**_ 
 
-![](https://blog.kakaocdn.net/dn/IOD23/btsGlSmEvdY/KMDRmtRP4SDHfUMwamqiX1/img.png)
+![[Pasted image 20250221114945.png]]
 
+![[Pasted image 20250221114951.png]]
 ![](https://blog.kakaocdn.net/dn/bsHrkv/btsGlStqXVF/Q5pLK6oa6q6aDKj0x46jJK/img.png)
 
 이제 docker는 준비가 끝났다...
 
 ---
 
-## _2. EC2 셋팅_
+## _2. EC2 셋팅_
 
 ### _2.1  EC2 인스턴스 생성_
 
 _자세한 설명은 생략한다. 검색해 보시길_
 
+![[Pasted image 20250221114959.png]]
 ![](https://blog.kakaocdn.net/dn/c39eac/btsGkA7RPFQ/WXW2i6wxyxyvuMw2GlFhM0/img.png)
 
 ### _2.2 쉘스크립트로 들어가기_
@@ -62,10 +65,12 @@ _4.번의 주소를 사용해서 접속한다._
 
 _이때, **.pem** 파일이 저장 되어있는 경로에서 진행한다_
 
+![[Pasted image 20250221115004.png]]
 ![](https://blog.kakaocdn.net/dn/btgNxU/btsGlvFfOO4/KWc5S5VprMYmzhBCLOP3n1/img.png)
 
 접속완료.
 
+![[Pasted image 20250221115010.png]]
 ![](https://blog.kakaocdn.net/dn/dC6aNH/btsGjZmJUnV/FW4MRXvKzWfdJIxC1UetRK/img.png)
 
 ### _2.2 쉘스크립트에서 docker 다운로드 및 image PULL 받기_
@@ -84,6 +89,7 @@ jinjinyang.tistory.com](https://jinjinyang.tistory.com/46)
 sudo docker pull [image이름]:[태그]
 ```
 
+![[Pasted image 20250221115019.png]]
 ![](https://blog.kakaocdn.net/dn/tgKic/btsGmNkCr3e/fbKyGjbCqc9hGCVeaoRvl0/img.png)
 
 ```
@@ -92,16 +98,19 @@ sudo docker images
 
 명령어를 통해 생성된것을 확인할 수 있다.
 
+![[Pasted image 20250221115024.png]]
 ![](https://blog.kakaocdn.net/dn/beGul0/btsGldYUJcB/lak0slLL5gyUtLTWbMhni0/img.png)
 
 #### ※ 나는 Apple m1 mac을 사용 중 이기 때문에 호환성 문제로 linux환경에 맞는 이미지를 한개 더 올렸다.
 
 1.2의 과정에서 ' --platform linux/amd64 ' 태그를 추가해 주고, 태그에 -linux를 붙였다.
 
+![[Pasted image 20250221115030.png]]
 ![](https://blog.kakaocdn.net/dn/bSkBzZ/btsGjW4EQg9/h82MdB4ksqhOuvn70ry8H1/img.png)
 
 ### _2.2 image컨테이너로 실행 시키기_
 
+![[Pasted image 20250221115035.png]]
 ![](https://blog.kakaocdn.net/dn/6EhlM/btsGkEvFfUM/l2XiZuNhJakNhkurkoxRi1/img.png)
 
 **잘 따라왔다면 EC2 환경에서 docker를 통해 받은 jar파일이 잘 실행되는 것을 볼 수 있다.**
@@ -110,26 +119,31 @@ sudo docker images
 
 **퍼블릭 IP주소 를 통해 접속을 확인해보기 전에..**
 
+![[Pasted image 20250221115040.png]]
 ![](https://blog.kakaocdn.net/dn/o9sXg/btsGmXOimKp/KAT1QfvNhSh2fAoEqpXEak/img.png)
 
 해당 인스턴스의 보안그룹을 확인하고, 내가 설정한 포트(:8000)에 대한 접근을 허가해주어야한다.
 
 보안그룹 확인 후,
 
+![[Pasted image 20250221115046.png]]
 ![](https://blog.kakaocdn.net/dn/KouqA/btsGmfhAcli/WPZWVKMA0TJCKQmyucdXR0/img.png)
 
 **네트워크 및 보안 -> 해당 보안그룹 ->  인바운드 규칙 편집 ( 인바운드란, 외부에서 해당 인스턴스로 접근하는 것)**
 
+![[Pasted image 20250221115052.png]]
 ![](https://blog.kakaocdn.net/dn/RuPYH/btsGmBY04SR/jKRtnMLm7Kq5QKyXDiybJK/img.png)
 
 **8000번 포트 추가**
 
+![[Pasted image 20250221115058.png]]
 ![](https://blog.kakaocdn.net/dn/TdFY5/btsGlxwg0Nd/ThpkZn4Wf516SY5AwtzsmK/img.png)
 
 이렇게 과정을 마치면...
 
 http://[인스턴스의 퍼블릭 IP주소]:[포트번호] 로 접속이 가능하다!
 
+![[Pasted image 20250221115102.png]]
 ![](https://blog.kakaocdn.net/dn/4YnAp/btsGjBs84gh/mquU9eVO1KB8HcutTOp1f1/img.png)
 
 ---
@@ -169,12 +183,14 @@ _spring + docker 셋팅_
 docker pull redis
 ```
 
+![[Pasted image 20250221115117.png]]
 ![](https://blog.kakaocdn.net/dn/pzJyA/btsGsjd74HU/S0rrcnIY8EgfWcFqMezu50/img.png)
 
 docker desktop을 통해 확인할 수 있고, 
 
 ' docker images ' 명령어를 통해서 확인 할 수 있다.
 
+![[Pasted image 20250221115122.png]]
 ![](https://blog.kakaocdn.net/dn/y01QG/btsGrcfsVtU/W0RAt2TKnkIKwOJQsl5Z20/img.png)
 
 ## 2.  redis.conf 파일 생성 및 docker file 생성
@@ -244,6 +260,7 @@ CMD [ "redis-server", "/저장디렉토리/redis.conf" ]
 EXPOSE 6379
 ```
 
+![[Pasted image 20250221115129.png]]
 ![](https://blog.kakaocdn.net/dn/bRV7ef/btsGuZZEHat/CJXCy1ZHQWj8K8g8E8z9u0/img.png)
 
 ## 3.  dockerfile로 원본 redis 이미지를 사용하여 EC2용 이미지 생성하기
@@ -258,6 +275,7 @@ dockerfile이 있는 디렉토리에서 해당 명령어를 실행한다.
 
 _* --platform linux/amd64 태그는 본인의 ec2환경이 리눅스64 환경이기 때문에 추가했다._
 
+![[Pasted image 20250221115132.png]]
 ![](https://blog.kakaocdn.net/dn/7Ng95/btsGtWvTYRK/ucfpgf6X7sB7q5aGxUGhAK/img.png)
 
 ## 3.  생성한 ec2용 이미지 docker 허브에 push하기
@@ -268,8 +286,10 @@ docker push xotjd794613/springredis:linux
 docker push 계정명/이미지이름:태그
 ```
 
+![[Pasted image 20250221115136.png]]
 ![](https://blog.kakaocdn.net/dn/bCe00h/btsGuOYiJUx/YxA8NOWJfHGQGiT93ChMpk/img.png)
 
+![[Pasted image 20250221115140.png]]
 ![](https://blog.kakaocdn.net/dn/Pjf4x/btsGqZ8sgNY/mNnPYip6pkAXZwY0Xn95H1/img.png)
 
 업로드까지 완료했다.
@@ -287,6 +307,7 @@ docker pull 계정명/이미지이름:태그
 
 'docker images' 명령어로 확인 할 수 있다.
 
+![[Pasted image 20250221115146.png]]
 ![](https://blog.kakaocdn.net/dn/1d0by/btsGrbHFJtO/S1q1KuWC4T5BBfqpeQ2UpK/img.png)
 
 이미지를 컨테이너로 실행하자.
@@ -311,18 +332,21 @@ docker run --name 컨테이너이름 -p 포트 -v 데이터저장할디렉토리
 
 'docker ps -a' 명령어로 실행중인 모든 컨테이너를 확인 할 수 있다.
 
+![[Pasted image 20250221115151.png]]
 ![](https://blog.kakaocdn.net/dn/bVBNZC/btsGuLtJTll/oRagY6TGuWGwGmRoqIlU10/img.png)
 
 _**http://ec2주소:포트번호**_    로 접속시 정상적으로 spring기반 페이지와 redis가 연결된 것을 확인할 수 있다.
 
+![[Pasted image 20250221115157.png]]
 ![](https://blog.kakaocdn.net/dn/2qV56/btsGtNsgEDE/XNKZ1FUm7ogbFcURIDNclk/img.png)
 
 ## **오류 : 만약,  해당주소로 접속시 접속이 안되거나, redis가 정상적으로 실행되지 않는경우**
 
 ## 1. EC2의 인바운드 규칙에 redis포트번호를 추가하여 준다
-
+![[Pasted image 20250221115201.png]]
 ![](https://blog.kakaocdn.net/dn/bWRhpZ/btsGuvScBYr/8KqDVk8ukDd8Clcem6TQok/img.png)
 
+![[Pasted image 20250221115214.png]]
 ![](https://blog.kakaocdn.net/dn/x5DCV/btsGt8QtMHv/PxpkLlP9CtWSBaEBPvPqe1/img.png)
 
 ## 2. Spring 프로젝트의 properties파일의 redis host를 ec2 redis 컨테이너의 ip로 잡아준다.
@@ -331,14 +355,18 @@ _**http://ec2주소:포트번호**_    로 접속시 정상적으로 spring�
 
 ' docker ps -a ' 로 redis 컨테이너 ID 확인
 
+![[Pasted image 20250221115220.png]]
 ![](https://blog.kakaocdn.net/dn/SBqAE/btsGtNMCLdQ/W6we02URKkQUYXkFVZdZck/img.png)
 
 ' docker inspect 컨테이너ID ' 명령어로 IP 확인
 
+![[Pasted image 20250221115224.png]]
 ![](https://blog.kakaocdn.net/dn/cs1JAI/btsGsVjNdLq/hHIN1jBOfG5rDp590x0eOK/img.png)
 
+![[Pasted image 20250221115228.png]]
 ![](https://blog.kakaocdn.net/dn/uSIbQ/btsGvs8otMy/j5WBGCDIS46Ny3gkEYPOs0/img.png)
 
 spring 프로젝트에 ip 정보 추가
 
+![[Pasted image 20250221115232.png]]
 ![](https://blog.kakaocdn.net/dn/bGNBRY/btsGrSOGtkq/KzJko781PraUWBkEaQky4K/img.png)

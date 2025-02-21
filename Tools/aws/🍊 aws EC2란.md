@@ -4,8 +4,7 @@
 
 ---
 
-![](https://blog.kakaocdn.net/dn/sXSnW/btsFB43IVKa/eg1QmcYrGKZAFgCKr1J580/img.png)
-
+![[Pasted image 20250221114152.png]]
 ## AWS의 EC2는 무엇이며, 왜 사용하는가? 에 대해 알아보겠다.
 
 ## 1. EC2란 무엇인가?
@@ -37,8 +36,7 @@
 - aws는 각 사용 사례에 맞게 최적화된 다양한 인스턴스 유형을 제공한다.
 
 - **한정된 요금**으로 **유형(사용목적)**을 정하고, **사이즈**를 골라, 각 인스턴스별 사용 목적에 따라 최적화 시킨다.
-
-![](https://blog.kakaocdn.net/dn/bPodr7/btsFENTZsQn/BEganXFBeLiekOk8K70fp1/img.png)
+![[Pasted image 20250221114208.png]]
 
 ### **_2.2 EBS(Elastic Block Storage)_**
 
@@ -49,8 +47,7 @@
 - 손쉽게 사용량을 많게, 혹은 적게 확장할 수 있으며, 빌린 부분에 대한 부분만 저렴하게 비용을 지불 할 수 있다.
 
 - 총 5가지 타입을 제공하는데, 다음과 같다.
-
-![](https://blog.kakaocdn.net/dn/bDJdMo/btsFEtH0aK5/uqzSDSok1Nrrzu7jOswXhK/img.png)
+![[Pasted image 20250221114220.png]]
 
 ### _**2.3 AMI(Amazon Machin Image)**_
 
