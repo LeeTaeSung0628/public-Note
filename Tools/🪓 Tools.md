@@ -5,19 +5,20 @@
 ---
 
 >[!note] 툴 모음
-> 제가 사용하고 있는 편리/유용한 TOOL을 두서없이 설명하는 곳 입니다.
+> 제가 사용하고 있는 편리/유용한 TOOL을 소개하고 설명하는 곳 입니다.
 
 
 ## ☁ *AWS*
 ### AWS cloude 
-- [[⛈ aws 셋팅_관리]]
 - [[🍊 aws EC2란]]
- 
+- [[🌥 aws(EC2)셋팅부터 배포까지]]
+
 ---
 
 ## 🐳 *Docker*
 ### docker app
 - [[🐋 docker]]
+- [[📘 SpringBoot & Docker + Reids 연동]]
 
 ---
 ## *🐻 Obsidian*
