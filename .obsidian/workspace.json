@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
-                "mode": "source",
+                "file": "index.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🌥 aws(EC2)셋팅부터 배포까지"
+              "title": "index"
             }
           }
         ]
@@ -74,8 +74,7 @@
               "title": "북마크"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -192,14 +191,24 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "819af4f14b5b76e4",
+  "active": "627e38f4394fefbf",
   "lastOpenFiles": [
+    "Tools/docker/🐋 docker.md",
+    "Tools/aws/🍊 aws EC2란.md",
     "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
     "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
-    "Tools/aws/🍊 aws EC2란.md",
-    "Tools/docker/🐋 docker.md",
     "Tools/🪓 Tools.md",
     "index.md",
+    "project/💻 프로젝트.md",
+    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
+    "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
+    "study/CS/🍃 Spring.md",
+    "study/📕 공부.md",
+    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
+    "Tools/🎵 Obsidian.md",
+    "project/note CI_CD/⛈ Obsidian-AWS연동.md",
+    "사진 및 문서/Hello - 바로 가기.lnk",
+    "study/Coding Test/👽 Algorithm.md",
     "사진 및 문서/Pasted image 20250221114856.png",
     "사진 및 문서/Pasted image 20250221114901.png",
     "사진 및 문서/Pasted image 20250221114152.png",
@@ -210,35 +219,26 @@
     "사진 및 문서/Pasted image 20250221114334.png",
     "사진 및 문서/Pasted image 20250221114327.png",
     "사진 및 문서/Pasted image 20250221114339.png",
-    "project/💻 프로젝트.md",
     "study/CS/🎩 DevOps.md",
     "Tools/docker",
     "Tools/aws",
     "Tools/⛈ aws 셋팅_관리.md",
     "project/무제",
-    "Tools/🎵 Obsidian.md",
-    "project/note CI_CD/⛈ Obsidian-AWS연동.md",
-    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
-    "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
     "study/CS/☕ JAVA , OOP.md",
     "study/CS/📭 Server.md",
-    "study/CS/🍃 Spring.md",
     "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
-    "project/hello Batch/🏹 Spring Batch 트러블 슈팅 부록.md",
     "study/CS/📔 DataBase.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
     "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
-    "study/Dev Seminar/🔻 Redis 캐쉬 전략 - hello 서비스에 적용하여 성능개선 가능성.md",
     "defaultHeaderContents.html",
     "study/Coding Test/Bronze/2446. 별 찍기 － 9/별 찍기 － 9.py",
     "study/Coding Test/Bronze/15596. 정수 N개의 합/정수 N개의 합.py",
     "study/Coding Test/Bronze/12813. 이진수 연산/이진수 연산.py",
     "study/Coding Test/Bronze/10810. 공 넣기/공 넣기.py",
     "study/Coding Test/Bronze/2446. 별 찍기 － 9",
-    "study/Coding Test/Bronze/15596. 정수 N개의 합",
     "무제.canvas"
   ]
 }

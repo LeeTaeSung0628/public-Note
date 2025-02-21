@@ -235,6 +235,7 @@ SSSUUU
 Sxr
 SH
 SRRn
+Soon
 JWT
 Java
 Join
@@ -1749,6 +1750,7 @@ Rcc
 Ruu
 Reids
 RUN
+Readme
 ID
 ItemReader
 IP
