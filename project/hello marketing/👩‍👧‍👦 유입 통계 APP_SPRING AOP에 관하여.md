@@ -366,7 +366,7 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 - 해당 방법은 기존 naver아날리틱스를 사용하고 있는 로직을 그대로 사용하는 것이기 때문에 제일 확실하다.
 - *한계 : 외부유입자가 아닌, 모든 사용자에게 session및 uid체크가 들어가기 때문에 부하가 증가한다.(DB통신은 X)*
 ### 3. 네이버 아날리틱스가 물고있는 Referrer를 찾아 HttpServletResponse에 함께 담아 redirect 하기.
-- BEST 🖐
+- BEST🖐
 - *한계 : 네이버 아날리틱스의 내부로직 파악이 불가함*
 
 #### - 세 해결법 모두 내부망/외부망 분리로 인하여 운영서버에 반영 전, 확실한 테스트가 불가능 하기 때문에 신중한 선택이 필요하다.
