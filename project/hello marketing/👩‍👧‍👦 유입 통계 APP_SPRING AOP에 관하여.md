@@ -370,6 +370,8 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 
 ---
 
+## 선택
+- 현재 네이버의 내부 로직 파악이 불가하니, View를 추가하여 네이버 스크립트가 물고 가는지 먼저 TEST하도록 하기
 
 
 
