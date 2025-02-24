@@ -1,6 +1,6 @@
 # 🍊 aws EC2란
 
-#Tools #AWS #Amazon #Cloud
+#Tools #AWS #Amazon #Cloud #EC2
 
 ---
 

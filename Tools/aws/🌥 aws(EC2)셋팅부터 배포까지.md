@@ -1,6 +1,6 @@
 # 🌥 aws(EC2)셋팅부터 배포까지
 
-#Tools #AWS #Amazon #Cloud #Docker #Redis 
+#Tools #AWS #Amazon #Cloud #Docker #Redis #EC2
 
 ---
 ![[Pasted image 20250221112429.png]]
