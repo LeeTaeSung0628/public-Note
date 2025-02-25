@@ -354,9 +354,6 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 # 원인?
 - 외부 유입통계 페이지의 인입 주소는 일반적인 메인 페이지가 아닌, Gate를 거쳐서(redirect) 동작하게 된다.
 - 이 때, 진입 referrer에 변동이 생기면서 집계가 되지 않는 오류가 발생한 것으로 보인다.
-
-![[Pasted image 20250224115208.png|2125]]
-
 # 해결법?
 ### 1. redirect -> 하이퍼링크 기반 Replace로 변경하기?
 - 해당 방법을 사용하여, View단을 추가하여 replace한다면, 처음 진입시 갖고 있는 referrer를 물고 갈수 있지 않을까?
@@ -376,7 +373,13 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 ## 선택
 - 현재 네이버의 내부 로직 파악이 불가하니, View를 추가하여 네이버 스크립트가 물고 가는지 먼저 TEST하도록 하기
 
-
+```JavaScript
+<script th:inline="javascript">  
+  $(document).ready(function() {  
+    location.href = [[${urls.SP_LOAN}]];  
+  });  
+</script>
+```
 
 ---
 
