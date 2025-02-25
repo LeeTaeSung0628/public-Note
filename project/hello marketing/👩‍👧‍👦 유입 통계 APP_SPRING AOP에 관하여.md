@@ -374,12 +374,16 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 - 현재 네이버의 내부 로직 파악이 불가하니, View를 추가하여 네이버 스크립트가 물고 가는지 먼저 TEST하도록 하기
 
 ```JavaScript
+<html xmlns:th="http://www/thymeleaf.org" th:replace="layout/mainLayout :: mainLayout('gate loan')">
+
 <script th:inline="javascript">  
   $(document).ready(function() {  
     location.href = [[${urls.SP_LOAN}]];  
   });  
 </script>
 ```
+
+mainLayout을 적용하여 해당 페이지에 default script를 적용시켰다.
 
 ---
 
