@@ -34,7 +34,7 @@
 
 ---
 
-# [[🏫 강의]]
+# [[🏫 강의]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
 >- ## 🐊 **Spring Core Basic**
 
 ---
