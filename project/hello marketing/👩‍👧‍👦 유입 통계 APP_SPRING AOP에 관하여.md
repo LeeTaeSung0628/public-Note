@@ -384,6 +384,13 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 ```
 
 mainLayout을 적용하여 해당 페이지에 default script를 적용시켰다.
+```
+2025-02-25 14:34:04 [hello-app-staging-7985c4d74f-47qnx] INFO com.hellofintech.hellofunding.common.interceptor.ServiceHandlerInterceptor[mergeIntoVisitCount:187] - referer = https://www-stg.hellofunding.co.kr/sp/loan/gtLoan?p=Z29vZ2xlMXN0
+```
+
+>[!quote] 
+> sp/loan기준으로 레퍼러를 `https://www-stg.hellofunding.co.kr/sp/loan/gtLoan?p=Z29vZ2xlMXN0` 로 갖고 있는 것은 확인 해 보아야 함.
+
 
 ---
 

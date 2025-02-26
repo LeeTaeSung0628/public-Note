@@ -237,6 +237,7 @@ SH
 SRRn
 Soon
 SpringCoreBasic
+STUDENT
 JWT
 Java
 Join
@@ -488,6 +489,7 @@ TYY
 TUUmL
 Tgj
 TZmm
+TABLE
 Cookie
 Chain
 Claim
@@ -668,6 +670,10 @@ CBB
 Cx
 CJHH
 Clang
+Company
+COL
+COUNT
+CHAR
 Authentication
 Authorization
 AOP
@@ -817,6 +823,7 @@ AvMM
 AZ
 ADD
 ApplicationContext
+AGE
 HTTP
 HttpOnly
 HTTPS
@@ -1499,6 +1506,7 @@ Pss
 PKK
 POJO
 PyPy
+Public
 Filter
 Fingers
 ForkJoinPool
@@ -1605,6 +1613,7 @@ FmI
 FZ
 FedddppPH
 Fpjw
+FOREIGN
 Refresh
 Redis
 RSA
@@ -1916,6 +1925,8 @@ IRkkkff
 IJKK
 Ill
 IvFF
+INDEX
+INT
 DB
 Dev
 Deploy
@@ -2067,6 +2078,7 @@ DXJ
 Dp
 Dockerfile
 DockerFile
+DEPT
 KB
 KEY
 Kill
@@ -3409,6 +3421,7 @@ NgZZ
 NveeeZZ
 Nvvv
 NOOONN
+NOT
 repository
 return
 reader
@@ -3823,6 +3836,7 @@ nQQ
 nhhhjj
 nzzz
 network
+number
 etc
 export
 ex
@@ -4005,6 +4019,7 @@ VSS
 VK
 VY
 Vi
+VARCHAR
 Export
 ExecutionContext
 Exception
@@ -4139,6 +4154,8 @@ Eee
 EIP
 EJB
 Empty
+ENI
+EMPLOYEE
 update
 under
 uzJl
@@ -4563,6 +4580,7 @@ vttpCY
 vzz
 vim
 vector
+varchar
 job
 jobName
 jE
@@ -4861,6 +4879,7 @@ lllzz
 lkk
 latest
 lectur
+license
 final
 forkJoinPool
 fail
@@ -4952,6 +4971,7 @@ fv
 fZ
 faY
 fzb
+free
 kakao
 kLMRW
 kqAzM

@@ -21,8 +21,8 @@
 # [[📕 공부]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
 >- ## ❄ **CS**
 >- ## 🧪 **Coding Test**
->- ## 🧑‍🤝‍🧑 **Dev Seminar**
->- ## 📔 **자격증**
+>- ## 🧑‍🤝‍🧑 **Company Seminar**
+>- ## 📔 **license**
 
 
 ---
