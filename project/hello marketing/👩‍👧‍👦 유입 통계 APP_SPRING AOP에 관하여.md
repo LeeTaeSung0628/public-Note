@@ -339,17 +339,15 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 ### 3. Filter를 사용한다.
 #### 종단으로 나두는 AOP에서 횡단으로 나누는 필터를 적용한다면 적용 범위가 전체 범위로 확장되어 오버헤드가 크게 증가할 수 있다.
 
-##### 해결방법이 떠오르지 않는다. 애초에 bean객체를 생성하는 시점에 맺어지는 의존관계를 전부 고려하며 다른 객체(프록시)로 변경하는 것은 쉽지 않다(권장하지도 않는다.)
-
 ## 결론
 - 참조를 갱신하기 위해서는 Java리플렉션을 사용하여 강제로 참조를 갱신하거나, AspectJ의 런타임 위빙 방식을 활용해야 한다.
-- 따라서, 서버 Kill을 하는 것과 진배 없다.
+- 따라서, 서버 Kill을 하는 것과 진배 없으며, 권장하지 않는 방법이다.
 
 ---
 
 # *+ 추가사항*
->[!error] 에러
-> 통계기능의 진입페이지에서 네이버 아날리틱스(외부 통계 프로그램)이 작동하지 않는 이슈
+>[!error] 이슈
+> 내부통계기능(AOP)의 진입URL에서 네이버 아날리틱스(외부 통계 프로그램)가 작동하지 않는 이슈
 
 # 원인?
 - 외부 유입통계 페이지의 인입 주소는 일반적인 메인 페이지가 아닌, Gate를 거쳐서(redirect) 동작하게 된다.
@@ -370,7 +368,8 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 
 ---
 
-## 선택
+## 방법 1 하이퍼링크 기반 Replace로 변경하기
+
 - 현재 네이버의 내부 로직 파악이 불가하니, View를 추가하여 네이버 스크립트가 물고 가는지 먼저 TEST하도록 하기
 
 ```JavaScript
@@ -384,13 +383,23 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 ```
 
 mainLayout을 적용하여 해당 페이지에 default script를 적용시켰다.
+*결과는 추후 모니터링 예정*
+
+---
+
+# 방법 3 네이버 아날리틱스가 물고있는 Referrer를 찾아 HttpServletResponse에 함께 담아 redirect 하기.
+
+>[!quote] 
+> sp/loan기준으로 레퍼러를 `https://www-stg.hellofunding.co.kr/sp/loan/gtLoan?p=Z29vZ2xlMXN0` 인입페이지 주소를 갖고있는것을 확인했다.
 ```
 2025-02-25 14:34:04 [hello-app-staging-7985c4d74f-47qnx] INFO com.hellofintech.hellofunding.common.interceptor.ServiceHandlerInterceptor[mergeIntoVisitCount:187] - referer = https://www-stg.hellofunding.co.kr/sp/loan/gtLoan?p=Z29vZ2xlMXN0
 ```
 
->[!quote] 
-> sp/loan기준으로 레퍼러를 `https://www-stg.hellofunding.co.kr/sp/loan/gtLoan?p=Z29vZ2xlMXN0` 로 갖고 있는 것은 확인 해 보아야 함.
+# sp/loan(대출페이지)에서 referrer넘기기
+![[Pasted image 20250226145129.png]]
 
+*확인 결과이미 sendRedirect 로직에서도 Header의 Referer를 물고있었다.*
+> 어떠한 referrer를 기준으로 집계를 하는지 정확한 파악이 필요하다.
 
 ---
 

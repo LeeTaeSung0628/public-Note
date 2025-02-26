@@ -238,6 +238,8 @@ SRRn
 Soon
 SpringCoreBasic
 STUDENT
+Smith
+Scott
 JWT
 Java
 Join
@@ -366,6 +368,7 @@ JKKgff
 JB
 Ju
 JpaRepository
+JOIN
 Tokken
 Token
 Tone
@@ -674,6 +677,8 @@ Company
 COL
 COUNT
 CHAR
+CNT
+CROSS
 Authentication
 Authorization
 AOP
@@ -824,6 +829,9 @@ AZ
 ADD
 ApplicationContext
 AGE
+Alias
+AVG
+Allen
 HTTP
 HttpOnly
 HTTPS
@@ -943,6 +951,7 @@ HIIinn
 HDGG
 HJJB
 HLL
+HAVING
 OAuth
 Obsidian
 Out
@@ -1769,6 +1778,8 @@ RUN
 Readme
 Replace
 Referrer
+RULE
+Referer
 ID
 ItemReader
 IP
@@ -2609,6 +2620,7 @@ iaa
 itoP
 it
 inflearn
+idx
 blog
 balanceJob
 batch
@@ -2700,6 +2712,8 @@ bff
 brew
 baseimage
 bridge
+brown
+black
 there
 this
 text
@@ -2937,6 +2951,11 @@ script
 sum
 std
 solve
+student
+stid
+score
+sql
+sendRedirect
 alt
 app
 api
@@ -3042,6 +3061,7 @@ aaaGG
 auuu
 aK
 application
+as
 with
 width
 writer
@@ -3132,6 +3152,7 @@ wuu
 wMMM
 wwvv
 wwwKK
+white
 marketing
 md
 main
@@ -3324,6 +3345,7 @@ GAAAdd
 Gs
 Gh
 Gate
+GROUP
 Netlify
 New
 Native
@@ -3422,6 +3444,7 @@ NveeeZZ
 Nvvv
 NOOONN
 NOT
+NAME
 repository
 return
 reader
@@ -3526,6 +3549,7 @@ raw
 report
 referrer
 replace
+rule
 pc
 public
 parallelStream
@@ -4491,6 +4515,8 @@ Mvjjj
 Maven
 MapperRepository
 MOBILE
+MIN
+MAX
 vs
 void
 var
@@ -4786,6 +4812,7 @@ driver
 display
 debug
 default
+deptid
 limit
 list
 long
@@ -4880,6 +4907,7 @@ lkk
 latest
 lectur
 license
+like
 final
 forkJoinPool
 fail
