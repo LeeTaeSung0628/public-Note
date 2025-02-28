@@ -515,7 +515,6 @@ SHOW STATUS LIKE 'Threads_connected'; //사용중인 개수
 ### 정상적으로 커넥션 풀이 점유 해제된 모습
 ![[Pasted image 20241213103503.png]]
 
-
 ---
 
 # Listener 역할 분리하고, 재사용 가능하도록 만들자
