@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/Dev Seminar/🔒 투자하기 서비스 락(Lock)기법 개선안.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🔒 투자하기 서비스 락(Lock)기법 개선안"
+              "title": "index"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "📔 DataBase"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,12 +195,16 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "68505ad50042a1f1",
+  "active": "23e7f2994bc98e9b",
   "lastOpenFiles": [
+    "Tools/🪓 도구.md",
     "study/Dev Seminar/🔒 투자하기 서비스 락(Lock)기법 개선안.md",
     "study/CS/📔 DataBase.md",
     "study/📕 공부.md",
+    "study/CS/🍃 Spring.md",
+    "study/CS/🐞 etc.md",
     "index.md",
+    "project/💻 프로젝트.md",
     "사진 및 문서/Pasted image 20250228150552.png",
     "사진 및 문서/Pasted image 20250228143143.png",
     "study/Dev Seminar/🪕 JPA 에 대한 고찰.md",
@@ -210,10 +213,8 @@
     "project/hello Batch/🏹 Spring Batch 구조 드로잉.md",
     "project/hello marketing/👩‍👧‍👦 유입 통계 APP_SPRING AOP에 관하여.md",
     "project/hello marketing/👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정.md",
-    "Tools/🪓 도구.md",
     "Tools/aws/🍌 Elastic IP(탄력적 IP)란.md",
     "사진 및 문서/Pasted image 20250227170651.png",
-    "project/💻 프로젝트.md",
     "lectur/🏫 강의.md",
     "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
     "Tools/docker/🐋 docker.md",
@@ -227,7 +228,6 @@
     "사진 및 문서/Pasted image 20250226145129.png",
     "사진 및 문서/Pasted image 20250225161448.png",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
-    "study/CS/🎩 DevOps.md",
     "study/Coding Test/Bronze/2446. 별 찍기 － 9/별 찍기 － 9.py",
     "study/Coding Test/Bronze/15596. 정수 N개의 합/정수 N개의 합.py",
     "study/Coding Test/Bronze/12813. 이진수 연산/이진수 연산.py",

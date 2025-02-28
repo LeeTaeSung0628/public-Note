@@ -241,6 +241,7 @@ STUDENT
 Smith
 Scott
 Selection
+Singleton
 JWT
 Java
 Join
@@ -837,6 +838,8 @@ AVG
 Allen
 ALL
 ANY
+Apach
+Ant
 HTTP
 HttpOnly
 HTTPS
@@ -1170,6 +1173,7 @@ LvBBBkk
 LI
 LaMB
 Lost
+LazyHolder
 Bean
 Bearer
 Batch
@@ -2988,6 +2992,10 @@ scf
 server
 shared
 spin
+single
+singleton
+safe
+synchronized
 alt
 app
 api
@@ -3095,6 +3103,7 @@ aK
 application
 as
 async
+abc
 with
 width
 writer
@@ -3381,6 +3390,9 @@ Gs
 Gh
 Gate
 GROUP
+Gradle
+Gradel
+Groovy
 Netlify
 New
 Native
@@ -3812,6 +3824,7 @@ gcc
 gffzzz
 gnn
 gradle
+getInstance
 name
 newMemberBalance
 naver
