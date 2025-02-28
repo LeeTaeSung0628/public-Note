@@ -240,6 +240,7 @@ SpringCoreBasic
 STUDENT
 Smith
 Scott
+Selection
 JWT
 Java
 Join
@@ -679,6 +680,7 @@ COUNT
 CHAR
 CNT
 CROSS
+Cartesian
 Authentication
 Authorization
 AOP
@@ -832,6 +834,8 @@ AGE
 Alias
 AVG
 Allen
+ALL
+ANY
 HTTP
 HttpOnly
 HTTPS
@@ -1039,6 +1043,7 @@ OOOw
 OPSd
 OSS
 ONN
+Operations
 LDAP
 Light
 List
@@ -1368,6 +1373,7 @@ Ugj
 UZZ
 UO
 URR
+Union
 Pointcut
 Point
 Payload
@@ -1516,6 +1522,8 @@ PKK
 POJO
 PyPy
 Public
+Projection
+Product
 Filter
 Fingers
 ForkJoinPool
@@ -1938,6 +1946,7 @@ Ill
 IvFF
 INDEX
 INT
+Intersection
 DB
 Dev
 Deploy
@@ -2090,6 +2099,7 @@ Dp
 Dockerfile
 DockerFile
 DEPT
+Difference
 KB
 KEY
 Kill
@@ -3672,6 +3682,7 @@ pjmj
 pEEEt
 pCO
 phh
+productList
 git
 gitignore
 gridSize

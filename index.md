@@ -38,7 +38,7 @@
 >- ## 🐊 **Spring Core Basic**
 
 ---
-
+![[Pasted image 20250227170651.png]]
 >[!summary] Soon
 > 1. 깃 레포에서도 블로그 주소로 이어질 수 있도록 Readme 설정하기.
 > 	- 리드미 또한 옵시디언에서 작업이 가능하다.
