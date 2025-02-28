@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiBadgeAlert",
       "LiAtom",
       "LiAnchor",
       "LiAlignJustify",
-      "LiAxe",
-      "LiAtSign"
+      "LiAxe"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -43,5 +43,6 @@
   "Tools": "LiAxe",
   "study/커리큘럼": "LiAlignJustify",
   "study/Coding Test": "LiAnchor",
-  "lectur": "LiAtom"
+  "lectur": "LiAtom",
+  "Issue_TroubleShooting": "LiBadgeAlert"
 }

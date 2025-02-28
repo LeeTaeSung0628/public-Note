@@ -19,7 +19,7 @@
 ---
 
 # [[📕 공부]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
->- ## 🌺 **Issue**
+>- ## 🌺 **Issue** / **TroubleShooting**
 >- ## ❄ **CS**
 >- ## 🧪 **Coding Test**
 >- ## 🧑‍🤝‍🧑 **Company Seminar**

@@ -1,4 +1,4 @@
-# 🏹 Spring Batch 트러블 슈팅
+# 🏹 예치금 차액 비교 Spring Batch 리펙토링
 
 #프로젝트 #개발 #SPRING #Batch #Partitioning #Chunk
 
@@ -589,7 +589,7 @@ public class JobTimerExecutionListener implements JobExecutionListener {
 ---
 # **예치금 배치 구조도**
 
-## [[🏹 Spring Batch 구조 드로잉]]
+## [[✏ Chunk_Partitioning Batch 구조 드로잉]]
 
 ---
 
@@ -633,4 +633,4 @@ public class JobTimerExecutionListener implements JobExecutionListener {
 
 ---
 
-🙇‍♂[[🏹 Spring Batch 트러블 슈팅 부록]]
+🙇‍♂[[🏹 예치금 차액 비교 Spring Batch 리펙토링 부록]]
