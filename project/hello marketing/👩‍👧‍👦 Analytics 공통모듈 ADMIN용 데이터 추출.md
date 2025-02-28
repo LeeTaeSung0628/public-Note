@@ -1,11 +1,11 @@
-# 👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정
+# 👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출
 
 #프로젝트 #개발 #SPRING #AOP
 
 ---
 
 # **작업 개요 먼저 보기**
-# ->[[👩‍👧‍👦 유입 통계 APP_SPRING AOP에 관하여]]
+# ->[[👩‍👧‍👦 marketing Analytics 공통모듈 제작기]]
 
 ---
 

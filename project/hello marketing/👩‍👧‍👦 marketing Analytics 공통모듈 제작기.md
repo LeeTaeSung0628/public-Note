@@ -1,7 +1,7 @@
 ---
 
 ---
-# 👩‍👧‍👦 유입 통계 APP_**SPRING AOP**에 관하여
+# 👩‍👧‍👦 marketing Analytics 공통모듈 제작기
 
 #프로젝트 #개발 #DB #SPRING #AOP 
 
@@ -412,4 +412,4 @@ mainLayout을 적용하여 해당 페이지에 default script를 적용시켰다
 ---
 
 [부록]
-[[👩‍👧‍👦 유입 통계 ADMIN용 테이블 설계 과정]]
+[[👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출]]
