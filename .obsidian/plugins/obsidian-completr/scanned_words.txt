@@ -238,9 +238,7 @@ SRRn
 Soon
 SpringCoreBasic
 STUDENT
-Smith
-Scott
-Selection
+Snapshot
 JWT
 Java
 Join
@@ -369,7 +367,6 @@ JKKgff
 JB
 Ju
 JpaRepository
-JOIN
 Tokken
 Token
 Tone
@@ -678,9 +675,9 @@ Company
 COL
 COUNT
 CHAR
-CNT
-CROSS
-Cartesian
+Cascading
+CR
+Copy
 Authentication
 Authorization
 AOP
@@ -831,11 +828,8 @@ AZ
 ADD
 ApplicationContext
 AGE
-Alias
-AVG
-Allen
-ALL
-ANY
+Apache
+Artillery
 HTTP
 HttpOnly
 HTTPS
@@ -955,7 +949,6 @@ HIIinn
 HDGG
 HJJB
 HLL
-HAVING
 OAuth
 Obsidian
 Out
@@ -1043,7 +1036,7 @@ OOOw
 OPSd
 OSS
 ONN
-Operations
+Optimistic
 LDAP
 Light
 List
@@ -1167,6 +1160,7 @@ LNNNLL
 LvBBBkk
 LI
 LaMB
+Lost
 Bean
 Bearer
 Batch
@@ -1281,6 +1275,8 @@ BmE
 Blog
 BEST
 Beans
+BullQueue
+Bull
 URL
 UtEHFOT
 UUFF
@@ -1373,7 +1369,7 @@ Ugj
 UZZ
 UO
 URR
-Union
+Uncommitted
 Pointcut
 Point
 Payload
@@ -1522,8 +1518,9 @@ PKK
 POJO
 PyPy
 Public
-Projection
-Product
+PCenter
+Pessimistic
+Pattern
 Filter
 Fingers
 ForkJoinPool
@@ -1786,8 +1783,8 @@ RUN
 Readme
 Replace
 Referrer
-RULE
-Referer
+RedLock
+RDBMS
 ID
 ItemReader
 IP
@@ -1946,7 +1943,9 @@ Ill
 IvFF
 INDEX
 INT
-Intersection
+InvestController
+INVEST
+Inconsistency
 DB
 Dev
 Deploy
@@ -2099,7 +2098,8 @@ Dp
 Dockerfile
 DockerFile
 DEPT
-Difference
+Distribution
+Design
 KB
 KEY
 Kill
@@ -2185,6 +2185,7 @@ KKKB
 KJJb
 Kbb
 KII
+Kafka
 Web
 WAS
 WEB
@@ -2425,6 +2426,7 @@ cjtB
 cvv
 cli
 condition
+custom
 home
 height
 hello
@@ -2524,6 +2526,7 @@ hbbbjj
 hJJ
 hmmU
 haa
+html
 index
 img
 insert
@@ -2630,7 +2633,11 @@ iaa
 itoP
 it
 inflearn
-idx
+investView
+invest
+investAction
+investService
+investmentsService
 blog
 balanceJob
 batch
@@ -2722,8 +2729,6 @@ bff
 brew
 baseimage
 bridge
-brown
-black
 there
 this
 text
@@ -2835,6 +2840,7 @@ tDE
 tlllnn
 tWW
 taesung
+transaction
 src
 site
 step
@@ -2961,11 +2967,9 @@ script
 sum
 std
 solve
-student
-stid
-score
-sql
-sendRedirect
+scf
+shared
+spin
 alt
 app
 api
@@ -3071,7 +3075,7 @@ aaaGG
 auuu
 aK
 application
-as
+async
 with
 width
 writer
@@ -3162,7 +3166,7 @@ wuu
 wMMM
 wwvv
 wwwKK
-white
+write
 marketing
 md
 main
@@ -3255,6 +3259,8 @@ mhh
 maven
 myredis
 mainLayout
+modal
+microservice
 Git
 GitDesktop
 Grid
@@ -3355,7 +3361,6 @@ GAAAdd
 Gs
 Gh
 Gate
-GROUP
 Netlify
 New
 Native
@@ -3454,7 +3459,7 @@ NveeeZZ
 Nvvv
 NOOONN
 NOT
-NAME
+Nest
 repository
 return
 reader
@@ -3559,7 +3564,6 @@ raw
 report
 referrer
 replace
-rule
 pc
 public
 parallelStream
@@ -3682,7 +3686,9 @@ pjmj
 pEEEt
 pCO
 phh
-productList
+pCenterInvestmentRegister
+pessimistic
+package
 git
 gitignore
 gridSize
@@ -3962,6 +3968,9 @@ eIDAT
 exec
 evaluation
 enabled
+exclusive
+event
+emitter
 Vault
 VARIABLES
 VIEW
@@ -4055,6 +4064,7 @@ VK
 VY
 Vi
 VARCHAR
+Versioning
 Export
 ExecutionContext
 Exception
@@ -4281,6 +4291,7 @@ uzz
 ur
 uuuj
 uttH
+unlock
 QueueCapacity
 QuerydslPagingItemReader
 Query
@@ -4526,8 +4537,7 @@ Mvjjj
 Maven
 MapperRepository
 MOBILE
-MIN
-MAX
+Microservices
 vs
 void
 var
@@ -4618,6 +4628,7 @@ vzz
 vim
 vector
 varchar
+version
 job
 jobName
 jE
@@ -4823,7 +4834,8 @@ driver
 display
 debug
 default
-deptid
+deadlock
+distributed
 limit
 list
 long
@@ -4918,7 +4930,7 @@ lkk
 latest
 lectur
 license
-like
+locking
 final
 forkJoinPool
 fail
@@ -5099,6 +5111,7 @@ kIx
 kIs
 koo
 keys
+kyc
 of
 only
 oqk
@@ -5177,6 +5190,7 @@ oAA
 okk
 owpp
 ow
+optimistic
 You
 YZV
 YALM
@@ -5653,6 +5667,7 @@ ZZZRLs
 Zx
 ZRR
 ZWW
+ZooKeeper
 qo
 query
 qc
