@@ -238,10 +238,7 @@ SRRn
 Soon
 SpringCoreBasic
 STUDENT
-Smith
-Scott
-Selection
-Singleton
+Snapshot
 JWT
 Java
 Join
@@ -370,7 +367,6 @@ JKKgff
 JB
 Ju
 JpaRepository
-JOIN
 Tokken
 Token
 Tone
@@ -679,10 +675,9 @@ Company
 COL
 COUNT
 CHAR
-CNT
-CROSS
-Cartesian
 Cascading
+CR
+Copy
 Authentication
 Authorization
 AOP
@@ -833,13 +828,8 @@ AZ
 ADD
 ApplicationContext
 AGE
-Alias
-AVG
-Allen
-ALL
-ANY
-Apach
-Ant
+Apache
+Artillery
 HTTP
 HttpOnly
 HTTPS
@@ -959,7 +949,6 @@ HIIinn
 HDGG
 HJJB
 HLL
-HAVING
 OAuth
 Obsidian
 Out
@@ -1047,7 +1036,6 @@ OOOw
 OPSd
 OSS
 ONN
-Operations
 Optimistic
 LDAP
 Light
@@ -1173,7 +1161,6 @@ LvBBBkk
 LI
 LaMB
 Lost
-LazyHolder
 Bean
 Bearer
 Batch
@@ -1288,6 +1275,8 @@ BmE
 Blog
 BEST
 Beans
+BullQueue
+Bull
 URL
 UtEHFOT
 UUFF
@@ -1380,7 +1369,6 @@ Ugj
 UZZ
 UO
 URR
-Union
 Uncommitted
 Pointcut
 Point
@@ -1530,10 +1518,9 @@ PKK
 POJO
 PyPy
 Public
-Projection
-Product
 PCenter
 Pessimistic
+Pattern
 Filter
 Fingers
 ForkJoinPool
@@ -1796,9 +1783,8 @@ RUN
 Readme
 Replace
 Referrer
-RULE
-Referer
 RedLock
+RDBMS
 ID
 ItemReader
 IP
@@ -1957,10 +1943,10 @@ Ill
 IvFF
 INDEX
 INT
-Intersection
 InvestController
 INVEST
 Inconsistency
+Issue
 DB
 Dev
 Deploy
@@ -2113,8 +2099,8 @@ Dp
 Dockerfile
 DockerFile
 DEPT
-Difference
 Distribution
+Design
 KB
 KEY
 Kill
@@ -2200,6 +2186,7 @@ KKKB
 KJJb
 Kbb
 KII
+Kafka
 Web
 WAS
 WEB
@@ -2646,7 +2633,6 @@ iaa
 itoP
 it
 inflearn
-idx
 investView
 invest
 investAction
@@ -2743,8 +2729,6 @@ bff
 brew
 baseimage
 bridge
-brown
-black
 there
 this
 text
@@ -2983,19 +2967,10 @@ script
 sum
 std
 solve
-student
-stid
-score
-sql
-sendRedirect
 scf
-server
 shared
 spin
-single
-singleton
-safe
-synchronized
+server
 alt
 app
 api
@@ -3101,9 +3076,7 @@ aaaGG
 auuu
 aK
 application
-as
 async
-abc
 with
 width
 writer
@@ -3194,7 +3167,6 @@ wuu
 wMMM
 wwvv
 wwwKK
-white
 write
 marketing
 md
@@ -3289,6 +3261,7 @@ maven
 myredis
 mainLayout
 modal
+microservice
 Git
 GitDesktop
 Grid
@@ -3389,10 +3362,6 @@ GAAAdd
 Gs
 Gh
 Gate
-GROUP
-Gradle
-Gradel
-Groovy
 Netlify
 New
 Native
@@ -3491,7 +3460,7 @@ NveeeZZ
 Nvvv
 NOOONN
 NOT
-NAME
+Nest
 repository
 return
 reader
@@ -3596,7 +3565,6 @@ raw
 report
 referrer
 replace
-rule
 pc
 public
 parallelStream
@@ -3719,9 +3687,9 @@ pjmj
 pEEEt
 pCO
 phh
-productList
 pCenterInvestmentRegister
 pessimistic
+package
 git
 gitignore
 gridSize
@@ -3824,7 +3792,6 @@ gcc
 gffzzz
 gnn
 gradle
-getInstance
 name
 newMemberBalance
 naver
@@ -4003,6 +3970,8 @@ exec
 evaluation
 enabled
 exclusive
+event
+emitter
 Vault
 VARIABLES
 VIEW
@@ -4096,6 +4065,7 @@ VK
 VY
 Vi
 VARCHAR
+Versioning
 Export
 ExecutionContext
 Exception
@@ -4568,8 +4538,7 @@ Mvjjj
 Maven
 MapperRepository
 MOBILE
-MIN
-MAX
+Microservices
 vs
 void
 var
@@ -4866,7 +4835,6 @@ driver
 display
 debug
 default
-deptid
 deadlock
 distributed
 limit
@@ -4963,7 +4931,6 @@ lkk
 latest
 lectur
 license
-like
 locking
 final
 forkJoinPool

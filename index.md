@@ -18,7 +18,8 @@
 
 ---
 
-# [[📕 공부]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
+# [[📕 공부]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
+>- ## 🌺 **Issue**
 >- ## ❄ **CS**
 >- ## 🧪 **Coding Test**
 >- ## 🧑‍🤝‍🧑 **Company Seminar**
