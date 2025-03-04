@@ -1,1 +1,3 @@
-![[Pasted image 20250228143143.png]]
+
+
+#  like 절 *OR* vs *IN* 추가예정
