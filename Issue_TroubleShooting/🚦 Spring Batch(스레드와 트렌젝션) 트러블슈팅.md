@@ -1,17 +1,19 @@
-# 📓 EntityManager와 Transaction 그리고 ConnectionPool
+# 🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅
 
 #트러블슈팅 #EntityManager #Transaction #트렌젝션
 
 ---
 
-# 트러블 슈팅
+# <font color="#9bbb59">첫 번째 이슈</font>
 
+>[!error] 청크사이즈가 다름에도 처리속도가 똑같은 이유가 뭘까?
 
->[!error] 청크사이즈가 다름에도 처리속도가 똑같은 이유?
+** Chunk 방식의 Batch에서 ChunkSize란, 한 트렌젝션 내에서 처리할 컬럼(DTO/모델)의 개수이다.
 
-### 예상 - 트렌젝션이 분리가 안됬나?
+즉, ChunkSize가 작을수록 *데이터 I/O작업* 및 *Overhead*(데이터 읽기/쓰기, 트랜잭션 시작 및 종료 등)가 *증가하여* 총 실행시간이 *길어져야한다*.
 
-```
+- 청크 사이즈별 실행시간 측정 데이터
+```json
 grid-size:12 / chunk-size:30
 -
 3분 22.856초
@@ -35,6 +37,13 @@ grid-size:12 / chunk-size:5
 3분 24.953초
 3분 24.353초
 ```
+=> *유의미한 차이를 보기어렵다.*
+
+---
+
+## 트러블 슈팅
+
+### 예상 - 트렌젝션이 분리가 안됬나?
 
 ### 원인이 무엇일까?
 
@@ -49,9 +58,12 @@ dtoList.stream().parallel()
 parallel문으로 내부 병렬처리로직을 구현했기 때문에, chunk의 트렌젝션에서 벗어나,
 매 insert문 마다 커밋을 하였던 것이다.
 
-## 트렌젝션 관리시 병렬처리 로직의 사용에 주의할것.
+#### 트렌젝션 관리시 병렬처리 로직의 사용에 주의할것.
 
 ---
+---
+
+# <font color="#9bbb59">두 번째 이슈</font>
 
 >[!error] 반복 TEST 중.. 커넥션풀 Time Out 문제??
 

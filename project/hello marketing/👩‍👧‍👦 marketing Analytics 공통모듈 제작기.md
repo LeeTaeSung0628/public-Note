@@ -392,6 +392,7 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 
 mainLayout을 적용하여 해당 페이지에 default script를 적용시켰다.
 *결과는 추후 모니터링 예정*
+# => <font color="#9bbb59">정상적으로 집계 되었다.</font>
 
 ---
 
