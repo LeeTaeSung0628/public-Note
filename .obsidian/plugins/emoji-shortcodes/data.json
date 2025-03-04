@@ -4,9 +4,11 @@
   "historyPriority": true,
   "historyLimit": 100,
   "history": [
-    ":vertical_traffic_light:",
-    ":star:",
     ":arrow_backward:",
+    ":star:",
+    ":arrow_forward:",
+    ":baby_bottle:",
+    ":vertical_traffic_light:",
     ":crossed_swords:",
     ":pencil2:",
     ":alarm_clock:",
@@ -58,7 +60,6 @@
     ":closed_book:",
     ":computer:",
     ":coconut:",
-    ":baby_bottle:",
     ":1st_place_medal:"
   ]
 }

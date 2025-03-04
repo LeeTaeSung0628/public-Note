@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "a5f05c9b2c610e14",
+        "id": "9cf16591a1dd83a7",
         "type": "tabs",
         "children": [
           {
-            "id": "bb34f8b9a87e4477",
+            "id": "1401cda0746bd118",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/hello marketing/👩‍👧‍👦 marketing Analytics 공통모듈 제작기.md",
+                "file": "Issue_TroubleShooting/⚔ 간단한 StckOverflow 원인분석(Query).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "👩‍👧‍👦 marketing Analytics 공통모듈 제작기"
-            }
-          },
-          {
-            "id": "42077baa855a4af2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Issue_TroubleShooting/🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅"
+              "title": "⚔ 간단한 StckOverflow 원인분석(Query)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -201,55 +186,60 @@
     "type": "floating",
     "children": [
       {
-        "id": "7ea58cee25d01a62",
+        "id": "7b60c42a9ac202a7",
         "type": "window",
         "children": [
           {
-            "id": "cf38a1c68de42dd2",
+            "id": "a5e64206deed8be4",
             "type": "tabs",
             "children": [
               {
-                "id": "23e7f2994bc98e9b",
+                "id": "bb34f8b9a87e4477",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+                    "file": "study/CS/📔 DataBase.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "🏹 예치금 차액 비교 Spring Batch 리펙토링"
+                  "title": "📔 DataBase"
                 }
               }
             ]
           }
         ],
         "direction": "vertical",
-        "x": 1001,
-        "y": 0,
-        "width": 921,
-        "height": 1053,
+        "x": 891,
+        "y": 25,
+        "width": 1021,
+        "height": 1000,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "42077baa855a4af2",
+  "active": "1401cda0746bd118",
   "lastOpenFiles": [
-    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
-    "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
-    "index.md",
-    "project/hello marketing/👩‍👧‍👦 marketing Analytics 공통모듈 제작기.md",
-    "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
     "Issue_TroubleShooting/🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅.md",
-    "study/📕 공부.md",
-    "Issue_TroubleShooting/⚔ 간단한 StckOverflow 원인분석(Query).md",
     "Issue_TroubleShooting/🔐 Lock이란 무엇인가. 헬로 서비스 이슈.md",
-    "Issue_TroubleShooting/⏰ Script 로딩 지연 트러블 슈팅.md",
+    "study/Dev Seminar/🔒 투자하기 서비스 락(Lock)기법 개선안.md",
+    "study/CS/📔 DataBase.md",
+    "Issue_TroubleShooting/⚔ 간단한 StckOverflow 원인분석(Query).md",
+    "Issue_TroubleShooting/⏰ Script 로딩 지연 이슈.md",
+    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+    "study/📕 공부.md",
+    "index.md",
+    "사진 및 문서/Pasted image 20250304171240.png",
+    "사진 및 문서/Pasted image 20250304171229.png",
+    "사진 및 문서/Pasted image 20250304170412.png",
+    "사진 및 문서/Pasted image 20250304170347.png",
+    "project/hello marketing/👩‍👧‍👦 marketing Analytics 공통모듈 제작기.md",
+    "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
+    "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
     "project/💻 프로젝트.md",
     "study/CS/📭 Server.md",
-    "study/CS/📔 DataBase.md",
     "study/CS/🎩 DevOps.md",
     "study/CS/🍃 Spring.md",
     "study/CS/☕ JAVA , OOP.md",
@@ -262,18 +252,12 @@
     "사진 및 문서/Pasted image 20250304121338.png",
     "사진 및 문서/Pasted image 20250304121056.png",
     "사진 및 문서/Pasted image 20250304121009.png",
-    "study/Dev Seminar/🔒 투자하기 서비스 락(Lock)기법 개선안.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 SQL 문제.md",
     "project/note CI_CD/⛈ Obsidian-AWS연동.md",
     "사진 및 문서/Pasted image 20250227115004.png",
     "사진 및 문서/Pasted image 20250227115015.png",
-    "사진 및 문서/Pasted image 20250227140620.png",
-    "사진 및 문서/Pasted image 20250227140437.png",
-    "사진 및 문서/Pasted image 20250227122809.png",
-    "사진 및 문서/Pasted image 20250227122736.png",
     "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
     "Issue_TroubleShooting",
-    "study/CS/🐞 etc.md",
     "study/Coding Test/Bronze/2446. 별 찍기 － 9/별 찍기 － 9.py",
     "study/Coding Test/Bronze/15596. 정수 N개의 합/정수 N개의 합.py",
     "study/Coding Test/Bronze/12813. 이진수 연산/이진수 연산.py",
