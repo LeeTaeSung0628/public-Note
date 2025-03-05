@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Issue_TroubleShooting/🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅.md",
+                "file": "Issue_TroubleShooting/🔐 Lock이란 무엇인가. 헬로 서비스 이슈.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅"
+              "title": "🔐 Lock이란 무엇인가. 헬로 서비스 이슈"
             }
           }
         ]
@@ -183,16 +183,16 @@
   },
   "active": "1401cda0746bd118",
   "lastOpenFiles": [
+    "study/📕 공부.md",
+    "index.md",
     "Issue_TroubleShooting/⏰ Script 로딩 지연 이슈.md",
+    "Issue_TroubleShooting/🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅.md",
     "project/💻 프로젝트.md",
     "study/CS/📔 DataBase.md",
-    "Issue_TroubleShooting/🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅.md",
     "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
     "Issue_TroubleShooting/🔐 Lock이란 무엇인가. 헬로 서비스 이슈.md",
     "Issue_TroubleShooting/⚔ 간단한 StckOverflow 원인분석(Query).md",
     "study/Dev Seminar/🔒 투자하기 서비스 락(Lock)기법 개선안.md",
-    "study/📕 공부.md",
-    "index.md",
     "사진 및 문서/Pasted image 20250304171240.png",
     "사진 및 문서/Pasted image 20250304171229.png",
     "사진 및 문서/Pasted image 20250304170412.png",
