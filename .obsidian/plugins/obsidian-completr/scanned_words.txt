@@ -246,6 +246,7 @@ Script
 SOa
 Science
 Stealing
+SOLID
 JWT
 Java
 Join
@@ -502,6 +503,7 @@ TABLE
 TroubleShooting
 Task
 ThreadLocal
+Tomcat
 Cookie
 Chain
 Claim
@@ -695,6 +697,7 @@ CSS
 Case
 ConnectionPool
 ChunkSize
+CRUD
 Authentication
 Authorization
 AOP
@@ -1064,6 +1067,7 @@ Operations
 Optimistic
 ODD
 Overhead
+OCP
 LDAP
 Light
 List
@@ -1190,6 +1194,8 @@ LaMB
 Lost
 LazyHolder
 Li
+LSP
+Liskov
 Bean
 Bearer
 Batch
@@ -1304,6 +1310,7 @@ BmE
 Blog
 BEST
 Beans
+BeanFactory
 URL
 UtEHFOT
 UUFF
@@ -1661,6 +1668,7 @@ FZ
 FedddppPH
 Fpjw
 FOREIGN
+Flux
 Refresh
 Redis
 RSA
@@ -2138,6 +2146,7 @@ Difference
 Distribution
 DOMContentLoaded
 DOM
+DIP
 KB
 KEY
 Kill
@@ -2467,6 +2476,7 @@ cli
 condition
 custom
 collect
+closed
 home
 height
 hello
@@ -2679,6 +2689,7 @@ investAction
 investService
 investmentsService
 icon
+inversion
 blog
 balanceJob
 batch
@@ -2775,6 +2786,7 @@ black
 bfX
 btdjo
 bbb
+background
 there
 this
 text
@@ -3029,6 +3041,11 @@ safe
 synchronized
 synchronizer
 sRGB
+span
+style
+starter
+substitution
+segregation
 alt
 app
 api
@@ -3639,6 +3656,7 @@ replace
 rule
 random
 rIo
+responsibility
 pc
 public
 parallelStream
@@ -3766,6 +3784,8 @@ pCenterInvestmentRegister
 pessimistic
 pHYs
 pf
+parth
+principle
 git
 gitignore
 gridSize
@@ -3958,6 +3978,7 @@ nhhhjj
 nzzz
 network
 number
+noSQL
 etc
 export
 ex
@@ -4280,6 +4301,7 @@ ENI
 EMPLOYEE
 EON
 Ewm
+EBJ
 update
 under
 uzJl
@@ -4620,6 +4642,7 @@ MIN
 MAX
 Main
 MIIIt
+MemberService
 vs
 void
 var
@@ -5113,6 +5136,7 @@ faY
 fzb
 free
 fst
+ffff
 kakao
 kLMRW
 kqAzM
@@ -5281,6 +5305,7 @@ okk
 owpp
 ow
 optimistic
+open
 You
 YZV
 YALM

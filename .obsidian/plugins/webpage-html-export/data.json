@@ -7,7 +7,7 @@
     "obsidian-advanced-codeblock"
   ],
   "includeSvelteCSS": true,
-  "titleProperty": "title",
+  "titleProperty": "taesung's Blog",
   "customHeadContentPath": "",
   "faviconPath": "",
   "documentWidth": "55em",
@@ -50,6 +50,7 @@
   "exportPath": "C:\\Users\\Hello\\Desktop\\obsidian\\export_HTML",
   "filesToExport": [
     [
+      "Issue_TroubleShooting",
       "lectur",
       "project",
       "study",
