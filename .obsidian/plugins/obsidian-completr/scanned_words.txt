@@ -247,6 +247,7 @@ SOa
 Science
 Stealing
 SOLID
+Section
 JWT
 Java
 Join
@@ -698,6 +699,7 @@ Case
 ConnectionPool
 ChunkSize
 CRUD
+Critical
 Authentication
 Authorization
 AOP
