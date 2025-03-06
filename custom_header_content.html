@@ -1,0 +1,29 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // 강제로 다크 모드 설정
+    document.documentElement.setAttribute('data-theme', 'dark');
+
+    // 시스템 테마 변경 감지 시 다크 모드 유지
+    const observer = new MutationObserver(() => {
+      if (document.documentElement.getAttribute('data-theme') !== 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    });
+
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    // 개발자 도구를 통해 강제로 변경할 경우를 방지
+    Object.defineProperty(document.documentElement, 'dataset', {
+      get: function() {
+        return new Proxy({}, {
+          get: function(target, prop) {
+            return prop === 'theme' ? 'dark' : undefined;
+          },
+          set: function() {
+            return true;
+          }
+        });
+      }
+    });
+  });
+</script>
