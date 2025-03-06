@@ -3657,6 +3657,7 @@ rule
 random
 rIo
 responsibility
+redisson
 pc
 public
 parallelStream
