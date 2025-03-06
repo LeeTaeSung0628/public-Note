@@ -158,7 +158,7 @@
 | **스레드 관리**    | 없음                          | 스레드 풀로 관리                         |
 | **오버헤드**      | 스레드 생성/소멸로 오버헤드 큼           | 스레드 재사용으로 오버헤드 적음                 |
 | **추천 사용 사례**  | 간단한 작업, 테스트용                | 대량 작업, 병렬 처리, 안정적 처리 필요 시         |
-|               |                             |                                   |
+
 
 ___
 
@@ -263,10 +263,10 @@ public QuerydslPagingItemReader<HfbatBankBalanceCheckDto> balanceReader() {
 
 ---
 
-# QuerydslPagingItemReader를 사용하며, 다중스레드 스케줄링 하기
+# QuerydslPagingItemReader를 사용하며, **다중스레드 스케줄링** 하기
 
 ## 목적
-- 각 파티션 스레드 별 종료 시간이 크게 상이하다. ==총 소요시간 기준 최대 약 20% 차이==
+- 각 파티션 스레드 별 종료 시간이 크게 상이하다. 총 소요시간 기준 최대 약 20% 차이
 - 적용 한다면, 각 스레드 별로 even하게 작업을 수행하여 총 소요시간을 줄일 수 있을것이라 판단 
 
 ## 구현 방법
@@ -374,63 +374,6 @@ public class BalanceQueue extends QueueManager<BalanceCheckResultDto>{
     }  
 }
 ```
-
----
-
-# **시행착오**
-
-# Limit을 사용하지 않고 JpaPagingReader를 사용했을 때, 프로세서가 모아서 처리할 수 있는 방법이 있는가?
-
->[!info] 이게 무슨소리인지?
->- 보통의 Batch 서비스라면 I/O 작업에 부하가 걸려있겠지만, 현재 예치금 차액 배치는 processor 즉, 예치금 비교 연산에서 큰 리소스를 소모하고있다.
->- 이에 해당하는 시간 소모를 줄이기 위해 processor(서비스로직) 을 병렬처리 함으로 최종 처리시간 단축을 꾀할 수 있을지에 대한 고민이다.
->- *이후 설명하겠지만, 내부 병렬처리 로직은 청크의 트렌젝션을 무너뜨릴 가능성이 크므로 지양해야함.*
-
-
-
-### - ==processor==는 ==reader==의 return결과로만 트리거 되기 때문에 방법이 없다.
-![[Pasted image 20241206113120.png]]
-## 필수가 아니라면, ==processor==의 로직을 ==writer==에 할당하여 청크사이즈로 컨트롤 할수 있지 않을까?
-#### reader(dto) -> ~~processor~~ -> writer(dtoList)
-
-##### - 구현 결과 ==reader==의 return인 dto값을 chunk사이즈 만큼 List dto로 합쳐 일괄 처리가 가능하다.
-
-	소요시간 : 1분 9초
--> 기존 limit절을 이용한 로직보다 속도가 더빠르며,
-   JpaPagingReader를 적용한다면 중복 select횟수를 줄여 더 빨라질 것으로 예상된다.
-
-### 우려되는 점은 writer가 데이터 가공의 역할까지 맡는게, 설계 목적에 부합한지 생각해보아야 한다.
-
-결론 : 둘 중 하나
-##### 1. 리더,프로세서 각각 dto 1개 씩 처리 (역할 분담)
-##### 2. 프로세서 로직을 제거하여 스레드는 유지하돼, 서비스로직에서 dto list로 내부 병렬처리 로직으로 구현하기
-
-```
-#### 292 컬럼
-## Processor 삭제(병렬처리)로직
-#### grid-size:6 / chunk-size:20
-54679 ms
-54416 ms
-## Processor 순차처리(writer만 병렬처리) 로직
-
-#### grid-size:6 / chunk-size:20
-60440 ms
-62271 ms
-#### grid-size:10 / chunk-size:20
-58129 ms
-56723 ms
-#### grid-size:16 / chunk-size:20
-58595 ms
-56314 ms
-
-#### grid-size:32 / chunk-size:20
-- SQLTransientConnectionException
-- 스레드풀 점유갯수 초과
-```
-
-## 데이터 상으로는 내부 병렬처리의 승리
-
->[!warning] 하지만, 이후 청크 방식 Batch의 확장성과 유지보수성을 고려하여 ==리더,프로세서,라이터== 방식으로 구현하기로 정했다.
 
 ---
 
