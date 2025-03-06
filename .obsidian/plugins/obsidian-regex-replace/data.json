@@ -1,0 +1,10 @@
+{
+  "findText": "(?<!\\S)싱글스레드(?!\\S)",
+  "replaceText": "포포ㅍㅍ",
+  "useRegEx": true,
+  "selOnly": false,
+  "caseInsensitive": true,
+  "processLineBreak": true,
+  "processTab": false,
+  "prefillFind": false
+}

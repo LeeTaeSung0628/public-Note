@@ -11,5 +11,6 @@
   "callout-manager",
   "obsidian-completr",
   "editing-toolbar",
-  "auto-hide-cursor"
+  "auto-hide-cursor",
+  "obsidian-regex-replace"
 ]
