@@ -5,7 +5,7 @@
 ---
 
 [![[Pasted image 20250220144552.png|220]]](https://github.com/LeeTaeSung0628)
-[<font color="#ffffff">🔗git Hub 이동</font>](https://github.com/LeeTaeSung0628)
+[<font color="#ffffff">🔗git Hub ▶ ...</font>](https://github.com/LeeTaeSung0628)
 
 ---
 # Hi, there <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Hand%20with%20Fingers%20Splayed%20Light%20Skin%20Tone.png" alt="Hand with Fingers Splayed Light Skin Tone" width="25" height="25" />
@@ -37,10 +37,3 @@
 
 # [[🏫 강의]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
 >- ## 🐊 **Spring Core Basic**
-
----
-
->[!summary] Soon
-> 1. 깃 레포에서도 블로그 주소로 이어질 수 있도록 Readme 설정하기.
-> 	- 리드미 또한 옵시디언에서 작업이 가능하다.
-> 2. Netlify 셋팅 추가하기

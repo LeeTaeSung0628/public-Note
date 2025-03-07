@@ -1,3 +1,36 @@
 <script>
-    alert("뿌우우우웅");
+    document.title = "🏠 taesung's Blog";
+    (function() {
+        function forceDarkTheme() {
+            // 강제 다크 모드 적용
+            document.body.classList.add("theme-dark");
+            document.body.classList.remove("theme-light");
+
+            // 테마 토글 버튼 찾기
+            let themeToggle = document.querySelector(".theme-toggle-input");
+            if (themeToggle) {
+                themeToggle.checked = true; // 다크 모드 유지
+                themeToggle.disabled = true; // 토글 비활성화
+            }
+
+            // .topbar-content 내부에 하이퍼링크 추가
+            let topbar = document.querySelector(".topbar-content");
+            if (topbar) {
+                topbar.innerHTML = `
+                    <a class="tree-item-self is-clickable nav-file-title" href="index.html" data-path="index.html">
+                        <div class="tree-item-inner nav-file-title-content">🏠 taesung's Blog</div>
+                    </a>`;
+            }
+        }
+
+        // 기존 window.onload가 있으면 유지하면서 추가
+        let prevOnLoad = window.onload;
+        console.log(prevOnLoad);
+        window.onload = function(event) {
+            if (typeof prevOnLoad === "function") {
+                prevOnLoad(event);
+            }
+            forceDarkTheme();
+        };
+    })();
 </script>

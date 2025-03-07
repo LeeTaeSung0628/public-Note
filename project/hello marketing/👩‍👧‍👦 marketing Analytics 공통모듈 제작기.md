@@ -5,6 +5,18 @@
 
 #프로젝트 #개발 #DB #SPRING #AOP 
 
+>[!info] 개요
+> - Hello Service의 유입/동작 통계 모듈의 공통화 작업이다.
+> - Spring AOP를 사용하여 구성하였다.
+
+## 1. 기존 **js 하드코딩** 되어있던 통계 로직 **SpringAOP** 공통화
+- 통계 필요 페이지 내에서(front > back)
+## 2. Hit체크 동작 데이터 삽입 후 **프록시 등록**
+- 쿠키 데이터 페이지 별 최초 진입 확인?\
+## 3. 상세 인입 정보 저장으로 ADMIN통계 page제작
+
+---
+
 # 목적
 - 기존 외부 유입 통계 로직의 단점 해결.
 	1. 확장에 닫혀있음
@@ -13,22 +25,7 @@
 
 ---
 
-# 개요
-	Hello Service의 유입/동작 통계 모듈의 공통화 작업이다.
-	Spring AOP를 사용하여 구성하였다.
-
----
-
-# *계획*(더 자세히 설명할것.)
-## 1. 광고 url 진입자, 파라미터(CODE) 쿠키 저장
-- 통계 필요 페이지 내에서(프론트), 쿠키 데이터 페이지 별 최초 진입 확인?
-## 2. Hit체크 하고싶은 페이지에서, CODE별 최초 진입 확인시 Hit로그 저장 controller 호출
-
-## 3. 파라미터로 CODE 및 현재 페이지 주소(ex. /sp/loan) 저장
-
----
-
-# *데이터 테이블 구상*
+# *데이터 모델 구상*
 
 | KEY `idx` | `hitDate`              | `hitCode`    | `hitUid`                             | `pageURL`               | `pageType` |
 | --------- | ---------------------- | ------------ | ------------------------------------ | ----------------------- | ---------- |
@@ -299,7 +296,7 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 }
 ```
 
-#### 1. **중복 데이터 조회와 저장 사이의 타이밍 차이**
+#### **중복 데이터 조회와 저장 사이의 타이밍 차이**
 
 - 여러 쓰레드(또는 트랜잭션)가 `findByHitCodeAndHitUidAndPageUrlAndPageType` 메서드를 호출하여 동일한 조건의 데이터를 동시에 조회할 수 있다.
 - 두 쓰레드가 모두 `existingLog.isPresent()` 조건에서 `false`를 확인한 후, 동시에 새로운 `HfMarketingHitLog` 객체를 생성하고 저장하려 하면 데이터 중복 문제가 발생할 수 있다.
@@ -309,7 +306,8 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 
 ---
 
-# 결과
+# **결과**
+
 ![[Pasted image 20241230135801.png]]
 * 1일의 유효기간을 갖는 uid를 발급하여, 인입코드 / Hit된 기능 주소 / 시간 을 저장한다.
 * *uid는 외부url로 접근시 발급*
@@ -331,7 +329,9 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 ### 다음 방법을 통해 DB로 admin과 app을 모두 관리 가능하도록 수정.
 
 ---
-# AOP위빙 방식을 활용해, 동적으로 원하는 시간에 Pointcut에 조건에 해당하는 메서드를 다시 설정할 수 있을까?
+# **고민**
+
+## AOP위빙 방식을 활용해, 동적으로 원하는 시간에 Pointcut에 조건에 해당하는 메서드를 다시 설정할 수 있을까?
 
  - api호출을 통해 advice내의 동작은 런타임 환경에서 동적으로 변경이 가능한 것을 확인했다.
 
@@ -420,5 +420,5 @@ mainLayout을 적용하여 해당 페이지에 default script를 적용시켰다
 
 ---
 
-[부록]
-[[👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출]]
+## [부록]
+## ▶ [[👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출]]

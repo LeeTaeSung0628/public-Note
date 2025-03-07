@@ -249,6 +249,7 @@ Stealing
 SOLID
 Section
 Starvation
+SpringAOP
 JWT
 Java
 Join
@@ -2793,6 +2794,7 @@ bfX
 btdjo
 bbb
 background
+back
 there
 this
 text
@@ -3052,6 +3054,7 @@ style
 starter
 substitution
 segregation
+sec
 alt
 app
 api
@@ -5144,6 +5147,7 @@ fzb
 free
 fst
 ffff
+front
 kakao
 kLMRW
 kqAzM
