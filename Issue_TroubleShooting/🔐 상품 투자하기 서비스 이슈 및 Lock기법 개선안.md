@@ -37,6 +37,51 @@
 - `헬로 서비스의 경우`, 회원 idx로 lock을 유지하여 성능과 안정성 확보
 -*상품별 한도* / *투자자 일별 투자상한* / *투자 금액* / *예치금* 등 정합성이 무엇보다 우선시 되는 데이터들이 포함
 
+#### ex1) java `synchronized` 키워드 사용
+(JVM 레벨 Lock)
+```java
+import org.springframework.stereotype.Service;
+
+@Service
+public class SynchronizedLockService {
+    private int counter = 0;
+
+    public synchronized void increment() {
+        counter++;
+        System.out.println(Thread.currentThread().getName() + " - 현재 카운트: " + counter);
+    }
+}
+
+```
+- JVM레벨에서 동작하므로, 분산환경에서는 동작 X, 성능 빠름
+#### ex2) Database Lock
+(DB를 활용하여 Lock구현)
+```sql
+CREATE TABLE lock_table (
+    id INT PRIMARY KEY,
+    locked BOOLEAN NOT NULL DEFAULT FALSE
+);
+```
+```java
+
+    @Transactional
+    public void doSomethingWithLock() {
+        // 행 잠금 (SELECT FOR UPDATE)
+        jdbcTemplate.queryForObject("SELECT * FROM lock_table WHERE id = 1 FOR UPDATE", (rs, rowNum) -> rs.getInt("id"));
+
+        System.out.println(Thread.currentThread().getName() + " - 데이터베이스 Lock 획득!");
+        try {
+            Thread.sleep(5000); // 작업 수행
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName() + " - 작업 완료!");
+    }
+```
+- DB만으로 구현 가능, 트렌젝션 격리레벨에 따라 멀티인스턴스(분산환경)에서 정합성 보장 가능
+- 모든 요청이 DB lock을 기다리므로 속도 느림(lock이 해제될때 까지 대기), 데드락 가능성있음
+-> *레디션 락은 블록킹하지 않고, Polling방식으로 재시도 가능.*
+*커넥션 pool 미 소유 및 TTL로 데드락 방지*
 ### 대기열
 - 설계 방법에 따라, 강한 일관성 유지 가능하지만, 추가적인 설계/개발이 필요.
 - 높은 트래픽을 감당할 수 있음. (동시요청)
