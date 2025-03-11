@@ -29,36 +29,33 @@ body.theme-dark {
 /* 페이지 상단으로 이동하는 플로팅 버튼 */
 #scrollToTopBtn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-accent);
-    color: var(--color-base-100);
-    border: 2px solid var(--color-base-100);
+    bottom: 60px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+    border: 2px solid #404040;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, transform 0.2s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 99999;
 }
 
 #scrollToTopBtn:hover {
     background-color: var(--color-accent);
-    opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 </style>
 
 <script>
 (function() {
-    document.documentElement.classList.add("theme-dark");
-    document.documentElement.classList.remove("theme-light");
-
     function forceDarkTheme() {
         document.body.classList.add("theme-dark");
         document.body.classList.remove("theme-light");
@@ -78,22 +75,54 @@ body.theme-dark {
         }
     }
 
+    function handleResize(entries) {
+        for (let entry of entries) {
+            updateScrollButtonPosition();
+        }
+    }
+
+    function updateScrollButtonPosition() {
+        let container = document.querySelector(".markdown-preview-view");
+        let button = document.getElementById("scrollToTopBtn");
+        if (!container || !button) return;
+
+        let containerRect = container.getBoundingClientRect();
+        button.style.right = `${Math.max(60, window.innerWidth - containerRect.right + 60)}px`;
+    }
+
+    function observeMarkdownPreviewResize() {
+        let container = document.querySelector(".markdown-preview-view");
+        if (!container) return;
+
+        // ResizeObserver 인스턴스 생성
+        const resizeObserver = new ResizeObserver(handleResize);
+        resizeObserver.observe(container);
+    }
+
     function addScrollToTopButton() {
-        console.log("버튼 플로팅 실행");
+        let container = document.querySelector(".markdown-preview-view");
+        if (!container) return;
+
         let button = document.getElementById("scrollToTopBtn");
         if (!button) {
             button = document.createElement("button");
             button.id = "scrollToTopBtn";
             button.innerHTML = "&#9650;"; // 위 화살표 아이콘
-            document.body.appendChild(button);
+            container.appendChild(button); // body에 추가하여 고정
         }
 
-        button.addEventListener("click", function() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 200) {
+        let containerRect = container.getBoundingClientRect();
+        // 버튼을 화면 우측 하단에 고정
+        button.style.position = "fixed";
+        button.style.bottom = "60px";
+        button.style.right = "60px";
+        button.style.zIndex = "99999";
+        button.style.opacity = "0";
+        button.style.visibility = "hidden";
+        updateScrollButtonPosition();
+        // 스크롤 이벤트 감지
+        container.addEventListener("scroll", function() {
+            if (container.scrollTop > 200) {
                 button.style.opacity = "1";
                 button.style.visibility = "visible";
             } else {
@@ -101,30 +130,25 @@ body.theme-dark {
                 button.style.visibility = "hidden";
             }
         });
+
+        // 버튼 클릭 시 최상단으로 이동
+        button.addEventListener("click", function() {
+            container.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        window.addEventListener("resize", updateScrollButtonPosition);
+       // 사이드바 변경 감지
+        const observer = new MutationObserver(() => {
+            updateScrollButtonPosition();
+        });
     }
 
-    let prevOnLoad = window.onload;
-    window.onload = function(event) {
-        if (typeof prevOnLoad === "function") {
-            prevOnLoad(event);
-        }
+
+    // 문서가 로드될 때 실행
+    document.addEventListener("DOMContentLoaded", () => {
         forceDarkTheme();
-        setTimeout(addScrollToTopButton, 500); // 강제 실행 보장
-    };
-
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.attributeName === "class") {
-                if (!document.body.classList.contains("theme-dark")) {
-                    console.log("⚠ 테마 변경 감지됨, 다시 다크 테마 적용");
-                    forceDarkTheme();
-                }
-            }
-        });
+        addScrollToTopButton();
+        observeMarkdownPreviewResize()
     });
-
-
-    // 페이지 로딩 완료 후 버튼 보장 실행
-    document.addEventListener("DOMContentLoaded", addScrollToTopButton);
 })();
 </script>
