@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "136e435db8917ef7",
+        "id": "f035f7346478ee9a",
         "type": "tabs",
         "children": [
           {
-            "id": "4453ec8a3d6d56f9",
+            "id": "d90a2b6bab538381",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "custom_header_content - 복사본.html",
-                "bFile": "custom_header_content - 복사본.html",
-                "aRef": ""
+                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: custom_header_content - 복사본.html"
+              "icon": "lucide-file",
+              "title": "🥇 정보처리 기사 실기 프로그래밍-제어문"
             }
           }
         ]
@@ -181,9 +181,9 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "4453ec8a3d6d56f9",
+  "active": "d90a2b6bab538381",
   "lastOpenFiles": [
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
+    "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
     "study/CS/☕ JAVA , OOP.md",
     "study/CS/📭 Server.md",
     "study/CS/🍃 Spring.md",
