@@ -34,20 +34,23 @@ body.theme-dark {
     width: 50px;
     height: 50px;
     background-color: var(--color-accent);
-    color: var(--color-base-00);
-    border: none;
+    color: var(--color-base-100);
+    border: 2px solid var(--color-base-100);
     border-radius: 50%;
     font-size: 24px;
     text-align: center;
     line-height: 50px;
     cursor: pointer;
-    display: none;
-    transition: opacity 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 #scrollToTopBtn:hover {
     background-color: var(--color-accent);
-    opacity: 0.8;
+    opacity: 1;
+    transform: scale(1.1);
 }
 </style>
 
@@ -75,13 +78,38 @@ body.theme-dark {
         }
     }
 
+    function addScrollToTopButton() {
+        console.log("버튼 플로팅 실행");
+        let button = document.getElementById("scrollToTopBtn");
+        if (!button) {
+            button = document.createElement("button");
+            button.id = "scrollToTopBtn";
+            button.innerHTML = "&#9650;"; // 위 화살표 아이콘
+            document.body.appendChild(button);
+        }
+
+        button.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 200) {
+                button.style.opacity = "1";
+                button.style.visibility = "visible";
+            } else {
+                button.style.opacity = "0";
+                button.style.visibility = "hidden";
+            }
+        });
+    }
+
     let prevOnLoad = window.onload;
     window.onload = function(event) {
         if (typeof prevOnLoad === "function") {
             prevOnLoad(event);
         }
         forceDarkTheme();
-        addScrollToTopButton();
+        setTimeout(addScrollToTopButton, 500); // 강제 실행 보장
     };
 
     const observer = new MutationObserver((mutations) => {
@@ -95,25 +123,8 @@ body.theme-dark {
         });
     });
 
-    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 
-    function addScrollToTopButton() {
-        let button = document.createElement("button");
-        button.id = "scrollToTopBtn";
-        button.innerHTML = "&#9650;"; // 위 화살표 아이콘
-        document.body.appendChild(button);
-
-        button.addEventListener("click", function() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 200) {
-                button.style.display = "block";
-            } else {
-                button.style.display = "none";
-            }
-        });
-    }
+    // 페이지 로딩 완료 후 버튼 보장 실행
+    document.addEventListener("DOMContentLoaded", addScrollToTopButton);
 })();
 </script>
