@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -183,7 +183,6 @@
   },
   "active": "4453ec8a3d6d56f9",
   "lastOpenFiles": [
-    "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
     "study/CS/☕ JAVA , OOP.md",
     "study/CS/📭 Server.md",
     "study/CS/🍃 Spring.md",
@@ -209,6 +208,8 @@
     "Issue_TroubleShooting/⏰ Script 로딩 지연 이슈.md",
     "Issue_TroubleShooting/🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅.md",
     "lectur/2. 스프링 핵심 원리 이해.md",
+    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+    "custom_header_content - 복사본.html",
     "사진 및 문서/Pasted image 20250307172522.png",
     "custom_header_content.html~",
     "custom_header_content.html",
@@ -228,7 +229,6 @@
     "study/Coding Test/Bronze/10810. 공 넣기/공 넣기.py",
     "study/Coding Test/Bronze/2446. 별 찍기 － 9",
     "study/Coding Test/Bronze/15596. 정수 N개의 합",
-    "study/Coding Test/Bronze/12813. 이진수 연산",
     "무제.canvas"
   ]
 }

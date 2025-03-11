@@ -1,0 +1,154 @@
+<style>
+:root {
+    --color-base-00: #1c2127; /* 다크 테마 기본 배경 */
+    --color-base-10: #282c34;
+    --color-base-100: #dadada;
+    --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+    --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --text-normal: var(--color-base-100);
+    --background-secondary-alt: var(--color-base-30);
+}
+
+/* 강제 다크 테마 적용 */
+body {
+    background-color: var(--color-base-00) !important;
+    color: var(--text-normal) !important;
+}
+
+/* 모든 다크/라이트 테마 클래스 무효화 */
+body.theme-light {
+    background-color: var(--color-base-00) !important;
+    color: var(--text-normal) !important;
+}
+
+body.theme-dark {
+    background-color: var(--color-base-00) !important;
+    color: var(--text-normal) !important;
+}
+
+/* 페이지 상단으로 이동하는 플로팅 버튼 */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+    border: 2px solid #404040;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+#scrollToTopBtn:hover {
+    background-color: var(--color-accent);
+    transform: scale(1.2);
+}
+</style>
+
+<script>
+(function() {
+    function forceDarkTheme() {
+        document.body.classList.add("theme-dark");
+        document.body.classList.remove("theme-light");
+
+        let themeToggle = document.querySelector(".theme-toggle-input");
+        if (themeToggle) {
+            themeToggle.checked = true;
+            themeToggle.disabled = true;
+        }
+
+        let topbar = document.querySelector(".topbar-content");
+        if (topbar) {
+            topbar.innerHTML = `
+                <a class="tree-item-self is-clickable nav-file-title" href="index.html" data-path="index.html">
+                    <div class="tree-item-inner nav-file-title-content">🏠 taesung's Blog</div>
+                </a>`;
+        }
+    }
+
+    function handleResize(entries) {
+        for (let entry of entries) {
+            updateScrollButtonPosition();
+        }
+    }
+
+    function updateScrollButtonPosition() {
+        let container = document.querySelector(".markdown-preview-view");
+        let button = document.getElementById("scrollToTopBtn");
+        if (!container || !button) return;
+
+        let containerRect = container.getBoundingClientRect();
+        button.style.right = `${Math.max(60, window.innerWidth - containerRect.right + 60)}px`;
+    }
+
+    function observeMarkdownPreviewResize() {
+        let container = document.querySelector(".markdown-preview-view");
+        if (!container) return;
+
+        // ResizeObserver 인스턴스 생성
+        const resizeObserver = new ResizeObserver(handleResize);
+        resizeObserver.observe(container);
+    }
+
+    function addScrollToTopButton() {
+        let container = document.querySelector(".markdown-preview-view");
+        if (!container) return;
+
+        let button = document.getElementById("scrollToTopBtn");
+        if (!button) {
+            button = document.createElement("button");
+            button.id = "scrollToTopBtn";
+            button.innerHTML = "&#9650;"; // 위 화살표 아이콘
+            container.appendChild(button); // body에 추가하여 고정
+        }
+
+        let containerRect = container.getBoundingClientRect();
+        // 버튼을 화면 우측 하단에 고정
+        button.style.position = "fixed";
+        button.style.bottom = "60px";
+        button.style.right = "60px";
+        button.style.zIndex = "99999";
+        button.style.opacity = "0";
+        button.style.visibility = "hidden";
+        updateScrollButtonPosition();
+        // 스크롤 이벤트 감지
+        container.addEventListener("scroll", function() {
+            if (container.scrollTop > 200) {
+                button.style.opacity = "1";
+                button.style.visibility = "visible";
+            } else {
+                button.style.opacity = "0";
+                button.style.visibility = "hidden";
+            }
+        });
+
+        // 버튼 클릭 시 최상단으로 이동
+        button.addEventListener("click", function() {
+            container.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        window.addEventListener("resize", updateScrollButtonPosition);
+       // 사이드바 변경 감지
+        const observer = new MutationObserver(() => {
+            updateScrollButtonPosition();
+        });
+    }
+
+
+    // 문서가 로드될 때 실행
+    document.addEventListener("DOMContentLoaded", () => {
+        forceDarkTheme();
+        addScrollToTopButton();
+        observeMarkdownPreviewResize()
+    });
+})();
+</script>
