@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
-                "mode": "source",
+                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-포인터.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "🥇 정보처리 기사 실기 프로그래밍-포인터"
             }
           }
         ]
@@ -183,11 +183,13 @@
   },
   "active": "d90a2b6bab538381",
   "lastOpenFiles": [
-    "study/📕 공부.md",
-    "study/CS/📭 Server.md",
     "index.md",
-    "lectur/🏫 강의 & 자격증.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-포인터.md",
+    "lectur/🏫 강의 & 자격증.md",
+    "Tools/🪓 도구.md",
+    "study/📕 공부.md",
+    "project/💻 프로젝트.md",
+    "study/CS/📭 Server.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
     "사진 및 문서/Pasted image 20250312144444.png",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
@@ -196,7 +198,6 @@
     "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
     "Issue_TroubleShooting/⏰ Script 로딩 지연 이슈.md",
     "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
-    "project/💻 프로젝트.md",
     "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
     "study/CS/☕ JAVA , OOP.md",
     "study/CS/🍃 Spring.md",
@@ -209,7 +210,6 @@
     "study/Dev Seminar/🪕 JPA 에 대한 고찰.md",
     "Tools/🎵 Obsidian.md",
     "study/Coding Test/🤠 Coding Test 풀이 모음.md",
-    "Tools/docker/🐋 docker.md",
     "custom-head-content.html",
     "custom_header_content.html",
     "custom_header_content - 복사본.html",
