@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Issue_TroubleShooting/⏰ Script 로딩 지연 이슈.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "⏰ Script 로딩 지연 이슈"
+              "title": "index"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#로딩지연",
+                "query": "183",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -184,17 +184,23 @@
   "active": "d90a2b6bab538381",
   "lastOpenFiles": [
     "study/📕 공부.md",
+    "study/CS/📭 Server.md",
     "index.md",
+    "lectur/🏫 강의 & 자격증.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-포인터.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
+    "사진 및 문서/Pasted image 20250312144444.png",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 SQL 문제.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
+    "Issue_TroubleShooting/⏰ Script 로딩 지연 이슈.md",
     "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
     "project/💻 프로젝트.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
     "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
     "study/CS/☕ JAVA , OOP.md",
-    "study/CS/📭 Server.md",
     "study/CS/🍃 Spring.md",
     "study/CS/🎩 DevOps.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
     "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
@@ -202,13 +208,8 @@
     "study/Dev Seminar/🔹 TDD에 대하여.md",
     "study/Dev Seminar/🪕 JPA 에 대한 고찰.md",
     "Tools/🎵 Obsidian.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
     "study/Coding Test/🤠 Coding Test 풀이 모음.md",
     "Tools/docker/🐋 docker.md",
-    "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
-    "Tools/aws/🍊 aws EC2란.md",
-    "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
-    "project/note CI_CD/⛈ Obsidian-AWS연동.md",
     "custom-head-content.html",
     "custom_header_content.html",
     "custom_header_content - 복사본.html",
@@ -222,7 +223,6 @@
     "사진 및 문서/Pasted image 20250304170347.png",
     "사진 및 문서/Pasted image 20250304121455.png",
     "사진 및 문서/Pasted image 20250304121338.png",
-    "사진 및 문서/Pasted image 20250304121056.png",
     "Issue_TroubleShooting",
     "study/Coding Test/Bronze/2446. 별 찍기 － 9/별 찍기 － 9.py",
     "study/Coding Test/Bronze/15596. 정수 N개의 합/정수 N개의 합.py",

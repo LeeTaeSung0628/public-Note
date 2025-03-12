@@ -23,8 +23,6 @@
 >- ## ❄ **Computer Science**
 >- ## 🧪 **Coding Test**
 >- ## 🧑‍🤝‍🧑 **Company Seminar**
->- ## 📔 **license**
-
 
 ---
 
@@ -35,5 +33,6 @@
 
 ---
 
-# [[🏫 강의]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
+# [[🏫 강의 & 자격증]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
 >- ## 🐊 **Spring Core Basic**
+>- ## 📔 **license**
