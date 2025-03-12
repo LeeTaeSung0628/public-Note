@@ -863,6 +863,7 @@ ANY
 Apach
 Ant
 Analytics
+ASCII
 HTTP
 HttpOnly
 HTTPS
@@ -2243,6 +2244,7 @@ KKKB
 KJJb
 Kbb
 KII
+KOREA
 Web
 WAS
 WEB
@@ -3817,6 +3819,7 @@ pf
 parth
 principle
 path
+printf
 git
 gitignore
 gridSize
