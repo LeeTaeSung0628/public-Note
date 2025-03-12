@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
+                "file": "Issue_TroubleShooting/⏰ Script 로딩 지연 이슈.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🥇 정보처리 기사 실기 프로그래밍-제어문"
+              "title": "⏰ Script 로딩 지연 이슈"
             }
           }
         ]
@@ -183,6 +183,11 @@
   },
   "active": "d90a2b6bab538381",
   "lastOpenFiles": [
+    "study/📕 공부.md",
+    "index.md",
+    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+    "project/💻 프로젝트.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
     "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
     "study/CS/☕ JAVA , OOP.md",
     "study/CS/📭 Server.md",
@@ -204,11 +209,6 @@
     "Tools/aws/🍊 aws EC2란.md",
     "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
     "project/note CI_CD/⛈ Obsidian-AWS연동.md",
-    "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
-    "study/CS/📔 DataBase.md",
-    "Issue_TroubleShooting/⏰ Script 로딩 지연 이슈.md",
-    "Issue_TroubleShooting/🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅.md",
-    "lectur/2. 스프링 핵심 원리 이해.md",
     "custom-head-content.html",
     "custom_header_content.html",
     "custom_header_content - 복사본.html",
