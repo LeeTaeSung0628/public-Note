@@ -382,6 +382,7 @@ JB
 Ju
 JpaRepository
 JOIN
+Junit
 Tokken
 Token
 Tone
@@ -2002,6 +2003,7 @@ InvestController
 INVEST
 Inconsistency
 Issue
+Impl
 DB
 Dev
 Deploy
@@ -3189,6 +3191,7 @@ advid
 aXo
 array
 arr
+assertj
 with
 width
 writer
@@ -3376,6 +3379,7 @@ myredis
 mainLayout
 modal
 mAe
+memberId
 Git
 GitDesktop
 Grid
@@ -3480,6 +3484,7 @@ GROUP
 Gradle
 Gradel
 Groovy
+Generate
 Netlify
 New
 Native
@@ -3821,6 +3826,7 @@ parth
 principle
 path
 printf
+psvm
 git
 gitignore
 gridSize
@@ -4106,6 +4112,7 @@ exec
 evaluation
 enabled
 exclusive
+enter
 Vault
 VARIABLES
 VIEW
@@ -4683,6 +4690,10 @@ MIIIt
 MemberService
 Math
 MemberServiceImpl
+MemoryMemberRepository
+MemberApp
+MemberServiceTest
+MemberRepository
 vs
 void
 var
