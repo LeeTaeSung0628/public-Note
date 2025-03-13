@@ -39,7 +39,7 @@ INSERT INTO 직원 VALUES(1007, 30, '박미경');
 SELECT DISTINCT COUNT(부서코드) FROM 직원 WHERE 부서코드 = 20;
 ```
 
-**결과:** <font color="#262626">3</font>
+**결과:** 3
 
 *해설 :*
 - `DISTINCT(중복 제거)`는 `부서코드`가 아닌 `COUNT(부서코드)`에 적용되므로, 여전히 부서코드가 20인 컬럼의 수 '3'이 된다.
@@ -51,7 +51,7 @@ DELETE FROM 부서 WHERE 부서코드 = 20;
 SELECT DISTINCT COUNT(부서코드) FROM 직원;
 ```
 
-**결과:** <font color="#262626">4</font>
+**결과:** 4
 
 *해설 :*
 - `부서코드`가 20인 컬럼을 삭제한 후, 모든 직원테이블의 부서코드 개수를 센다. 이때 `DISTINCT(중복 제거)`는 `COUNT`에 적용되므로
@@ -70,7 +70,7 @@ SELECT DISTINCT COUNT(부서코드) FROM 직원;
 SELECT DEPT FROM STUDENT;
 ```
 
-**결과:** <font color="#262626">200</font>
+**결과:** 200
 
 ### 실행 SQL ②
 
@@ -78,7 +78,7 @@ SELECT DEPT FROM STUDENT;
 SELECT DISTINCT DEPT FROM STUDENT;
 ```
 
-**결과:** <font color="#262626">3</font>
+**결과:** 3
 
 *해설 :*
 - 전기/전자/화학 3가지 종류로 이루어진 DEPT 속성의 중복을 제거하면 '3'이 남는다.
@@ -88,7 +88,7 @@ SELECT DISTINCT DEPT FROM STUDENT;
 SELECT COUNT(DISTINCT DEPT) FROM STUDENT WHERE DEPT = '전산과';
 ```
 
-**결과:** <font color="#262626">1</font>
+**결과:** 1
 
 *해설 :*
 - 전산과인 학생들의 학과를 뽑는다. 이후 해당 학과의 중복을 제거하면 1개만 남게 된다.
@@ -104,7 +104,7 @@ FROM 제품
 WHERE 단가 > (    ) (SELECT 단가 FROM 제품 WHERE 제조사 = 'H');
 ```
 
-**답:** <font color="#262626">`ALL`</font>
+**답:** ALL
 
 *해설 :*
 - 해당 쿼리는, where절의 하위 질의에 결과를 반영하여 본 질의의 조건에 추가하는 SQL이다.
@@ -141,7 +141,7 @@ WHERE COL1 IN (2, 3)
     OR COL2 IN (3, 5);
 ```
 
-**결과:** <font color="#262626">3</font>
+**결과:** 3
 
 *해설 :*
 - COL1 컬럼에 2나 3이 포함되었거나, COL2컬럼에 3이나 5가 포함된 컬럼 (4개)를 찾는다,
