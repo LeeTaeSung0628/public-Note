@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/CS/🌋 OSIV와 영속성 컨텍스트.md",
+                "file": "study/📕 공부.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🌋 OSIV와 영속성 컨텍스트"
+              "title": "📕 공부"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,13 +196,13 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "7689b4a1735fa244",
+  "active": "d59ae60b47ce21b5",
   "lastOpenFiles": [
-    "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock이슈.md",
-    "Issue_TroubleShooting/🚦 Spring Batch 트러블슈팅.md",
     "study/CS/🌋 OSIV와 영속성 컨텍스트.md",
+    "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock이슈.md",
     "study/📕 공부.md",
     "🏠 taesung's Blog.md",
+    "Issue_TroubleShooting/🚦 Spring Batch 트러블슈팅.md",
     "사진 및 문서/Pasted image 20250314152143.png",
     "study/CS/🛬 JDK와 JRE, JVM.md",
     "study/CS/🍊 Spring의 의존성 주입(DI).md",
