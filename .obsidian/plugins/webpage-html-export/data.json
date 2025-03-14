@@ -8,7 +8,7 @@
   ],
   "includeSvelteCSS": true,
   "titleProperty": "taesung's Blog",
-  "customHeadContentPath": "custom_header_content.html",
+  "customHeadContentPath": "custom-head-content.html",
   "faviconPath": "C:\\Users\\Hello\\Desktop\\obsidian\\Vault_md_public\\사진 및 문서\\Pasted image 20250220144552.png",
   "documentWidth": "55em",
   "sidebarWidth": "30em",
