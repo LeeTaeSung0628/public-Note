@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a5f05c9b2c610e14",
+        "id": "5f8ebe2332cf6128",
         "type": "tabs",
         "children": [
           {
-            "id": "23e7f2994bc98e9b",
+            "id": "7689b4a1735fa244",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "ae27dea48a244b01",
+            "id": "d59ae60b47ce21b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock이슈.md",
+                "file": "study/CS/🌋 OSIV와 영속성 컨텍스트.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🍂 JPA, Mybatis , Dead Lock이슈"
+              "title": "🌋 OSIV와 영속성 컨텍스트"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "데드락",
+                "query": "DIP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,16 +103,6 @@
         "id": "678824eee1352855",
         "type": "tabs",
         "children": [
-          {
-            "id": "46154ce4c9d8ab2e",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
-            }
-          },
           {
             "id": "225e76e8871e366c",
             "type": "leaf",
@@ -184,11 +174,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 369.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,21 +196,34 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "ae27dea48a244b01",
+  "active": "d59ae60b47ce21b5",
   "lastOpenFiles": [
+    "study/CS/🛬 JDK와 JRE, JVM.md",
+    "study/CS/🍊 Spring의 의존성 주입(DI).md",
+    "study/CS/📔 DataBase.md",
+    "study/CS/🌋 OSIV와 영속성 컨텍스트.md",
+    "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock이슈.md",
+    "lectur/2. 스프링 핵심 원리 이해.md",
+    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+    "Issue_TroubleShooting/🚦 Spring Batch 트러블슈팅.md",
+    "study/CS/🪕 JPA 에 대한 고찰.md",
     "study/📕 공부.md",
     "🏠 taesung's Blog.md",
-    "study/CS/🪕 JPA 에 대한 고찰.md",
-    "study/CS/🌋 OSIV와 영속성 컨텍스트.md",
-    "study/CS/🍊 Spring의 의존성 주입(DI).md",
-    "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock이슈.md",
-    "[[🍂.md",
-    "study/CS/🐰 Java의 String과 SpringBuffer.md",
+    "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock.md",
     "사진 및 문서/Pasted image 20250314122906.png",
-    "Issue_TroubleShooting/🚦 Spring Batch 트러블슈팅.md",
     "사진 및 문서/Pasted image 20250314120439.png",
-    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
-    "사진 및 문서/do-messenger_screenshot_2025-03-13_10_41_16.png",
+    "project/💻 프로젝트.md",
+    "Issue_TroubleShooting/🔐 상품 투자하기 서비스 이슈 및 Lock기법 개선안.md",
+    "study/CS/🍃 Spring.md",
+    "study/CS/🐰 Java의 String과 SpringBuffer.md",
+    "lectur/🏫 강의 & 자격증.md",
+    "lectur/1. 객체 지향 설계와 스프링.md",
+    "lectur/2.1 스프링 프로젝트 생성.md",
+    "lectur/2.4 새로운 할인 정책 개발.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-구조체(structuer).md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 SQL 문제.md",
+    "lectur/2.2 회원 도메인 설계 및 개발.md",
+    "lectur/2.3 주문과 할인 도메인 설계 및 개발.md",
     "사진 및 문서/Pasted image 20250313165833.png",
     "사진 및 문서/Pasted image 20250313162400.png",
     "사진 및 문서/Pasted image 20250313155756.png",
@@ -228,32 +231,19 @@
     "사진 및 문서/Pasted image 20250313155459.png",
     "사진 및 문서/Pasted image 20250313155205.png",
     "사진 및 문서/Pasted image 20250313153740.png",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-포인터.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-사용자 정의 함수.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-구조체(structuer).md",
-    "study/CS/🛬 JDK와 JRE, JVM.md",
-    "lectur/🏫 강의 & 자격증.md",
-    "lectur/2.4 새로운 할인 정책 개발.md",
-    "lectur/2.3 주문과 할인 도메인 설계 및 개발.md",
-    "lectur/2.2 회원 도메인 설계 및 개발.md",
-    "lectur/2.1 스프링 프로젝트 생성.md",
+    "사진 및 문서/Pasted image 20250313153630.png",
+    "study/CS/☕ JAVA , OOP.md",
+    "🐰 String.md",
     "custom-head-content.html",
-    "project/hello marketing/👩‍👧‍👦 marketing Analytics 공통모듈 제작기.md",
-    "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
-    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링 부록.md",
-    "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
-    "lectur/2. 스프링 핵심 원리 이해.md",
     "custom_header_content.html",
-    "Issue_TroubleShooting/🔐 상품 투자하기 서비스 이슈 및 Lock기법 개선안.md",
+    "custom_header_content - 복사본.html",
+    "custom_header_content.html~",
     "Issue_TroubleShooting",
-    "lectur",
-    "project/무제",
-    "사진 및 문서/Hello - 바로 가기.lnk",
-    "Tools/docker",
-    "Tools/aws",
-    "defaultHeaderContents.html",
     "study/Coding Test/Bronze/2446. 별 찍기 － 9/별 찍기 － 9.py",
+    "study/Coding Test/Bronze/15596. 정수 N개의 합/정수 N개의 합.py",
+    "study/Coding Test/Bronze/12813. 이진수 연산/이진수 연산.py",
+    "study/Coding Test/Bronze/10810. 공 넣기/공 넣기.py",
+    "study/Coding Test/Bronze/2446. 별 찍기 － 9",
     "무제.canvas"
   ]
 }
