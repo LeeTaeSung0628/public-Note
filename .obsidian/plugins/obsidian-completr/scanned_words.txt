@@ -382,7 +382,6 @@ JB
 Ju
 JpaRepository
 JOIN
-Junit
 Tokken
 Token
 Tone
@@ -865,7 +864,6 @@ ANY
 Apach
 Ant
 Analytics
-ASCII
 HTTP
 HttpOnly
 HTTPS
@@ -986,6 +984,7 @@ HDGG
 HJJB
 HLL
 HAVING
+HibernateTransactionManager
 OAuth
 Obsidian
 Out
@@ -1078,9 +1077,8 @@ Optimistic
 ODD
 Overhead
 OCP
-Order
-OrderApp
 OFF
+OpenSessionInViewFilter
 LDAP
 Light
 List
@@ -1324,7 +1322,6 @@ Blog
 BEST
 Beans
 BeanFactory
-Byte
 URL
 UtEHFOT
 UUFF
@@ -1576,6 +1573,10 @@ ProductList
 PD
 PG
 Polling
+PostController
+PostService
+Post
+PostDAO
 Filter
 Fingers
 ForkJoinPool
@@ -1685,6 +1686,7 @@ Fpjw
 FOREIGN
 Flux
 Fair
+FilterChain
 Refresh
 Redis
 RSA
@@ -2007,7 +2009,6 @@ InvestController
 INVEST
 Inconsistency
 Issue
-Impl
 DB
 Dev
 Deploy
@@ -2252,7 +2253,6 @@ KKKB
 KJJb
 Kbb
 KII
-KOREA
 Web
 WAS
 WEB
@@ -2499,11 +2499,7 @@ condition
 custom
 collect
 closed
-clickable
-containerRect
 close
-connection
-clos
 home
 height
 hello
@@ -2604,8 +2600,6 @@ hJJ
 hmmU
 haa
 html
-href
-hab
 index
 img
 insert
@@ -2719,10 +2713,6 @@ investService
 investmentsService
 icon
 inversion
-item
-is
-inner
-innerWidth
 blog
 balanceJob
 batch
@@ -2821,8 +2811,6 @@ btdjo
 bbb
 background
 back
-break
-bit
 there
 this
 text
@@ -2937,8 +2925,6 @@ taesung
 transaction
 troubleshooting
 tree
-title
-transactionObserver
 src
 site
 step
@@ -3086,7 +3072,7 @@ starter
 substitution
 segregation
 sec
-self
+sessionFactory
 alt
 app
 api
@@ -3199,9 +3185,6 @@ addEventListener
 aceat
 advid
 aXo
-array
-arr
-assertj
 with
 width
 writer
@@ -3389,7 +3372,6 @@ myredis
 mainLayout
 modal
 mAe
-memberId
 mybatis
 mybatisSelectMethod
 Git
@@ -3496,7 +3478,6 @@ GROUP
 Gradle
 Gradel
 Groovy
-Generate
 Netlify
 New
 Native
@@ -3706,7 +3687,6 @@ random
 rIo
 responsibility
 redisson
-right
 pc
 public
 parallelStream
@@ -3836,9 +3816,6 @@ pHYs
 pf
 parth
 principle
-path
-printf
-psvm
 git
 gitignore
 gridSize
@@ -4032,7 +4009,6 @@ nzzz
 network
 number
 noSQL
-nav
 etc
 export
 ex
@@ -4124,7 +4100,6 @@ exec
 evaluation
 enabled
 exclusive
-enter
 Vault
 VARIABLES
 VIEW
@@ -4218,7 +4193,6 @@ VK
 VY
 Vi
 VARCHAR
-VIP
 Export
 ExecutionContext
 Exception
@@ -4700,12 +4674,6 @@ MAX
 Main
 MIIIt
 MemberService
-Math
-MemberServiceImpl
-MemoryMemberRepository
-MemberApp
-MemberServiceTest
-MemberRepository
 vs
 void
 var
@@ -5008,8 +4976,8 @@ deptid
 deadlock
 distributed
 dl
-div
 doReadPage
+doFilter
 limit
 list
 long
@@ -5109,7 +5077,6 @@ locking
 loading
 lJ
 lp
-len
 final
 forkJoinPool
 fail
@@ -5376,6 +5343,7 @@ ow
 optimistic
 open
 out
+openSession
 You
 YZV
 YALM
