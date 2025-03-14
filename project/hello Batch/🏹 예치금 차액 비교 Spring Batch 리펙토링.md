@@ -492,7 +492,7 @@ public class JobTimerExecutionListener implements JobExecutionListener {
 
 ---
 # <font color="#9bbb59">트러블 슈팅 과정 보러가기 ◀</font>
-#### [[🚦 Spring Batch(스레드와 트렌젝션) 트러블슈팅]]
+#### [[🚦 Spring Batch 트러블슈팅]]
 
 ---
 #### 데이터 / 부록 ◀
