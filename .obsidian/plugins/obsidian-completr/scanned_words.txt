@@ -382,6 +382,7 @@ JB
 Ju
 JpaRepository
 JOIN
+Junit
 Tokken
 Token
 Tone
@@ -864,6 +865,7 @@ ANY
 Apach
 Ant
 Analytics
+ASCII
 HTTP
 HttpOnly
 HTTPS
@@ -985,6 +987,7 @@ HJJB
 HLL
 HAVING
 HibernateTransactionManager
+Hica
 OAuth
 Obsidian
 Out
@@ -1077,6 +1080,8 @@ Optimistic
 ODD
 Overhead
 OCP
+Order
+OrderApp
 OFF
 OpenSessionInViewFilter
 LDAP
@@ -1322,6 +1327,7 @@ Blog
 BEST
 Beans
 BeanFactory
+Byte
 URL
 UtEHFOT
 UUFF
@@ -2009,6 +2015,7 @@ InvestController
 INVEST
 Inconsistency
 Issue
+Impl
 DB
 Dev
 Deploy
@@ -2253,6 +2260,7 @@ KKKB
 KJJb
 Kbb
 KII
+KOREA
 Web
 WAS
 WEB
@@ -2499,7 +2507,11 @@ condition
 custom
 collect
 closed
+clickable
+containerRect
 close
+connection
+clos
 home
 height
 hello
@@ -2600,6 +2612,8 @@ hJJ
 hmmU
 haa
 html
+href
+hab
 index
 img
 insert
@@ -2713,6 +2727,10 @@ investService
 investmentsService
 icon
 inversion
+item
+is
+inner
+innerWidth
 blog
 balanceJob
 batch
@@ -2811,6 +2829,8 @@ btdjo
 bbb
 background
 back
+break
+bit
 there
 this
 text
@@ -2925,6 +2945,9 @@ taesung
 transaction
 troubleshooting
 tree
+title
+transactionObserver
+tamplate
 src
 site
 step
@@ -3072,6 +3095,7 @@ starter
 substitution
 segregation
 sec
+self
 sessionFactory
 alt
 app
@@ -3185,6 +3209,9 @@ addEventListener
 aceat
 advid
 aXo
+array
+arr
+assertj
 with
 width
 writer
@@ -3372,6 +3399,7 @@ myredis
 mainLayout
 modal
 mAe
+memberId
 mybatis
 mybatisSelectMethod
 Git
@@ -3478,6 +3506,7 @@ GROUP
 Gradle
 Gradel
 Groovy
+Generate
 Netlify
 New
 Native
@@ -3687,6 +3716,7 @@ random
 rIo
 responsibility
 redisson
+right
 pc
 public
 parallelStream
@@ -3816,6 +3846,9 @@ pHYs
 pf
 parth
 principle
+path
+printf
+psvm
 git
 gitignore
 gridSize
@@ -4009,6 +4042,7 @@ nzzz
 network
 number
 noSQL
+nav
 etc
 export
 ex
@@ -4100,6 +4134,7 @@ exec
 evaluation
 enabled
 exclusive
+enter
 Vault
 VARIABLES
 VIEW
@@ -4193,6 +4228,7 @@ VK
 VY
 Vi
 VARCHAR
+VIP
 Export
 ExecutionContext
 Exception
@@ -4674,6 +4710,12 @@ MAX
 Main
 MIIIt
 MemberService
+Math
+MemberServiceImpl
+MemoryMemberRepository
+MemberApp
+MemberServiceTest
+MemberRepository
 vs
 void
 var
@@ -4976,6 +5018,7 @@ deptid
 deadlock
 distributed
 dl
+div
 doReadPage
 doFilter
 limit
@@ -5077,6 +5120,7 @@ locking
 loading
 lJ
 lp
+len
 final
 forkJoinPool
 fail

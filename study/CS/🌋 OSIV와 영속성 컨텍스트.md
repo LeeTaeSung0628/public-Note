@@ -20,6 +20,7 @@ spring.jpa.open-in-view to disable this warning
 ---
 
 # OSIV의 동작원리
+### Reference ▶ [꺼진 OSIV 도다시보자](https://velog.io/@haron/Spring-Connection-Pool-%EC%9D%B4-%EB%B6%80%EC%A1%B1%ED%95%98%EB%8B%A4%EA%B3%A0%EC%9A%94)
 
 ![[Pasted image 20250314152143.png]]
 
@@ -31,30 +32,66 @@ spring.jpa.open-in-view to disable this warning
     - doFilter 메서드가 **FilterChain 객체에 의해 호출되어 요청의 계속 처리**를 허용한다.
 
 3. DispatcherServlet 및 컨트롤러 호출  
-    DispatcherServlet이 호출되어 HTTP 요청을 기본 컨트롤러(여기서는 PostController)로 라우팅한다.
+    - DispatcherServlet이 호출되어 HTTP 요청을 기본 컨트롤러(여기서는 PostController)로 라우팅한다.
 
 4. 서비스 레이어 트랜잭션  
-    PostController는 PostService를 호출하여 Post 엔터티 목록을 가져온다.  
-    PostService는 새로운 트랜잭션을 시작하며, HibernateTransactionManager는 **OpenSessionInViewFilter에서 열린 동일한 Hibernate 세션을 재사용한다.**
+    - PostController는 PostService를 호출하여 Post 엔터티 목록을 가져온다.  
+    - PostService는 새로운 트랜잭션을 시작하며, HibernateTransactionManager **OpenSessionInViewFilter에서 열린 동일한 Hibernate 세션을 재사용한다.**
 
 5. 데이터 액세스 레이어  
-    PostService는 PostDAO (데이터 액세스 객체)에게 Post 엔터티 목록을 가져오도록 위임한다.  
-    PostDAO는 **어떠한 게으른 연관성도 초기화하지 않고 Post 엔터티 목록을 검색한다**. 게으른 연관성은 Hibernate에서 즉시 가져오지 않고 필요할 때 로드되는 관계이다.
+    - PostService는 PostDAO (데이터 액세스 객체)에게 Post 엔터티 목록을 가져오도록 위임한다.  
+    - PostDAO는 **어떠한 게으른 연관성도 초기화하지 않고 Post 엔터티 목록을 검색한다**. 게으른 연관성은 Hibernate에서 즉시 가져오지 않고 필요할 때 로드되는 관계이다.
 
 6. 트랜잭션 커밋  
-    PostService는 기본 트랜잭션을 커밋한다. 그러나 세션이 외부에서 열렸기 때문에( OpenSessionInViewFilter에서), **이 시점에서 세션은 닫히지 않는다**.
+    - PostService는 기본 트랜잭션을 커밋한다. 그러나 세션이 외부에서 열렸기 때문에( OpenSessionInViewFilter에서), **이 시점에서 세션은 닫히지 않는다**.
 >[!failure] 주의
 > 트렌젝션은 커멧 되더라도 오픈 세션(영속성 컨텍스트) 은 닫히지 않는다!
 
 
 7. 뷰 렌더링 시작  
-    DispatcherServlet이 사용자 인터페이스 (UI)를 렌더링하기 시작한다.
+    - DispatcherServlet이 사용자 인터페이스 (UI)를 렌더링하기 시작한다.
 
 8. 게으른 연관성 초기화  
-    렌더링 과정 중에 UI는 Post 엔터티의 게으른 연관성을 탐색한다.  
-    이 탐색은 게으른 연관성의 초기화를 트리거하며 **추가적인 데이터베이스 쿼리**를 날린다.
-**Lazy Loading**
+    - 렌더링 과정 중에 UI는 Post 엔터티의 게으른 연관성을 탐색한다.  
+    - 이 탐색은 게으른 연관성의 초기화를 트리거하며 **추가적인 데이터베이스 쿼리**를 날린다.
+- **Lazy Loading**이 일어나는 시점
 
 9. 세션 닫힘  
-    OpenSessionInViewFilter는 이제 Hibernate 세션을 닫을 수 있습니다. 렌더링 프로세스가 완료되었기 때문이다.  
-    세션과 관련된 데이터베이스 연결이 해제된다.
+    - OpenSessionInViewFilter는 이제 Hibernate 세션을 닫을 수 있습니다. 렌더링 프로세스가 완료되었기 때문이다.  
+    - 세션과 관련된 데이터베이스 연결이 해제된다.
+
+---
+
+# OSIV옵션에 따른 DB 커넥션 보유 여부
+
+### 1. OSIV OFF
+
+- JPA의 영속성 컨텍스트가 DB커넥션을 얻는 시점은 DB트렌젝션을 시작할 때 이다.
+	**@Transactional 어노테이션이 붙은 매서드가 실행될 때.**
+	-없다면, 해당 JPA쿼리가 실행되는 시점에 얻게 된다.
+
+- DB커넥션을 반환하는 시점은 서비스 레이어의 **@Transactional**어노테이션이 붙은 메서드가 끝날때 이다.
+	이 떄, 영속성 컨텍스트가 사라지고 DB커넥션이 반환된다.
+
+즉, 한 컨트롤러 안에서 여러개의 서비스 레이어의 **함수를 여러개** 실행할 경우,
+각각의 메서드마다 영속성 컨텍스트가 생기고 사라지게 된다.
+
+<u>해당 방식은 DB커넥션을 최소한으로만 사용하기 때문에 트레픽이 중요한 경우 유연하고 효율적이다.</u>
+
+### 2. OSIV ON
+
+- JPA가 영속성 컨텍스트를 얻는 시점은 동일하다.
+	**@Transactional 어노테이션이 붙은 매서드가 실행될 때.**
+	-없다면, 해당 JPA쿼리가 실행되는 시점에 얻게 된다.
+
+- DB커넥션을 반환하는 시점은 
+	-**api의 경우** : 데이터가 유저에게 반환될 때 까지.
+	-**tamplate으로 갈 경우** : 모든 데이터가 렌더링 되어 출력될 때 까지.
+
+즉, **@Transactional**메서드가 끝날 떄 즉시 반환하지 않고 **프록시 객체**가 Lazy Loading으로
+ 호출될 수 있기 때문에, 영속성 컨텍스트를 살려 놓는것이다.
+ 
+>[!tip] 정보
+> 영속성 컨텐스트는 DB커넥션을 보유해야 유지될 수 있다.
+
+해당 방식은 개발적인 측면에서 중복을 줄이고, 지연로딩을 사용할 수 있어 코드의 유지보수성에 큰 도움을 주지만, **DB커넥션을 오래 물고 있기 때문에 자칫 성능적인 장애를 일으킬 수 있다.**
