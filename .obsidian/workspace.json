@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock이슈.md",
+                "file": "🏠 taesung's Blog.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🍂 JPA, Mybatis , Dead Lock이슈"
+              "title": "🏠 taesung's Blog"
             }
           }
         ]
@@ -183,9 +183,14 @@
   },
   "active": "7689b4a1735fa244",
   "lastOpenFiles": [
-    "study/📕 공부.md",
-    "🏠 taesung's Blog.md",
     "project/💻 프로젝트.md",
+    "🏠 taesung's Blog.md",
+    "study/📕 공부.md",
+    "study/CS/🍊 Spring의 의존성 주입(DI).md",
+    "study/CS/🐰 Java의 String과 SpringBuffer.md",
+    "study/CS/🌋 OSIV와 영속성 컨텍스트.md",
+    "lectur/2. 스프링 핵심 원리 이해.md",
+    "lectur/🏫 강의 & 자격증.md",
     "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock이슈.md",
     "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
@@ -204,11 +209,6 @@
     "Tools/docker/🐋 docker.md",
     "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
     "Tools/aws/🍊 aws EC2란.md",
-    "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
-    "project/note CI_CD/⛈ Obsidian-AWS연동.md",
-    "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
-    "study/CS/📔 DataBase.md",
-    "lectur/1. 객체 지향 설계와 스프링.md",
     "사진 및 문서/Pasted image 20250314152143.png",
     "사진 및 문서/Pasted image 20250314122906.png",
     "사진 및 문서/Pasted image 20250314120439.png",
