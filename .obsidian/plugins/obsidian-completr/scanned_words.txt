@@ -707,6 +707,7 @@ ChunkSize
 CRUD
 Critical
 Close
+Configuration
 Authentication
 Authorization
 AOP
@@ -866,6 +867,9 @@ Apach
 Ant
 Analytics
 ASCII
+Add
+AppConfig
+AnnotationConfigApplicationContext
 HTTP
 HttpOnly
 HTTPS
@@ -1084,6 +1088,7 @@ Order
 OrderApp
 OFF
 OpenSessionInViewFilter
+OrderServiceImpl
 LDAP
 Light
 List
@@ -1693,6 +1698,7 @@ FOREIGN
 Flux
 Fair
 FilterChain
+FixDiscountPolicy
 Refresh
 Redis
 RSA
@@ -1852,6 +1858,7 @@ RULE
 Referer
 RedLock
 Redisson
+RateDiscountPolicy
 ID
 ItemReader
 IP
@@ -2016,6 +2023,7 @@ INVEST
 Inconsistency
 Issue
 Impl
+Inversion
 DB
 Dev
 Deploy
@@ -2175,6 +2183,8 @@ DOM
 DIP
 DataSource
 DBCP
+DiscountPolicy
+DEBUG
 KB
 KEY
 Kill
@@ -2512,6 +2522,7 @@ containerRect
 close
 connection
 clos
+control
 home
 height
 hello
@@ -2731,6 +2742,7 @@ item
 is
 inner
 innerWidth
+import
 blog
 balanceJob
 batch
@@ -2831,6 +2843,7 @@ background
 back
 break
 bit
+beforeEach
 there
 this
 text
@@ -3212,6 +3225,7 @@ aXo
 array
 arr
 assertj
+appConfig
 with
 width
 writer
@@ -3402,6 +3416,9 @@ mAe
 memberId
 mybatis
 mybatisSelectMethod
+memoryMemberRepository
+memberServiceImpl
+memberService
 Git
 GitDesktop
 Grid
@@ -3954,6 +3971,7 @@ gradle
 getInstance
 gAMA
 gnw
+getBean
 name
 newMemberBalance
 naver
@@ -5021,6 +5039,7 @@ dl
 div
 doReadPage
 doFilter
+demand
 limit
 list
 long
@@ -5217,6 +5236,7 @@ fst
 ffff
 front
 find
+for
 kakao
 kLMRW
 kqAzM
@@ -5388,6 +5408,7 @@ optimistic
 open
 out
 openSession
+orderService
 You
 YZV
 YALM
