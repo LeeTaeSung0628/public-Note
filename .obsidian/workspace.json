@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7baa8a6f650e5507",
+        "id": "2e4826197d7860d8",
         "type": "tabs",
         "children": [
           {
-            "id": "dafe5c4de83cd54e",
+            "id": "4db88073c2dd9fe2",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "lectur/3.1 스프링 컨테이너 생성.md",
-                "bFile": "lectur/3.1 스프링 컨테이너 생성.md",
-                "aRef": ""
+                "file": "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 3.1 스프링 컨테이너 생성"
+              "icon": "lucide-file",
+              "title": "🏹 예치금 차액 비교 Spring Batch 리펙토링"
             }
           }
         ]
@@ -181,16 +181,17 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "2e958c9dd4f388f9",
+  "active": "4db88073c2dd9fe2",
   "lastOpenFiles": [
-    "lectur/3.1 스프링 컨테이너 생성.md",
+    "project/💻 프로젝트.md",
     "🏠 taesung's Blog.md",
+    "lectur/2.5 좋은 객체지향 설계의 5가지 원칙의 적용.md",
+    "lectur/3.1 스프링 컨테이너 생성.md",
     "lectur/🏫 강의 & 자격증.md",
     "lectur/2. 스프링 핵심 원리 이해.md",
     "lectur/3. 스프링 컨테이너와 스프링 빈.md",
     "study/📕 공부.md",
     "Tools/🪓 도구.md",
-    "project/💻 프로젝트.md",
     "study/CS/📭 Server.md",
     "study/CS/🍃 Spring.md",
     "study/CS/🎩 DevOps.md",
@@ -208,7 +209,6 @@
     "Tools/aws/🍊 aws EC2란.md",
     "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
     "project/note CI_CD/⛈ Obsidian-AWS연동.md",
-    "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
     "서비스 취약점 점검 결과 보고.pdf",
     "사진 및 문서/서비스 취약점 점검 결과 보고.pdf",
     "사진 및 문서/Pasted image 20250317142134.png",
