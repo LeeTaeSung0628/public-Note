@@ -163,7 +163,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5
+    "width": 312.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,7 +181,7 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "4db88073c2dd9fe2",
+  "active": "2e958c9dd4f388f9",
   "lastOpenFiles": [
     "study/📕 공부.md",
     "🏠 taesung's Blog.md",
