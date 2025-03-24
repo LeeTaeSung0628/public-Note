@@ -6,6 +6,7 @@
 
 [![[Pasted image 20250220144552.png|220]]](https://github.com/LeeTaeSung0628)
 [<font color="#ffffff">🔗git Hub ▶ ...</font>](https://github.com/LeeTaeSung0628)
+[<font color="#ffffff">🔗Portfolio ▶ ...</font>](https://leetaesung0628.github.io/)
 
 ---
 # Hi, there <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Hand%20with%20Fingers%20Splayed%20Light%20Skin%20Tone.png" alt="Hand with Fingers Splayed Light Skin Tone" width="25" height="25" />
