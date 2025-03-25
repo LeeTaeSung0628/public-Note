@@ -122,7 +122,7 @@
 # 2.2 평문 + base64공개키 -> base64암호문 생성 로직 .JS
 
 >[!tip] node-forge 패키지를 사용한다.
->  base64, encode등 TLS프로토콜(암호화 도구)를 구혀한 패키지 이다.
+>  base64, encode등 TLS프로토콜(암호화 도구)를 구현한 패키지 이다.
 
 ```JavaScript
 <script src="https://cdn.jsdelivr.net/npm/node-forge@1.3.1/dist/forge.min.js"></script>
@@ -198,7 +198,7 @@ function rsaEncryptWithBase64PublicKey(plainText, publicKeyBase64) {
 
 ---
 
-# 백로직 검증하기
+# 백로직 및 프론트 검증 완료
 
 ### *junit*과 *assertj*를 사용하여 검증
 - `JUnit` → 테스트 프레임워크  
@@ -237,3 +237,10 @@ public void testGenerateKeypairAndEncryptDecrypt() throws Exception {
 결과
 ![[Pasted image 20250325102427.png]]
 - Base64기반 String 변환 및 암/복호화 테스트 완료
+- <u>js암호화도 동일하게 동작 확인</u>
+
+---
+
+## *+ 로그인 / 회원가입 서비스 적용 완료*
+![[Pasted image 20250325165845.png]]
+![[Pasted image 20250325172818.png]]
