@@ -1,4 +1,4 @@
-# 🚨 RSA 암호화 방식의 이해와 구현
+# 🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)
 
 #공부 #Tokken #Security #SPRING #보안
 

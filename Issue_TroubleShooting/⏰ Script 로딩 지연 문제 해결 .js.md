@@ -1,4 +1,4 @@
-# ⏰ Script 로딩 지연 이슈
+# ⏰ Script 로딩 지연 이슈 .js
 
 #Script #로딩지연 #성능개선
 

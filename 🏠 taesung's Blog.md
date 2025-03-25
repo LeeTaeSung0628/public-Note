@@ -22,8 +22,13 @@
 
 ---
 
+# [[🔫 이슈·트러블슈팅]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
+>- ## 🌺 *Issue* ⭐
+>- ## ⛑ *TroubleShooting*⭐
+
+---
+
 # [[📕 공부]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
->- ## 🌺 **Issue / TroubleShooting**⭐
 >- ## ❄ **Computer Science**
 >- ## 🧪 **Coding Test**
 >- ## 🧑‍🤝‍🧑 **Company Seminar**
