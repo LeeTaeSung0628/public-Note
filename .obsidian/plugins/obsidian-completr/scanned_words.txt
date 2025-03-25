@@ -3238,6 +3238,8 @@ array
 arr
 assertj
 appConfig
+assert
+assertion
 with
 width
 writer
@@ -4926,6 +4928,7 @@ jnn
 jdk
 jWF
 jpaSelectMethod
+junit
 dto
 dtoList
 double

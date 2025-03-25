@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/CS/🚨 RSA 암호화 방식의 이해와 서비스 적용.md",
+                "file": "study/CS/🚨 RSA 암호화 방식의 이해와 구현.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🚨 RSA 암호화 방식의 이해와 서비스 적용"
+              "title": "🚨 RSA 암호화 방식의 이해와 구현"
             }
           }
         ]
@@ -181,21 +181,22 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "2e958c9dd4f388f9",
+  "active": "4db88073c2dd9fe2",
   "lastOpenFiles": [
     "study/📕 공부.md",
+    "study/CS/🚨 RSA 암호화 방식의 이해와 구현.md",
     "🏠 taesung's Blog.md",
+    "project/💻 프로젝트.md",
+    "사진 및 문서/Pasted image 20250325102427.png",
     "lectur/🏫 강의 & 자격증.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
     "lectur/2.4 새로운 할인 정책 개발.md",
-    "study/CS/🚨 RSA 암호화 방식의 이해와 서비스 적용.md",
     "study/Dev Seminar/🔹 TDD에 대하여.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
     "lectur/2.2 회원 도메인 설계 및 개발.md",
     "lectur/2.6 IoC, DI 그리고 컨테이너 - 스프링으로 전환.md",
     "study/CS/🪕 JPA 에 대한 고찰.md",
     "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
-    "project/💻 프로젝트.md",
     "lectur/2.5 좋은 객체지향 설계의 5가지 원칙의 적용.md",
     "lectur/3.1 스프링 컨테이너 생성.md",
     "lectur/2. 스프링 핵심 원리 이해.md",
@@ -208,7 +209,6 @@
     "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
     "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
-    "study/Dev Seminar/🔻 Redis 캐쉬 전략 - hello 서비스에 적용하여 성능개선 가능성.md",
     "서비스 취약점 점검 결과 보고.pdf",
     "사진 및 문서/서비스 취약점 점검 결과 보고.pdf",
     "사진 및 문서/Pasted image 20250317142134.png",
@@ -220,7 +220,6 @@
     "사진 및 문서/Pasted image 20250317120814.png",
     "사진 및 문서/Pasted image 20250317120025.png",
     "사진 및 문서/Pasted image 20250317115640.png",
-    "사진 및 문서/Pasted image 20250317115359.png",
     "custom-head-content.html",
     "custom_header_content.html",
     "custom_header_content - 복사본.html",

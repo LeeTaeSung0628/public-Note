@@ -1,4 +1,4 @@
-# 🚨 RSA 암호화 방식의 이해와 서비스 적용
+# 🚨 RSA 암호화 방식의 이해와 구현
 
 #공부 #Tokken #Security #SPRING #보안
 
@@ -33,14 +33,14 @@
 - **사용자( Client )마다 공개키와 개인키를 접근 시 새로 생성/발급하여 원본 데이터 추적이 불가**하다.
 
 >[!tip] 결론
-> 즉, 클라이언트의 요청이 들어오면 서버에서 *공개키(클라이언트에게 제공할 키)* 와 *개인키(서버측에서 갖고있는, 공개키와 한쌍이 되는 키)* 를 매번 새로 발급하기 때문에, 추적이 어렵고 암호와에 뛰어나다.
+> 즉, 클라이언트의 요청이 들어오면 서버에서 *공개키(클라이언트에게 제공할 키)* 와 *개인키(서버측에서 갖고있는, 공개키와 한쌍이 되는 키)* 를 매번 새로 발급하기 때문에, 추적이 어렵고 암호화에 뛰어나다.
 
 #### 단, AES(대칭 암호화)와 방식보다 성능(속도)측면에서 떨어진다.
 - 서비스 특성에 따라 적절하게 적용할 필요가 있다.
 
 ---
 
-# 로그인 회원가입 시 RSA암호화 적용하기
+# Java/JS 환경에서 RSA암호화 적용하기
 
 >[!tip] 정보
 > - **RSA 키 객체 (`PublicKey`, `PrivateKey`)** 는 메모리 상에서만 동작할 수 있다.
@@ -54,25 +54,14 @@
 4. `클라이언트`는 `서버`로부터 받은 공개키로 평문 암호화, `서버`에 전달
 5. 암호화된 평문을 KeyUUID로 찾은 공개키로 복호화 -> 평문 완성
 
-# 1. Server 키 발급 로직 만들기
+# 1. 키 쌍 발급 로직
 
 ### 하나의 쌍으로 이루어지는 *공개키(public key)* 와 *개인키(private key)* 를 생성하는 로직 
 
-* *`java.security` 패키지를 사용하여 구현한다. **Java의 보안 프레임워크의 핵심**
+#### **`java.security`** 패키지를 사용하여 구현한다. **Java의 보안 프레임워크의 핵심**
 - 암호화, 해시, 키 생성, 인증서 처리, 서명 등 **암호학 기반 기능들을 제공**하는 클래스들의 모음이다.
 
-KeyPairGenerator (공개키/개인키 쌍 생성) 을 사용한다.
-
 ```java
-import org.springframework.stereotype.Service;  
-import java.security.KeyPair;  
-import java.security.KeyPairGenerator;  
-import java.security.NoSuchAlgorithmException;  
-import java.security.SecureRandom;  
-  
-@Service  
-public class RsaService {  
-  
     private static final String INSTANCE_TYPE = "RSA";  
   
     // 2048bit RSA KeyPair 생성.  
@@ -83,9 +72,8 @@ public class RsaService {
   
         return keyPairGen.genKeyPair();  
     }  
-}
 ```
-
+- KeyPairGenerator (공개키/개인키 쌍 생성) 을 사용한다.
 * `NoSuchAlgorithmException` : 지정한 알고리즘 이름이 현재 JVM 환경에서 지원되지 않거나 잘못된 경우 발생하는 **체크 예외**다.
 - `KeyPair`타입 : PrivateKey와 PublicKey로 이루어져있는 데이터 타입
 - `SecureRandom`을 시드로 사용해 보안 수준 향상
@@ -94,35 +82,48 @@ public class RsaService {
 
 ---
 
-# 2. 백로직 디코딩 함수 생성
+# 2.1 평문 + base64공개키 -> base64암호문 생성 로직 .Java
 
-### 암호화된 base64평문을 개인키로 디코딩 
 ```java
 	private static final String INSTANCE_TYPE = "RSA";
-		
-  public static String rsaDecode(String encryptedPlainTextBase64, String privateKey)
-          throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidKeySpecException, IllegalBlockSizeException, BadPaddingException {
-		
-    byte[] encryptedPlainTextByte = Base64.getDecoder().decode(encryptedPlainTextBase64.getBytes());
-		
-    Cipher cipher = Cipher.getInstance(INSTANCE_TYPE);
-    cipher.init(Cipher.DECRYPT_MODE, convertPrivateKey(privateKey));
-				
-    return new String(cipher.doFinal(encryptedPlainTextByte));
-  }
+	
+	// 평문 + 공개키 Base64로 암호문 생성  
+	public static String rsaEncode(String plainText, String publicKey)  
+	        throws InvalidKeyException, InvalidKeySpecException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {  
+	  
+	    Cipher cipher = Cipher.getInstance(INSTANCE_TYPE);  
+	    cipher.init(Cipher.ENCRYPT_MODE, convertPublicKey(publicKey));  
+	  
+	    byte[] plainTextByte = cipher.doFinal(plainText.getBytes());  
+	  
+	    return base64EncodeToString(plainTextByte);  
+	}  
+	//Base64 공개키 -> 공개키로 디코딩  
+	public static PublicKey convertPublicKey(String publicKey)  
+	        throws InvalidKeySpecException, NoSuchAlgorithmException {  
+	  
+	    KeyFactory keyFactory = KeyFactory.getInstance(INSTANCE_TYPE);  
+	    byte[] publicKeyByte = Base64.getDecoder().decode(publicKey.getBytes());  
+	  
+	    return keyFactory.generatePublic(new X509EncodedKeySpec(publicKeyByte));  
+	}
 ```
 
 - `Cipher` : Java 보안 API에서 실제 *암호화/복호화*를 수행하는 핵심 클래스
 	AES, RAS, DES 같은 알고리즘을 직접 실행하는 암호 모듈 , 암호화 엔진 이다.
 
 - `Cipher cipher = Cipher.getInstance(INSTANCE_TYPE);` : 타입에 따라, 암호화 모드와 패딩 방식이 결정된다. 
+- `convertPublicKey` : base64기반 코드를 실제 키 객체로 변환
+- `KeyFactory` : 키 복원용 펙토리 객체
+- `keyFactory.generate...` : 실제 키 객체 생성
+- `X509EncodedKeySpec` → 공개키 표준 포맷 스펙
 
 ---
+# 2.2 평문 + base64공개키 -> base64암호문 생성 로직 .JS
 
-# 3. 개인키를 받아 암호화하는 JS코드
+>[!tip] node-forge 패키지를 사용한다.
+>  base64, encode등 TLS프로토콜(암호화 도구)를 구혀한 패키지 이다.
 
-### node-forge 패키지를 사용한다.
-- base64, encode등 TLS프로토콜(암호화 도구)를 구혀한 패키지 이다.
 ```JavaScript
 <script src="https://cdn.jsdelivr.net/npm/node-forge@1.3.1/dist/forge.min.js"></script>
 
@@ -151,35 +152,41 @@ function rsaEncryptWithBase64PublicKey(plainText, publicKeyBase64) {
 }
 </script>
 ```
+- 클라이언트 단에서 request전달 전, 암호화 하기 위한 코드 / 동작 구성은 `2.1`과 동일 하다
 
 ---
 
-# + Base64기반 문자열 공개키 및 개인키로 변환 함수 .java
-
+# 3. base64암호문 + base64개인키 -> 평문 생성 로직
 ```java
-  public static PublicKey convertPublicKey(String publicKeyBase64) 
-          throws InvalidKeySpecException, NoSuchAlgorithmException {
-		
-    KeyFactory keyFactory = KeyFactory.getInstance(INSTANCE_TYPE);
-    byte[] publicKeyByte = Base64.getDecoder().decode(publicKey.getBytes());
-		
-    return keyFactory.generatePublic(new X509EncodedKeySpec(publicKeyByte));
-  }
-		
-  public static PrivateKey convertPrivateKey(String privateKeyBase64) 
-          throws InvalidKeySpecException, NoSuchAlgorithmException {
-		
-    KeyFactory keyFactory = KeyFactory.getInstance(INSTANCE_TYPE);
-    byte[] privateKeyByte = Base64.getDecoder().decode(privateKey.getBytes());
-		
-    return keyFactory.generatePrivate(new PKCS8EncodedKeySpec(privateKeyByte));
-  }
+	private static final String INSTANCE_TYPE = "RSA";
+
+	// 암호문 + 개인키 Base64로 평문 생성  
+	public static String rsaDecode(String encryptedPlainText, String privateKey)  
+	        throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidKeySpecException, IllegalBlockSizeException, BadPaddingException {  
+	  
+	    byte[] encryptedPlainTextByte = Base64.getDecoder().decode(encryptedPlainText.getBytes());  
+	  
+	    Cipher cipher = Cipher.getInstance(INSTANCE_TYPE);  
+	    cipher.init(Cipher.DECRYPT_MODE, convertPrivateKey(privateKey));  
+	  
+	    return new String(cipher.doFinal(encryptedPlainTextByte));  
+	}  
+	//Base64 개인키 -> 개인키로 디코딩  
+	public static PrivateKey convertPrivateKey(String privateKey)  
+	        throws InvalidKeySpecException, NoSuchAlgorithmException {  
+	  
+	    KeyFactory keyFactory = KeyFactory.getInstance(INSTANCE_TYPE);  
+	    byte[] privateKeyByte = Base64.getDecoder().decode(privateKey.getBytes());  
+	  
+	    return keyFactory.generatePrivate(new PKCS8EncodedKeySpec(privateKeyByte));  
+	}
 ```
 
-- `KeyFactory` : 키 복원용 펙토리 객체
-- `keyFactory.generate...` : 실제 키 객체 생성
-- `X509EncodedKeySpec` → 공개키 표준 포맷 스펙
+- `Cipher` 객체를 사용하여 위와 동일하게 동작.
 - `PKCS8EncodedKeySpec` → 개인키 표준 포맷 스펙
+
+---
+
 # + 바이너리 데이터를 Base64로 인코딩 .java
 
 ```java
@@ -188,3 +195,45 @@ function rsaEncryptWithBase64PublicKey(plainText, publicKeyBase64) {
   }
 ```
 - cipher.doFinal(...) 과 같은 코드는 *바이너리 데이터*로 리턴값을 보낸다.
+
+---
+
+# 백로직 검증하기
+
+### *junit*과 *assertj*를 사용하여 검증
+- `JUnit` → 테스트 프레임워크  
+- `AssertJ` → 테스트 결과를 검증(assert)할 때 쓰는 **강력한 assertion 도구**
+
+JS코드는 제외
+```java
+private static final String PLAIN_TEXT = "키 암/복호화 테스트 123 abc !@#";
+
+@Test  
+@DisplayName("RSA 키쌍 생성 및 암/복호화 통합 테스트")  
+public void testGenerateKeypairAndEncryptDecrypt() throws Exception {  
+    // 키쌍 생성  
+    KeyPair keyPair = rsaService.generateKeypair();  
+    PublicKey publicKey = keyPair.getPublic();  
+    PrivateKey privateKey = keyPair.getPrivate();  
+  
+    // 공개키, 개인키 → Base64 인코딩  
+    String publicKeyBase64 = rsaService.base64EncodeToString(publicKey.getEncoded());  
+    String privateKeyBase64 = rsaService.base64EncodeToString(privateKey.getEncoded());  
+    System.out.println("공개키Base64 : " + publicKeyBase64);  
+    System.out.println("개인키Base64 : " + privateKeyBase64);  
+  
+    // 암호화  
+    String encryptedText = rsaService.rsaEncode(PLAIN_TEXT, publicKeyBase64);  
+    System.out.println("RSA암호화 텍스트 : " + encryptedText);  
+  
+    // 복호화 (개인키 사용해야 함)  
+    String decryptedText = rsaService.rsaDecode(encryptedText, privateKeyBase64);  
+    System.out.println("RSA복호화 텍스트 : " + decryptedText);  
+  
+    // 검증  
+    Assertions.assertThat(decryptedText).isEqualTo(PLAIN_TEXT);  
+}
+```
+결과
+![[Pasted image 20250325102427.png]]
+- Base64기반 String 변환 및 암/복호화 테스트 완료
