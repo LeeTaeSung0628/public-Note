@@ -1,4 +1,4 @@
-# 🪕 JPA 에 대한 고찰
+# 🪕 JPA 관련 용어 정리
 
 #공부 #JPA #DB #SPRING
 
