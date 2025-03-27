@@ -254,6 +254,7 @@ StckOverflow
 Safe
 StackOverflow
 Site
+SSD
 JWT
 Java
 Join
@@ -1594,6 +1595,7 @@ PostDAO
 Private
 PrivateKey
 PublicKey
+PostgreSql
 Filter
 Fingers
 ForkJoinPool
@@ -2534,6 +2536,7 @@ connection
 clos
 control
 cipher
+ctionary
 home
 height
 hello
@@ -3433,6 +3436,8 @@ mybatisSelectMethod
 memoryMemberRepository
 memberServiceImpl
 memberService
+memory
+mote
 Git
 GitDesktop
 Grid
@@ -3638,6 +3643,8 @@ NOOONN
 NOT
 NAME
 Nw
+NoSql
+NoSQL
 repository
 return
 reader
@@ -4169,6 +4176,7 @@ enabled
 exclusive
 enter
 encode
+ever
 Vault
 VARIABLES
 VIEW
@@ -4750,6 +4758,7 @@ MemoryMemberRepository
 MemberApp
 MemberServiceTest
 MemberRepository
+MongoDB
 vs
 void
 var

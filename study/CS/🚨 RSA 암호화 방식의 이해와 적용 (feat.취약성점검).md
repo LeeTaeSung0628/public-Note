@@ -244,3 +244,6 @@ public void testGenerateKeypairAndEncryptDecrypt() throws Exception {
 ## *+ 로그인 / 회원가입 서비스 적용 완료*
 ![[Pasted image 20250325165845.png]]
 ![[Pasted image 20250325172818.png]]
+
+## Key 관리 보러가기
+## ▶ [[🍎 Redis로 Key관리하기]]
