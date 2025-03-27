@@ -253,6 +253,7 @@ SpringAOP
 StckOverflow
 Safe
 StackOverflow
+Site
 SSD
 Sticky
 JWT
@@ -385,6 +386,7 @@ Ju
 JpaRepository
 JOIN
 Junit
+Jedis
 Tokken
 Token
 Tone
@@ -513,6 +515,7 @@ TroubleShooting
 Task
 ThreadLocal
 Tomcat
+TLS
 Cookie
 Chain
 Claim
@@ -710,6 +713,7 @@ CRUD
 Critical
 Close
 Configuration
+Cross
 Clustering
 Authentication
 Authorization
@@ -873,6 +877,7 @@ ASCII
 Add
 AppConfig
 AnnotationConfigApplicationContext
+Aside
 HTTP
 HttpOnly
 HTTPS
@@ -1220,6 +1225,8 @@ LazyHolder
 Li
 LSP
 Liskov
+Lettuce
+Look
 Bean
 Bearer
 Batch
@@ -1336,6 +1343,7 @@ BEST
 Beans
 BeanFactory
 Byte
+Boolean
 URL
 UtEHFOT
 UUFF
@@ -1591,6 +1599,9 @@ PostController
 PostService
 Post
 PostDAO
+Private
+PrivateKey
+PublicKey
 PostgreSql
 Filter
 Fingers
@@ -1703,6 +1714,8 @@ Flux
 Fair
 FilterChain
 FixDiscountPolicy
+Forgery
+False
 Refresh
 Redis
 RSA
@@ -1863,7 +1876,15 @@ Referer
 RedLock
 Redisson
 RateDiscountPolicy
+RAS
 RedisConfiguration
+RedisConnectionFactory
+RedissonClient
+RedisCacheManager
+RedisCacheConfiguration
+RealPrice
+RealPriceInquiryResponse
+RealPriceInquiryResponseDto
 ID
 ItemReader
 IP
@@ -2277,6 +2298,8 @@ KJJb
 Kbb
 KII
 KOREA
+KeyUUID
+KeyPairGenerator
 Web
 WAS
 WEB
@@ -2529,7 +2552,13 @@ close
 connection
 clos
 control
+cipher
 ctionary
+cacheConfigurations
+cache
+cacheManager
+cacheKey
+cacheData
 home
 height
 hello
@@ -2851,6 +2880,8 @@ back
 break
 bit
 beforeEach
+base
+buildingCd
 there
 this
 text
@@ -2968,6 +2999,7 @@ tree
 title
 transactionObserver
 tamplate
+true
 src
 site
 step
@@ -3117,6 +3149,7 @@ segregation
 sec
 self
 sessionFactory
+searchCache
 alt
 app
 api
@@ -3233,6 +3266,8 @@ array
 arr
 assertj
 appConfig
+assert
+assertion
 with
 width
 writer
@@ -3745,6 +3780,10 @@ rIo
 responsibility
 redisson
 right
+realPrice
+realPriceInquiryRequestDto
+realPriceInquiryResponseDto
+realPriceInquiryResponse
 pc
 public
 parallelStream
@@ -3985,6 +4024,11 @@ getInstance
 gAMA
 gnw
 getBean
+getRealPriceCacheConfiguration
+getCache
+getBuildingCd
+getErrYn
+getOutH
 name
 newMemberBalance
 naver
@@ -4074,6 +4118,7 @@ network
 number
 noSQL
 nav
+node
 etc
 export
 ex
@@ -4166,7 +4211,9 @@ evaluation
 enabled
 exclusive
 enter
+encode
 ever
+error
 Vault
 VARIABLES
 VIEW
@@ -4927,6 +4974,7 @@ jnn
 jdk
 jWF
 jpaSelectMethod
+junit
 dto
 dtoList
 double
@@ -5055,6 +5103,7 @@ div
 doReadPage
 doFilter
 demand
+doFinal
 limit
 list
 long
@@ -5252,6 +5301,7 @@ ffff
 front
 find
 for
+forge
 kakao
 kLMRW
 kqAzM
@@ -5341,6 +5391,7 @@ kIs
 koo
 keys
 kyc
+keyPair
 of
 only
 oqk
@@ -5590,6 +5641,7 @@ yg
 ymm
 yUUU
 your
+yml
 XAVwLuLJ
 XML
 XOR
@@ -5829,6 +5881,7 @@ xiii
 xfgg
 xZZZ
 xZ
+xlsx
 ZaCmNrTx
 Zing
 Zjw
