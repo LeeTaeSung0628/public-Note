@@ -179,13 +179,18 @@ private Map<String, RedisCacheConfiguration> redisCacheConfigurationMap() {
         cacheConfigurations  
                 .put(cacheNameAndTimeout.getKey(), redisCacheDefaultConfiguration().entryTtl(  
                         Duration.ofSeconds(cacheNameAndTimeout.getValue())));  
-        cacheConfigurations  
-                .put(`원하는 Custom RedisCacheConfiguration 정책 추가`)  // 커스텀
     }  
     return cacheConfigurations;  
 }
 ```
+<br/>
 
+//cacheProperties.yml
+```yml
+cache:  
+  ttl:  
+    CacheName: 10 #만료 시간
+```
 - 외부 설정(`CacheProperties`)에서 캐시별 TTL 정보를 읽어와 각 캐시의 만료 시간을 지정
 이를 통해 특정 캐시만 별도의 만료 정책 등을 적용할 수 있다.
 - *entryTtl* : 기본 만료시간 설정
@@ -213,5 +218,74 @@ public CacheManager redisCacheManager(RedisConnectionFactory redisConnectionFact
 
 ---
 
-## **Custom RedisCacheConfiguration**
-- 추가예정.
+# 3. Service Layer
+▶ [[🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)]] 에서 이어진다.
+
+## *Bean 주입*
+```java
+@Service  
+public class TestServiceImpl {
+
+	private final CacheManager cacheManager;  
+	private final RedisTemplate<String, Object> redisTemplate;
+
+	public TestServiceImpl(CacheManager cacheManager, RedisTemplate<String, Object> redisTemplate) {  
+	    this.cacheManager = cacheManager;  
+	    this.redisTemplate = redisTemplate;  
+	}
+}
+```
+(생성자 주입)
+- 위(*RedisConfiguration*)에서 생성한 CacheManager 및 RedisTemplate의 빈을 주입한다.
+
+>[!info] 주의
+> 
+> 만약, Bean으로 생성된 CacheManager객체나, RedisTemplate객체가 여러개라면,
+> @Qualifier 어노테이션으로 Bean이름을 명시해야한다.
+> >
+> 	`ex) @Qualifier("CustomCacheManager") CacheManager cacheManager ...`
+
+---
+
+##  *Cache 삽입 / 꺼내기 / 삭제 *
+
+```java
+	Cache privateKeyCache = cacheManager.getCache("CacheName");
+	
+	public void putCache() {
+		
+		if (privateKeyCache != null) {  
+		    privateKeyCache.put(keyId, 벨류);  
+		} else {  
+		    // 캐시가 없으면 예외 처리 또는 로깅  
+		    throw new IllegalStateException("privateKeyCache 가 유요하지 않습니다.");  
+		}
+	}
+
+	public void getCache() {
+		
+		if (privateKeyCache == null) {  
+			throw new IllegalStateException("rsaPrivateKeyCache 가 유요하지 않습니다.");  
+		}  
+		String privateKeyValue = privateKeyCache.get(keyId, String.class);  
+		// 1회용 사용을 위해 조회 후 캐시에서 제거할 수 있다.
+		rsaPrivateKeyCache.evict(keyId); // 1회용 사용: 캐시에서 제거
+		
+	}
+```
+
+- getCache.(*CacheName*)으로 캐쉬를 객체를 가져온다.
+- `put(keyId, 벨류);` / `get(keyId, String.class);` 로 삽입 / 가져오기가 가능하다.
+- `.evict(keyId)`로 삭제 ( 1회성 사용이 가능하다. )
+
+>[!info] 1회성으로 사용하는 이유
+>
+> 나의 경우에 RSA키를 매번 발급 받기 때문에 값을 꺼냄과 동시에 해당 키벨류를 삭제한다.
+> Exception이 터지더라도, cacheProperties 에 설정한 TTL이 초과되면 삭제된다.
+
+---
+
+#### Redis서버를 사용한 Key 관리로, 멀티 서버 환경에서 정합성과 안정성을 챙길 수 있었다.
+
+## + TTL 체크
+![[Pasted image 20250328120415.png]]

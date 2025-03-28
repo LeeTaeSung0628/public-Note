@@ -715,6 +715,9 @@ Close
 Configuration
 Cross
 Clustering
+Custom
+CacheManager
+CacheName
 Authentication
 Authorization
 AOP
@@ -1885,6 +1888,8 @@ RedisCacheConfiguration
 RealPrice
 RealPriceInquiryResponse
 RealPriceInquiryResponseDto
+RedisCacheDefaultConfiguration
+RedisTemplate
 ID
 ItemReader
 IP
@@ -2411,6 +2416,7 @@ WD
 Worker
 Work
 Watchdog
+With
 contained
 css
 chunk
@@ -2559,6 +2565,7 @@ cache
 cacheManager
 cacheKey
 cacheData
+cacheProperties
 home
 height
 hello
@@ -3150,6 +3157,8 @@ sec
 self
 sessionFactory
 searchCache
+serializeKeysWith
+serializeValuesWith
 alt
 app
 api
@@ -3784,6 +3793,7 @@ realPrice
 realPriceInquiryRequestDto
 realPriceInquiryResponseDto
 realPriceInquiryResponse
+redisCacheConfigurationMap
 pc
 public
 parallelStream
@@ -4214,6 +4224,7 @@ enter
 encode
 ever
 error
+entryTtl
 Vault
 VARIABLES
 VIEW
@@ -4621,6 +4632,7 @@ QWWWqq
 Qbv
 QXX
 QFF
+Qualifier
 MaxPoolSize
 Member
 MORE
