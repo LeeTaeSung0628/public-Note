@@ -4,8 +4,7 @@
 
 ---
 
-[![[Pasted image 20250220144552.png|220]]](https://github.com/LeeTaeSung0628)
-
+[![[prof2.png|300]]](https://github.com/LeeTaeSung0628)
 ### [<font color="#ffffff">🔗git Hub ▶ ...</font>](https://github.com/LeeTaeSung0628)
 
 

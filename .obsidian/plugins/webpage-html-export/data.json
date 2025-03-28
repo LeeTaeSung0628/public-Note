@@ -30,7 +30,7 @@
   "addGraphView": true,
   "addTitle": true,
   "addRSSFeed": true,
-  "siteURL": "http://lts.kr/",
+  "siteURL": "https://lts.kr/",
   "authorName": "taesung's Blog",
   "vaultTitle": "blog",
   "exportPreset": "website",
