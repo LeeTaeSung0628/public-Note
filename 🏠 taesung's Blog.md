@@ -38,9 +38,11 @@
 ---
 
 # [[🪓 도구]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
->- ## 🐻 **Obsidian**
+
 >- ## ☁ **AWS**
 >- ## 🐋 **docker**
+>- ## 🔻 *Redis*
+>- ## 🐻 **Obsidian**
 
 ---
 

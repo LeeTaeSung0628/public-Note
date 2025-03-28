@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🏠 taesung's Blog.md",
-                "mode": "preview",
+                "file": "lectur/🏫 강의 & 자격증.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🏠 taesung's Blog"
+              "title": "🏫 강의 & 자격증"
             }
           }
         ]
@@ -140,12 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "lectur/🏫 강의 & 자격증.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "개요"
+              "title": "🏫 강의 & 자격증 의 개요"
             }
           },
           {
@@ -163,7 +164,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5
+    "width": 389.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,12 +184,16 @@
   },
   "active": "ed5a6184775fad20",
   "lastOpenFiles": [
-    "lectur/🏫 강의 & 자격증.md",
     "🏠 taesung's Blog.md",
-    "Tools/🪓 도구.md",
     "study/📕 공부.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-구조체(structuer).md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-사용자 정의 함수.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
     "project/🔫 이슈·트러블슈팅.md",
+    "Tools/🪓 도구.md",
+    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
     "project/💻 프로젝트.md",
+    "lectur/🏫 강의 & 자격증.md",
     "study/CS/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
     "lectur/3. 스프링 컨테이너와 스프링 빈.md",
     "lectur/2. 스프링 핵심 원리 이해.md",
@@ -206,10 +211,6 @@
     "study/CS/🍃 Spring.md",
     "study/CS/🎩 DevOps.md",
     "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
-    "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
-    "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
     "🔫 이슈",
     "사진 및 문서/Pasted image 20250325172818.png",
     "사진 및 문서/Pasted image 20250325165845.png",
