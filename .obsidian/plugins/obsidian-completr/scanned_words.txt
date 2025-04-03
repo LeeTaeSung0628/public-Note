@@ -2217,6 +2217,8 @@ DBCP
 DiscountPolicy
 DEBUG
 Disk
+Dos
+DDoS
 KB
 KEY
 Kill
