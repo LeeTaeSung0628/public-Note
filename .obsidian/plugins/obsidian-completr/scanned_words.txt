@@ -385,6 +385,7 @@ Ju
 JpaRepository
 JOIN
 Junit
+Jedis
 Tokken
 Token
 Tone
@@ -873,6 +874,7 @@ ASCII
 Add
 AppConfig
 AnnotationConfigApplicationContext
+Aside
 HTTP
 HttpOnly
 HTTPS
@@ -1220,6 +1222,8 @@ LazyHolder
 Li
 LSP
 Liskov
+Look
+Lettuce
 Bean
 Bearer
 Batch
@@ -1336,6 +1340,7 @@ BEST
 Beans
 BeanFactory
 Byte
+Boolean
 URL
 UtEHFOT
 UUFF
@@ -1703,6 +1708,7 @@ Flux
 Fair
 FilterChain
 FixDiscountPolicy
+False
 Refresh
 Redis
 RSA
@@ -1864,6 +1870,12 @@ RedLock
 Redisson
 RateDiscountPolicy
 RedisConfiguration
+RedisConnectionFactory
+RedisCacheManager
+RedisCacheConfiguration
+RealPrice
+RealPriceInquiryResponse
+RealPriceInquiryResponseDto
 ID
 ItemReader
 IP
@@ -2530,6 +2542,11 @@ connection
 clos
 control
 ctionary
+cache
+cacheConfigurations
+cacheManager
+cacheKey
+cacheData
 home
 height
 hello
@@ -2632,6 +2649,9 @@ haa
 html
 href
 hab
+hyphen
+hfemp
+haproxy
 index
 img
 insert
@@ -2750,6 +2770,7 @@ is
 inner
 innerWidth
 import
+implementation
 blog
 balanceJob
 batch
@@ -2851,6 +2872,7 @@ back
 break
 bit
 beforeEach
+buildingCd
 there
 this
 text
@@ -2968,6 +2990,7 @@ tree
 title
 transactionObserver
 tamplate
+true
 src
 site
 step
@@ -3117,6 +3140,10 @@ segregation
 sec
 self
 sessionFactory
+store
+supply
+springDataRedis
+searchCache
 alt
 app
 api
@@ -3233,6 +3260,7 @@ array
 arr
 assertj
 appConfig
+area
 with
 width
 writer
@@ -3745,6 +3773,10 @@ rIo
 responsibility
 redisson
 right
+realPrice
+realPriceInquiryResponse
+realPriceInquiryRequestDto
+realPriceInquiryResponseDto
 pc
 public
 parallelStream
@@ -3985,6 +4017,11 @@ getInstance
 gAMA
 gnw
 getBean
+getRealPriceCacheConfiguration
+getCache
+getBuildingCd
+getErrYn
+getOutH
 name
 newMemberBalance
 naver
@@ -4167,6 +4204,8 @@ enabled
 exclusive
 enter
 ever
+estate
+error
 Vault
 VARIABLES
 VIEW
@@ -4840,6 +4879,7 @@ vim
 vector
 varchar
 version
+values
 job
 jobName
 jE
@@ -5590,6 +5630,7 @@ yg
 ymm
 yUUU
 your
+yml
 XAVwLuLJ
 XML
 XOR
@@ -5829,6 +5870,7 @@ xiii
 xfgg
 xZZZ
 xZ
+xlsx
 ZaCmNrTx
 Zing
 Zjw

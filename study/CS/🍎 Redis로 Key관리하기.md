@@ -7,7 +7,7 @@
 # *Redis*란 무엇일까?
 <br/>
 
-## Redis(원격 디렉터리 서버 : **Re**mote **Di**ctionary **S**ever)
+## Redis(원격 딕셔너리 서버 : **Re**mote **Di**ctionary **S**ever)
 - 주로 애플리케이션 캐시 또는 빠른 응답 데이터베이스로 사용되는 오픈소스,
 인매모리, NoSql <키, 벨류> 저장소이다.
 
