@@ -256,6 +256,8 @@ StackOverflow
 Site
 SSD
 Sticky
+Suite
+SecurityFilterChain
 JWT
 Java
 Join
@@ -1230,6 +1232,7 @@ LSP
 Liskov
 Lettuce
 Look
+Login
 Bean
 Bearer
 Batch
@@ -1347,6 +1350,7 @@ Beans
 BeanFactory
 Byte
 Boolean
+Burp
 URL
 UtEHFOT
 UUFF
@@ -1719,6 +1723,7 @@ FilterChain
 FixDiscountPolicy
 Forgery
 False
+Form
 Refresh
 Redis
 RSA
@@ -2788,6 +2793,7 @@ is
 inner
 innerWidth
 import
+ignoringAntMatchers
 blog
 balanceJob
 batch
