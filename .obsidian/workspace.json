@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/🔫 이슈 분석 & 트러블슈팅.md",
+                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🔫 이슈 분석 & 트러블슈팅"
+              "title": "🥇 정보처리 기사 실기 키워드"
             }
           }
         ]
@@ -184,10 +184,11 @@
   },
   "active": "ed5a6184775fad20",
   "lastOpenFiles": [
-    "Issue_TroubleShooting/🤖 CSRF란 무엇인가.md",
-    "project/🔫 이슈 분석 & 트러블슈팅.md",
-    "study/CS/🍎 Redis로 Key관리하기.md",
+    "lectur/🏫 강의 & 자격증.md",
     "🏠 taesung's Blog.md",
+    "project/🔫 이슈 분석 & 트러블슈팅.md",
+    "Issue_TroubleShooting/🤖 CSRF란 무엇인가.md",
+    "study/CS/🍎 Redis로 Key관리하기.md",
     "project/💻 프로젝트.md",
     "사진 및 문서/Pasted image 20250407110848.png",
     "사진 및 문서/Pasted image 20250407104754.png",
@@ -198,7 +199,6 @@
     "Issue_TroubleShooting/⚔ StckOverflow 이슈와 QueryDSL.md",
     "study/Dev Seminar/🔻 Redis 캐쉬 전략 - hello 서비스에 적용하여 성능개선 가능성.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
-    "lectur/🏫 강의 & 자격증.md",
     "study/📕 공부.md",
     "사진 및 문서/prof2.jpg",
     "사진 및 문서/prof2.png",
