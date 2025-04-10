@@ -140,17 +140,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🏠 taesung's Blog.md",
+                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "🏠 taesung's Blog 의 개요"
+              "title": "🥇 정보처리 기사 실기 키워드 의 개요"
             }
           },
           {
-            "id": "2e958c9dd4f388f9",
+            "id": "747780f9e63170f5",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -174,12 +174,12 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
-      "webpage-html-export:Export Vault to HTML": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian42-brat:BRAT": false,
-      "callout-manager:Insert Callout": false
+      "webpage-html-export:Export Vault to HTML": false,
+      "callout-manager:Insert Callout": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "ed5a6184775fad20",
