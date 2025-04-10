@@ -48,4 +48,57 @@ int main() {
 > 구조체의 멤버를 지정할 때는 변수명 멤버이름 으로 지정하지만, **[변수명].[멤버이름]**
 > **포인터 변수**를 이용해 구조체의 멤버를 지정할 때는 변수명 멤버이름 으로 지정한다 **[변수명]->[멤버이름]**
 
+---
+
+# 다음 c코드의 출력값은?
+```c
+struct Node {
+    int value;
+    struct Node* next;  
+};
+
+void func(struct Node* node) {
+    while (node != NULL && node->next != NULL) {
+        int t = node->value;
+        node->value = node->next->value;
+        node->next->value = t;
+        node = node->next->next;
+    }
+}
+
+int main() {
+    struct Node n1 = {1, NULL};
+    struct Node n2 = {2, NULL};
+    struct Node n3 = {3, NULL};
+    
+    n1.next = &n3;  
+    n3.next = &n2;
+
+    func(&n1);
+
+    struct Node* current = &n1;
+    while (current != NULL) {
+        printf("%d", current->value);  
+        current = current->next;
+    }
+}
+```
+
+n1 - n3 - n2 순서
+- 구조체의 주소를 메소드로 넘길경우 *값(value)* 은 반영이된다.
+
+node->value = node->next->value;
+- n1의 벨류는 n3의 벨류가 된다
+node->next->value = t;
+- n3의 벨류는 n1의 벨류가 된다.
+node = node->next->next;
+- 현재 노드를 n2로 바꾼다
+- 이때, n2의 next는 없으므로 조건 종료
+
+이때 n1부터 연결된 노드의 벨류를 프린트하면 3 1 2
+
+### 답 : 312
+
+----
+
 
