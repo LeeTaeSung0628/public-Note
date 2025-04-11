@@ -55,22 +55,13 @@
 
 ---
 
-# *RSA private key*를 *Redis*에 저장하는 이유?
-- RSA 적용기 ▶ [[🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)]]
-### 1. RSA 1회성 발급시 성능 유지
-- Disk 기반의 DB보다 성능 측면에서, 뛰어남.
-*로그인/회원가입(<u>트래픽이 크지 않음</u>)의 보안성 향상을 위해, 복호화 요청이 들어왔을때 개인키를 꺼냄과 동시에 삭제시키고, 매번 새로 발급되도록 하였음. ( put / pop )형식*
+# - *RSA private key*를 *Redis*에 저장해보기
+- #### RSA란 무엇인가? ▶ [[🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)]]
 
-### 2. 다중 컨테이너(서버) 환경에서 **세션 불일치** 문제 해결
-- 다중 컨테이너 환경에서 동일한 인메모리(캐시)에 접근하기 위해서, 독립적인 서버를 갖는 Redis를 사용.
+---
 
->[!tip] Sticky Session도 있는데?
->
-> 해당 방식은 요청에 대해 처리한 WAS에서만 세션을 관리(응답)하는 기법이다.
-> 세션을 고정시켜놓기에, 로드 벨런싱 기능이 잘 작동하기 힘들어 트래픽이 한 서버에 집중될 수 있다.
-> 
-> 또한, Session Clustering을 사용한다면, 여러대의 서버에 세션을 동일하게 가져가야 하기 때문에,
-> 메모리 용량과 트래픽이 증가하게 된다.
+# - 캐쉬 전략으로 **Redis**를 선택한 이유?
+- #### 인메모리 캐시와의 비교 ▶ [[🤲분산 환경에서의 Cache 선택하기]]
 
 ---
 
@@ -289,3 +280,18 @@ public class TestServiceImpl {
 
 ## + TTL 체크
 ![[Pasted image 20250328120415.png]]
+
+# + TTL 설정
+
+```c
+application.yml / properties
+      ↓
+CacheProperties (ttl map 관리)
+      ↓
+redisCacheConfigurationMap() → 캐시별 TTL 매핑
+      ↓
+redisCacheDefaultConfiguration() → 기본 설정 (ex: serializer, 기본 TTL)
+      ↓
+redisCacheManager() → 최종 CacheManager 생성
+```
+다음과 같이 TTL 시간 및 [[Redis 만료 정책]]을 맵핑 할 수 있다.

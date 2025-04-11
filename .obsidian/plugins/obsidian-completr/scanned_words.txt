@@ -259,6 +259,8 @@ Sticky
 Suite
 SecurityFilterChain
 Source
+Scans
+SPOF
 JWT
 Java
 Join
@@ -723,6 +725,8 @@ Custom
 CacheManager
 CacheName
 Conflicts
+ConcurrentHashMap
+Collections
 Authentication
 Authorization
 AOP
@@ -887,6 +891,7 @@ AppConfig
 AnnotationConfigApplicationContext
 Aside
 Additional
+Active
 HTTP
 HttpOnly
 HTTPS
@@ -1009,6 +1014,7 @@ HLL
 HAVING
 HibernateTransactionManager
 Hica
+High
 OAuth
 Obsidian
 Out
@@ -1450,6 +1456,7 @@ URR
 Union
 Uncommitted
 UV
+UUID
 Pointcut
 Point
 Payload
@@ -1615,6 +1622,9 @@ PrivateKey
 PublicKey
 PostgreSql
 Please
+Passive
+Periodic
+Policies
 Filter
 Fingers
 ForkJoinPool
@@ -1729,6 +1739,7 @@ FixDiscountPolicy
 Forgery
 False
 Form
+Failure
 Refresh
 Redis
 RSA
@@ -1900,6 +1911,7 @@ RealPriceInquiryResponse
 RealPriceInquiryResponseDto
 RedisCacheDefaultConfiguration
 RedisTemplate
+Remote
 ID
 ItemReader
 IP
@@ -2582,6 +2594,7 @@ cacheProperties
 commands
 conflicted
 conflicts
+cookie
 home
 height
 hello
@@ -3501,6 +3514,7 @@ memberService
 memory
 mote
 mode
+mykey
 Git
 GitDesktop
 Grid
@@ -3825,6 +3839,7 @@ realPriceInquiryResponse
 redisCacheConfigurationMap
 resolve
 recommend
+replication
 pc
 public
 parallelStream
@@ -4258,6 +4273,7 @@ error
 entryTtl
 each
 every
+eviction
 Vault
 VARIABLES
 VIEW
@@ -4492,6 +4508,7 @@ EON
 Ewm
 EBJ
 Equality
+Expiration
 update
 under
 uzJl
@@ -5155,6 +5172,7 @@ demand
 doFinal
 deleted
 desired
+dirty
 limit
 list
 long
@@ -5256,6 +5274,7 @@ lJ
 lp
 len
 listed
+latency
 final
 forkJoinPool
 fail
@@ -6096,5 +6115,6 @@ qcaa
 qGG
 qmZ
 qii
+quick
 öm
 ÜR

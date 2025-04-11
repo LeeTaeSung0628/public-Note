@@ -54,6 +54,9 @@
 4. `클라이언트`는 `서버`로부터 받은 공개키로 평문 암호화, `서버`에 전달
 5. 암호화된 평문을 KeyUUID로 찾은 공개키로 복호화 -> 평문 완성
 
+>[!warning] 정보
+>UUID자동 발급 및 매칭 로직은 공개하지 않음.
+
 # 1. 키 쌍 발급 로직
 
 ### 하나의 쌍으로 이루어지는 *공개키(public key)* 와 *개인키(private key)* 를 생성하는 로직 
@@ -250,4 +253,3 @@ public void testGenerateKeypairAndEncryptDecrypt() throws Exception {
 
 ---
 
-# TTL 선정이유, 인메모리캐쉬가 아닌 Redis선정이유, 부하 상황 찾아보기
