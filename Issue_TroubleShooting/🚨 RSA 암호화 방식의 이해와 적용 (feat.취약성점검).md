@@ -247,3 +247,7 @@ public void testGenerateKeypairAndEncryptDecrypt() throws Exception {
 
 ## Key 관리 보러가기
 ## ▶ [[🍎 Redis로 Key관리하기]]
+
+---
+
+# TTL 선정이유, 인메모리캐쉬가 아닌 Redis선정이유, 부하 상황 찾아보기

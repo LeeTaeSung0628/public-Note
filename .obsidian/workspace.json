@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4013f1bf53f1a7ce",
+        "id": "de15e2ed304e09d6",
         "type": "tabs",
         "children": [
           {
-            "id": "ed5a6184775fad20",
+            "id": "a01c9c3d6f1cf474",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
-                "mode": "source",
-                "source": false
+                "aFile": "Issue_TroubleShooting/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
+                "bFile": "Issue_TroubleShooting/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "🥇 정보처리 기사 실기 키워드"
+              "icon": "diff",
+              "title": "Diff: 🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)"
             }
           }
         ]
@@ -182,16 +182,17 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "ed5a6184775fad20",
+  "active": "a01c9c3d6f1cf474",
   "lastOpenFiles": [
+    "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
+    "project/💻 프로젝트.md",
+    "🏠 taesung's Blog.md",
     "Issue_TroubleShooting/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
+    "project/🔫 이슈 분석 & 트러블슈팅.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
     "lectur/🏫 강의 & 자격증.md",
-    "🏠 taesung's Blog.md",
-    "project/🔫 이슈 분석 & 트러블슈팅.md",
     "Issue_TroubleShooting/🤖 CSRF란 무엇인가.md",
     "study/CS/🍎 Redis로 Key관리하기.md",
-    "project/💻 프로젝트.md",
     "사진 및 문서/Pasted image 20250407110848.png",
     "사진 및 문서/Pasted image 20250407104754.png",
     "사진 및 문서/Pasted image 20250407104728.png",
