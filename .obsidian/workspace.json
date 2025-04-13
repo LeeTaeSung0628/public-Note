@@ -48,38 +48,8 @@
               "icon": "lucide-file",
               "title": "🥇 정보처리 기사 실기 키워드"
             }
-          },
-          {
-            "id": "070e91329b9439ec",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "conflict-files-obsidian-git.md",
-                "bFile": "conflict-files-obsidian-git.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: conflict-files-obsidian-git"
-            }
-          },
-          {
-            "id": "5524176b51654c3c",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "study/CS/🍎 Redis로 Key관리하기.md",
-                "bFile": "study/CS/🍎 Redis로 Key관리하기.md",
-                "aRef": "HEAD",
-                "bRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: 🍎 Redis로 Key관리하기"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -240,8 +210,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5524176b51654c3c",
+  "active": "ed5a6184775fad20",
   "lastOpenFiles": [
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-구조체(structuer).md",
     "conflict-files-obsidian-git.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
     "짧은 키워드/Redis 만료 정책.md",
@@ -249,7 +220,6 @@
     "study/CS/🤲분산 환경에서의 Cache 선택하기.md",
     "사진 및 문서/스크린샷 2025-04-14 오전 12.06.09.png",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-사용자 정의 함수.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-구조체(structuer).md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 기타문제.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-포인터.md",
