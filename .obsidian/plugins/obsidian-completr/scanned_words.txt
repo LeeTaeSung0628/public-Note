@@ -258,6 +258,8 @@ SSD
 Sticky
 Suite
 SecurityFilterChain
+Structural
+Strategy
 JWT
 Java
 Join
@@ -518,6 +520,7 @@ Task
 ThreadLocal
 Tomcat
 TLS
+Template
 Cookie
 Chain
 Claim
@@ -720,6 +723,10 @@ Clustering
 Custom
 CacheManager
 CacheName
+Communicational
+Creational
+Composite
+Cursor
 Authentication
 Authorization
 AOP
@@ -883,6 +890,7 @@ Add
 AppConfig
 AnnotationConfigApplicationContext
 Aside
+Abstract
 HTTP
 HttpOnly
 HTTPS
@@ -1611,6 +1619,7 @@ Private
 PrivateKey
 PublicKey
 PostgreSql
+Prototype
 Filter
 Fingers
 ForkJoinPool
@@ -1725,6 +1734,8 @@ FixDiscountPolicy
 Forgery
 False
 Form
+Facade
+Flyweight
 Refresh
 Redis
 RSA
@@ -2061,6 +2072,7 @@ Inconsistency
 Issue
 Impl
 Inversion
+Iterator
 DB
 Dev
 Deploy
@@ -2226,6 +2238,7 @@ Disk
 Dos
 DDoS
 DDOS
+Design
 KB
 KEY
 Kill
@@ -3169,6 +3182,8 @@ sessionFactory
 searchCache
 serializeKeysWith
 serializeValuesWith
+switch
+swap
 alt
 app
 api
@@ -3587,6 +3602,7 @@ Gradle
 Gradel
 Groovy
 Generate
+GoF
 Netlify
 New
 Native
@@ -3689,6 +3705,7 @@ NAME
 Nw
 NoSql
 NoSQL
+NullPointerException
 repository
 return
 reader
@@ -4139,6 +4156,7 @@ number
 noSQL
 nav
 node
+next
 etc
 export
 ex
@@ -4235,6 +4253,7 @@ encode
 ever
 error
 entryTtl
+else
 Vault
 VARIABLES
 VIEW
@@ -4329,6 +4348,7 @@ VY
 Vi
 VARCHAR
 VIP
+Visitor
 Export
 ExecutionContext
 Exception
@@ -4818,6 +4838,8 @@ MemberApp
 MemberServiceTest
 MemberRepository
 MongoDB
+Memento
+Mediator
 vs
 void
 var
@@ -5126,6 +5148,7 @@ doReadPage
 doFilter
 demand
 doFinal
+decorator
 limit
 list
 long
@@ -5324,6 +5347,8 @@ front
 find
 for
 forge
+func
+finally
 kakao
 kLMRW
 kqAzM
