@@ -48,9 +48,38 @@
               "icon": "lucide-file",
               "title": "🥇 정보처리 기사 실기 키워드"
             }
+          },
+          {
+            "id": "070e91329b9439ec",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "conflict-files-obsidian-git.md",
+                "bFile": "conflict-files-obsidian-git.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: conflict-files-obsidian-git"
+            }
+          },
+          {
+            "id": "5524176b51654c3c",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "study/CS/🍎 Redis로 Key관리하기.md",
+                "bFile": "study/CS/🍎 Redis로 Key관리하기.md",
+                "aRef": "HEAD",
+                "bRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: 🍎 Redis로 Key관리하기"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -211,13 +240,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fe901588da42ef4b",
+  "active": "5524176b51654c3c",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+    "짧은 키워드/Redis 만료 정책.md",
+    "짧은 키워드",
+    "study/CS/🤲분산 환경에서의 Cache 선택하기.md",
     "사진 및 문서/스크린샷 2025-04-14 오전 12.06.09.png",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-사용자 정의 함수.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-구조체(structuer).md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 기타문제.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-포인터.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 SQL 문제.md",
@@ -242,14 +275,11 @@
     "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
     "lectur/3. 스프링 컨테이너와 스프링 빈.md",
     "lectur/2. 스프링 핵심 원리 이해.md",
-    "lectur/2.6 IoC, DI 그리고 컨테이너 - 스프링으로 전환.md",
-    "lectur/3.1 스프링 컨테이너 생성.md",
     "사진 및 문서/Pasted image 20250328120415.png",
     "🔫 이슈",
     "사진 및 문서/Pasted image 20250325172818.png",
     "사진 및 문서/Pasted image 20250325165845.png",
     "사진 및 문서/Pasted image 20250325165844.png",
-    "사진 및 문서/Pasted image 20250325102427.png",
     "서비스 취약점 점검 결과 보고.pdf",
     "사진 및 문서/서비스 취약점 점검 결과 보고.pdf",
     "custom-head-content.html",
@@ -258,7 +288,6 @@
     "custom_header_content.html~",
     "Issue_TroubleShooting",
     "study/Coding Test/Bronze/2446. 별 찍기 － 9/별 찍기 － 9.py",
-    "study/Coding Test/Bronze/15596. 정수 N개의 합/정수 N개의 합.py",
     "무제.canvas"
   ]
 }
