@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+                "file": "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 SQL 문제.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🥇 정보처리 기사 실기 키워드"
+              "title": "🥇 정보처리 기사 실기 SQL 문제"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 505.5
+    "width": 433.5
   },
   "right": {
     "id": "f9f8508c398bcd94",
@@ -184,23 +184,24 @@
   },
   "active": "d21e4bde77aadd14",
   "lastOpenFiles": [
-    "lectur/🏫 강의 & 자격증.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-포인터.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-사용자 정의 함수.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-구조체(structuer).md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+    "project/💻 프로젝트.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 기타문제.md",
+    "lectur/🏫 강의 & 자격증.md",
     "🏠 taesung's Blog.md",
     "conflict-files-obsidian-git.md",
     "사진 및 문서/스크린샷 2025-04-14 오전 12.06.09.png",
-    "project/💻 프로젝트.md",
     "Tools/🪓 도구.md",
     "⛈ Obsidian-AWS연동.md",
     "study/📕 공부.md",
     "project/🔫 이슈 분석 & 트러블슈팅.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
     "project/note CI_CD/⛈ Obsidian-AWS연동.md",
     "짧은 키워드/Redis 만료 정책.md",
     "study/CS/🍎 Redis로 Key관리하기.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 기타문제.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
     "Issue_TroubleShooting/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
     "study/CS/🤲분산 환경에서의 Cache 선택하기.md",
     "짧은 키워드",
