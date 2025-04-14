@@ -11,10 +11,14 @@
             "id": "1225765ffc269daa",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "conflict-files-obsidian-git"
             }
           }
         ]
@@ -180,6 +184,8 @@
   },
   "active": "2e958c9dd4f388f9",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "사진 및 문서/스크린샷 2025-04-14 오전 12.06.09.png",
     "project/💻 프로젝트.md",
     "Tools/🪓 도구.md",
     "⛈ Obsidian-AWS연동.md",
@@ -202,14 +208,12 @@
     "study/CS/📔 DataBase.md",
     "study/CS/🐰 Java의 String과 SpringBuffer.md",
     "study/CS/📭 Server.md",
-    "conflict-files-obsidian-git.md",
     "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
     "Issue_TroubleShooting/🤖 CSRF란 무엇인가.md",
     "사진 및 문서/Pasted image 20250407110848.png",
     "사진 및 문서/Pasted image 20250407104754.png",
     "사진 및 문서/Pasted image 20250407104728.png",
     "Issue_TroubleShooting/🔐 상품 투자하기 서비스 Lock기법 개선안.md",
-    "Issue_TroubleShooting/🚦 Spring Batch 트러블슈팅.md",
     "사진 및 문서/prof2.jpg",
     "사진 및 문서/prof2.png",
     "사진 및 문서/Pasted image 20250328120415.png",
@@ -217,7 +221,6 @@
     "사진 및 문서/Pasted image 20250325172818.png",
     "사진 및 문서/Pasted image 20250325165845.png",
     "사진 및 문서/Pasted image 20250325165844.png",
-    "사진 및 문서/Pasted image 20250325102427.png",
     "서비스 취약점 점검 결과 보고.pdf",
     "사진 및 문서/서비스 취약점 점검 결과 보고.pdf",
     "custom-head-content.html",

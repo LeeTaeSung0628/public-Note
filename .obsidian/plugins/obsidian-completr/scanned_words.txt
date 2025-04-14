@@ -258,10 +258,9 @@ SSD
 Sticky
 Suite
 SecurityFilterChain
+Structural
+Strategy
 Source
-Scans
-SPOF
-SET
 JWT
 Java
 Join
@@ -522,6 +521,7 @@ Task
 ThreadLocal
 Tomcat
 TLS
+Template
 This
 Cookie
 Chain
@@ -725,9 +725,11 @@ Clustering
 Custom
 CacheManager
 CacheName
+Communicational
+Creational
+Composite
+Cursor
 Conflicts
-ConcurrentHashMap
-Collections
 Authentication
 Authorization
 AOP
@@ -891,8 +893,8 @@ Add
 AppConfig
 AnnotationConfigApplicationContext
 Aside
+Abstract
 Additional
-Active
 HTTP
 HttpOnly
 HTTPS
@@ -1015,7 +1017,6 @@ HLL
 HAVING
 HibernateTransactionManager
 Hica
-High
 OAuth
 Obsidian
 Out
@@ -1458,7 +1459,6 @@ URR
 Union
 Uncommitted
 UV
-UUID
 Pointcut
 Point
 Payload
@@ -1623,10 +1623,8 @@ Private
 PrivateKey
 PublicKey
 PostgreSql
+Prototype
 Please
-Passive
-Periodic
-Policies
 Filter
 Fingers
 ForkJoinPool
@@ -1741,7 +1739,8 @@ FixDiscountPolicy
 Forgery
 False
 Form
-Failure
+Facade
+Flyweight
 Refresh
 Redis
 RSA
@@ -1913,8 +1912,6 @@ RealPriceInquiryResponse
 RealPriceInquiryResponseDto
 RedisCacheDefaultConfiguration
 RedisTemplate
-Remote
-Radix
 ID
 ItemReader
 IP
@@ -2080,6 +2077,7 @@ Inconsistency
 Issue
 Impl
 Inversion
+Iterator
 Instructions
 DB
 Dev
@@ -2246,6 +2244,7 @@ Disk
 Dos
 DDoS
 DDOS
+Design
 KB
 KEY
 Kill
@@ -2596,9 +2595,9 @@ cacheKey
 cacheData
 cacheProperties
 commands
+completr
 conflicted
 conflicts
-cookie
 home
 height
 hello
@@ -2926,7 +2925,6 @@ buildingCd
 before
 below
 blocks
-bash
 there
 this
 text
@@ -3198,9 +3196,11 @@ sessionFactory
 searchCache
 serializeKeysWith
 serializeValuesWith
+switch
+swap
+scanned
 strongly
 simple
-switch
 alt
 app
 api
@@ -3416,6 +3416,7 @@ white
 write
 wP
 will
+words
 workspace
 marketing
 md
@@ -3520,7 +3521,6 @@ memberService
 memory
 mote
 mode
-mykey
 Git
 GitDesktop
 Grid
@@ -3626,6 +3626,7 @@ Gradle
 Gradel
 Groovy
 Generate
+GoF
 Netlify
 New
 Native
@@ -3728,6 +3729,7 @@ NAME
 Nw
 NoSql
 NoSQL
+NullPointerException
 repository
 return
 reader
@@ -3845,7 +3847,6 @@ realPriceInquiryResponse
 redisCacheConfigurationMap
 resolve
 recommend
-replication
 pc
 public
 parallelStream
@@ -3980,6 +3981,7 @@ printf
 psvm
 put
 pop
+plugins
 git
 gitignore
 gridSize
@@ -4278,10 +4280,9 @@ encode
 ever
 error
 entryTtl
+else
 each
 every
-eviction
-else
 Vault
 VARIABLES
 VIEW
@@ -4376,6 +4377,7 @@ VY
 Vi
 VARCHAR
 VIP
+Visitor
 Export
 ExecutionContext
 Exception
@@ -4516,7 +4518,6 @@ EON
 Ewm
 EBJ
 Equality
-Expiration
 update
 under
 uzJl
@@ -4868,6 +4869,8 @@ MemberApp
 MemberServiceTest
 MemberRepository
 MongoDB
+Memento
+Mediator
 vs
 void
 var
@@ -5178,9 +5181,9 @@ doReadPage
 doFilter
 demand
 doFinal
+decorator
 deleted
 desired
-dirty
 limit
 list
 long
@@ -5282,7 +5285,6 @@ lJ
 lp
 len
 listed
-latency
 final
 forkJoinPool
 fail
@@ -5381,6 +5383,8 @@ front
 find
 for
 forge
+func
+finally
 followed
 files
 following
@@ -6123,6 +6127,5 @@ qcaa
 qGG
 qmZ
 qii
-quick
 öm
 ÜR
