@@ -258,9 +258,12 @@ SSD
 Sticky
 Suite
 SecurityFilterChain
+Source
+Scans
+SPOF
+SET
 Structural
 Strategy
-Source
 JWT
 Java
 Join
@@ -521,8 +524,8 @@ Task
 ThreadLocal
 Tomcat
 TLS
-Template
 This
+Template
 Cookie
 Chain
 Claim
@@ -725,11 +728,13 @@ Clustering
 Custom
 CacheManager
 CacheName
+Conflicts
+ConcurrentHashMap
+Collections
 Communicational
 Creational
 Composite
 Cursor
-Conflicts
 Authentication
 Authorization
 AOP
@@ -893,8 +898,9 @@ Add
 AppConfig
 AnnotationConfigApplicationContext
 Aside
-Abstract
 Additional
+Active
+Abstract
 HTTP
 HttpOnly
 HTTPS
@@ -1017,6 +1023,7 @@ HLL
 HAVING
 HibernateTransactionManager
 Hica
+High
 OAuth
 Obsidian
 Out
@@ -1459,6 +1466,7 @@ URR
 Union
 Uncommitted
 UV
+UUID
 Pointcut
 Point
 Payload
@@ -1623,8 +1631,11 @@ Private
 PrivateKey
 PublicKey
 PostgreSql
-Prototype
 Please
+Passive
+Periodic
+Policies
+Prototype
 Filter
 Fingers
 ForkJoinPool
@@ -1739,6 +1750,7 @@ FixDiscountPolicy
 Forgery
 False
 Form
+Failure
 Facade
 Flyweight
 Refresh
@@ -1912,6 +1924,8 @@ RealPriceInquiryResponse
 RealPriceInquiryResponseDto
 RedisCacheDefaultConfiguration
 RedisTemplate
+Remote
+Radix
 ID
 ItemReader
 IP
@@ -2077,8 +2091,8 @@ Inconsistency
 Issue
 Impl
 Inversion
-Iterator
 Instructions
+Iterator
 DB
 Dev
 Deploy
@@ -2595,9 +2609,9 @@ cacheKey
 cacheData
 cacheProperties
 commands
-completr
 conflicted
 conflicts
+cookie
 home
 height
 hello
@@ -2925,6 +2939,7 @@ buildingCd
 before
 below
 blocks
+bash
 there
 this
 text
@@ -3196,11 +3211,10 @@ sessionFactory
 searchCache
 serializeKeysWith
 serializeValuesWith
-switch
-swap
-scanned
 strongly
 simple
+switch
+swap
 alt
 app
 api
@@ -3416,7 +3430,6 @@ white
 write
 wP
 will
-words
 workspace
 marketing
 md
@@ -3521,6 +3534,7 @@ memberService
 memory
 mote
 mode
+mykey
 Git
 GitDesktop
 Grid
@@ -3847,6 +3861,7 @@ realPriceInquiryResponse
 redisCacheConfigurationMap
 resolve
 recommend
+replication
 pc
 public
 parallelStream
@@ -3981,7 +3996,6 @@ printf
 psvm
 put
 pop
-plugins
 git
 gitignore
 gridSize
@@ -4280,9 +4294,10 @@ encode
 ever
 error
 entryTtl
-else
 each
 every
+eviction
+else
 Vault
 VARIABLES
 VIEW
@@ -4518,6 +4533,7 @@ EON
 Ewm
 EBJ
 Equality
+Expiration
 update
 under
 uzJl
@@ -5181,9 +5197,10 @@ doReadPage
 doFilter
 demand
 doFinal
-decorator
 deleted
 desired
+dirty
+decorator
 limit
 list
 long
@@ -5285,6 +5302,7 @@ lJ
 lp
 len
 listed
+latency
 final
 forkJoinPool
 fail
@@ -5383,11 +5401,11 @@ front
 find
 for
 forge
-func
-finally
 followed
 files
 following
+func
+finally
 kakao
 kLMRW
 kqAzM
@@ -6127,5 +6145,6 @@ qcaa
 qGG
 qmZ
 qii
+quick
 öm
 ÜR
