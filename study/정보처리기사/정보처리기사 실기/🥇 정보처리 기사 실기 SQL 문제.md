@@ -428,3 +428,19 @@ A테이블의 모든 행과, B테이블의 모든 행의 모든 가능한 조합
 
 ---
 
+- . 다음 빈칸에 들어갈 UNION 연산의 결과값을 작성하시오.
+![[Pasted image 20250415181225.png]]
+```sql
+[쿼리]
+SELECT A FROM  T1
+UNION
+SELECT A FROM  T2
+ORDER BY A DESC;
+```
+
+- *UNION* → 중복 제거
+- *UNION ALL* → 중복 허용
+### 답 : 
+> 4
+> 3
+> 1
