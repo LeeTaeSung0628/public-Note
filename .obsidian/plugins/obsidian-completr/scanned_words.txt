@@ -264,6 +264,7 @@ SPOF
 SET
 Structural
 Strategy
+SaaS
 JWT
 Java
 Join
@@ -526,6 +527,8 @@ Tomcat
 TLS
 This
 Template
+Transfer
+Transformation
 Cookie
 Chain
 Claim
@@ -901,6 +904,9 @@ Aside
 Additional
 Active
 Abstract
+Asynchronous
+ATM
+Applications
 HTTP
 HttpOnly
 HTTPS
@@ -1024,6 +1030,8 @@ HAVING
 HibernateTransactionManager
 Hica
 High
+Heroku
+Hat
 OAuth
 Obsidian
 Out
@@ -1123,6 +1131,8 @@ OpenSessionInViewFilter
 OrderServiceImpl
 OOAAA
 Objective
+ORDER
+OpenShift
 LDAP
 Light
 List
@@ -1373,6 +1383,7 @@ Byte
 Boolean
 Burp
 Backdoor
+Beanstalk
 URL
 UtEHFOT
 UUFF
@@ -1469,6 +1480,7 @@ Union
 Uncommitted
 UV
 UUID
+UNION
 Pointcut
 Point
 Payload
@@ -1638,6 +1650,7 @@ Passive
 Periodic
 Policies
 Prototype
+PKI
 Filter
 Fingers
 ForkJoinPool
@@ -1928,6 +1941,9 @@ RedisCacheDefaultConfiguration
 RedisTemplate
 Remote
 Radix
+Rule
+RDAC
+Red
 ID
 ItemReader
 IP
@@ -2095,6 +2111,8 @@ Impl
 Inversion
 Instructions
 Iterator
+Identity
+IaaS
 DB
 Dev
 Deploy
@@ -2262,6 +2280,8 @@ DDoS
 DDOS
 Design
 Dijkstra
+DESC
+Dropbox
 KB
 KEY
 Kill
@@ -2615,6 +2635,8 @@ commands
 conflicted
 conflicts
 cookie
+conn
+count
 home
 height
 hello
@@ -2717,6 +2739,7 @@ haa
 html
 href
 hab
+hat
 index
 img
 insert
@@ -2836,6 +2859,7 @@ inner
 innerWidth
 import
 ignoringAntMatchers
+insights
 blog
 balanceJob
 batch
@@ -3222,6 +3246,7 @@ swap
 set
 semi
 super
+salesforce
 alt
 app
 api
@@ -3343,6 +3368,8 @@ assertion
 automatically
 available
 above
+applications
+apps
 with
 width
 writer
@@ -3542,6 +3569,7 @@ memory
 mote
 mode
 mykey
+middleware
 Git
 GitDesktop
 Grid
@@ -3869,6 +3897,7 @@ redisCacheConfigurationMap
 resolve
 recommend
 replication
+red
 pc
 public
 parallelStream
@@ -4544,6 +4573,7 @@ Ewm
 EBJ
 Equality
 Expiration
+ECC
 update
 under
 uzJl
