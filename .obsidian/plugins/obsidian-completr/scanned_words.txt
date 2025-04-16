@@ -2622,6 +2622,7 @@ commands
 conflicted
 conflicts
 cookie
+completr
 home
 height
 hello
@@ -3229,6 +3230,7 @@ swap
 set
 semi
 super
+scanned
 alt
 app
 api
@@ -3445,6 +3447,7 @@ write
 wP
 will
 workspace
+words
 marketing
 md
 main
@@ -4011,6 +4014,7 @@ psvm
 put
 pop
 print
+plugins
 git
 gitignore
 gridSize
