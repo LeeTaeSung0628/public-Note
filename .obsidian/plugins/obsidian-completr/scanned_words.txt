@@ -99,7 +99,6 @@ Switching
 Stop
 Selective
 SSTF
-Seek
 Sequential
 Semi
 SDN
@@ -600,7 +599,6 @@ Cost
 Coax
 Common
 CIDR
-CASCADE
 Consistency
 CREATE
 COMMIT
@@ -716,7 +714,6 @@ CHAR
 CNT
 CROSS
 Cartesian
-Cascading
 Contents
 CSS
 Case
