@@ -1128,7 +1128,6 @@ OpenSessionInViewFilter
 OrderServiceImpl
 OOAAA
 Objective
-ORDER
 OpenShift
 LDAP
 Light
@@ -1477,7 +1476,6 @@ Union
 Uncommitted
 UV
 UUID
-UNION
 Pointcut
 Point
 Payload
@@ -2277,7 +2275,6 @@ DDoS
 DDOS
 Design
 Dijkstra
-DESC
 Dropbox
 KB
 KEY
@@ -2632,8 +2629,7 @@ commands
 conflicted
 conflicts
 cookie
-conn
-count
+completr
 home
 height
 hello
@@ -3243,6 +3239,7 @@ swap
 set
 semi
 super
+scanned
 salesforce
 alt
 app
@@ -3462,6 +3459,7 @@ write
 wP
 will
 workspace
+words
 marketing
 md
 main
@@ -4030,6 +4028,7 @@ psvm
 put
 pop
 print
+plugins
 git
 gitignore
 gridSize
