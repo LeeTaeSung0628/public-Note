@@ -264,6 +264,7 @@ SPOF
 SET
 Structural
 Strategy
+SaaS
 JWT
 Java
 Join
@@ -905,6 +906,7 @@ Active
 Abstract
 Asynchronous
 ATM
+Applications
 HTTP
 HttpOnly
 HTTPS
@@ -1028,6 +1030,8 @@ HAVING
 HibernateTransactionManager
 Hica
 High
+Heroku
+Hat
 OAuth
 Obsidian
 Out
@@ -1127,6 +1131,7 @@ OpenSessionInViewFilter
 OrderServiceImpl
 OOAAA
 Objective
+OpenShift
 LDAP
 Light
 List
@@ -1377,6 +1382,7 @@ Byte
 Boolean
 Burp
 Backdoor
+Beanstalk
 URL
 UtEHFOT
 UUFF
@@ -1642,6 +1648,7 @@ Passive
 Periodic
 Policies
 Prototype
+PKI
 Filter
 Fingers
 ForkJoinPool
@@ -1934,6 +1941,7 @@ Remote
 Radix
 Rule
 RDAC
+Red
 ID
 ItemReader
 IP
@@ -2102,6 +2110,7 @@ Inversion
 Instructions
 Iterator
 Identity
+IaaS
 DB
 Dev
 Deploy
@@ -2269,6 +2278,7 @@ DDoS
 DDOS
 Design
 Dijkstra
+Dropbox
 KB
 KEY
 Kill
@@ -2725,6 +2735,7 @@ haa
 html
 href
 hab
+hat
 index
 img
 insert
@@ -2844,6 +2855,7 @@ inner
 innerWidth
 import
 ignoringAntMatchers
+insights
 blog
 balanceJob
 batch
@@ -3231,6 +3243,7 @@ set
 semi
 super
 scanned
+salesforce
 alt
 app
 api
@@ -3352,6 +3365,8 @@ assertion
 automatically
 available
 above
+applications
+apps
 with
 width
 writer
@@ -3552,6 +3567,7 @@ memory
 mote
 mode
 mykey
+middleware
 Git
 GitDesktop
 Grid
@@ -3879,6 +3895,7 @@ redisCacheConfigurationMap
 resolve
 recommend
 replication
+red
 pc
 public
 parallelStream
@@ -4555,6 +4572,7 @@ Ewm
 EBJ
 Equality
 Expiration
+ECC
 update
 under
 uzJl
