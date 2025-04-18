@@ -265,6 +265,12 @@ SET
 Structural
 Strategy
 SaaS
+Syntax
+Semantic
+Standardization
+Structured
+Study
+Stake
 JWT
 Java
 Join
@@ -396,6 +402,9 @@ JpaRepository
 JOIN
 Junit
 Jedis
+Journey
+JAVASCRIPT
+JQUERY
 Tokken
 Token
 Tone
@@ -532,6 +541,11 @@ Transformation
 TP
 Telnet
 Tip
+TCL
+Turnaround
+Travel
+Today
+Tamper
 Cookie
 Chain
 Claim
@@ -743,6 +757,10 @@ Composite
 Cursor
 Cyber
 Concurrent
+Come
+Certificate
+Conceptual
+Camping
 Authentication
 Authorization
 AOP
@@ -1037,6 +1055,10 @@ Hica
 High
 Heroku
 Hat
+Highest
+HAS
+Hadoop
+HDFS
 OAuth
 Obsidian
 Out
@@ -1140,6 +1162,8 @@ OpenShift
 OLAP
 OLTP
 ORDER
+Organization
+Overseas
 LDAP
 Light
 List
@@ -1271,6 +1295,8 @@ Liskov
 Lettuce
 Look
 Login
+Learnability
+Life
 Bean
 Bearer
 Batch
@@ -1391,6 +1417,9 @@ Boolean
 Burp
 Backdoor
 Beanstalk
+BCP
+BIA
+Business
 URL
 UtEHFOT
 UUFF
@@ -1488,6 +1517,8 @@ Uncommitted
 UV
 UUID
 UNION
+Usage
+Uniform
 Pointcut
 Point
 Payload
@@ -1659,6 +1690,13 @@ Policies
 Prototype
 PKI
 PPTP
+Priority
+Plan
+PoW
+Proof
+PoS
+Production
+Proofing
 Filter
 Fingers
 ForkJoinPool
@@ -1777,6 +1815,8 @@ Failure
 Facade
 Flyweight
 FCFS
+Flexibility
+Favicon
 Refresh
 Redis
 RSA
@@ -1953,6 +1993,13 @@ Radix
 Rule
 RDAC
 Red
+Ratio
+RPO
+RUI
+Relation
+Reply
+Redirect
+Reduce
 ID
 ItemReader
 IP
@@ -2123,6 +2170,11 @@ Iterator
 Identity
 IaaS
 IPsec
+Internatioal
+Impact
+IKE
+Intuitiveness
+Identifier
 DB
 Dev
 Deploy
@@ -2292,6 +2344,12 @@ Design
 Dijkstra
 Dropbox
 DESC
+Deadine
+Destination
+DRP
+Disaster
+DRS
+Domestic
 KB
 KEY
 Kill
@@ -2380,6 +2438,8 @@ KII
 KOREA
 KeyUUID
 KeyPairGenerator
+KCDSA
+Korean
 Web
 WAS
 WEB
@@ -2492,6 +2552,8 @@ Worker
 Work
 Watchdog
 With
+Writing
+Website
 contained
 css
 chunk
@@ -2976,6 +3038,7 @@ before
 below
 blocks
 bash
+based
 there
 this
 text
@@ -3096,6 +3159,8 @@ tamplate
 true
 them
 theta
+throughout
+tamper
 src
 site
 step
@@ -3380,6 +3445,7 @@ available
 above
 applications
 apps
+algorithm
 with
 width
 writer
@@ -3581,6 +3647,10 @@ mote
 mode
 mykey
 middleware
+meet
+many
+mark
+modifications
 Git
 GitDesktop
 Grid
@@ -3688,6 +3758,8 @@ Groovy
 Generate
 GoF
 GIT
+GoodMan
+Group
 Netlify
 New
 Native
@@ -3793,6 +3865,7 @@ NoSQL
 NullPointerException
 Nature
 NUI
+Next
 repository
 return
 reader
@@ -4050,6 +4123,8 @@ print
 plugins
 ping
 proxy
+people
+proofing
 git
 gitignore
 gridSize
@@ -4162,6 +4237,8 @@ getBuildingCd
 getErrYn
 getOutH
 getT
+goodMan
+good
 name
 newMemberBalance
 naver
@@ -4591,6 +4668,9 @@ EBJ
 Equality
 Expiration
 ECC
+Effciency
+Exam
+Eat
 update
 under
 uzJl
@@ -4684,6 +4764,7 @@ uttH
 unlock
 using
 use
+unauthorized
 QueueCapacity
 QuerydslPagingItemReader
 Query
@@ -4944,6 +5025,8 @@ MemberRepository
 MongoDB
 Memento
 Mediator
+Modeling
+Must
 vs
 void
 var
@@ -5127,6 +5210,10 @@ jpaSelectMethod
 junit
 json
 join
+journey
+jsp
+jQuery
+jstl
 dto
 dtoList
 double
@@ -5364,6 +5451,8 @@ len
 listed
 latency
 left
+life
+leaving
 final
 forkJoinPool
 fail
@@ -5731,6 +5820,8 @@ Ya
 YTT
 YZZ
 YrO
+YohanKim
+Yesterday
 yn
 ydiM
 yeHyk
@@ -5899,6 +5990,7 @@ Xt
 XC
 Xm
 XtQ
+XMLHttpRequest
 zWAl
 za
 zf
