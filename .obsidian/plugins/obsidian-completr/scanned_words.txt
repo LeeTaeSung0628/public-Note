@@ -264,6 +264,7 @@ SET
 Structural
 Strategy
 SaaS
+Structured
 JWT
 Java
 Join
@@ -530,6 +531,8 @@ Transfer
 Transformation
 TP
 Telnet
+Tip
+Tamper
 Cookie
 Chain
 Claim
@@ -1135,6 +1138,7 @@ Objective
 OpenShift
 OLAP
 OLTP
+ORDER
 LDAP
 Light
 List
@@ -1386,6 +1390,9 @@ Boolean
 Burp
 Backdoor
 Beanstalk
+BCP
+BIA
+Business
 URL
 UtEHFOT
 UUFF
@@ -1482,6 +1489,7 @@ Union
 Uncommitted
 UV
 UUID
+UNION
 Pointcut
 Point
 Payload
@@ -1653,6 +1661,8 @@ Policies
 Prototype
 PKI
 PPTP
+Proofing
+Plan
 Filter
 Fingers
 ForkJoinPool
@@ -1947,6 +1957,7 @@ Radix
 Rule
 RDAC
 Red
+RPO
 ID
 ItemReader
 IP
@@ -2117,6 +2128,7 @@ Iterator
 Identity
 IaaS
 IPsec
+Impact
 DB
 Dev
 Deploy
@@ -2285,6 +2297,10 @@ DDOS
 Design
 Dijkstra
 Dropbox
+DRP
+Disaster
+DRS
+DESC
 KB
 KEY
 Kill
@@ -2639,6 +2655,8 @@ conflicted
 conflicts
 cookie
 completr
+conn
+count
 home
 height
 hello
@@ -3089,6 +3107,7 @@ tamplate
 true
 them
 theta
+tamper
 src
 site
 step
@@ -3574,6 +3593,7 @@ mote
 mode
 mykey
 middleware
+modifications
 Git
 GitDesktop
 Grid
@@ -3681,6 +3701,7 @@ Groovy
 Generate
 GoF
 GIT
+Group
 Netlify
 New
 Native
@@ -3784,6 +3805,8 @@ Nw
 NoSql
 NoSQL
 NullPointerException
+Nature
+NUI
 repository
 return
 reader
@@ -4041,6 +4064,7 @@ print
 plugins
 ping
 proxy
+proofing
 git
 gitignore
 gridSize
@@ -4675,6 +4699,7 @@ uttH
 unlock
 using
 use
+unauthorized
 QueueCapacity
 QuerydslPagingItemReader
 Query
