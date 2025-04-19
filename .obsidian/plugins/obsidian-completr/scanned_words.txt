@@ -528,6 +528,8 @@ This
 Template
 Transfer
 Transformation
+TP
+Telnet
 Cookie
 Chain
 Claim
@@ -735,6 +737,8 @@ Communicational
 Creational
 Composite
 Cursor
+Cyber
+Concurrent
 Authentication
 Authorization
 AOP
@@ -1129,6 +1133,8 @@ OrderServiceImpl
 OOAAA
 Objective
 OpenShift
+OLAP
+OLTP
 LDAP
 Light
 List
@@ -1646,6 +1652,7 @@ Periodic
 Policies
 Prototype
 PKI
+PPTP
 Filter
 Fingers
 ForkJoinPool
@@ -1763,6 +1770,7 @@ Form
 Failure
 Facade
 Flyweight
+FCFS
 Refresh
 Redis
 RSA
@@ -2108,6 +2116,7 @@ Instructions
 Iterator
 Identity
 IaaS
+IPsec
 DB
 Dev
 Deploy
@@ -3671,6 +3680,7 @@ Gradel
 Groovy
 Generate
 GoF
+GIT
 Netlify
 New
 Native
@@ -4029,6 +4039,8 @@ put
 pop
 print
 plugins
+ping
+proxy
 git
 gitignore
 gridSize
