@@ -55,7 +55,7 @@
 
 ---
 
-# - *RSA private key*를 *Redis*에 저장해보기
+# - *RSA private key* 암호화 방식 적용하기
 - #### RSA란 무엇인가? ▶ [[🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)]]
 
 ---
