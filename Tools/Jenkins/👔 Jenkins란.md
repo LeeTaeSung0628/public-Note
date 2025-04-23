@@ -1,4 +1,4 @@
-# 🏉 Jenkins란
+# 👔 Jenkins란
 
 #Tools #도커 #Docker
 
@@ -182,7 +182,7 @@ Jenkins는 Docker를 사용해 **컨테이너 환경에서 빌드와 테스트�
         
 6. **서버 또는 클러스터에 배포**
     - SSH, Docker Compose, <u>Kubernetes</u> 등을 통해 자동 배포
-        
+        ▶ [[🚢Kubernetes(k8s)란]]
 7. **알림 및 로그 저장**
     - Slack, Email 알림 전송 + Jenkins에 빌드 로그 기록
 

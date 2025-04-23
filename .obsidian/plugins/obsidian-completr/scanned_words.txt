@@ -99,7 +99,6 @@ Switching
 Stop
 Selective
 SSTF
-Seek
 Sequential
 Semi
 SDN
@@ -272,6 +271,8 @@ Structured
 Study
 Stake
 Slack
+Secret
+SSOT
 JWT
 Java
 Join
@@ -548,6 +549,7 @@ Travel
 Today
 Tamper
 Teams
+Truth
 Cookie
 Chain
 Claim
@@ -619,7 +621,6 @@ Cost
 Coax
 Common
 CIDR
-CASCADE
 Consistency
 CREATE
 COMMIT
@@ -735,7 +736,6 @@ CHAR
 CNT
 CROSS
 Cartesian
-Cascading
 Contents
 CSS
 Case
@@ -766,6 +766,8 @@ Camping
 Cron
 CircleCI
 Compose
+ClusterIP
+ConfigMap
 Authentication
 Authorization
 AOP
@@ -1433,6 +1435,7 @@ BCP
 BIA
 Business
 Bitbucket
+Borg
 URL
 UtEHFOT
 UUFF
@@ -1712,6 +1715,7 @@ Production
 Proofing
 Poliing
 Plugin
+PVC
 Filter
 Fingers
 ForkJoinPool
@@ -2729,6 +2733,8 @@ conflicts
 cookie
 completr
 cloud
+containerd
+cri
 home
 height
 hello
@@ -3467,6 +3473,7 @@ above
 applications
 apps
 algorithm
+argoCD
 with
 width
 writer
@@ -3891,6 +3898,8 @@ NUI
 Next
 Notification
 Nexus
+Node
+Namespace
 repository
 return
 reader
@@ -4457,6 +4466,7 @@ each
 every
 eviction
 else
+etcd
 Vault
 VARIABLES
 VIEW
@@ -4552,6 +4562,7 @@ Vi
 VARCHAR
 VIP
 Visitor
+Volume
 Export
 ExecutionContext
 Exception
@@ -5054,6 +5065,7 @@ Memento
 Mediator
 Modeling
 Must
+Manager
 vs
 void
 var
@@ -5676,6 +5688,7 @@ keys
 kyc
 keyPair
 kit
+kube
 of
 only
 oqk
@@ -5932,6 +5945,7 @@ ymm
 yUUU
 your
 yml
+yaml
 XAVwLuLJ
 XML
 XOR
