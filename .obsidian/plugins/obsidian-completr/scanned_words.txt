@@ -765,6 +765,7 @@ Conceptual
 Camping
 Cron
 CircleCI
+Compose
 Authentication
 Authorization
 AOP
@@ -1067,6 +1068,8 @@ HAS
 Hadoop
 HDFS
 Hook
+HIPO
+Hierarchy
 OAuth
 Obsidian
 Out
@@ -1172,6 +1175,7 @@ OLTP
 ORDER
 Organization
 Overseas
+Output
 LDAP
 Light
 List
@@ -2187,6 +2191,7 @@ Impact
 IKE
 Intuitiveness
 Identifier
+Input
 DB
 Dev
 Deploy

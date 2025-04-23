@@ -185,3 +185,4 @@ Jenkins는 Docker를 사용해 **컨테이너 환경에서 빌드와 테스트�
         
 7. **알림 및 로그 저장**
     - Slack, Email 알림 전송 + Jenkins에 빌드 로그 기록
+
