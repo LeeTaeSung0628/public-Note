@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "짧은 키워드/GitOps.md",
+                "file": "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitOps"
+              "title": "🚢Kubernetes(k8s)란"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "🏠 taesung's Blog"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,23 +196,23 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "7d0687a04214960a",
+  "active": "4b241774655b87e6",
   "lastOpenFiles": [
-    "project/💻 프로젝트.md",
-    "🏠 taesung's Blog.md",
-    "project/🔫 이슈 분석 & 트러블슈팅.md",
-    "Tools/🪓 도구.md",
-    "study/📕 공부.md",
-    "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
+    "Tools/Jenkins/👔 Jenkins란.md",
+    "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
     "짧은 키워드/GitOps.md",
+    "Tools/🪓 도구.md",
+    "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
+    "🏠 taesung's Blog.md",
+    "project/💻 프로젝트.md",
+    "project/🔫 이슈 분석 & 트러블슈팅.md",
+    "study/📕 공부.md",
     "study/CS/🎩 DevOps.md",
     "짧은 키워드/Redis 만료 정책.md",
-    "Tools/Jenkins/👔 Jenkins란.md",
     "Tools/Kubernetes",
     "study/정보처리기사/정보처리기사 실기/무제.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 SQL 문제.md",
     "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
-    "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
     "Tools/docker/🐋 docker 란.md",
     "Issue_TroubleShooting/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
     "study/CS/🍎 Redis로 Key관리하기.md",

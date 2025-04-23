@@ -813,8 +813,6 @@ AS
 ARM
 APT
 Array
-ArgoCD
-Argo
 Assertions
 ACTIVE
 Actuator
@@ -2735,6 +2733,7 @@ completr
 cloud
 containerd
 cri
+cluster
 home
 height
 hello
@@ -3349,6 +3348,8 @@ semi
 super
 scanned
 salesforce
+sync
+stage
 alt
 app
 api
@@ -3473,7 +3474,6 @@ above
 applications
 apps
 algorithm
-argoCD
 with
 width
 writer
@@ -3679,6 +3679,7 @@ meet
 many
 mark
 modifications
+multi
 Git
 GitDesktop
 Grid
@@ -4019,6 +4020,8 @@ resolve
 recommend
 replication
 red
+revert
+repo
 pc
 public
 parallelStream
@@ -5066,6 +5069,7 @@ Mediator
 Modeling
 Must
 Manager
+Manifest
 vs
 void
 var
@@ -5775,6 +5779,7 @@ orderService
 obsidian
 occurrence
 outer
+overlay
 You
 YZV
 YALM

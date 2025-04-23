@@ -107,3 +107,5 @@ Git Repository (Manifest 저장) ← (*감시*) ← Argo CD → (*반영*) → K
 3. Git을 소스 오브 트루스로 삼고, Argo CD는 상태를 감시하고 Kubernetes와 싱크 맞춤
 4. 실시간 배포 이력 추적, 자동 복구, 롤백, 멀티클러스터 지원 등 GitOps 핵심 도구
 5. Kubernetes를 쓰는 조직이라면 Argo CD는 필수에 가까움 (Jenkins는 CI로만 남게 됨)
+
+---
