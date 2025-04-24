@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -198,15 +198,15 @@
   },
   "active": "4b241774655b87e6",
   "lastOpenFiles": [
+    "🏠 taesung's Blog.md",
+    "Tools/🪓 도구.md",
+    "study/📕 공부.md",
+    "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
     "Tools/Jenkins/👔 Jenkins란.md",
     "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
     "짧은 키워드/GitOps.md",
-    "Tools/🪓 도구.md",
-    "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
-    "🏠 taesung's Blog.md",
     "project/💻 프로젝트.md",
     "project/🔫 이슈 분석 & 트러블슈팅.md",
-    "study/📕 공부.md",
     "study/CS/🎩 DevOps.md",
     "짧은 키워드/Redis 만료 정책.md",
     "Tools/Kubernetes",
