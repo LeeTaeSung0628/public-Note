@@ -273,6 +273,7 @@ Stake
 Slack
 Secret
 SSOT
+Servlet
 JWT
 Java
 Join
@@ -407,6 +408,7 @@ Jedis
 Journey
 JAVASCRIPT
 JQUERY
+Jetty
 Tokken
 Token
 Tone
@@ -938,6 +940,8 @@ Applications
 Artifactory
 Agent
 Actions
+Applets
+Apache
 HTTP
 HttpOnly
 HTTPS
@@ -1533,6 +1537,7 @@ UUID
 UNION
 Usage
 Uniform
+Undertow
 Pointcut
 Point
 Payload
@@ -2370,6 +2375,7 @@ Disaster
 DRS
 Domestic
 Directory
+DelegatingFilterProxy
 KB
 KEY
 Kill
@@ -2576,6 +2582,7 @@ With
 Writing
 Website
 Webhook
+WildFly
 contained
 css
 chunk
@@ -2734,6 +2741,9 @@ cloud
 containerd
 cri
 cluster
+conn
+count
+clean
 home
 height
 hello
@@ -5391,6 +5401,8 @@ desired
 dirty
 decorator
 day
+doGet
+doPost
 limit
 list
 long

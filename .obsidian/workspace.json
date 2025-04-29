@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
-                "mode": "preview",
+                "file": "study/CS/🐡 Spring Security와 Filter.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🚢Kubernetes(k8s)란"
-            }
-          },
-          {
-            "id": "7d0687a04214960a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "🏠 taesung's Blog.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🏠 taesung's Blog"
+              "title": "🐡 Spring Security와 Filter"
             }
           }
         ]
@@ -67,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git ops",
+                "query": "의존성",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,35 +184,36 @@
   },
   "active": "4b241774655b87e6",
   "lastOpenFiles": [
-    "🏠 taesung's Blog.md",
-    "Tools/🪓 도구.md",
+    "짧은 키워드/Servlet.md",
+    "study/CS/🐡 Spring Security와 Filter.md",
     "study/📕 공부.md",
+    "짧은 키워드/GitOps.md",
+    "짧은 키워드/Redis 만료 정책.md",
+    "사진 및 문서/do-messenger_screenshot_2025-04-29_15_37_33.png",
+    "study/CS/🍊 Spring의 의존성 주입(DI).md",
+    "lectur/2.4 새로운 할인 정책 개발.md",
+    "Spring의 의존성 주입(DI).md",
+    "🏠 taesung's Blog.md",
+    "짧은 키워드/무제.md",
+    "study/정보처리기사/정보처리기사 실기/무제.md",
+    "project/💻 프로젝트.md",
+    "Tools/🪓 도구.md",
+    "study/CS/🍎 Redis로 Key관리하기.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 기타문제.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-구조체(structuer).md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-사용자 정의 함수.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-제어문.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 프로그래밍-포인터.md",
+    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 SQL 문제.md",
     "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
+    "Issue_TroubleShooting/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
+    "project/🔫 이슈 분석 & 트러블슈팅.md",
     "Tools/Jenkins/👔 Jenkins란.md",
     "Tools/docker/📘 SpringBoot & Docker + Reids 연동.md",
-    "짧은 키워드/GitOps.md",
-    "project/💻 프로젝트.md",
-    "project/🔫 이슈 분석 & 트러블슈팅.md",
-    "study/CS/🎩 DevOps.md",
-    "짧은 키워드/Redis 만료 정책.md",
     "Tools/Kubernetes",
-    "study/정보처리기사/정보처리기사 실기/무제.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 SQL 문제.md",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 키워드.md",
-    "Tools/docker/🐋 docker 란.md",
-    "Issue_TroubleShooting/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
-    "study/CS/🍎 Redis로 Key관리하기.md",
-    "Issue_TroubleShooting/🔐 상품 투자하기 서비스 Lock기법 개선안.md",
-    "study/CS/🤲분산 환경에서의 Cache 선택하기.md",
     "사진 및 문서/Pasted image 20250421164348.png",
-    "Tools/aws/🍌 Elastic IP(탄력적 IP)란.md",
     "Tools/Jenkins",
-    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
-    "lectur/3.1 스프링 컨테이너 생성.md",
-    "lectur/3. 스프링 컨테이너와 스프링 빈.md",
-    "lectur/2.2 회원 도메인 설계 및 개발.md",
-    "lectur/2.3 주문과 할인 도메인 설계 및 개발.md",
-    "lectur/2.4.1 전체 흐름 정리.md",
     "사진 및 문서/Pasted image 20250417121150.png",
     "사진 및 문서/Pasted image 20250416182123.png",
     "사진 및 문서/Pasted image 20250416181833.png",
@@ -236,7 +223,6 @@
     "사진 및 문서/Pasted image 20250415181225.png",
     "사진 및 문서/스크린샷 2025-04-14 오전 12.06.09.png",
     "짧은 키워드",
-    "사진 및 문서/Pasted image 20250407110848.png",
     "🔫 이슈",
     "서비스 취약점 점검 결과 보고.pdf",
     "사진 및 문서/서비스 취약점 점검 결과 보고.pdf",

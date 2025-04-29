@@ -140,7 +140,7 @@ public RedisConnectionFactory redisConnectionFactory() {
 
 ## **RedisCacheDefaultConfiguration**
 
-Redis에 저장될 캐시의 <u>기본</u> 직렬화 및 만료 시간 등의 설정을 담당.
+Redis에 저장될 캐시의 <u>기본</u> 직렬화 및 만료 시간(TTL) 등의 설정을 담당.
 
 ```java
 private RedisCacheConfiguration redisCacheDefaultConfiguration() {
