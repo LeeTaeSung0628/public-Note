@@ -278,6 +278,8 @@ SecurityFilter
 SecurityContext
 Storming
 SAGA
+Selenium
+Spinnaker
 JWT
 Java
 Join
@@ -414,6 +416,7 @@ JAVASCRIPT
 JQUERY
 Jetty
 Jaeger
+Jest
 Tokken
 Token
 Tone
@@ -1730,6 +1733,7 @@ Poliing
 Plugin
 PVC
 PasswordEncoder
+Prometheus
 Filter
 Fingers
 ForkJoinPool
@@ -1852,6 +1856,7 @@ Flexibility
 Favicon
 Folder
 FilterChainProxy
+FluxCD
 Refresh
 Redis
 RSA
@@ -3928,6 +3933,7 @@ Notification
 Nexus
 Node
 Namespace
+Nomad
 repository
 return
 reader
