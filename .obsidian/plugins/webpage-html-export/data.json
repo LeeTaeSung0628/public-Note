@@ -21,8 +21,8 @@
   "logLevel": "warning",
   "minifyHTML": true,
   "makeNamesWebStyle": true,
-  "onlyExportModified": false,
-  "deleteOldFiles": true,
+  "onlyExportModified": true,
+  "deleteOldFiles": false,
   "addThemeToggle": false,
   "addOutline": true,
   "addFileNav": true,
@@ -30,7 +30,7 @@
   "addGraphView": true,
   "addTitle": true,
   "addRSSFeed": true,
-  "siteURL": "http://lts.kr/",
+  "siteURL": "https://lts.kr/",
   "authorName": "taesung's Blog",
   "vaultTitle": "blog",
   "exportPreset": "website",
@@ -50,13 +50,13 @@
   "exportPath": "C:\\Users\\Hello\\Desktop\\obsidian\\export_HTML",
   "filesToExport": [
     [
+      "짧은 키워드",
       "Issue_TroubleShooting",
       "lectur",
       "project",
       "study",
       "Tools",
-      "🏠 taesung's Blog.md",
-      "project/🔫 이슈·트러블슈팅.md"
+      "🏠 taesung's Blog.md"
     ]
   ],
   "filePickerBlacklist": [

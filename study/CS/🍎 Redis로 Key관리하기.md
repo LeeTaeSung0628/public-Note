@@ -55,161 +55,243 @@
 
 ---
 
-# *RSA private key*를 *Redis*에 저장하는 이유?
-- RSA 적용기 ▶ [[🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)]]
-### 1. RSA 1회성 발급시 성능 유지
-- Disk 기반의 DB보다 성능 측면에서, 뛰어남.
-*로그인/회원가입(<u>트래픽이 크지 않음</u>)의 보안성 향상을 위해, 복호화 요청이 들어왔을때 개인키를 꺼냄과 동시에 삭제시키고, 매번 새로 발급되도록 하였음. ( put / pop )형식*
-
-### 2. 다중 컨테이너(서버) 환경에서 **세션 불일치** 문제 해결
-- 다중 컨테이너 환경에서 동일한 인메모리(캐시)에 접근하기 위해서, 독립적인 서버를 갖는 Redis를 사용.
-
->[!tip] Sticky Session도 있는데?
->
-> 해당 방식은 요청에 대해 처리한 WAS에서만 세션을 관리(응답)하는 기법이다.
-> 세션을 고정시켜놓기에, 로드 벨런싱 기능이 잘 작동하기 힘들어 트래픽이 한 서버에 집중될 수 있다.
-> 
-> 또한, Session Clustering을 사용한다면, 여러대의 서버에 세션을 동일하게 가져가야 하기 때문에,
-> 메모리 용량과 트래픽이 증가하게 된다.
+# - *RSA private key* 암호화 방식 적용하기
+- #### RSA란 무엇인가? ▶ [[🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)]]
 
 ---
 
-# **Redis** 연결 및 구현
+# - 캐쉬 전략으로 **Redis**를 선택한 이유?
+- #### 인메모리 캐시와의 비교 ▶ [[🤲분산 환경에서의 Cache 선택하기]]
+
+---
+
+# **Redis** 연결 및 구현 With. Spring
 <br/>
 
-## 1. RedisConfiguration 
 
-
-
-시세조회 API Redis 적용
-
-redis 캐시그룹 : realPrice  
-캐시 key : buildingCd 숫자 값  
-캐시 value : realPriceInquiryResponse 객체
-
-**기존로직**  
-현재 부동산 시세조회는 hyphen 외부 API통신으로 검색한 주소의 시세를 받아서 조회했다.
-
-주소입력 > 외부 API로 단지 코드 조회(buildingCd) > 단지 코드를 기반으로 외부 API로  
-시세조회
-
-주소별 시세를 redis로 캐싱해서 성능을 올리기 위해 리팩토링
-
-redis 캐싱 전략(Look Aside)
-
-1. redis cache store에 검색하는 데이터가 있는지 확인(cache store에 데이터 있다면 바로 데이터 사용)
-2. redis cache store에 없을 경우 DB(hfemp_estate_supply_area)에서 데이터 조회
-3. DB에서 가져온 데이터를 cache store에 업데이트
-
-# 환경 설정
+# 1. 환경 설정
 
 **build.gradle에 의존성 추가**  
+
+```java
 implementation 'org.springframework.boot:spring-boot-starter-data-redis'  
->> springDataRedis 모듈을 사용하여 Redis와 객체 매핑을 처리해주고  
-Redis 서버와 쉽게 연결할 수 있도록 기본 설정과 자동 설정 제공
+```
 
 **yml redis 속성 추가**  
+```yml
 cache:  
 type: redis  
 redis:  
 cache-null-values: true
 
 redis:  
-host: hello-redis-ha-haproxy.redis-ns  
-port: 6379
+host: `레디스 호스트`
+port: `레디스 포트`
+```
 
-# Configuration 클래스 설정
+---
 
-![Pasted image 20241220094057.png](https://jsdevblog1124.netlify.app/lib/media/pasted-image-20241220094057.png)
+## 2. RedisConfiguration
+- @Configuration으로 redis사용에 필요한 셋팅을 Bean으로 등록할 클래스.
+```java
+@Configuration  
+public class RedisConfiguration {  
+  
+    @Value("${spring.redis.host}")  
+    private String host;  
+  
+    @Value("${spring.redis.port}")  
+    private int port;
+}
+```
+<br/>
 
-**RedisConnectionFactory**  
+---
+
+## **RedisConnectionFactory**
+
 Redis 서버와 연결을 생성 및 관리해주는 인터페이스
-
-어플리케이션 서버와 Redis 서버 간의 데이터 송수신을 하는 클라이언트로  
-Lettuce와 Jedis가 있음  
-Lettuce : 비동기 및 이벤트 기반의 통신으로 높은 성능  
-Jedis : 동기 방식으로 안정성이 높지만 처리 능력이 좀 부족하다.
-
-따라서 해당 코드에는 성능이 좋은 Lettuce를 사용했음
-
-**RedisCacheManager**  
-Redis를 캐시 저장소로 사용하는 캐시 관리 기능 제공
-
-지정된 이름으로 Redis 캐시를 생성 및 관리  
-TTL(Time-To-Live, 생명주기) 설정  
-직렬화/역직렬화 지원
-
-RedisCacheManager를 통해 realPrice라는 이름으로 캐시 키를 생성하고 생명주기를 설정
-
-Map<String, RedisCacheConfiguration> cacheConfigurations = new HashMap<>();  
-cacheConfigurations.put("realPrice", getRealPriceCacheConfiguration());
-
-해당 코드를 통해 key : realPrice, value : getRealPriceCacheConfiguration() >> 동적 TTL  
-구조로 Redis에 저장
-
-**getRealPriceCacheConfiguration 메서드**  
-매주 목요일 오후 11:30에 Redis에서 캐시들이 삭제되도록 설정  
-(일주일 단위로 부동산 시세가 변동해서 매주 목요일에 기존 캐시 데이터를 삭제하는 것)
-
-현재시간 기준으로 이번 주 목요일 오후 11:30까지의 시간차를 계산해서 반환하는 메서드
-
-따라서 Redis Configuration 클래스의 역할은
-
-1. 어플리케이션 서버와 Redis 서버간의 통신을 관리
-2. RealPrice라는 이름의 캐시를 매주 목요일 오후 11:30까지의 TTL을 가지도록 설정
-
-# 비즈니스 로직 개선
-
-![Pasted image 20241220101945.png](https://jsdevblog1124.netlify.app/lib/media/pasted-image-20241220101945.png)  
-![Pasted image 20241220101957.png](https://jsdevblog1124.netlify.app/lib/media/pasted-image-20241220101957.png)
-
-**admin, app 프로젝트 분기처리**  
-요구사항 중 app 프로젝트에서 요청이 들어올 시 Redis를 활용하고  
-admin 프로젝트에서 요청이 들어올 시 Redis 미활용 기존 로직대로 API 통신
-
-요구사항을 충족하기 위해 URL 쿼리 파라미터를 활용했다.
-
-![Pasted image 20241220102154.png](https://jsdevblog1124.netlify.app/lib/media/pasted-image-20241220102154.png)  
-admin 프로젝트에서 api 프로젝트로 통신할 때 URL에 "cache=False"를 추가
-
-Redis를 적용하는 api 프로젝트에서는 service 메서드에 Boolean cache 파라미터를 추가
-
-Boolean cache가 true이면 redis를 적용하고 false이면 admin 프로젝트에서 온 요청으로  
-api 통신을 하도록 분기처리
-
-**Look Aside 전략 구현**
-
-Cache searchCache = cacheManager.getCache("realPrice");  
-String cacheKey = realPriceInquiryRequestDto.getBuildingCd();
-
-if(cache == null || cache) {  
-RealPriceInquiryResponse cacheData = searchCache.get(cacheKey, RealPriceInquiryResponse.class);
-
+```java
+@Bean  
+public RedisConnectionFactory redisConnectionFactory() {  
+    return new LettuceConnectionFactory(host, port);  
+}
 ```
-if(cacheData != null) {  
-    RealPriceInquiryResponseDto realPriceInquiryResponseDto = RealPriceInquiryResponseDto.builder()  
-            .errYn("N")  
-            .errMsg("")  
-            .outH0001(cacheData)  
-            .build();  
+- 어플리케이션 서버와 Redis 서버 간의 데이터 송수신을 하는 클라이언트
+- 대표적으로 *Lettuce*와 *Jedis*, *Redisson* 이 있다.
 
-    return new ResponseModel<>(realPriceInquiryResponseDto);  
+### Lettuce
+- 비동기 및 논블로킹 I/O를 기반으로 하여 고부하, 다중 스레드 환경에 적합
+
+### Jedis
+- 블로킹 I/O(동기) 방식을 사용.
+- 고부하나 비동기 처리가 중요한 환경에서는 효울이 떨어진다.
+
+### redisson
+- 단순히 Redis 연결을 관리하는 것을 넘어 <u>분산 락, 분산 컬렉션, 분산 캐시</u> 등 고급 기능을 제공.
+- 직접 <u>RedisConnectionFactory</u>로 사용하기보다는 *RedissonClient를 빈으로 등록*하고 이를 통해 분산 락이나 캐시 매니저를 구성.
+- #### redisson 사용 예
+   ▶ [[🔐 상품 투자하기 서비스 Lock기법 개선안]]
+<br/>
+
+따라서 해당 코드에는 비동기 성능이 높은 좋은 **Lettuce** 선택.
+
+---
+
+## **RedisCacheDefaultConfiguration**
+
+Redis에 저장될 캐시의 <u>기본</u> 직렬화 및 만료 시간(TTL) 등의 설정을 담당.
+
+```java
+private RedisCacheConfiguration redisCacheDefaultConfiguration() {
+    return RedisCacheConfiguration
+            .defaultCacheConfig()
+            .serializeKeysWith(RedisSerializationContext.SerializationPair
+                    .fromSerializer(new StringRedisSerializer()))
+            .serializeValuesWith(RedisSerializationContext.SerializationPair
+                    .fromSerializer(new GenericJackson2JsonRedisSerializer());
 }
 ```
 
-1. 우선 realPrice::buildingCd로 저장되어 있는 캐시가 있는지 조회
-2. 있으면 RealPriceInquiryResponseDto 객체에 담아서 return
-3. 만약 조회 결과가 없으면 기존 로직인 API 통신을 실시
+- *serializeKeysWith* : `StringRedisSerializer`를 사용하여 키를 문자열로 직렬화합니다.
+- *serializeValuesWith* : `GenericJackson2JsonRedisSerializer`와 `ObjectMapper`를 사용해 JSON 형식으로 직렬화
+> `GenericJackson2JsonRedisSerializer` : 직렬화 방식 중 하나로, JSON형식을 지원.
 
-if(!realPriceInquiryResponseDto.getErrYn().equals("Y")){  
-RealPriceInquiryResponse realPriceInquiryResponse = realPriceInquiryResponseDto.getOutH0001();  
-searchCache.put(cacheKey, realPriceInquiryResponse);  
+---
+
+## **redisCacheConfigurationMap**
+
+여러 캐시 이름에 대해 각기 다른 TTL(Time To Live)을 동적으로 설정.
+
+```java
+private Map<String, RedisCacheConfiguration> redisCacheConfigurationMap() {  
+    Map<String, RedisCacheConfiguration> cacheConfigurations = new HashMap<>();  
+    for (Map.Entry<String, Long> cacheNameAndTimeout : cacheProperties.getTtl().entrySet()) {  
+        cacheConfigurations  
+                .put(cacheNameAndTimeout.getKey(), redisCacheDefaultConfiguration().entryTtl(  
+                        Duration.ofSeconds(cacheNameAndTimeout.getValue())));  
+    }  
+    return cacheConfigurations;  
 }
+```
+<br/>
 
-4. API 데이터 통신 후 Response의 결과가 error가 아닐 때만 Redis에 저장
+//cacheProperties.yml
+```yml
+cache:  
+  ttl:  
+    CacheName: 10 #만료 시간
+```
+- 외부 설정(`CacheProperties`)에서 캐시별 TTL 정보를 읽어와 각 캐시의 만료 시간을 지정
+이를 통해 특정 캐시만 별도의 만료 정책 등을 적용할 수 있다.
+- *entryTtl* : 기본 만료시간 설정
 
-HF-DT-20 테스트 수행내역서_부동산 시세조회 API Redis 적용.xlsx
+---
 
-**그 결과 응답 속도 약 99.8% 성능 개선**  
-5번의 테스트 API 평균 응답 속도 : 3,494ms  
-5번의 Redis 평균 응답 속도 : 2.4ms
+## **RedisCacheManager**  
+
+Spring의 캐시 추상화에서 Redis를 캐시 저장소로 사용하기 위한 캐시 매니저를 생성
+위에서 설정한 `redisCacheDefaultConfiguration`과 `cacheConfigurations`(커스텀) 이 삽입된다.
+
+```java
+@Bean
+public CacheManager redisCacheManager(RedisConnectionFactory redisConnectionFactory) {
+    return RedisCacheManager.RedisCacheManagerBuilder
+            .fromConnectionFactory(redisConnectionFactory)
+            .cacheDefaults(redisCacheDefaultConfiguration())
+            .withInitialCacheConfigurations(redisCacheConfigurationMap())
+            .build();
+}
+```
+
+- `withInitialCacheConfigurations` : *RedisCacheManager*를 생성할 때 <u>미리 정의된 특정 캐시 이름</u>에 대해 개별적인 설정을 적용할 수 있도록 해주는 메서드입니다.
+
+
+---
+
+# 3. Service Layer
+▶ [[🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검)]] 에서 이어진다.
+
+## *Bean 주입*
+```java
+@Service  
+public class TestServiceImpl {
+
+	private final CacheManager cacheManager;  
+	private final RedisTemplate<String, Object> redisTemplate;
+
+	public TestServiceImpl(CacheManager cacheManager, RedisTemplate<String, Object> redisTemplate) {  
+	    this.cacheManager = cacheManager;  
+	    this.redisTemplate = redisTemplate;  
+	}
+}
+```
+(생성자 주입)
+- 위(*RedisConfiguration*)에서 생성한 CacheManager 및 RedisTemplate의 빈을 주입한다.
+
+>[!info] 주의
+> 
+> 만약, Bean으로 생성된 CacheManager객체나, RedisTemplate객체가 여러개라면,
+> @Qualifier 어노테이션으로 Bean이름을 명시해야한다.
+> >
+> 	`ex) @Qualifier("CustomCacheManager") CacheManager cacheManager ...`
+
+---
+
+##  *Cache 삽입 / 꺼내기 / 삭제 *
+
+```java
+	Cache privateKeyCache = cacheManager.getCache("CacheName");
+	
+	public void putCache() {
+		
+		if (privateKeyCache != null) {  
+		    privateKeyCache.put(keyId, 벨류);  
+		} else {  
+		    // 캐시가 없으면 예외 처리 또는 로깅  
+		    throw new IllegalStateException("privateKeyCache 가 유요하지 않습니다.");  
+		}
+	}
+
+	public void getCache() {
+		
+		if (privateKeyCache == null) {  
+			throw new IllegalStateException("rsaPrivateKeyCache 가 유요하지 않습니다.");  
+		}  
+		String privateKeyValue = privateKeyCache.get(keyId, String.class);  
+		// 1회용 사용을 위해 조회 후 캐시에서 제거할 수 있다.
+		rsaPrivateKeyCache.evict(keyId); // 1회용 사용: 캐시에서 제거
+		
+	}
+```
+
+- getCache.(*CacheName*)으로 캐쉬를 객체를 가져온다.
+- `put(keyId, 벨류);` / `get(keyId, String.class);` 로 삽입 / 가져오기가 가능하다.
+- `.evict(keyId)`로 삭제 ( 1회성 사용이 가능하다. )
+
+>[!info] 1회성으로 사용하는 이유
+>
+> 나의 경우에 RSA키를 매번 발급 받기 때문에 값을 꺼냄과 동시에 해당 키벨류를 삭제한다.
+> Exception이 터지더라도, cacheProperties 에 설정한 TTL이 초과되면 삭제된다.
+
+---
+
+#### Redis서버를 사용한 Key 관리로, 멀티 서버 환경에서 정합성과 안정성을 챙길 수 있었다.
+
+## + TTL 체크
+![[Pasted image 20250328120415.png]]
+
+# + TTL 설정
+
+```c
+application.yml / properties
+      ↓
+CacheProperties (ttl map 관리)
+      ↓
+redisCacheConfigurationMap() → 캐시별 TTL 매핑
+      ↓
+redisCacheDefaultConfiguration() → 기본 설정 (ex: serializer, 기본 TTL)
+      ↓
+redisCacheManager() → 최종 CacheManager 생성
+```
+다음과 같이 TTL 시간 및 [[Redis 만료 정책]]을 맵핑 할 수 있다.

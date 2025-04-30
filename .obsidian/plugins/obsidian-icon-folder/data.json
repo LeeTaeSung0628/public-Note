@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAsterisk",
       "LiBadgeAlert",
       "LiAtom",
       "LiAnchor",
-      "LiAlignJustify",
-      "LiAxe"
+      "LiAlignJustify"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -44,5 +44,6 @@
   "study/커리큘럼": "LiAlignJustify",
   "study/Coding Test": "LiAnchor",
   "lectur": "LiAtom",
-  "Issue_TroubleShooting": "LiBadgeAlert"
+  "Issue_TroubleShooting": "LiBadgeAlert",
+  "짧은 키워드": "LiAsterisk"
 }

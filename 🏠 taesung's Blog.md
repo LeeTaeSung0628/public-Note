@@ -4,12 +4,12 @@
 
 ---
 
-[![[Pasted image 20250220144552.png|220]]](https://github.com/LeeTaeSung0628)
+[![[prof2.jpg|250]]](https://github.com/LeeTaeSung0628)
+### [<font color="#ffffff">🔗git Hub ▶</font>](https://github.com/LeeTaeSung0628)
 
-### [<font color="#ffffff">🔗git Hub ▶ ...</font>](https://github.com/LeeTaeSung0628)
+### [<font color="#ffffff">📔 Portfolio ▶</font>](https://leetaesung0628.github.io/)
 
-
-### [<font color="#ffffff">📔 Portfolio ▶ ...</font>](https://leetaesung0628.github.io/)
+<br/>
 
 ---
 # Hi, there <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Hand%20with%20Fingers%20Splayed%20Light%20Skin%20Tone.png" alt="Hand with Fingers Splayed Light Skin Tone" width="25" height="25" />
@@ -22,7 +22,7 @@
 
 ---
 
-# [[🔫 이슈·트러블슈팅]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
+# [[🔫 이슈 분석 & 트러블슈팅]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
 >- ## 🌺 *Issue* ⭐
 >- ## ⛑ *TroubleShooting*⭐
 
@@ -36,9 +36,11 @@
 ---
 
 # [[🪓 도구]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
->- ## 🐻 **Obsidian**
+
 >- ## ☁ **AWS**
 >- ## 🐋 **docker**
+>- ## 🔻 *Redis*
+>- ## 🐻 **Obsidian**
 
 ---
 

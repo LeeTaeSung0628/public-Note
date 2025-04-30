@@ -1,1 +1,8 @@
 int
+Seek
+CASCADE
+Cascading
+ArgoCD
+Argo
+argoCD
+CRUD
