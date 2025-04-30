@@ -274,6 +274,8 @@ Slack
 Secret
 SSOT
 Servlet
+SecurityFilter
+SecurityContext
 JWT
 Java
 Join
@@ -770,6 +772,8 @@ CircleCI
 Compose
 ClusterIP
 ConfigMap
+CloudNative
+CNA
 Authentication
 Authorization
 AOP
@@ -1438,6 +1442,7 @@ BIA
 Business
 Bitbucket
 Borg
+BCryptPasswordEncoder
 URL
 UtEHFOT
 UUFF
@@ -1719,6 +1724,7 @@ Proofing
 Poliing
 Plugin
 PVC
+PasswordEncoder
 Filter
 Fingers
 ForkJoinPool
@@ -1840,6 +1846,7 @@ FCFS
 Flexibility
 Favicon
 Folder
+FilterChainProxy
 Refresh
 Redis
 RSA
@@ -2023,6 +2030,7 @@ Relation
 Reply
 Redirect
 Reduce
+ROLE
 ID
 ItemReader
 IP
@@ -3690,6 +3698,7 @@ many
 mark
 modifications
 multi
+msa
 Git
 GitDesktop
 Grid
@@ -4899,6 +4908,7 @@ Qbv
 QXX
 QFF
 Qualifier
+Queuing
 MaxPoolSize
 Member
 MORE
@@ -5080,6 +5090,8 @@ Modeling
 Must
 Manager
 Manifest
+Microservices
+Monolithic
 vs
 void
 var
