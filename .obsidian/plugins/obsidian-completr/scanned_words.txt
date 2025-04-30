@@ -411,6 +411,7 @@ Journey
 JAVASCRIPT
 JQUERY
 Jetty
+Jaeger
 Tokken
 Token
 Tone
@@ -1184,6 +1185,7 @@ ORDER
 Organization
 Overseas
 Output
+OpenTelemetry
 LDAP
 Light
 List
@@ -1317,6 +1319,7 @@ Look
 Login
 Learnability
 Life
+Latency
 Bean
 Bearer
 Batch
@@ -3368,6 +3371,7 @@ scanned
 salesforce
 sync
 stage
+scale
 alt
 app
 api
