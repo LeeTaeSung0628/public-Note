@@ -5,3 +5,4 @@ Cascading
 ArgoCD
 Argo
 argoCD
+CRUD
