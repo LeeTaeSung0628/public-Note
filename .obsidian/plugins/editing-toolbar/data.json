@@ -297,7 +297,7 @@
   "cMenuBottomValue": 4.25,
   "cMenuNumRows": 12,
   "cMenuWidth": 610,
-  "cMenuFontColor": "#9bbb59",
+  "cMenuFontColor": "#76923c",
   "cMenuBackgroundColor": "#40a9ff",
   "autohide": true,
   "custom_bg1": "#FFB78B8C",
@@ -318,5 +318,5 @@
   "viewTypeSettings": {},
   "toolbarBackgroundColor": "rgba(var(--background-secondary-rgb), 0.7)",
   "toolbarIconColor": "var(--text-normal)",
-  "toolbarIconSize": 18
+  "toolbarIconSize": 21
 }
