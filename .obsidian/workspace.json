@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f0d877bdc1d6eb02",
+        "id": "a2b200845a4aee1a",
         "type": "tabs",
         "children": [
           {
-            "id": "732dbe5f7066eb1b",
+            "id": "c50f3863197b8d2d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,21 +22,35 @@
             }
           },
           {
-            "id": "df424a1b39e9a94a",
+            "id": "8a0ef6db8e054b78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "project/MeloMeter Project/✈MM_클라우드 마이그레이션.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "✈MM_클라우드 마이그레이션"
+            }
+          },
+          {
+            "id": "d39d8f572e1b3595",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "project/MeloMeter Project/✈MM_클라우드 마이그레이션.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "✈MM_클라우드 마이그레이션"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -68,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "solid",
+                "query": "cicd",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 485.5
+    "width": 429.5
   },
   "right": {
     "id": "f9f8508c398bcd94",
@@ -155,12 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "project/MeloMeter Project/✈MM_클라우드 마이그레이션.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "개요"
+              "title": "✈MM_클라우드 마이그레이션 의 개요"
             }
           },
           {
@@ -196,53 +211,53 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "df424a1b39e9a94a",
+  "active": "d39d8f572e1b3595",
   "lastOpenFiles": [
-    "study/CS/🌩 Cloud-Native Architecture 분석.md",
-    "conflict-files-obsidian-git.md",
-    "사진 및 문서/do-messenger_screenshot_2025-05-02_14_28_33.png",
-    "project/MeloMeter Project/✈MM_클라우드 마이그레이션.md",
-    "project/MeloMeter Project",
-    "study/📕 공부.md",
+    "project/💻 프로젝트.md",
     "🏠 taesung's Blog.md",
-    "lectur/1. 객체 지향 설계와 스프링.md",
-    "짧은 키워드/무제.md",
-    "짧은 키워드/RESTful API.md",
-    "짧은 키워드/Servlet.md",
-    "짧은 키워드/Redis 만료 정책.md",
-    "짧은 키워드/GitOps.md",
-    "짧은 키워드/CICD.md",
-    "짧은 키워드",
-    "사진 및 문서/스크린샷 2025-04-14 오전 12.06.09.png",
-    "사진 및 문서/prof2.jpg",
+    "study/📕 공부.md",
+    "project/🔫 이슈 분석 & 트러블슈팅.md",
+    "project/MeloMeter Project/✈MM_클라우드 마이그레이션.md",
+    "사진 및 문서/do-messenger_screenshot_2025-05-02_14_28_33.png",
+    "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
+    "study/CS/🌩 Cloud-Native Architecture 분석.md",
+    "project/MeloMeter Project",
+    "Tools/🪓 도구.md",
+    "Tools/aws/🍊 aws EC2란.md",
+    "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
+    "study/CS/📭 Server.md",
+    "study/CS/🍃 Spring.md",
+    "study/CS/🎩 DevOps.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 1과목 - 소프트웨어 설계.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 2과목 - 소프트웨어 개발.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 3과목 - 데이터베이스 구축.md",
+    "study/정보처리기사/정보처리기사 필기/🥈 필기 4과목 - 프로그래밍 언어 활용.md",
+    "study/Dev Seminar/📔 DB 테이블 설계, 어떻게 하는게 옳은 방법인가.md",
+    "Tools/🎵 Obsidian.md",
+    "study/커리큘럼/🆕 Dev 커리큘럼.md",
+    "study/Coding Test/🤠 Coding Test 풀이 모음.md",
+    "study/Coding Test/👽 Algorithm.md",
+    "Tools/aws/🌥 aws(EC2)셋팅부터 배포까지.md",
+    "project/hello marketing/👩‍👧‍👦 Analytics 공통모듈 ADMIN용 데이터 추출.md",
+    "study/CS/📔 DataBase.md",
+    "CI",
     "사진 및 문서/do-messenger_screenshot_2025-04-29_15_37_33.png",
+    "Tools/Kubernetes",
     "사진 및 문서/Pasted image 20250421164348.png",
+    "Tools/Jenkins",
     "사진 및 문서/Pasted image 20250417121150.png",
     "사진 및 문서/Pasted image 20250416182123.png",
     "사진 및 문서/Pasted image 20250416181833.png",
     "사진 및 문서/Pasted image 20250416172118.png",
     "사진 및 문서/Pasted image 20250416171828.png",
-    "study/정보처리기사/정보처리기사 실기/🥇 정보처리 기사 실기 기타문제.md",
-    "study/CS/🤲분산 환경에서의 Cache 선택하기.md",
-    "study/CS/🐹 MSA(Microservices Architecture).md",
-    "study/CS/🐡 Spring Security와 Filter.md",
-    "project/🔫 이슈 분석 & 트러블슈팅.md",
-    "Tools/docker/🐋 docker 란.md",
-    "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
-    "Tools/Kubernetes",
-    "Tools/Jenkins/👔 Jenkins란.md",
-    "Tools/Jenkins",
-    "Issue_TroubleShooting/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
-    "study/CS/🍎 Redis로 Key관리하기.md",
-    "project/🔫 이슈·트러블슈팅.md",
-    "study/CS/🪕 JPA 관련 용어 정리.md",
-    "study/CS/🚨 RSA 암호화 방식의 이해와 적용 (feat.취약성점검).md",
+    "사진 및 문서/Pasted image 20250415182923.png",
+    "사진 및 문서/Pasted image 20250415181225.png",
+    "짧은 키워드",
+    "🔫 이슈",
     "서비스 취약점 점검 결과 보고.pdf",
     "사진 및 문서/서비스 취약점 점검 결과 보고.pdf",
     "custom-head-content.html",
     "custom_header_content.html",
-    "custom_header_content - 복사본.html",
-    "custom_header_content.html~",
     "무제.canvas"
   ]
 }
