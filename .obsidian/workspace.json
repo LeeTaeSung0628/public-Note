@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/📕 공부.md",
+                "file": "🏠 taesung's Blog.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "📕 공부"
+              "title": "🏠 taesung's Blog"
             }
           },
           {
@@ -169,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study/📕 공부.md",
+                "file": "🏠 taesung's Blog.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "📕 공부 의 개요"
+              "title": "🏠 taesung's Blog 의 개요"
             }
           },
           {
@@ -213,23 +213,23 @@
   },
   "active": "a2d8c43294abdfaf",
   "lastOpenFiles": [
-    "Tools/Jenkins/👔 Jenkins란.md",
     "study/📕 공부.md",
+    "🏠 taesung's Blog.md",
+    "project/🔫 이슈 분석 & 트러블슈팅.md",
+    "project/💻 프로젝트.md",
+    "Tools/Jenkins/👔 Jenkins란.md",
     "study/CS/🌩 Cloud-Native Architecture 분석.md",
     "짧은 키워드/CICD.md",
     "study/CS/🎩 DevOps.md",
-    "🏠 taesung's Blog.md",
     "study/CS/🐹 MSA(Microservices Architecture).md",
     "study/CS/🍎 Redis로 Key관리하기.md",
     "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
     "짧은 키워드/GitOps.md",
     "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
     "짧은 키워드/RESTful API.md",
-    "project/🔫 이슈 분석 & 트러블슈팅.md",
     "CI",
     "study/CS/🍃 Spring.md",
     "study/CS/☕ JAVA , OOP.md",
-    "project/💻 프로젝트.md",
     "Tools/🪓 도구.md",
     "study/CS/🐰 Java의 String과 SpringBuffer.md",
     "study/Dev Seminar/🍂 JPA, Mybatis , Dead Lock이슈.md",
