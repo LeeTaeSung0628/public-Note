@@ -14,8 +14,8 @@
 ---
 
 # 🆕 <font color="#92cddc">새로 추가된 글</font>
-> [[🌩 Cloud-Native Architecture 분석]]
-> [[🐹 MSA(Microservices Architecture)]]
+> ### [[🌩 Cloud-Native Architecture 분석]]
+> ### [[🐹 MSA(Microservices Architecture)]]
 
 ---
 # [[💻 프로젝트]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
