@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "study/📕 공부.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -49,7 +49,8 @@
               "title": "CICD"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study/CS/🌩 Cloud-Native Architecture 분석.md",
+                "file": "study/📕 공부.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "🌩 Cloud-Native Architecture 분석 의 개요"
+              "title": "📕 공부 의 개요"
             }
           },
           {
@@ -210,12 +211,13 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "c50f3863197b8d2d",
+  "active": "a2d8c43294abdfaf",
   "lastOpenFiles": [
-    "짧은 키워드/CICD.md",
-    "study/CS/🌩 Cloud-Native Architecture 분석.md",
-    "study/CS/🎩 DevOps.md",
+    "Tools/Jenkins/👔 Jenkins란.md",
     "study/📕 공부.md",
+    "study/CS/🌩 Cloud-Native Architecture 분석.md",
+    "짧은 키워드/CICD.md",
+    "study/CS/🎩 DevOps.md",
     "🏠 taesung's Blog.md",
     "study/CS/🐹 MSA(Microservices Architecture).md",
     "study/CS/🍎 Redis로 Key관리하기.md",
@@ -239,7 +241,6 @@
     "짧은 키워드/Redis 만료 정책.md",
     "사진 및 문서/do-messenger_screenshot_2025-04-29_15_37_33.png",
     "study/CS/🍊 Spring의 의존성 주입(DI).md",
-    "lectur/2.4 새로운 할인 정책 개발.md",
     "Tools/Kubernetes",
     "사진 및 문서/Pasted image 20250421164348.png",
     "Tools/Jenkins",
