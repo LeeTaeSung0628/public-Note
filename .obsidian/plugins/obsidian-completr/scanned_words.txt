@@ -280,6 +280,7 @@ Storming
 SAGA
 Selenium
 Spinnaker
+Scaling
 JWT
 Java
 Join
@@ -952,6 +953,7 @@ Agent
 Actions
 Applets
 Apache
+Auto
 HTTP
 HttpOnly
 HTTPS
@@ -2395,6 +2397,7 @@ DRS
 Domestic
 Directory
 DelegatingFilterProxy
+DR
 KB
 KEY
 Kill

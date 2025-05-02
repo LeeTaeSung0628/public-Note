@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "study/CS/🌩 Cloud-Native Architecture 분석.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -212,12 +212,13 @@
   },
   "active": "c50f3863197b8d2d",
   "lastOpenFiles": [
+    "짧은 키워드/CICD.md",
+    "study/CS/🌩 Cloud-Native Architecture 분석.md",
+    "study/CS/🎩 DevOps.md",
     "study/📕 공부.md",
     "🏠 taesung's Blog.md",
     "study/CS/🐹 MSA(Microservices Architecture).md",
-    "study/CS/🌩 Cloud-Native Architecture 분석.md",
     "study/CS/🍎 Redis로 Key관리하기.md",
-    "짧은 키워드/CICD.md",
     "Tools/Kubernetes/🚢Kubernetes(k8s)란.md",
     "짧은 키워드/GitOps.md",
     "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
@@ -239,7 +240,6 @@
     "사진 및 문서/do-messenger_screenshot_2025-04-29_15_37_33.png",
     "study/CS/🍊 Spring의 의존성 주입(DI).md",
     "lectur/2.4 새로운 할인 정책 개발.md",
-    "Spring의 의존성 주입(DI).md",
     "Tools/Kubernetes",
     "사진 및 문서/Pasted image 20250421164348.png",
     "Tools/Jenkins",
