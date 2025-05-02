@@ -99,7 +99,6 @@ Switching
 Stop
 Selective
 SSTF
-Seek
 Sequential
 Semi
 SDN
@@ -587,7 +586,6 @@ Cost
 Coax
 Common
 CIDR
-CASCADE
 Consistency
 CREATE
 COMMIT
@@ -703,18 +701,18 @@ CHAR
 CNT
 CROSS
 Cartesian
-Cascading
 Contents
 CSS
 Case
 ConnectionPool
 ChunkSize
-CRUD
 Critical
 Close
 Configuration
 Clustering
 Conflicts
+CloudNative
+CNA
 Authentication
 Authorization
 AOP
@@ -760,8 +758,6 @@ AS
 ARM
 APT
 Array
-ArgoCD
-Argo
 Assertions
 ACTIVE
 Actuator
@@ -4643,6 +4639,7 @@ QWWWqq
 Qbv
 QXX
 QFF
+Queuing
 MaxPoolSize
 Member
 MORE
