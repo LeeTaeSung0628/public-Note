@@ -6,5 +6,6 @@
   "alwaysUpdateLinks": true,
   "spellcheck": false,
   "autoConvertHtml": true,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "strictLineBreaks": true
 }

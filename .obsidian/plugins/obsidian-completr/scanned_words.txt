@@ -1736,6 +1736,7 @@ Plugin
 PVC
 PasswordEncoder
 Prometheus
+Practice
 Filter
 Fingers
 ForkJoinPool
@@ -2220,6 +2221,7 @@ IKE
 Intuitiveness
 Identifier
 Input
+Infra
 DB
 Dev
 Deploy
@@ -5112,6 +5114,7 @@ Manager
 Manifest
 Microservices
 Monolithic
+MeloMeter
 vs
 void
 var
