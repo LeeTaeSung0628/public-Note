@@ -20,7 +20,6 @@
 ---
 # [[💻 프로젝트]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
 >- ## 🍃 **Spring Batch**⭐
->- ## 〽 **Spring AOP**⭐
 >- ## 🌍 **Obsidian CI/CD**
 >- ## 💁 **infra settings**
 
@@ -33,7 +32,7 @@
 ---
 
 # [[📕 공부]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
->- ## ❄ **Computer Science**
+>- ## ❄ **Computer Science**⭐
 >- ## 🧪 **Coding Test**
 >- ## 🧑‍🤝‍🧑 **Company Seminar**
 
