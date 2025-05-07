@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/CS/🌩 Cloud-Native Architecture 분석.md",
+                "file": "study/CS/🐹 MSA(Microservices Architecture).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🌩 Cloud-Native Architecture 분석"
+              "title": "🐹 MSA(Microservices Architecture)"
             }
           },
           {
@@ -49,8 +49,7 @@
               "title": "✈MM_클라우드 마이그레이션"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "project/MeloMeter Project/✈MM_클라우드 마이그레이션.md",
+                "file": "study/CS/🐹 MSA(Microservices Architecture).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "✈MM_클라우드 마이그레이션 의 개요"
+              "title": "🐹 MSA(Microservices Architecture) 의 개요"
             }
           },
           {
@@ -211,16 +210,16 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "d39d8f572e1b3595",
+  "active": "2e958c9dd4f388f9",
   "lastOpenFiles": [
+    "study/CS/🌩 Cloud-Native Architecture 분석.md",
+    "project/MeloMeter Project/✈MM_클라우드 마이그레이션.md",
     "project/💻 프로젝트.md",
     "🏠 taesung's Blog.md",
     "study/📕 공부.md",
     "project/🔫 이슈 분석 & 트러블슈팅.md",
-    "project/MeloMeter Project/✈MM_클라우드 마이그레이션.md",
     "사진 및 문서/do-messenger_screenshot_2025-05-02_14_28_33.png",
     "project/note CI_CD/👻 Obsidian 정적호스팅 CICD 과정.md",
-    "study/CS/🌩 Cloud-Native Architecture 분석.md",
     "project/MeloMeter Project",
     "Tools/🪓 도구.md",
     "Tools/aws/🍊 aws EC2란.md",
