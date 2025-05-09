@@ -753,7 +753,6 @@ CSS
 Case
 ConnectionPool
 ChunkSize
-CRUD
 Critical
 Close
 Configuration
@@ -1740,6 +1739,7 @@ PVC
 PasswordEncoder
 Prometheus
 Practice
+POI
 Filter
 Fingers
 ForkJoinPool
@@ -2407,6 +2407,7 @@ Domestic
 Directory
 DelegatingFilterProxy
 DR
+DataTables
 KB
 KEY
 Kill
@@ -4760,6 +4761,7 @@ Effciency
 Exam
 Eat
 Email
+Excel
 update
 under
 uzJl
