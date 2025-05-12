@@ -282,6 +282,8 @@ Selenium
 Spinnaker
 Scaling
 Swift
+SXSSFWorkbook
+Sheet
 JWT
 Java
 Join
@@ -781,6 +783,8 @@ ClusterIP
 ConfigMap
 CloudNative
 CNA
+CellStyleMap
+CustomExcelDto
 Authentication
 Authorization
 AOP
@@ -1193,6 +1197,7 @@ Organization
 Overseas
 Output
 OpenTelemetry
+OutOfMemory
 LDAP
 Light
 List
@@ -5658,6 +5663,7 @@ func
 finally
 from
 full
+flush
 kakao
 kLMRW
 kqAzM

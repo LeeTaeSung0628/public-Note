@@ -67,14 +67,6 @@ DataTables는 <u>클라이언트 측에서 브라우저 메모리</u>를 사용�
 
 buttons: [
     {
-        extend: 'copyHtml5',
-        name: 'Copy',
-        text: 'Copy',
-        exportOptions: {
-            columns: [0, ':visible']
-        }
-    },
-    {
         extend: 'excel',
         name: 'Excel',
         text: 'Excel',
@@ -84,9 +76,7 @@ buttons: [
         customize: function(xlsx) {
             var sSh = xlsx.xl['styles.xml'];
             var lastXfIndex = $('cellXfs xf', sSh).length - 1;
-
             var sheet = xlsx.xl.worksheets['sheet1.xml'];
-
 			// 스타일 적용
             var n1 = '<xf numFmtId="0" fontId="2" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1" xfId="0" applyAlignment="1">' +
                      '<alignment horizontal="center"/></xf>';
@@ -97,18 +87,10 @@ buttons: [
 
             var greyBoldCentered = lastXfIndex + 1;
             var value = lastXfIndex + 2;
-
             $('c', sheet).attr('s', value);
             $('row:first c', sheet).attr('s', greyBoldCentered);
         }
-    },
-    {
-        extend: 'print',
-        name: 'Print',
-        text: 'Print',
-        action: serverSideButtonAction
-    },
-    'colvis'
+    }
 ]
 
 ```
@@ -150,3 +132,130 @@ buttons: [
     - 응답을 **스트리밍 방식**으로 처리하여 중간에 데이터가 소실되지 않도록 보장한다.
 
 ---
+
+<br>
+
+# <u><font color="#76923c">엑셀 구현</font></u>
+
+<br>
+
+## `SimpleExcelFile`
+
+- 엑셀 파일 처리 클래스
+- 엑셀파일 생성, 데이터 추가, 스타일 적용 등
+- **SXSSFWorkbook**방식으로 스트리밍 처리
+	- 대용량 처리에 적합
+	- 일정 개수 이상의 row를 디스크로 flush
+	- <u>OutOfMemory</u>방지
+```java
+for (T t : data) {  
+    renderBody(t, rowNum, bodyStyle, totalStyle, accumStyle);  
+    if (rowNum % 10000 == 0 || rowNum == data.size()) {   // 10,000건 마다 flush
+	    
+	    try {  
+            // 마지막 데이터의 경우, 남는 데이터 만큼만 flush, 아닌경우 10,000건씩 플러쉬  
+            workbook.getSheet(sheetName).flushRows(rowNum == data.size() ? data.size() % 10000 : 10000);  
+        } catch (IOException e) {  
+            throw new BadRequestException(e.getMessage());  
+        }  
+    }  
+    rowNum++;  
+}
+```
+- Excel Sheet정보 파라미터로 받아서 초기화
+- `SimpleExcelMetaDataFactory`를 이용하여 엑셀 메타데이터를 생성
+- **전체적인 엑셀 다운로드까지의 모든 단계를 포함하고 실제 랜더링해서 셀을 생성하는것**
+
+
+<br>
+
+## `SimpleExcelMetaDataFactory`
+
+- **싱글톤 객체**로 생성
+- 엑셀로 출력할 DTO객체의 어노테이션을 파악해 메타데이터 정리
+- `SimpleExcelMetadata`객체를 생성하기 위한 *기본 틀 제공*(헤더, 스타일, 필드 목록 등)
+- <u>CellStyleMap을 사용하여 각 필드의 스타일을 미리 캐싱 ( 스타일 중복 방지 )</u>
+```java
+private void applyCellStyle(CellStyleMap cellStyleMap, ExcelColumnStyle fieldStyle, ExcelColumnStyle classDefaultStyle, String fieldName, CellPart part, Workbook workbook) {  
+    /* dto 의 field 값에 스타일이 설정되어 있는지 체크 */    
+    boolean styleCheck = fieldStyle.excelCellStyleClass() != NullStyle.class;  
+  
+    /* dto 의 field 에 스타일 존재 유무에 따라, ExcelCellKey 의 fieldName 지정 */    
+    String fieldNameKey = styleCheck ? fieldName : "DEFAULT";  
+  
+    /* dto 의 field 에 스타일 존재 유무에 따라 스타일 설정 */    
+    ExcelColumnStyle style = styleCheck ? fieldStyle : classDefaultStyle;  
+  
+    ExcelCellKey excelCellKey = ExcelCellKey.of(fieldNameKey, part);  
+  
+    /* 해당 키값과 같은 키값을 가진 데이터가 있는 경우 styleMap 에 추가하지 않음 */    
+    if (!cellStyleMap.valueCheck(excelCellKey)) {  
+        cellStyleMap.put(decideAppliedStyle(style, workbook),  
+                excelCellKey,  
+                workbook);  
+    }  
+}
+```
+- **스타일, 정보등 dto 어노테이션 필드들을 읽어와서 파악하고, 가공하여 SimpleExcelFile에서 사용하기 쉽게 만드는 역할**
+
+<br>
+
+## `CustomExcelDto`
+
+- `@DefaultExcelHeaderStyle`: 엑셀 헤더에 기본 스타일 적용
+    - 스타일: `HeaderStyle.class`
+- `@DefaultExcelBodyStyle`: 엑셀 데이터 행에 기본 스타일 적용
+    - 스타일: `BodyStyle.class`
+- `@DefaultExcelTotalRow`: 합계 행에 기본 스타일 적용
+```java
+@DefaultExcelHeaderStyle(style = @ExcelColumnStyle(excelCellStyleClass = HeaderStyle.class))  
+@DefaultExcelBodyStyle(style = @ExcelColumnStyle(excelCellStyleClass = BodyStyle.class))  
+@DefaultExcelTotalRow(style = @ExcelColumnStyle(excelCellStyleClass = TotalRowStyle.class))  
+public class PgDepositListExcelDto {  
+    @ExcelColumn(headerName = "No")  
+    private String rowNum;  
+  
+    @ExcelColumn(headerName = "회원번호")  
+    private String mbNo;  
+  
+    @ExcelColumn(headerName = "아이디")  
+    private String mbId;  
+  
+    @ExcelColumn(  
+            headerName = "금액",  
+            bodyStyle = @ExcelColumnStyle(excelCellStyleClass = AmountStyle.class),  
+            totalRowStyle = @ExcelColumnStyle(excelCellStyleClass = TotalAmountStyle.class)  
+    )  
+    private long amt;
+```
+- **실제 객체와 맵핑될 excelDTO객체**
+
+### 사용부
+
+**SimpleExcelMetaDataFactory**에서 `@ExcelColumn` 어노테이션이 붙은 필드를 수집하여 리스트에 저장
+```java
+public SimpleExcelMetadata createSimpleExcelMetaData(
+        Class<?> type, Workbook workbook, SheetType sheetType, boolean hasGroupHeader) {
+
+    List<Field> fields = getExcelAnnotatedFields(type);
+    List<String> headerNames = new ArrayList<>();
+
+    for (Field field : fields) {
+        ExcelColumn excelColumn = field.getAnnotation(ExcelColumn.class); // 어노테이션 체크
+        String headerName = excelColumn.headerName();
+        headerNames.add(headerName);
+
+        applyCellStyle(cellStyleMap, excelColumn.headerStyle(), null, field.getName(), HEADER, workbook);
+    }
+    return new SimpleExcelMetadata(headerNames, fields, cellStyleMap, groups);
+}
+
+```
+
+
+<br>
+
+## `Service`
+
+- 엑셀로 출력할 기존 객체 → `CustomExcelDto`로 파싱 후 `simpleExcelWrite`로 엑셀 출력
+- 출력시 메모리 

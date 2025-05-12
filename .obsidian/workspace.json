@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 429.5
+    "width": 357.5
   },
   "right": {
     "id": "f9f8508c398bcd94",
@@ -193,7 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 369.5
+    "width": 320.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,13 +213,13 @@
   },
   "active": "abc92ccfc7f18064",
   "lastOpenFiles": [
-    "project/🔫 이슈 분석 & 트러블슈팅.md",
     "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+    "study/CS/🐹 MSA(Microservices Architecture).md",
     "project/🚞 Java 대용량 Excel 리펙토링.md",
+    "project/🔫 이슈 분석 & 트러블슈팅.md",
     "🏠 taesung's Blog.md",
     "project/💻 프로젝트.md",
     "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
-    "study/CS/🐹 MSA(Microservices Architecture).md",
     "study/CS/🌩 Cloud-Native Architecture 분석.md",
     "짧은 키워드/CICD.md",
     "study/📕 공부.md",
