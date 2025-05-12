@@ -135,7 +135,7 @@ buttons: [
 
 <br>
 
-# <u><font color="#76923c">엑셀 구현</font></u>
+# <u><font color="#76923c">엑셀 내보내기 서버 사이드 구현</font></u>
 
 <br>
 
@@ -258,4 +258,14 @@ public SimpleExcelMetadata createSimpleExcelMetaData(
 ## `Service`
 
 - 엑셀로 출력할 기존 객체 → `CustomExcelDto`로 파싱 후 `simpleExcelWrite`로 엑셀 출력
-- 출력시 메모리 
+- 쿼리 데이터 조회시 페이징으로 메모리 관리
+
+<br>
+
+---
+
+<br>
+
+# <u><font color="#76923c">메모리 모니터링</font></u>
+
+![[Pasted image 20250512180307.png]]
