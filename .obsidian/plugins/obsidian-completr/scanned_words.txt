@@ -284,6 +284,8 @@ Scaling
 Swift
 SXSSFWorkbook
 Sheet
+SimpleExcelFile
+SimpleExcelMetaDataFactory
 JWT
 Java
 Join
@@ -4524,6 +4526,7 @@ every
 eviction
 else
 etcd
+excelDTO
 Vault
 VARIABLES
 VIEW

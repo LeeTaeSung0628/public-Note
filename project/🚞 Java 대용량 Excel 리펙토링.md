@@ -259,7 +259,26 @@ public SimpleExcelMetadata createSimpleExcelMetaData(
 
 - 엑셀로 출력할 기존 객체 → `CustomExcelDto`로 파싱 후 `simpleExcelWrite`로 엑셀 출력
 - 쿼리 데이터 조회시 페이징으로 메모리 관리
-
+```java
+// 1) 엑셀 파일 생성 (데이터 -> ExcelFile)
+SimpleExcelFile<E> excelFile = new SimpleExcelFile<>(  
+        simpleExcelWriteDto.getData(),  
+        simpleExcelWriteDto.getType(),  
+        simpleExcelWriteDto.getSheetName(),  
+        simpleExcelWriteDto.getSheetType()  
+);  
+  
+// 2) ExcelSetUpDto 간단히 만들어서, 기존 write(...) 메서드 사용  
+ExcelSetUpDto excelSetUpDto = ExcelSetUpDto.builder()  
+        .response(simpleExcelWriteDto.getResponse())  
+        .excel(excelFile.getWorkbook())  
+        .excelPreFileTitle(simpleExcelWriteDto.getPreFileTitle())  
+        .excelFilePath(simpleExcelWriteDto.getFilePath())  
+        .build();  
+  
+// 3) 한 번에 write
+excelFile.write(excelSetUpDto);
+```
 <br>
 
 ---
@@ -268,4 +287,15 @@ public SimpleExcelMetadata createSimpleExcelMetaData(
 
 # <u><font color="#76923c">메모리 모니터링</font></u>
 
-![[Pasted image 20250512180307.png]]
+<br>
+
+## Local Server VisualVM 2.1 사용
+
+### 7만건 셀 생성시
+
+- cpu 최대 사용율 17.2%
+
+![[Pasted image 20250513101628.png]]
+- 메모리 469MB
+
+![[Pasted image 20250513101743.png]]
