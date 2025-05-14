@@ -49,8 +49,7 @@
               "title": "🚞 Java 대용량 Excel 리펙토링"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -211,14 +210,14 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "abc92ccfc7f18064",
+  "active": "8a0ef6db8e054b78",
   "lastOpenFiles": [
+    "study/CS/🐹 MSA(Microservices Architecture).md",
+    "project/🚞 Java 대용량 Excel 리펙토링.md",
     "사진 및 문서/Pasted image 20250513101743.png",
     "사진 및 문서/Pasted image 20250513101640.png",
     "사진 및 문서/Pasted image 20250513101628.png",
     "🏠 taesung's Blog.md",
-    "study/CS/🐹 MSA(Microservices Architecture).md",
-    "project/🚞 Java 대용량 Excel 리펙토링.md",
     "사진 및 문서/Pasted image 20250512180307.png",
     "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
     "project/🔫 이슈 분석 & 트러블슈팅.md",
@@ -252,7 +251,6 @@
     "사진 및 문서/Pasted image 20250417121150.png",
     "사진 및 문서/Pasted image 20250416182123.png",
     "사진 및 문서/Pasted image 20250416181833.png",
-    "사진 및 문서/Pasted image 20250416172118.png",
     "짧은 키워드",
     "🔫 이슈",
     "서비스 취약점 점검 결과 보고.pdf",
