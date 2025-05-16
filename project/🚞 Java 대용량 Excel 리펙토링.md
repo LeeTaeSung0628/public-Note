@@ -299,3 +299,15 @@ excelFile.write(excelSetUpDto);
 - 메모리 469MB
 
 ![[Pasted image 20250513101743.png]]
+
+---
+
+# mRemoteNG 사용법
+
+0. `예`
+1. `k9s`
+2. `Shift + :` → `contexts`  이전디렉토리
+3. ![[Pasted image 20250515175933.png]]
+- 위 상태 바 숫자 입력하여 이동
+
+*cpu 사용률 98% 이상 가는지 확인 / 메모리 1800최대인데, 1300~1400 까지 확인하기*

@@ -39,17 +39,18 @@
             "id": "abc92ccfc7f18064",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "project/🚞 Java 대용량 Excel 리펙토링.md",
-                "mode": "preview",
-                "source": false
+                "aFile": "project/🚞 Java 대용량 Excel 리펙토링.md",
+                "bFile": "project/🚞 Java 대용량 Excel 리펙토링.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "🚞 Java 대용량 Excel 리펙토링"
+              "icon": "diff",
+              "title": "Diff: 🚞 Java 대용량 Excel 리펙토링"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -210,16 +211,17 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "8a0ef6db8e054b78",
+  "active": "abc92ccfc7f18064",
   "lastOpenFiles": [
-    "study/CS/🐹 MSA(Microservices Architecture).md",
     "project/🚞 Java 대용량 Excel 리펙토링.md",
+    "사진 및 문서/Pasted image 20250515175933.png",
+    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+    "study/CS/🐹 MSA(Microservices Architecture).md",
     "사진 및 문서/Pasted image 20250513101743.png",
     "사진 및 문서/Pasted image 20250513101640.png",
     "사진 및 문서/Pasted image 20250513101628.png",
     "🏠 taesung's Blog.md",
     "사진 및 문서/Pasted image 20250512180307.png",
-    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
     "project/🔫 이슈 분석 & 트러블슈팅.md",
     "project/💻 프로젝트.md",
     "project/hello Batch/✏ Chunk_Partitioning Batch 구조 드로잉.md",
@@ -250,7 +252,6 @@
     "Tools/Jenkins",
     "사진 및 문서/Pasted image 20250417121150.png",
     "사진 및 문서/Pasted image 20250416182123.png",
-    "사진 및 문서/Pasted image 20250416181833.png",
     "짧은 키워드",
     "🔫 이슈",
     "서비스 취약점 점검 결과 보고.pdf",
