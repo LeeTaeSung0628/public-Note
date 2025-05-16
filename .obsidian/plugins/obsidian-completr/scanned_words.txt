@@ -286,6 +286,8 @@ SXSSFWorkbook
 Sheet
 SimpleExcelFile
 SimpleExcelMetaDataFactory
+STG
+Stg
 JWT
 Java
 Join
