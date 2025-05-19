@@ -288,6 +288,7 @@ SimpleExcelFile
 SimpleExcelMetaDataFactory
 STG
 Stg
+SAVE
 JWT
 Java
 Join
@@ -789,6 +790,8 @@ CloudNative
 CNA
 CellStyleMap
 CustomExcelDto
+Checking
+Clear
 Authentication
 Authorization
 AOP
@@ -1336,6 +1339,7 @@ Login
 Learnability
 Life
 Latency
+LOG
 Bean
 Bearer
 Batch
@@ -2061,6 +2065,9 @@ Reduce
 ROLE
 RabbitMQ
 Realtime
+Repeatable
+Read
+Remove
 ID
 ItemReader
 IP
@@ -2238,6 +2245,7 @@ Intuitiveness
 Identifier
 Input
 Infra
+Insert
 DB
 Dev
 Deploy
@@ -2417,6 +2425,8 @@ Directory
 DelegatingFilterProxy
 DR
 DataTables
+DATA
+Dirty
 KB
 KEY
 Kill
@@ -2787,6 +2797,8 @@ conn
 count
 clean
 cddc
+createEntityManager
+clear
 home
 height
 hello
@@ -3118,6 +3130,7 @@ below
 blocks
 bash
 based
+begin
 there
 this
 text
@@ -3240,6 +3253,7 @@ them
 theta
 throughout
 tamper
+transient
 src
 site
 step
@@ -3404,6 +3418,9 @@ salesforce
 sync
 stage
 scale
+setId
+setUsername
+setAge
 alt
 app
 api
@@ -3736,6 +3753,10 @@ modifications
 multi
 msa
 mRemoteNG
+managed
+member
+memberA
+memberB
 Git
 GitDesktop
 Grid
@@ -4080,6 +4101,8 @@ replication
 red
 revert
 repo
+removed
+remove
 pc
 public
 parallelStream
@@ -4221,6 +4244,8 @@ proxy
 people
 proofing
 prem
+persist
+println
 git
 gitignore
 gridSize
@@ -4336,6 +4361,7 @@ getT
 goodMan
 good
 gRPC
+getTransaction
 name
 newMemberBalance
 naver
@@ -4530,6 +4556,7 @@ eviction
 else
 etcd
 excelDTO
+emf
 Vault
 VARIABLES
 VIEW
@@ -4774,6 +4801,7 @@ Exam
 Eat
 Email
 Excel
+EntityTransaction
 update
 under
 uzJl
@@ -5460,6 +5488,8 @@ decorator
 day
 doGet
 doPost
+detached
+detach
 limit
 list
 long
