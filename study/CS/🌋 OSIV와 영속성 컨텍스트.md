@@ -68,7 +68,7 @@ spring.jpa.open-in-view to disable this warning
 
 - JPA의 영속성 컨텍스트가 DB커넥션을 얻는 시점은 DB트렌젝션을 시작할 때 이다.
 	**@Transactional 어노테이션이 붙은 매서드가 실행될 때.**
-	-없다면, 해당 JPA쿼리가 실행되는 시점에 얻게 된다.
+	-없다면, 해당 JPA쿼리(**Repository JPA 조회 메서드에 자동으로 트렌젝션 부여**)가 실행되는 시점에 얻게 된다.
 
 - DB커넥션을 반환하는 시점은 서비스 레이어의 **@Transactional**어노테이션이 붙은 메서드가 끝날때 이다.
 	이 떄, 영속성 컨텍스트가 사라지고 DB커넥션이 반환된다.

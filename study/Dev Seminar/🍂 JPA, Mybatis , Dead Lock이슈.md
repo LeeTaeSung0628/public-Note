@@ -141,7 +141,27 @@ public void deadLockMethod(){
 트래픽이 몰려 커넥션 풀 40개가 전부 점유되었을 때를 가정하자.
 
 ---
+```java
+@Service
+public class TestServiceImpl implements TestService {
+    private final MybatisRepo mybatisRepo;
+    private final JpaRepo jpaRepo;
 
+    public TestServiceImpl(MybatisRepo mybatisRepo,
+                             JpaRepo jpaRepo) {
+        this.mybatisRepo = mybatisRepo;
+        this.jpaRepo = jpaRepo;
+    }
+
+    public void test() {
+        // JPA
+        jpaRepo.somethingRun();
+        // MyBatis
+        mybatisRepo.somethingRun();
+    }
+}
+
+```
 **조건**
 - 여러개의 클라언트의 요청이 동시에 발생
 - 2개 이상의 클라이언트가 *2번함수*를 수행 후, **영속성 컨택스트를 유지 중**
@@ -161,9 +181,10 @@ public void deadLockMethod(){
 - 해당 서버의 옵션을 끄면, 데이터 일관성 문제 및 커넥션 점유 문제를 해결 가능
 *한계 :* 해당 서버의 다른 서비스 까지 직접적인 영향을 끼침
 
-## 2. @Transactional ?
- - @Transactional어노테이션은 서비스 레이어의 트렌젝션 관리에 쓰이는 것 이기 떄문에,
- OSIV 옵션으로 인한 view레이어의 지연로딩을 막을 수 없음, **MyBatis**는 **JPA와 각기 다른 방법ㅇ으로 커넥션을 관리 Connection을 관리**. (동일한 커넥션 풀에서 서로 다르게 관리)
+## 2. <font color="#ff0000">@Transactional</font>
+ - @Transactional어노테이션을 사용하더라도 결과는 마찬가지. 
+ - 오히려 OSIV옵션 OFF이더라도 같은 트렌젝션 안에 있다면 영속성 컨텍스트를 놔주지 않기 때문에 결과는 동일.
+
  *즉, DB커넥션 점유 시점의 차이만 생길 뿐, 반환시점의 차이는 없다.*
  >[!tip] 단, 트렌젝션 매니저를 통합하여 코드를 리펙토링한다면 가능
 
