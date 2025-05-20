@@ -4246,6 +4246,7 @@ proofing
 prem
 persist
 println
+pk
 git
 gitignore
 gridSize

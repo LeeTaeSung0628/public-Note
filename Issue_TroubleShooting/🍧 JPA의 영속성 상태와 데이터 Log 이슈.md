@@ -54,7 +54,7 @@
 
 트렌젝션이 종료된 이후(commit)임에도 기존의 id를 기억하여 update를 할 수 있었던 이유가 무었일까?
 
-#### 이에 대한 해답을 알기위해 *영속 상태*의 개념과 *더티체킹*에 대해서 알아보겠다.
+#### 이에 대한 해답을 알기위해 *영속 상태*의 개념에 대해 알아보겠다.
 
 ---
 
@@ -75,19 +75,50 @@
 
 ![[Pasted image 20250519144842.png|700]]
 
-위 글에서 볼 수 있듯이, 
-
-
-
+#### 나의 예상되로 라면...
+- 아래 코드의 실행 결과로 알 수 있듯이, **비영속 상태의 엔티티**를 `save()`하여 `persist()`를 수행했을 때, DB에 이미 동일한 ID(PK)가 있다면 **예외를 발생시킨다**.
+```java
+@Autowired  
+private EntityManager em;  
+  
+@Test  
+@Transactional  
+void MemberPersistenceTest() {  
+  
+    // 1) 새 엔티티 인스턴스 생성 → Transient 상태  
+    HfMarketingCode testcode = new HfMarketingCode();  
+  
+    testcode.setHitCode("testCode1");  
+    testcode.setCodeName("testName1");  
+  
+    em.persist(testcode);  
+  
+    em.flush();  
+}
+```
+![[Pasted image 20250520142253.png]]
+>[!danger] 주의
+> 영속성 컨텍스트에 등록할 객체의 id 설정의 `@GeneratedValue(strategy = GenerationType.IDENTITY)` 
+> 여부에 따라, *지연 쓰기*가 동작하지 않을 수 있다. 
+> - 기본키 생성에 대한 권한을 DB에 위임하기 때문에, JPA가 곧바로 id값을 알기위해 지연하지 않고, 바로 insert쿼리를 실행시킨다.
+> 
 
 ---
 
-***더티 체킹*** ← 다음 걔념도 알아보기
-1. 인서트 - 첫 save로직에 select을 하는지.
+>[!question] 질문?
+> 동일한 idx(pk)의 엔티티를 넘겨 save동작을 수행했을 때, *persist(insert)* 가 아닌 *merge(update)* 가 되었다면,
+> 해당 엔티티의 영속 상태는 어떻게 되는가?
 
-**준영속상태** - 메모리에 idx가 있으면, select를 한번 날리고 db에 있다면 업데이트를 칠 수 있다.
-**비영속**과 **준영속**을 나누는 기준과 JPA동작 순서, 원리 알아보기
+### 해답 :
+> 엔티티 메니저는 트렌젝션이 종료될때 close되며, 이때 모든 영속석 **컨텍스트에 등록된 엔티티를 준영속 상태로 돌린다**.
+> 따라서, 준영속 상태로 관리되고 있던 객체에 save() 연산이 수행되면서, update쿼리가 실행된 것.
+
+<br>
+
+그렇다면 준영속 상태의 지속 범위는 어떻게 될까?
+- 보통 엔티티 객체가 준영속 상태로 진입하게 되면, *엔티티 매니저*와 모든 의존성을 끊기 때문에 일반적인 POJO 객체와 같이 *GC(가비지 컬렉터)* 에 의해 메모리를 해제하게 된다.
+- 그럼에도 1시간의 시간 차가 발생했음에도 GC로 정리가 되지 않은 부분은 조금 의아하다.
+- 해당 부분은 더 깊게 찾아보야 할것으로 보인다.
 
 
-save매서드가 매번 Select후에 두가지 동작을 수행한다면, 왜 비영속상태에서 비효율적으로 select 쿼리를 수행한것일까?
-비영속 상태에서는 select를 안해도 insert만 하면 되는것인데, 왜 매번 select연산을 수행하는 것인가?
+---
