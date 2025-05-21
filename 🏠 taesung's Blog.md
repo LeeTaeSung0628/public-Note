@@ -21,20 +21,20 @@
 
 ---
 # [[💻 프로젝트]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
->- ## 🍃 **Spring Batch**⭐
+>- ## 🍃 **Spring Batch**
 >- ## 🌍 **Obsidian CI/CD**
 >- ## 💁 **infra settings**
 
 ---
 
 # [[🔫 이슈 분석 & 트러블슈팅]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
->- ## 🌺 *Issue* ⭐
->- ## ⛑ *TroubleShooting*⭐
+>- ## 🌺 **Issue**
+>- ## ⛑ **TroubleShooting**
 
 ---
 
 # [[📕 공부]] <font color="#7f7f7f" size=3.5px>🖱Click!</font> 
->- ## ❄ **Computer Science**⭐
+>- ## ❄ **Computer Science**
 >- ## 🧪 **Coding Test**
 >- ## 🧑‍🤝‍🧑 **Company Seminar**
 

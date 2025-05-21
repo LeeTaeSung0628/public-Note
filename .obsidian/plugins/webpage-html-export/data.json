@@ -27,7 +27,7 @@
   "addOutline": true,
   "addFileNav": true,
   "addSearchBar": true,
-  "addGraphView": true,
+  "addGraphView": false,
   "addTitle": true,
   "addRSSFeed": true,
   "siteURL": "https://lts.kr/",
