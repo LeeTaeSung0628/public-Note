@@ -9,13 +9,19 @@
 1977년에 **Rivest, Shamir, Adleman** 이라는 세 명의 수학자가 고안해서 RSA라고 부른다.
 이 방식은 지금도 SSL/TLS, 이메일, 디지털 서명, 인증서 등 **보안의 핵심 인프라**에서 계속 쓰이고 있는 방식이다.
 
-# 정의
+<br>
+
+# <font color="#76923c">정의</font>
 
 - RSA는 "공개키로 암호화하고, 개인키로 복호화" 또는 그 반대로 동작하는 비대칭 암호화 알고리즘이다.
 
 ---
 
-# 핵심 개념
+<br>
+
+# <u><font color="#76923c">핵심 개념</font></u>
+<br>
+
 
 | 항목        | 설명                                  |
 | --------- | ----------------------------------- |
@@ -27,7 +33,9 @@
 
 ---
 
-# 그래서 왜 보안에 효과적인걸까?
+# <font color="#76923c">그래서 왜 보안에 효과적인걸까?</font>
+
+<br>
 
 - 공개키로 암호화된 데이터는 **개인키를 소유한 공개키 생성자만이 복호화** 가능하다.
 - **사용자( Client )마다 공개키와 개인키를 접근 시 새로 생성/발급하여 원본 데이터 추적이 불가**하다.
@@ -40,7 +48,11 @@
 
 ---
 
-# Java/JS 환경에서 RSA암호화 적용하기
+<br>
+
+# <u><font color="#76923c">Java/JS 환경에서 RSA암호화 적용하기</font></u>
+
+<br>
 
 >[!tip] 정보
 > - **RSA 키 객체 (`PublicKey`, `PrivateKey`)** 는 메모리 상에서만 동작할 수 있다.
@@ -57,7 +69,11 @@
 >[!warning] 정보
 >UUID자동 발급 및 매칭 로직은 공개하지 않음.
 
+<br>
+
 # 1. 키 쌍 발급 로직
+
+<br>
 
 ### 하나의 쌍으로 이루어지는 *공개키(public key)* 와 *개인키(private key)* 를 생성하는 로직 
 
@@ -85,7 +101,11 @@
 
 ---
 
+<br>
+
 # 2.1 평문 + base64공개키 -> base64암호문 생성 로직 .Java
+
+<br>
 
 ```java
 	private static final String INSTANCE_TYPE = "RSA";
@@ -122,7 +142,12 @@
 - `X509EncodedKeySpec` → 공개키 표준 포맷 스펙
 
 ---
+
+<br>
+
 # 2.2 평문 + base64공개키 -> base64암호문 생성 로직 .JS
+
+<br>
 
 >[!tip] node-forge 패키지를 사용한다.
 >  base64, encode등 TLS프로토콜(암호화 도구)를 구현한 패키지 이다.
@@ -158,8 +183,12 @@ function rsaEncryptWithBase64PublicKey(plainText, publicKeyBase64) {
 - 클라이언트 단에서 request전달 전, 암호화 하기 위한 코드 / 동작 구성은 `2.1`과 동일 하다
 
 ---
+<br>
 
 # 3. base64암호문 + base64개인키 -> 평문 생성 로직
+
+<br>
+
 ```java
 	private static final String INSTANCE_TYPE = "RSA";
 
@@ -201,7 +230,11 @@ function rsaEncryptWithBase64PublicKey(plainText, publicKeyBase64) {
 
 ---
 
-# 백로직 및 프론트 검증 완료
+<br>
+
+# <u><font color="#76923c">백로직 및 프론트 검증</font></u>
+
+<br>
 
 ### *junit*과 *assertj*를 사용하여 검증
 - `JUnit` → 테스트 프레임워크  
