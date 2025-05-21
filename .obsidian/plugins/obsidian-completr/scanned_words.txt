@@ -965,6 +965,8 @@ Actions
 Applets
 Apache
 Auto
+Assigned
+AUTO
 HTTP
 HttpOnly
 HTTPS
@@ -1879,6 +1881,7 @@ FluxCD
 FireBase
 Firebase
 Firestore
+FlushMode
 Refresh
 Redis
 RSA

@@ -4,12 +4,17 @@
 
 ---
 
+<br>
 
-# 작업 목적
+# <u><font color="#76923c">작업 목적</font></u>
+
 기존 예치금 차액비교 Batch의 Tasklet방식의 배치의 단점을 보완하는 chunk 방식의 배치를 구현하고,
 나아가 다른 기능의 Batch에도 효과적으로 빠르게 적용할 수 있는==재사용성/유지보수성 높은 코드==, 선례를 만들기 위함이다.
 
-# 작업 계획
+
+<br>
+
+# <u><font color="#76923c">작업 계획</font></u>
 1. Chunk, Partioning방식을 Job을 추가 개발 (기존 balanceJob 유지)
 2. 당분간 두 Job을 병행하면서 비교
 3. 추가한 Job 기능에 문제없다면 기존 balanceJob 삭제
@@ -22,17 +27,10 @@
 ![[Spring Batch Tasklet 예치금 잔액 비교 잘못된 차액발생 인식 타임라인.png]]
 
 ---
-# 예치금차액비교 Batch Job 기존 소요시간 그래프
 
-## 2024-10-28 ~ 2024-11-19 (주말제외)
-- **평균 소요시간**: 약 17.35분
-- **최대 소요시간**: 22분
-- **최소 소요시간**: 12분
-![[output (1).png]]
+# <u><font color="#76923c">문제점 분석</font></u>
 
----
-
-# 문제점 분석
+<br>
 
 ## 1. 하나의 트렌젝션으로 동작하며, 실패시 처음부터 재시도 해야함
 * *처음 가져온 Point 배치 완료시 까지 계속 물고있다.* -> ==한 트렌젝션의 범위가 넓다.==
@@ -43,7 +41,9 @@
 
 ---
 
-# 배치 동작 로직
+# <u><font color="#76923c">배치 동작 로직</font></u>
+
+<br>
 
 ### 7:00 -> 회원 개개인 별 비교. 문자는 9시 30분에 예약문자로 오지만, 실제 로직은 7시에 돈다
 - G5-Point 등은 처음 7시 시점에 묶여있다. 회원별로 **실데이터를 건건이 api(신한)를 호출하여 비교한다. 때문에, 7시 이후에 수정된데이터를 실시간으로 반영하지 못한다.**
@@ -51,7 +51,12 @@
 
 ---
 
-# New Batch의 주요 기술 및 목적
+<br>
+
+# <u><font color="#76923c">New Batch의 주요 기술 및 목적</font></u>
+
+<br>
+
 ## Partitioning
 - 목적 : batch의 step 레벨에서의 스레드 분리 ( 병렬처리 )
 ##### ** 프로세스(서비스 로직)단계에서 병렬처리를 하는 것과 어떠한차이가 있는가? ex) parallelStream, CompletableFuture **
@@ -76,7 +81,12 @@
 - Reader / Processor / writer 가 역할을 분담
 
 ---
-# 파티셔닝 흐름
+
+<br>
+
+# <u><font color="#76923c">파티셔닝 흐름</font></u>
+
+<br>
 
 ### ThreadPoolSize : 동시에 실행시킬 스테리드의 개수
 ### gridSize : 실제로 제단할 사이즈(작업단위)
@@ -139,8 +149,11 @@
 
 ---
 
+<br>
 
-# 파티셔닝 시 스레드 설정 방식 선택
+# <u><font color="#76923c">파티셔닝 시 스레드 설정 방식 선택</font></u>
+
+<br>
 
 ### 어떠한 방식을 적용하는게 속도와 안정성 면에서 효율적일지??
 
@@ -213,14 +226,20 @@ Th min/maxSize16, g4/c10 :  2분 29.207초 / 2분 8.004초
 
 ---
 
-# 청크 방식의 정확한 동작 로직
+# 청크 방식의 동작 로직
 ## 1. ==리더==는 청크사이즈 만큼 반복하며, 각 반복마다 특정범위의 값을 return한다.
 ## 2. ==프로세서==는 청크사이즈와 관계없이 리더가 넘긴 return에 따라 동작을 수행한다. 
 ## 3. ==롸이터==는 청크사이즈만큼 모이면, 그때 1번 동작한다.
 
 
 ---
-# QuerydslPagingItemReader 적용기
+
+<br>
+
+# <u><font color="#76923c">QuerydslPagingItemReader 적용기</font></u>
+
+<br>
+
 ## ItemReader 방식
 - 쿼리 호출 및 페이징 기법 직접 구현
 
@@ -263,7 +282,11 @@ public QuerydslPagingItemReader<HfbatBankBalanceCheckDto> balanceReader() {
 
 ---
 
-# QuerydslPagingItemReader를 사용하며, **다중스레드 스케줄링** 하기
+<br>
+
+# <u><font color="#76923c">QuerydslPagingItemReader를 사용하며, **다중스레드 스케줄링** 하기</font></u>
+
+<br>
 
 ## 목적
 - 각 파티션 스레드 별 종료 시간이 크게 상이하다. 총 소요시간 기준 최대 약 20% 차이
@@ -317,7 +340,11 @@ JPQLQuery<T> query = createQuery()
 
 ---
 
-# 메세징 처리 로직 분리
+<br>
+
+# <u><font color="#76923c">메세징 처리 로직 분리</font></u>
+
+<br>
 
 ## 1. 로직순서
 
@@ -376,9 +403,11 @@ public class BalanceQueue extends QueueManager<BalanceCheckResultDto>{
 ```
 
 ---
+<br>
 
-# Listener 역할 분리하고, 재사용 가능하도록 만들자
+# <u><font color="#76923c">Listener 역할 분리</font></u>
 
+<br>
 
 ### * Listener에 포함된 초기화 코드 및 로그 로직
 ![[Pasted image 20241217150339.png]]
@@ -452,9 +481,22 @@ public class JobTimerExecutionListener implements JobExecutionListener {
 
 ---
 
-# 성과
+<br>
 
-## Batch 총 소요시간 그래프
+# <u><font color="#76923c">성과</font></u>
+
+<br>
+
+## 예치금차액비교 Batch Job 기존 소요시간 그래프
+
+## 2024-10-28 ~ 2024-11-19 (주말제외)
+- **평균 소요시간**: 약 17.35분
+- **최대 소요시간**: 22분
+- **최소 소요시간**: 12분
+![[output (1).png]]
+
+
+## 변경 후 Batch 총 소요시간 비교 그래프
 
 ![[output (9) 1.png]]
 #### 평균 총 소요시간

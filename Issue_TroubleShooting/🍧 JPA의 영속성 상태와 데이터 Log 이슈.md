@@ -104,7 +104,7 @@ void MemberPersistenceTest() {
 > >
 > 2. id값을 명시적으로 지정한 후, `save()`를 수행하면 예외가 발생한다. 그 이유는, 명시적으로id를 지정하는 순간 non-null의 id값을 갖게되고, `isNew()`의 첫 호출부터 id가 null이 아니기 때문에, 기존에 존재하는 id값에 대해 persist를 수행하게 되어 예외가 발생하는 것이다.
 
-- JPA save()의 isNew() 분기문
+아래는 JPA save()의 isNew() 분기문
 ```java
 @Transactional  
 public <S extends T> S save(S entity) {  
@@ -176,5 +176,4 @@ public boolean isNew(T entity) {
 <br>
 
 ## <font color="#76923c">결론</font>
-: <u>JPA의 특성</u>을 정확히 파악하여, 데이터베이스 연산의 최적화와, 일관성을 지키며 코드의 예외를 미리 예상하도록 해야겠다.
----
+: JPA의 save()는 단순히 insert와 update의 통합이 아니다. 각 동작의 원리와 특성을 파악하여 예외사항을 정확히 판단하여 결과를 예상 가능하도록 설계해야한다.
