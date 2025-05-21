@@ -5,25 +5,33 @@
 
 #프로젝트 #개발 #DB #SPRING #AOP 
 
+---
+
+
 >[!info] 개요
 > - Hello Service의 유입/동작 통계 모듈의 공통화 작업이다.
 > - Spring AOP를 사용하여 구성하였다.
 
+<br>
+
 ## 1. 기존 **js 하드코딩** 되어있던 통계 로직 **SpringAOP** 공통화
 - 통계 필요 페이지 내에서(front > back)
 ## 2. Hit체크 동작 데이터 삽입 후 **프록시 등록**
-- 쿠키 데이터 페이지 별 최초 진입 확인?\
+- 쿠키 데이터 페이지 별 최초 진입 확인?
 ## 3. 상세 인입 정보 저장으로 ADMIN통계 page제작
 
 ---
 
-# 목적
+# <u><font color="#76923c">목적</font></u>
+
 - 기존 외부 유입 통계 로직의 단점 해결.
 	1. 확장에 닫혀있음
 	2. 디테일한 행동 추적 불가능
 	3. 중복 접근자 처리로직의 부재
 
 ---
+
+<br>
 
 # *데이터 모델 구상*
 
@@ -35,28 +43,27 @@
 
 ---
 
+<br>
+
 # *고려사항*
+
+<br>
+
 ## 1. 추적을 얼마나 디테일하게 저장할지?
 - 해당 진입시점부터 특정 동작에 대한 모든 타임라인 로그
 ## 2. 디테일한 로그에 대한 부하분산은 어떻게 할지?
-- 레디스 가용 메모리에 대한 한계값 산정. -> 아직 적용 X
+- 레디스 가용 메모리에 대한 한계값 산정.
 ## 3. 인입시점이 아닌 동작에대한 unique값을 어떻게 지정할지?
 - URL + 함수명 조합
 
 ---
 
-# 정리
-
-### 1. 첫 외부 URL진입 시점엔 controller redirect로직 으로 ==로그 쌓기== / ==쿠키 셋팅== => 이후 AOP 공통로직 화
-=> 메인 테이블
-=> 백로직에서 쿠키 데이터 쌓기
-### 2. 이후 동작에 대해 ==쿠기값 비교== / ==AOP 로그 쌓기 공통 실행==
-=> 디테일 테이블 - 타임라인으로 관리 단, 메인테이블에 존재하는 내셕들에 대해서
-=> AOP에서 특정 서비스or메서드orURL로 지정하여 로그 쌀기
-
----
+<br>
 
 ## **Spring AOP 사용 이유**
+
+<br>
+
 	- 관심사(Aspect)를 분리하여, 각 서비스 메서드에 반복해서 구현하는 것이 아닌, 별도의 Aspect로 관리하여 핵심로직을 공통으로 적용하기 위함이다.
 
 #### 어떻게 자신의 메인 테이블을 찾을것인가? 
@@ -65,29 +72,38 @@
 
 ---
 
-# Path를 명시적으로 설정하여 주지 않았을 때, 쿠키가 등록되지 않는 이유
+> Path를 명시적으로 설정하여 주지 않았을 때, 쿠키가 등록되지 않는 이유
 ![[Pasted image 20241224144309.png]]
 
 쿠키가 필요한 페이지의 경로가 기본 `path`와 일치하는 경우(`redirect url` 이 `SP_MARKETING_HIT_TEST1` 의 하위 url일 경우)
 에는 명시적으로 표시할 필요가 없지만,
-## 현재는 하위 URL이 아니기 때문에 경로를 명시적으로 설정해주어야 한다.
+#### 현재는 하위 URL이 아니기 때문에 경로를 명시적으로 설정해주어야 한다.
 
+
+<br>
 
 ---
 
 >[!note] AOP에서 Front-end 단의 특정 동작 필터링 하기
 
-## 1. Pointcut 객체에 동적으로 enum에서 미리 선언한 값 execution으로 삽입하기
+## <u><font color="#76923c">Pointcut 객체에 동적으로 enum에서 미리 선언한 값 execution으로 삽입하기</font></u>
 ### **(이후 ADMIN 관리를 위해 enum객체 -> DB 데이터화 )**
 
 기존
+
 ![[Pasted image 20241226111559.png]]
+
 DB
+
 ![[Pasted image 20250102160223.png]]
 
 ---
 
-# `@Pointcut` 어노테이션은 컴파일 시점에 고정된 문자열로 정의된 포인트컷 표현식을 기반으로 동작한다.
+<br>
+
+> [!caution] `@Pointcut` 어노테이션은 컴파일 시점에 고정된 문자열로 정의된 포인트컷 표현식을 기반으로 동작한다.
+
+## 어노테이션 기반 방식
 - **장점**:
     
     - 코드가 간결하고 읽기 쉽다.
@@ -98,9 +114,8 @@ DB
     - 복잡한 조건이나 동적으로 변경되는 조건을 처리하기 어렵다.
 -> *`@Pointcut` 등의 조건에 부합하는 Bean객체를 컴파일 시점에 찾아내어 프록시를 감싼다.*
 
-### 이를 해결할 방법은?
 
-# 프록시 기반 동적 포인트컷 생성방식
+## 프록시 기반 동적 포인트컷 생성방식
 - **동적 생성**:
     
     - 런타임에 프록시를 생성하여 포인트컷과 어드바이스를 동적으로 적용.
@@ -117,9 +132,13 @@ DB
 
 -> *해당 프록시 객체를 `적용하고 싶은 Bean객체`에 매번 생성(등록)해주어야 함.*
 
----
+<br>
 
-# customAdvisor를 사용한 동적 포인트컷 생성방식
+---
+<br>
+
+# <u><font color="#76923c">customAdvisor를 사용하여 동적 포인트컷 생성하기</font></u>
+
 ``` java
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
@@ -160,7 +179,11 @@ public class AopConfig {
 - **유연성과 효율성 향상**:
     - Spring AOP 인프라를 활용하므로, 관리가 용이하고 런타임 성능이 개선됩니다.
 
+<br>
+
 ---
+
+<br>
 
 # `DefaultAdvisorAutoProxyCreator`는 어떻게 `customAdvisor`의 조건에 부합하는 빈을 찾나?
 - **BeanPostProcessor**:
@@ -217,22 +240,14 @@ public class AopConfig {
 
 ### @EnableAspectJAutoProxy 어노테이션을 사용한다면, 빈 최초등록시 자동으로 판단하여 해당 프록시 객체를 적용할 수 있다.
 
----
-
-# 프록시?
-### 프록시(Proxy)란?
-
-`프록시(Proxy)`는 **대리자**라는 뜻으로, **다른 객체에 대한 인터페이스 역할을 하는 객체**를 말합니다. 프로그래밍에서 프록시는 실제 객체에 접근하기 전에 특정 작업(로깅, 보안, 트랜잭션 관리 등)을 수행하거나, 객체에 대한 접근을 제어하는 데 사용됩니다.
-
-#### 핵심 개념:
-
-- **대리 객체**: 프록시는 실제 객체에 대한 **중간다리** 역할을 합니다.
-- **동작 조정**: 프록시는 요청을 가로채서 추가적인 작업을 수행하거나, 요청을 변형한 뒤 실제 객체에 전달할 수 있습니다.
-- **AOP와 연관**: 프록시를 사용하면 코드를 변경하지 않고도 객체의 동작을 확장하거나 변경할 수 있습니다.
+## ▶ [[프록시]]
 
 ---
 
-# StaticMethodMatcherPointcut에서 사용가능한 호출 고유정보
+# <font color="#76923c">StaticMethodMatcherPointcut에서 사용가능한 호출 고유정보</font>
+
+<br>
+
 ## 타겟 클래스 / 메서드명 / 파라미터 / 어노테이션
 
 Method Name: loanerLoginPage
@@ -244,7 +259,10 @@ org.springframework.web.bind.annotation.GetMapping
 
 ---
 
-# ENUM객체에, 고유한 정보를 넣어주면 자동 집계가 시작된다
+#### ENUM객체에, 고유한 정보를 넣어주면 자동 집계가 시작된다
+> 이후 DB에 맵핑하여 admin에서 자동으로 관리로 변경 됨.
+<br>
+
 ![[Pasted image 20241226171158.png]]
 ### customAdvice에 등록된 invoke함수는 Pointcut의 조건에 부합하는 메서드의 정보만을 가져온다.
 
@@ -316,7 +334,8 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 
 ---
 
-# 이후 PointCut에서 service 생성자 주입으로, DB에서 값로드 형식으로 변경
+# <u><font color="#76923c">PointCut service 생성자 주입으로, DB에서 값로드 형식으로 변경</font></u>
+
 ![[Pasted image 20250102160213.png]]
 ![[Pasted image 20250102160223.png]]
 
@@ -329,11 +348,18 @@ public ResponseModel insertMarketingHitLog(String hitCode, String hitUid, String
 ### 다음 방법을 통해 DB로 admin과 app을 모두 관리 가능하도록 수정.
 
 ---
+
+<br>
+
 # **고민**
 
-## AOP위빙 방식을 활용해, 동적으로 원하는 시간에 Pointcut에 조건에 해당하는 메서드를 다시 설정할 수 있을까?
+<br>
+
+## <font color="#76923c"><u>AOP위빙 방식을 활용해, 동적으로 원하는 시간에 Pointcut에 조건에 해당하는 메서드를 다시 설정할 수 있을까?</u> → **서버를 재실행 하지않게 할 수 있을까?**</font>
 
  - api호출을 통해 advice내의 동작은 런타임 환경에서 동적으로 변경이 가능한 것을 확인했다.
+
+<br>
 
 ## pointcut도 런타임에 변경이 가능하잖아? 런타임 위빙이니까?
 - 런타입 위빙 방식이라고 하더라도, 변경은 불가능하다.
