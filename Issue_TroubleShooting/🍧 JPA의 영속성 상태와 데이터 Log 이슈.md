@@ -169,7 +169,6 @@ public boolean isNew(T entity) {
 **`persist()`가 아닌 `merge()`로 넘어갈 수밖에없게 된다는 것이다.**
 
 #### 즉, 어떠한 객체가 save() 되는 시점에 `persist()`가 동작되어 <u>PK중복 예외가 발생할 일은 없다는 것이다.</u>
-
 <br>
 
 ---

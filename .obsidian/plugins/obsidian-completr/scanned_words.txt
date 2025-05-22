@@ -291,6 +291,7 @@ Stg
 SAVE
 SNS
 Sarahah
+SnapShot
 JWT
 Java
 Join
@@ -3042,6 +3043,7 @@ import
 ignoringAntMatchers
 insights
 isNew
+invocation
 blog
 balanceJob
 batch
@@ -4125,6 +4127,7 @@ revert
 repo
 removed
 remove
+readOnly
 pc
 public
 parallelStream
