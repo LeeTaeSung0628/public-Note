@@ -1,4 +1,4 @@
-# ✈MM_클라우드 마이그레이션
+# ✈ MM_클라우드 마이그레이션
 
 #프로젝트 #개발 #Cloud #CloudNative #CI/CD
 
