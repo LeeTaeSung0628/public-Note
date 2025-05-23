@@ -128,7 +128,7 @@ public class A {
 
 
 #### 결론
-- `readOnly = true`옵션이 켜져있다면, JPA는 해당 트렌젝션이 내의 조회 쿼리에 대해서, 변경감지를 위한 초기상태(SnapShot)을 저장하지 않아도 되고, 불필요한 DB I/O를 방지함으로 **매모리와 CPU리소스를 절감할 수 있다.**
+- `readOnly = true`옵션이 켜져있다면, JPA는 해당 트렌젝션이 내의 조회 쿼리에 대해서, 변경감지를 위한 초기상태(SnapShot)을 저장하지 않아도 되고, 불필요한 Dirty Checking을 건너 뛰게 함으로 **매모리와 CPU리소스를 절감할 수 있다.**
 
 <br>
 
@@ -152,9 +152,84 @@ public Loaner getLoaner(int memberId) {
 ```
 
 - 위 코드를 보았을 때, 물론 코드를 분석하여 단순 select로직인지, 쓰기 로직인지 판단할 수있겠지만, <br>
-**누가 봐도 단번에 getMember가 읽기전용 메서드라는것을 파악할 수 있다.**
-- 이는 코드의 가독성을 향상시켜 줄 뿐 아니라, 유지보수 시 실수로 엔티티 수정시 예외를 유도할 수 있다.
+**누가 봐도 단번에 `getMember(int memberId)`가 읽기전용 메서드라는것을 파악할 수 있다.**
+- 이는 코드의 가독성을 향상시켜 줄 뿐 아니라, 실수로 트리거 할 수 있는 쓰기 작업을 거부할 수 있다.
+<br>
+
+## 3. 레플리케이션(Replication) 환경의 분산 부하
+
+>[!tip] 레플리케이션이란?
+>’두개 이상의 DBMS를 Master/Slave 라는 수직적 구조를 활용하여 DB의 부하를 분산시키는 기술’
+>
+>Master DB에는 insert/update/delete 와 같은 작업을 수행하도록 하고, select 작업을 Slave DB에서
+>
+>작업하도록 구성한다.
 
 <br>
 
-## 3. 
+#### 왜? select작업만을 따로 빼는 구조를 만들었을까?
+
+- 보통의 경우 select작업의 소요시간이 가장 길기 때문이다.
+- Table Full Scan에 경우 데이터 개수에 따라 소요시간이 아주 길게 사용될 수 있다.
+- 이 시간동안, 다른 작업을 하지 못하게 되니 병목이 발생하는 주요원인이 된다.
+
+
+#### 이로 인한 장점
+1. 레플리케이션 구조는 복제본 DB(Slave)를 함께 운용함으로, Master DB장애 발생시 SlaveDB를 승격시켜 **장애를 빠르게 복구**할 수 있다.
+2. 조회작업에 대한 트레픽을 분산할 수 있다.
+
+![[do-messenger_screenshot_2025-05-23_10_48_34.png|725]]
+
+## 결론
+
+- @Transactional(readOnly = true) 옵션은 SlaveDB에서 데이터를 가져오도록 동작시키고,
+	- (읽기 전용 트렌젝션이 SlaveDB로 자동 라우팅 된다.)
+- 이를 통해 **레플리케이션**의 목적에 맞게 트래픽 분산을 온전하게 적용시킬 수 있다.
+
+<br>
+
+---
+
+<br>
+
+# + <font color="#76923c">@Transactional 어노테이션을 제거한다면?</font>
+
+<br>
+
+만약, readOnly=ture 옵션을 통해, 스냅샷 저장을 막고 조회 속도를 올리는게 목적이라면,
+
+@Transactional 어노테이션을 완전히 지우면 되는것 아닌가?
+
+```java
+// @Transactional(readOnly = true) -> 주석처리
+public Member getMember(int idx) {
+        Member member = memberRepository.findByIdx(idx).get();
+        System.out.println(member.getName()); // Lazy Loading 발생
+        return member;
+}
+```
+
+다음과 같이 코드를 구성했다면?
+- 사실 아무일도 일어나지 않는다. (Lazy Loading이 정상적으로 동작한다.)
+- **단, OSIV 옵션이 true인 경우에만 한정이다.** ▶ [[🌋 OSIV란 무엇인가]]
+
+<br>
+
+그렇다면 다음과 같이 osiv옵션을 false로 하고 재실행한다면?
+```java
+// application.properties
+spring.jpa.open-in-view=false
+```
+
+
+`LazyInitializationException`이 발생하게 된다.
+
+이는 영속성 컨텍스트가 종료된 이후(준영속 상태)에 해당 엔티티에 접근하려 할 때 발생하는 예외이다.
+
+(<u>DTO로 변환하여 직접 엔티티에 접근할 필요가 없도록 관리하는 이유이기도 함</u>)
+
+<br>
+
+따라서, OSIV옵션이 켜져있지 않다면, @Transactional 어노테이션은 강제되고,
+
+조회용 쿼리만을 위한 메서드에는 항상 readOnly=ture 옵션을 붙여주는것이 바람직하다.

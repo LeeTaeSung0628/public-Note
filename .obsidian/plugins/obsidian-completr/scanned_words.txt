@@ -292,6 +292,8 @@ SAVE
 SNS
 Sarahah
 SnapShot
+Scan
+SlaveDB
 JWT
 Java
 Join
@@ -3276,6 +3278,7 @@ theta
 throughout
 tamper
 transient
+ture
 src
 site
 step
@@ -5196,6 +5199,7 @@ Monolithic
 MeloMeter
 Messaging
 Million
+MANUAL
 vs
 void
 var
@@ -5521,6 +5525,7 @@ doGet
 doPost
 detached
 detach
+delete
 limit
 list
 long

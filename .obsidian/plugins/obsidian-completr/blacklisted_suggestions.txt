@@ -6,3 +6,5 @@ ArgoCD
 Argo
 argoCD
 CRUD
+Slave
+SlaveStep
