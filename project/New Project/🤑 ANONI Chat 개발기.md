@@ -190,5 +190,40 @@ target
 
 <br>
 
+
+문제 해결 후
+- gradle빌드 후 도커 이미지파일 생성
+```c
+gradlew bootJar
+docker build -t anonichat .
+```
+
 docker image 생성 완료.
+
+![[Pasted image 20250527095229.png|650]]
 ![[Pasted image 20250526182326.png]]
+- build : .(현재 디렉토리)를 기준으로 빌드하여 이미지 생성
+- tag : 현재 anonichat이미지에 태그를 붙여 복사
+```c
+docker build -t xotjd794613/anonichat:v0.02 .
+docker tag anonichat xotjd794613/anonichat:v0.02
+docker push "계정명"/anonichat-app:latest
+```
+
+
+- 이미지 생성후 UBUNTU서버에서
+1. docker 다운로드
+2. docker 로그인
+3. image pull 받기
+```c
+curl -fsSL https://get.docker.com | sh
+docker login
+sudo docker pull [image이름]:[태그]
+```
+
+
+실행
+```c
+sudo docker run -p 8000:8080 "계정명"/anonichat:latest
+```
+![[Pasted image 20250527103130.png|925]]
