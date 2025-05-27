@@ -1,6 +1,6 @@
 # 🤑 ANONI Chat 개발기 - infra setup
 
-#프로젝트 #개발 #개요 #구상 #인프라 #Vultr
+#프로젝트 #개발 #개요 #구상 #인프라 #Vultr #docker
 
 ---
 
@@ -229,4 +229,74 @@ sudo docker pull [image이름]:[태그]
 ```c
 sudo docker run -p 8000:8080 "계정명"/anonichat:latest
 ```
-![[Pasted image 20250527103130.png|925]]![[Pasted image 20250527144405.png|575]]
+![[Pasted image 20250527103130.png|925]]
+
+![[Pasted image 20250527144405.png|575]]
+
+---
+
+<br>
+
+# + <font color="#76923c">Docker(컨테이너)를 적용하여 얻는 이득이 뭘까?</font>
+
+<br>
+
+## 1. 배포 환경 통일성
+
+### 이전 방식:
+- 개발자는 로컬에서 `.jar`로 실행
+- 서버는 Ubuntu, 다른 Java 버전, 설정 다를 수 있음 → **"로컬에선 되는데 서버에선 안 돼"**
+
+### Docker 도입 후:
+- `Dockerfile`에 명시된 Java 버전, 종속성, 실행 방식이 **모두 이미지에 포함**
+- 개발/운영 환경 차이가 없음  
+    → **"로컬에선 되는데 서버에선 안 돼"** 문제가 사라짐
+
+---
+
+## 2. CI/CD 파이프라인 단순화
+
+### 과거 방식:
+
+- `.jar` 파일을 빌드하고 → 서버에 복사하고 → 수동으로 백업 & 재실행
+
+### Docker 도입 후:
+- Jenkins에서 `docker build` → `docker push` → 서버에서 `docker pull && restart`
+- **단일 명령으로 배포 자동화**됨
+
+---
+
+## 3. 버전 관리 / 롤백 가능
+
+
+`docker run xotjd794613/anonichat:v0.02 docker run xotjd794613/anonichat:v0.01`
+
+→ 이전 버전으로 **즉시 롤백 가능**
+
+과거 방식은 `.jar` 백업/복원 과정이 필요했음  
+Docker는 이미지 자체가 버전 단위 배포본
+
+---
+
+## 4. 의존성 없는 실행 가능
+
+- 서버에 JDK 없어도 됨
+- Gradle, Maven, OpenJDK, Node 등 포함해서 독립 실행 가능
+- Java + Redis + Nginx 등 **멀티 컨테이너 서비스화**도 가능
+
+→ 서버는 단지 "Docker 런타임"만 제공하면 됨
+
+---
+
+## 5. 운영 서버 리스크 감소
+
+- 시스템에 직접 설치하는 것이 아님 → **호스트 오염 없음**
+- 서버를 초기화하거나 다른 서버로 옮겨도 → Docker만 깔고 이미지 pull
+
+→ **서버 관리와 인프라 유지 부담 최소화**
+
+---
+
+<br>
+
+## ▶ [[🤑 ANONI Chat 개발기 - CICD 구성]]
