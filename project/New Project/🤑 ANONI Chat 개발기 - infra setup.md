@@ -1,4 +1,4 @@
-# 🤑 ANONI Chat 개발기
+# 🤑 ANONI Chat 개발기 - infra setup
 
 #프로젝트 #개발 #개요 #구상 #인프라 #Vultr
 
@@ -6,25 +6,23 @@
 
 <br>
 
-# <font color="#76923c">개요</font>
-
-1. 초기 인프라 셋팅
-2. Cloud 셋팅 및 설정
-
----
-<br>
-
-# <font color="#76923c">1. 초기 인프라 셋팅</font>
+# 초기 인프라 셋팅
 
 <br>
 
-## Spring Boot init
+## <font color="#76923c">Spring Boot init</font>
+
+
 ![[Pasted image 20250523150517.png]]
 - 스프링 이니셜라이저를 사용하여 java기반의 SpringBoot서버 초기 셋팅
 
+---
+
 <br>
 
-## Vultr
+## <font color="#76923c">Vultr</font>
+
+<br>
 
 보안과 확장성을 고려하여 Cloud 서버를 구축하고자 Vultr를 선택하였다.
 
@@ -50,10 +48,15 @@
 Vultr 인스턴스 생성후, console에서 최소사양으로 ubuntu desktop을 설지하겠다.
 
 
+---
+
 <br>
 
  
-## ubuntu 초기 셋팅
+## <font color="#76923c">ubuntu 초기 셋팅</font>
+
+
+<br>
 
 ```
 sudo apt-get update ( apt-get 도구 업데이트 )
@@ -127,7 +130,7 @@ sudo systemctl set-default graphical.target ( runlevel 5 영구히 실행 / init
 
 <br>
 
-## Docker 설정
+## <font color="#76923c">Docker 설정</font>
 
 ```python
 # 1. 베이스 이미지 (명시적으로 22.04)
@@ -222,8 +225,8 @@ sudo docker pull [image이름]:[태그]
 ```
 
 
-실행
+## <font color="#76923c">실행</font>
 ```c
 sudo docker run -p 8000:8080 "계정명"/anonichat:latest
 ```
-![[Pasted image 20250527103130.png|925]]
+![[Pasted image 20250527103130.png|925]]![[Pasted image 20250527144405.png|575]]
