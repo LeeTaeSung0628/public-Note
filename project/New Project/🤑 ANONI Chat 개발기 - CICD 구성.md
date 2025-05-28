@@ -213,3 +213,40 @@ docker exec -it jenkins-dood cat /home/hello/secrets/initialAdminPassword
  *핑 확인시 정상적으로 붙어있는 모습*
 
 그렇다면 무엇이 문제일까?
+
+- 호스트 Ubuntu는 인터넷 연결이 되어 있어도, **Docker 컨테이너 내부**는 DNS나 라우팅 설정이 다를 수 있다.
+
+이를 위한 확인. (컨테이너에 붙기)
+```bash
+docker exec -it jenkins-dood bash
+# 컨테이너에 붙은 후 `apt update로 확인`
+```
+![[Pasted image 20250528152038.png|700]]
+```
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+```
+
+**다음과 같은 로그를 보고 큰 단서를 얻을 수 있었다.**
+이 에러는 컨테이너 내부에서 `apt update`를 실행하려 했지만, <u>**현재 사용자가 루트 권한이 아니기 때문에 실패한 것**</u>이다.
+
+jenkins dockerfile 중,,,
+```c
+# 6. Jenkins 실행
+# Dockerfile 실행 이후 명령은 `jenkins` 사용자 권한으로 실행됨 (보안을 위해 루트 권한 피함)
+USER hello
+WORKDIR /var/hello
+```
+
+다음 부분을 보면 알 수 있다.
+
+<u>하지만...</u>
+이미 hello 계정에는 `/etc/sudoers` sudo권한을 준것을 볼 수있다.
+```c
+RUN groupadd -g 999 docker && \  
+    useradd -m -d /home/hello -s /bin/bash -G docker hello && \  
+    echo "hello ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+```
+
+
+<br>
