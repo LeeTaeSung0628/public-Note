@@ -112,8 +112,8 @@ EXPOSE 50000
 
 # 6. Jenkins 실행
 # Dockerfile 실행 이후 명령은 `jenkins` 사용자 권한으로 실행됨 (보안을 위해 루트 권한 피함)
-USER jenkins
-WORKDIR /var/jenkins_home
+USER hello
+WORKDIR /var/hello
 
 # `8080` 포트에서 Jenkins 서비스가 시작됨
 CMD ["java", "-jar", "/usr/share/jenkins.war"]
@@ -152,7 +152,7 @@ docker run -d \
 
 - Dockerfile에 아래 내용을 **추가**하기
 ```c
-# + Docker 그룹(GID: 999)에 추가 (호스트와 GID 일치)  
+# + Docker 그룹id확인 후(GID: 999)에 추가 (호스트와 GID 일치)  
 RUN groupadd -g 999 docker && \  
     useradd -m -d /home/hello -s /bin/bash -G docker hello && \  
     echo "hello ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
@@ -170,3 +170,46 @@ sudo usermod -aG docker hello(계정명)
 `ip주소:8080`으로 접속하면 jenkins admin 페이지를 확인할 수 있다.
 
 ![[Pasted image 20250528142521.png]]
+
+
+---
+
+<br>
+
+
+# <font color="#76923c">Jenkins Admin 셋팅</font>
+
+
+위 페이지에서 admin passwd를 찾기 위해서는 ssh에서 다음 명령어를 통해 알 수 있다.
+```bash
+docker exec -it jenkins-dood cat /home/hello/secrets/initialAdminPassword
+```
+
+- admin 로그인 완료
+
+![[Pasted image 20250528145922.png]]
+
+## 1.  플러그인 설치 화면
+
+<br>
+
+### `Install suggested plugins`
+
+- Jenkins 커뮤니티에서 추천하는 **기본 플러그인 모음**을 자동 설치해줌
+- 여기엔 Git, Pipeline, Credentials 등 필수 요소가 포함되어 있음
+
+> !만약 특정한 커스텀 설정이나 최소 설치 환경이 필요한 경우엔 오른쪽을 선택해서 수동으로 선택할 수 있음
+
+
+>[!failure] 에러
+>![[Pasted image 20250528151309.png|625]]
+>자동 설치중 대부분에서 `fail`이 발생했다.
+
+### 원인분석
+
+1. ubuntu서버가 외부망에 붙지 못했나??
+![[Pasted image 20250528151438.png]]
+
+ *핑 확인시 정상적으로 붙어있는 모습*
+
+그렇다면 무엇이 문제일까?
