@@ -430,6 +430,7 @@ JQUERY
 Jetty
 Jaeger
 Jest
+JENKINS
 Tokken
 Token
 Tone
@@ -576,7 +577,6 @@ Truth
 Cookie
 Chain
 Claim
-CICD
 CI
 CD
 Cmd
@@ -801,6 +801,7 @@ Chat
 Cloude
 CIDE
 Clude
+CMD
 Authentication
 Authorization
 AOP
@@ -1590,6 +1591,7 @@ Uniform
 Undertow
 Ubuntu
 UBUNTU
+USER
 Pointcut
 Point
 Payload
@@ -2455,6 +2457,9 @@ DataTables
 DATA
 Dirty
 Dollar
+DinD
+DooD
+DockerHub
 KB
 KEY
 Kill
@@ -2665,6 +2670,7 @@ Webhook
 WildFly
 Wordle
 WebRTC
+WORKDIR
 contained
 css
 chunk
@@ -2830,6 +2836,9 @@ cddc
 createEntityManager
 clear
 console
+curl
+certificates
+common
 home
 height
 hello
@@ -2933,6 +2942,7 @@ html
 href
 hab
 hat
+https
 index
 img
 insert
@@ -3166,6 +3176,7 @@ blocks
 bash
 based
 begin
+bin
 there
 this
 text
@@ -3292,6 +3303,8 @@ transient
 ture
 tools
 tag
+timezone
+transport
 src
 site
 step
@@ -3461,6 +3474,10 @@ setUsername
 setAge
 startx
 setup
+software
+sudoers
+sock
+share
 alt
 app
 api
@@ -3684,6 +3701,8 @@ wP
 will
 workspace
 words
+wget
+war
 marketing
 md
 main
@@ -3914,6 +3933,7 @@ GitHub
 GitLab
 GhatGPT
 GPU
+GID
 Netlify
 New
 Native
@@ -4027,6 +4047,7 @@ Namespace
 Nomad
 NETFLIX
 Nginx
+NOPASSWD
 repository
 return
 reader
@@ -4152,6 +4173,7 @@ removed
 remove
 readOnly
 runlevel
+release
 pc
 public
 parallelStream
@@ -4296,6 +4318,7 @@ prem
 persist
 println
 pk
+permission
 git
 gitignore
 gridSize
@@ -4413,6 +4436,9 @@ good
 gRPC
 getTransaction
 gui
+gnupg
+gpg
+groupadd
 name
 newMemberBalance
 naver
@@ -4610,6 +4636,7 @@ else
 etcd
 excelDTO
 emf
+echo
 Vault
 VARIABLES
 VIEW
@@ -4709,6 +4736,7 @@ Volume
 VisualVM
 Vonvon
 Vultr
+VERSION
 Export
 ExecutionContext
 Exception
@@ -4858,6 +4886,8 @@ Email
 Excel
 EntityTransaction
 ElfYourself
+ENV
+EXPOSE
 update
 under
 uzJl
@@ -4954,6 +4984,10 @@ use
 unauthorized
 ubuntu
 upgrade
+unzip
+useradd
+usr
+usermod
 QueueCapacity
 QuerydslPagingItemReader
 Query
@@ -5553,6 +5587,11 @@ detached
 detach
 delete
 dockerignore
+daemon
+dearmor
+deb
+dood
+denied
 limit
 list
 long
@@ -5658,6 +5697,7 @@ latency
 left
 life
 leaving
+lsb
 final
 forkJoinPool
 fail
@@ -5764,6 +5804,7 @@ finally
 from
 full
 flush
+fsSL
 kakao
 kLMRW
 kqAzM
@@ -5856,6 +5897,7 @@ kyc
 keyPair
 kit
 kube
+keyrings
 of
 only
 oqk
@@ -5945,6 +5987,8 @@ outer
 overlay
 old
 osiv
+outside
+openjdk
 You
 YZV
 YALM
@@ -6358,6 +6402,7 @@ xZZZ
 xZ
 xlsx
 xwindow
+xotjd
 ZaCmNrTx
 Zing
 Zjw

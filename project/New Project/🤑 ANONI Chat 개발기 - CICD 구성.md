@@ -33,3 +33,140 @@ graph TD
 	E[DockerHub Push]
 	F[서버 Pull + Deploy]
 ```
+
+- 여기서 해당 방식은 Docker-in-Docker(DinD)방식 중 **DooD** 방식으로 진행한다.
+
+DinD란? - “도커 안에 도커를 실행한다”는 개념.
+
+>[!info] DinD의 종류
+>|방식|설명|핵심 개념|
+|---|---|---|
+|1️⃣ 진짜 DinD (Nested Docker)|컨테이너 안에 Docker 엔진 자체를 설치하고 `dockerd`를 직접 실행|내부에 완전한 Docker daemon|
+|2️⃣ Docker-outside-of-Docker (DooD)|컨테이너에서 **호스트의 Docker 데몬에 접근** (`/var/run/docker.sock` 바인드)|외부 Docker 제어|
+|3️⃣ Remote Docker|컨테이너에서 **다른 머신의 Docker 데몬**을 TCP로 접근 (`tcp://...`)|원격 제어|
+
+<br>
+
+---
+
+<br>
+
+## Docker에 Jenkins 설치
+
+<br>
+
+일반적인 경우에, Docker에서 Jenkins이미지를 pull받아 컨테이너를 실행시키는 것이 가장 간단하다.
+하지만, 이번엔 같은(Ubuntu)서버 내에서 **Jenkins와 Spring서버를 Docker로 함께 띄울**예정 이다.
+
+그렇게 때문에 위에서 기술한 <u>DooD방식으로 Docker로 띄운 Jenkins안에서 Docker를 제어해야한다</u>.
+
+이를위해 `/var/run/docker.sock`을 마운트 해야한다.
+
+*현재 스펙은 ubuntu:22.04 / Spring 3.3.12 / Java17 이다.*
+
+---
+
+<br>
+
+## Jenkins docker image 생성용 dockerfile
+
+```python
+# 베이스 이미지 설정
+FROM ubuntu:22.04
+
+LABEL maintainer="xotjd794613@naver.com"
+
+#- **비대화식 모드 설정**
+# apt 설치 시 발생하는 `timezone 설정`, `Y/N 질문` 등을 자동으로 건너뛰기 위한 설정
+ENV DEBIAN_FRONTEND=noninteractive
+
+# 1. UBUNTU 시스템 패키지`s 설치
+RUN apt-get update && apt-get install -y \
+    curl gnupg2 ca-certificates apt-transport-https software-properties-common \
+    git sudo unzip wget lsb-release openjdk-17-jdk \
+    && apt-get clean
+
+# 2. 사용자 hello 생성 및 sudo 권한 부여(비밀번호 묻지 않도록)
+# Docker CLI 사용이나 기타 시스템 명령 실행 시 필요
+RUN useradd -m -d /home/hello -s /bin/bash hello \
+    && echo "hello ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+ENV JENKINS_HOME=/home/hello
+
+# 3. Docker CLI 설치 (DooD 방식) - Jenkins 내부에서 `docker build`, `docker run`, `docker push` 명령 사용 가능
+# Jenkins가 호스트의 Docker 데몬을 **/var/run/docker.sock**로 제어하게 되는 구조를 전제로 셋팅
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+    > /etc/apt/sources.list.d/docker.list && \
+    apt-get update && apt-get install -y docker-ce-cli
+
+# 4. Jenkins WAR 다운로드 (LTS 버전)
+# /usr/share/jenkins.war 경로에 배치
+ENV JENKINS_VERSION=2.440.1
+RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /usr/share/jenkins.war
+
+# 5. 포트 노출
+# → 도커 실행 시 `-p 8080:8080 -p 50000:50000` 으로 외부 연결 가능
+EXPOSE 8080
+EXPOSE 50000
+
+# 6. Jenkins 실행
+# Dockerfile 실행 이후 명령은 `jenkins` 사용자 권한으로 실행됨 (보안을 위해 루트 권한 피함)
+USER jenkins
+WORKDIR /var/jenkins_home
+
+# `8080` 포트에서 Jenkins 서비스가 시작됨
+CMD ["java", "-jar", "/usr/share/jenkins.war"]
+
+```
+
+Docker이미지 빌드
+- `jenkins-dood`이름으로 이미지 생성
+```c
+docker build -t jenkins-dood .
+docker tag jenkins-dood xotjd794613/jenkins-dood:v0.01
+```
+
+<br> 
+
+push/pull 후 docker.sock 사용하여 실행
+```c
+docker run -d \
+  --name jenkins-dood \
+  -p 8080:8080 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  jenkins-dood:v0.01
+
+```
+
+> `permission denied` 오류 
+![[do-messenger_screenshot_2025-05-28_11_42_51.png]]
+
+즉, **`/var/run/docker.sock` 파일에 접근할 수 있는 권한이 없기 때문에** 발생한 오류이다.
+![[do-messenger_screenshot_2025-05-28_12_03_35.png]]
+
+다음과 같이 docker.sock에 접근권한은 root만이 갖고 있기 때문에,
+현재 계정을 `docker`그룹에 포함시켜야 한다.
+
+### 해결법
+
+- Dockerfile에 아래 내용을 **추가**하기
+```c
+# + Docker 그룹(GID: 999)에 추가 (호스트와 GID 일치)  
+RUN groupadd -g 999 docker && \  
+    useradd -m -d /home/hello -s /bin/bash -G docker hello && \  
+    echo "hello ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+```
+
+또는
+
+root계정으로 변경 후 권한주기
+``` c
+sudo usermod -aG docker hello(계정명)
+```
+
+
+문제 해결 후,
+`ip주소:8080`으로 접속하면 jenkins admin 페이지를 확인할 수 있다.
+
+![[Pasted image 20250528142521.png]]

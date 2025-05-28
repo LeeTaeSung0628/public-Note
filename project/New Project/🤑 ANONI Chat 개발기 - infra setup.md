@@ -218,7 +218,7 @@ docker push "계정명"/anonichat-app:latest
 1. docker 다운로드
 2. docker 로그인
 3. image pull 받기
-```c
+```python
 curl -fsSL https://get.docker.com | sh
 docker login
 sudo docker pull [image이름]:[태그]
