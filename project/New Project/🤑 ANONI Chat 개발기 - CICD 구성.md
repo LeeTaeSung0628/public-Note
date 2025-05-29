@@ -264,10 +264,14 @@ RUN groupadd -g 999 docker && \
 ENV JENKINS_VERSION=2.462.3  
 RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /usr/share/jenkins.war
 ```
+<br>
+
 **<font color="#76923c">결론</font>**
 - 외부망 접근 금지 문제 X
 - root/sudo 권한 문제 X
 - <u>Jenkins 버전 문제 O</u>
+
+![[do-messenger_screenshot_2025-05-29_11_37_10.png]]
 
 <br>
 
@@ -275,4 +279,6 @@ RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /us
 
 <br>
 
-## EODEOD
+# <font color="#76923c">Jenkins 파이프라인 구성하기</font>
+
+<br>

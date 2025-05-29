@@ -122,3 +122,12 @@ sudo usermod -aG docker hello(계정명)
 ```bash
 docker exec -it jenkins-dood cat /home/hello/secrets/initialAdminPassword
 ```
+
+---
+
+# jenkins 버전 확인
+```bash
+docker exec -it <컨테이너_이름> java -jar /usr/share/jenkins.war --version
+```
+
+---
