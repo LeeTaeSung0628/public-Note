@@ -1,3 +1,4 @@
+# UBUNTU sever 명령어 모음
 <br>
 <br>
 
@@ -100,6 +101,7 @@ docker run -d \
 
 ---
 
+
 # root계정으로 접속
 ```bash
 su -
@@ -113,3 +115,10 @@ su -
 sudo usermod -aG docker hello(계정명)
 ```
 
+---
+
+# jenkins admin passwd찾기
+
+```bash
+docker exec -it jenkins-dood cat /home/hello/secrets/initialAdminPassword
+```

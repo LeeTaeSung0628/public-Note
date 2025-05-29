@@ -221,7 +221,14 @@ docker exec -it jenkins-dood cat /home/hello/secrets/initialAdminPassword
 docker exec -it jenkins-dood bash
 # 컨테이너에 붙은 후 `apt update로 확인`
 ```
+
+<br>
+
 ![[Pasted image 20250528152038.png|700]]
+
+
+<br> 
+
 ```
 E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
 E: Unable to lock directory /var/lib/apt/lists/
@@ -231,6 +238,7 @@ E: Unable to lock directory /var/lib/apt/lists/
 이 에러는 컨테이너 내부에서 `apt update`를 실행하려 했지만, <u>**현재 사용자가 루트 권한이 아니기 때문에 실패한 것**</u>이다.
 
 jenkins dockerfile 중,,,
+다음 부분을 보면 알 수 있다.
 ```c
 # 6. Jenkins 실행
 # Dockerfile 실행 이후 명령은 `jenkins` 사용자 권한으로 실행됨 (보안을 위해 루트 권한 피함)
@@ -238,7 +246,7 @@ USER hello
 WORKDIR /var/hello
 ```
 
-다음 부분을 보면 알 수 있다.
+<br>
 
 <u>하지만...</u>
 이미 hello 계정에는 `/etc/sudoers` sudo권한을 준것을 볼 수있다.
@@ -248,5 +256,23 @@ RUN groupadd -g 999 docker && \
     echo "hello ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 ```
 
+#### 원인을 계속 찾지 못하던 때, Jenkins 버전 up을 통해 해결할 수 있었다.
+
+```java
+# /usr/share/jenkins.war 경로에 배치  
+#ENV JENKINS_VERSION=2.440.1 플러그인 설치 실패로 인해 버전업  
+ENV JENKINS_VERSION=2.462.3  
+RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /usr/share/jenkins.war
+```
+**<font color="#76923c">결론</font>**
+- 외부망 접근 금지 문제 X
+- root/sudo 권한 문제 X
+- <u>Jenkins 버전 문제 O</u>
 
 <br>
+
+---
+
+<br>
+
+## EODEOD
