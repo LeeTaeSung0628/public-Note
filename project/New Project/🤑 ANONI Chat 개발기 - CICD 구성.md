@@ -260,7 +260,7 @@ RUN groupadd -g 999 docker && \
 
 ```java
 # /usr/share/jenkins.war 경로에 배치  
-#ENV JENKINS_VERSION=2.440.1 플러그인 설치 실패로 인해 버전업  
+#ENV JENKINS_VERSION=2.440.1 !!플러그인 설치 실패로 인해 버전업  
 ENV JENKINS_VERSION=2.462.3  
 RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /usr/share/jenkins.war
 ```
@@ -282,3 +282,4 @@ RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /us
 # <font color="#76923c">Jenkins 파이프라인 구성하기</font>
 
 <br>
+- 추가예정
