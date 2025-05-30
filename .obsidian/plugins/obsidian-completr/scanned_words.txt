@@ -311,6 +311,7 @@ Sbi
 SJ
 SK
 Stk
+Settings
 JWT
 Java
 Join
@@ -1988,6 +1989,9 @@ Ps
 PXl
 PFT
 Prod
+Personal
+PAT
+Packages
 Filter
 Fingers
 ForkJoinPool
@@ -2334,6 +2338,7 @@ RNY
 Rxd
 ROm
 Root
+Registry
 ID
 ItemReader
 IP
@@ -2733,6 +2738,7 @@ DcU
 DZb
 Drfo
 DEG
+Developer
 KB
 KEY
 Kill
@@ -3695,6 +3701,8 @@ tsKIh
 tp
 tHP
 trf
+tokens
+token
 src
 site
 step
@@ -4391,6 +4399,7 @@ GgW
 Gqsy
 GFY
 GTj
+GHCR
 Netlify
 New
 Native
