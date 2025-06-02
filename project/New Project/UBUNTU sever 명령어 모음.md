@@ -93,7 +93,8 @@ docker run -d \
   --name jenkins-dood \
   -p 8080:8080 \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  xotjd794613/jenkins-dood:v0.01
+  -v jenkins_home:/home/hello \ # 볼륨 마운트 적용
+  ghcr.io/anonichat/app/jenkins-dood:v0.06
 ```
 - `--name jenkins-dood \` 실행시킬 컨테이너 이름
 - `-p 8080:8080 \` 실행시킬 포트번호

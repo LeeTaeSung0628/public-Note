@@ -53,17 +53,17 @@ GHCR에 이미지를 푸시하려면 인증이 필요하다. 이를 위해 Perso
 4. 로컬 환경에서 다음 명령어로 Docker에 로그인한다.
 
 ```bash
-echo $CR_PAT | docker login ghcr.io -u YOUR_GITHUB_USERNAME --password-stdin
+$  docker login ghcr.io -u "gitHub아이디" 
+Password: #<Pesonal Access Token> 입력
 ```   
 
-여기서 `CR_PAT`는 생성한 토큰을 *환경 변수*로 설정하는 명령어 이다.
 
 ---
 
 <br>
 
 
-# <font color="#76923c">Docker 이미지 빌드 및 태깅</font>
+# <font color="#76923c">Docker 이미지 빌드 및 태깅(선택)</font>
 
 <br>
 
@@ -71,17 +71,7 @@ echo $CR_PAT | docker login ghcr.io -u YOUR_GITHUB_USERNAME --password-stdin
 Dockerfile이 있는 디렉토리에서 다음 명령어로 이미지를 빌드하고 태깅한다.
 
 ```bash
-docker build -t ghcr.io/"OWNER"/"REPOSITORY"/"IMAGE_NAME":"TAG" .
-```
-
-- `OWNER`는 GitHub 사용자명 또는 조직명입니다.
-    
-- `REPOSITORY`는 이미지와 연결할 GitHub 저장소명입니다.
-    
-- `IMAGE_NAME`은 이미지의 이름입니다.
-
-```bash
-docker build -t ghcr.io/my-org/my-repo/my-app:latest .
+docker tag "이미지ID" ghcr.io/"gitHub아이디"/"repo이름"/"이미지:태그"
 ```
 
 ---
@@ -92,20 +82,17 @@ docker build -t ghcr.io/my-org/my-repo/my-app:latest .
 
 <br>
 
-빌드한 이미지를 **GHCR**에 푸시한다.
+위에서 빌드(태깅)한 이미지를 **GHCR**에 푸시한다.
 
 ```bash
-docker push ghcr.io/OWNER/REPOSITORY/IMAGE_NAME:TAG
+docker push ghcr.io/"gitHub아이디"/"repo이름"/"이미지:태그"
 ```
 
-예시:
-
-```bash
-docker push ghcr.io/my-org/my-repo/my-app:latest
-```
 
 푸시가 완료되면, 해당 이미지는 GitHub의 **Packages** 섹션에서 확인할 수 있다.
 
+![[Pasted image 20250602104005.png|900]]
+![[Pasted image 20250602104018.png|925]]
 
 ---
 
@@ -123,12 +110,15 @@ docker push ghcr.io/my-org/my-repo/my-app:latest
 docker pull ghcr.io/OWNER/REPOSITORY/IMAGE_NAME:TAG
 ```
 
+![[Pasted image 20250602112229.png|725]]
 또한, Kubernetes 등의 오케스트레이션 도구에서 해당 이미지를 참조하여 배포할 수 있다.
+
+![[Pasted image 20250602113419.png|775]]
 
 ---
 
 <br>
 
-이러한 과정을 통해 Docker 이미지를 GitHub 팀 저장소에서 효과적으로 관리하고 배포할 수 있다.
+이러한 과정을 통해 **Docker 이미지를 GitHub 팀 저장소에서 효과적으로 관리하고 배포할 수 있다**.
 
 또한, <u>추가적인 자동화나 보안 설정이 필요하다면</u>, GitHub Actions의 다양한 기능과 GHCR의 접근 제어 설정을 활용할 수 있다.
