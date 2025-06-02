@@ -281,5 +281,4 @@ RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /us
 
 # <font color="#76923c">Jenkins 파이프라인 구성하기</font>
 
-<br>
-- 추가예정
+## ▶ [[젠킨스 파이프라인 설정]]
