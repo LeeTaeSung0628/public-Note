@@ -132,3 +132,18 @@ docker exec -it <컨테이너_이름> java -jar /usr/share/jenkins.war --version
 ```
 
 ---
+
+# git(GHCR) docker 컨테이너 로그인
+```bash
+$  docker login ghcr.io -u "gitHub아이디" 
+Password: #<Pesonal Access Token> 입력
+```
+
+---
+
+# # git(GHCR) docker 태깅
+```bash
+docker tag "이미지ID" ghcr.io/"gitHub아이디"/"repo이름"/"이미지:태그"
+```
+
+---
