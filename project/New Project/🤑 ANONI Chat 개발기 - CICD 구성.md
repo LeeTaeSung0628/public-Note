@@ -275,6 +275,10 @@ RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /us
 
 <br>
 
+# + Jenkins [[젠킨스 설정 초기화 문제]]
+
+<br>
+
 ---
 
 <br>

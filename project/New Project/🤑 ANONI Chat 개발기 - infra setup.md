@@ -58,7 +58,7 @@ Vultr 인스턴스 생성후, console에서 최소사양으로 ubuntu desktop을
 
 <br>
 
-```
+```bash
 sudo apt-get update ( apt-get 도구 업데이트 )
 sudo apt-get upgrade ( apt-get 도구 업그레이드 )
 ```
@@ -70,7 +70,7 @@ sudo apt-get upgrade ( apt-get 도구 업그레이드 )
 
 ## ubuntu-desktop 패키지 설치
 
-```
+```bash
 sudo apt-get install --no-install-recommends ubuntu-desktop ( 최소 설치 )
 sudo apt-get install ubuntu-desktop ( 전체 설치 )
 ```
@@ -84,7 +84,7 @@ DB, jenkins 등 서버용 셋팅만을 원하면 최소 설치를 하기를 권�
 
 ## gui 설치 후 추가 패키지 설치
 
-```
+```bash
 sudo apt-get install indicator-appmenu-tools ( hud service not connected 오류 해결 )
 
 sudo apt-get install indicator-session ( 계정, 세션 아이콘 추가 )
@@ -102,7 +102,7 @@ sudo apt-get install indicator-applet-complete ( 볼륨 조절 아이콘 추가 
 
 ## gui 환경 실행
 
-```
+```bash
 startx ( xwindow 환경 실행 )
 
 sudo systemctl isolate graphical.target ( runlevel 5 일회성 실행 / init 실행 )
