@@ -275,7 +275,7 @@ RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /us
 
 <br>
 
-# + Jenkins [[젠킨스 설정 초기화 문제]]
+# + [[Jenkins 설정 초기화 문제]]
 
 <br>
 
@@ -285,4 +285,18 @@ RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /us
 
 # <font color="#76923c">Jenkins 파이프라인 구성하기</font>
 
-## ▶ [[젠킨스 파이프라인 설정]]
+<br>
+
+## Jenkins 파이프라인이란?
+
+- 젠킨스 파이프라인(Jenkins Pipeline)이란, **소프트웨어 빌드, 테스트, 배포의 전체 과정을 코드로 정의하고 자동화**할 수 있게 해주는 Jenkins의 핵심 기능이다. 
+
+- CI/CD(지속적 통합/지속적 배포)를 효율적으로 수행하기 위한 필수 도구이다.
+
+#### ▶ [[Jenkins 파이프라인 설정]]
+
+다음 설정을 통해 파이프라인을 구성할 수 있다.
+
+Git repo에 push시 자동적으로 통합 / 배포 할 수 있지만, 일단은 Jenkins Admin에서 수동 트리거 되도록 설정해 두었다.
+
+---
