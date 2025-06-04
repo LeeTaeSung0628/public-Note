@@ -145,8 +145,69 @@ public ModelAndView mainView()
 
 <br>
 
-# <font color="#76923c">Ubuntu server 셋팅</font>
+# <font color="#76923c">Ubuntu server Kibana 사용 셋팅</font>
 
 <br>
 
-## Kibana 사용을 위한 셋팅
+## docker-compose.yml 생성
+
+1. Elasticsearch
+2. Logstash
+3. Kibana
+4. Spring Boot 애플리케이션
+
+```yml
+# Docker Compose 파일 스펙 버전 3 사용
+version: '3' 
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    environment:
+      - discovery.type=single-node # 단일 노드 구성
+    ports:
+      - "9200:9200"
+    networks:
+      - elk # `elk`키워드 네트워크로 구성 (다른 서비스와 내부 통신)
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  logstash:
+	  image: docker.elastic.co/logstash/logstash:7.12.0
+	  ports:
+	    - "5044:5044" # Filebeat 등 input으로 사용하는 포트
+	    - "5000:5000" # TCP 또는 JSON 로그 input 용 포트 (Spring에서 이 포트를 사용)
+	  volumes:
+	    - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+	  networks:
+	    - elk # `elk`키워드 네트워크
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.11.1
+    ports:
+      - "5601:5601" # 웹 UI 접근용 포트
+    networks:
+      - elk # `elk`키워드 네트워크
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200 # Elasticsearch 주소 연결
+      - server.host=0.0.0.0 # 모든 IP 바인딩 허용
+
+  spring:
+    image: ghcr.io/anonichat/app/anonichat:v0.04
+    ports:
+      - "8080:8080"
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch:9200 # Elasticsearch의 내부 주소를 환경변수로 주입
+    depends_on:
+      - elasticsearch # Elasticsearch가 먼저 실행되도록 보장
+    networks:
+      - elk # 내부 ELK 네트워크로 연결
+
+volumes:
+  esdata:
+    driver: local # Elasticsearch 데이터 저장소를 호스트 볼륨에 영구 저장
+
+networks:
+  elk: # 모든 서비스가 하나의 공용 네트워크 `elk`에서 통신
+    driver: bridge # `elasticsearch`, `logstash`, `spring`, `kibana`는 서로 이름으로 접근 가능
+```
