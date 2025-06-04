@@ -299,4 +299,15 @@ RUN wget https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war -O /us
 
 Git repo에 push시 자동적으로 통합 / 배포 할 수 있지만, 일단은 Jenkins Admin에서 수동 트리거 되도록 설정해 두었다.
 
+<br>
+
+
+`Git repo(prod branch) push 후 → Jenkins 수동 빌드` 시
+
+![[do-messenger_screenshot_2025-06-04_11_29_26.png]]
+
+![[do-messenger_screenshot_2025-06-04_11_29_14.png]]
+
+#### 적용 완료.
+
 ---
