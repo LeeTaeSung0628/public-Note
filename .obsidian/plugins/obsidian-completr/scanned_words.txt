@@ -312,6 +312,7 @@ SJ
 SK
 Stk
 Settings
+SRE
 JWT
 Java
 Join
@@ -1665,6 +1666,7 @@ BO
 BsF
 BBOH
 BhR
+Beats
 URL
 UtEHFOT
 UUFF
@@ -2131,6 +2133,7 @@ FLM
 FgSp
 FC
 Fl
+Filebeat
 Refresh
 Redis
 RSA
@@ -2845,6 +2848,7 @@ KEx
 KWt
 KghmQV
 KVFiL
+Kibana
 Web
 WAS
 WEB
@@ -3560,6 +3564,7 @@ bJi
 buB
 bTG
 bcd
+branch
 there
 this
 text
@@ -3897,6 +3902,7 @@ syJ
 souuuu
 sF
 startxref
+setting
 alt
 app
 api
@@ -5497,6 +5503,7 @@ EpK
 EJzZML
 Ewk
 EOF
+ES
 update
 under
 uzJl
@@ -5907,6 +5914,7 @@ MS
 MKH
 MA
 MC
+Metricbeat
 vs
 void
 var
@@ -6275,6 +6283,7 @@ dxx
 dv
 dX
 dTL
+dependencies
 limit
 list
 long
