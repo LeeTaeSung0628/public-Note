@@ -34,7 +34,7 @@ services:
       - server.host=0.0.0.0
 
   spring:
-    image: ghcr.io/anonichat/app/anonichat:v0.04
+    image: ghcr.io/anonichat/app/anonichat
     ports:
       - "8080:8080"
     environment:

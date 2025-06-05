@@ -147,3 +147,10 @@ docker tag "이미지ID" ghcr.io/"gitHub아이디"/"repo이름"/"이미지:태�
 ```
 
 ---
+
+# DockerCompose 실행
+
+```bash
+docker-compose up -d
+```
+

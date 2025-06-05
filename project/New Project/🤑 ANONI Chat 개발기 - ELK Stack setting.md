@@ -202,7 +202,7 @@ services:
       - server.host=0.0.0.0 # 모든 IP 바인딩 허용
 
   spring:
-    image: ghcr.io/anonichat/app/anonichat:v0.04
+    image: ghcr.io/anonichat/app/anonichat
     ports:
       - "8080:8080"
     environment:
@@ -289,3 +289,53 @@ output { // 로그 출력 설정 시작
 //  }
 }
 ```
+
+<br>
+
+---
+
+<br>
+
+# <font color="#76923c">적용 및 확인</font>
+
+
+<br>
+
+## server에 파일 생성하기
+
+<br>
+
+임의의 폴더를 지정한 후,
+
+[[anoniChat-docker-compose.yml]] / [[anoniChat-logstash.conf]]
+
+```bash
+nano anoniChat-docker-compose.yml
+nano logstash.conf
+```
+파일을 생성한다.
+
+![[Pasted image 20250605172214.png|550]]
+
+>[!info] DockerComposeTool이 없다면?
+>```bash
+> sudo apt install -y docker-compose
+>```
+>해당 명령어로 다운로드 받기
+
+
+이후,
+```bash
+docker-compose up -d
+```
+- `-d` : 백그라운드로 실행
+
+`http://{‘IP주소‘}:5610 (Kibana port)` 로 접속확인
+
+![[Pasted image 20250605172823.png]]
+
+<br>
+
+Kibana를 사용할 준비가 되었다.
+
+이후, 왼쪽의 메뉴바 에서 `Analytics` → `Discover` 메뉴로 이동
