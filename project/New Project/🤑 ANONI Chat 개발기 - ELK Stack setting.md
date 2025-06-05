@@ -68,6 +68,9 @@ dependencies {
 <br>
 
 ## logback-spring.xml 설정 추가
+- spring boot용 Logback 로깅 사용자 정의 설정파일
+
+<br>
 
 *logback-spring.xml*
 ```xml
@@ -150,12 +153,18 @@ public ModelAndView mainView()
 <br>
 
 ## docker-compose.yml 생성
+- DockerComposeTool 설정파일.
+- <u>여러개의 컨테이너(서비스)를 하나의 애플리케이션 처럼 정의하고 실행하도록 도움.</u>
+- 컨테이너 환경을 코드화/자동화
+- 컨테이너를 띄울 서버(필자는 Ubuntu)에 생성하여 준다.
+<br>
 
 1. Elasticsearch
 2. Logstash
 3. Kibana
 4. Spring Boot 애플리케이션
 
+주석 제외코드 ▶ [[anoniChat-docker-compose.yml]]
 ```yml
 # Docker Compose 파일 스펙 버전 3 사용
 version: '3' 
@@ -210,4 +219,73 @@ volumes:
 networks:
   elk: # 모든 서비스가 하나의 공용 네트워크 `elk`에서 통신
     driver: bridge # `elasticsearch`, `logstash`, `spring`, `kibana`는 서로 이름으로 접근 가능
+```
+
+
+<br>
+
+# logstash.conf 생성
+- <u>Logstash의 데이터 처리 파이프라인을 정의</u>하는 설정 파일이다.
+- `docker-compose.yml`파일을 생성한 같은 디렉토리에 생성한다.
+
+
+주석 제외 코드 ▶ [[anoniChat-logstash.conf]]
+```c
+input { // 데이터 수신 설정
+
+	beats {
+	    port => 5044
+	}
+	  
+	tcp {
+	    port => 5000
+	    codec => json_lines // json형식으로 한줄씩 파싱
+	    type => "main_log" // 수산 로그에 type필드로 "auction_log" 부여
+	}
+	
+	//tcp {
+	//    port => 5001
+	//    codec => json_lines
+	//    type => "custom_log"
+	//}
+}
+
+filter { // 수신된 로그를 처리하기위한 전처리
+	if [type] == "main_log" { // 로그 타입이 `main_log`일 때만 처리.
+		grok { // 정규식으로 메세지 파싱
+			match => { "message" => "%{TIMESTAMP_ISO8601:timestamp} \[%{DATA:thread}\] %{LOGLEVEL:loglevel} %{DATA:logger} - %{GREEDYDATA:logmessage}" }
+		}
+	}
+
+// 필터 사용 예시
+//	if [type] == "custom_log" {
+//		if "TestLogDTO" in [message] {
+//		    grok {
+//		        match => {
+//		           "message" => "TestLogDTO\(userId=%{NUMBER:user_id}, exchangeAmount=%{NUMBER:exchange_amount}, payType=%{WORD:pay_type}, payStatus=%{WORD:pay_status}\)"
+//		        }
+//		    }
+//		    mutate { // 필드 타입 변환 및 메시지 필드 제거
+//			    remove_field => ["message"]  
+//			}
+//		} else {
+//			drop { } // `TestLogDTO`가 포함되지 않으면 해당 로그 삭제(drop).
+//		}
+//	}
+}
+
+output { // 로그 출력 설정 시작
+	if [type] == "auction_log" {
+	    elasticsearch {
+	      hosts => ["http://elasticsearch:9200"] // Elasticsearch로 전송
+	      index => "main_log" // 인덱스 이름: `main_log`.
+		}
+	}
+//  if [type] == "custom_log" {
+//    elasticsearch {
+//      hosts => ["http://elasticsearch:9200"]
+//      index => "custom_log"
+//   }
+//  }
+}
 ```

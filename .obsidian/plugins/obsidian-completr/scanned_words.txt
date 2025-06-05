@@ -313,6 +313,7 @@ SK
 Stk
 Settings
 SRE
+Started
 JWT
 Java
 Join
@@ -1078,6 +1079,8 @@ Aqe
 Abs
 Annoni
 Admin
+AuctionService
+AuctionServiceLogger
 HTTP
 HttpOnly
 HTTPS
@@ -1513,6 +1516,7 @@ LFx
 Lz
 LP
 LOT
+Logback
 Bean
 Bearer
 Batch
@@ -2744,6 +2748,7 @@ DZb
 Drfo
 DEG
 Developer
+DockerComposeTool
 KB
 KEY
 Kill
@@ -3173,6 +3178,7 @@ cNQ
 cD
 crK
 credential
+compose
 home
 height
 hello
@@ -4283,6 +4289,7 @@ mP
 myü
 mc
 mrAA
+mainController
 Git
 GitDesktop
 Grid
@@ -5218,6 +5225,8 @@ eT
 elf
 eS
 ed
+elk
+elasticsearch
 Vault
 VARIABLES
 VIEW
@@ -6412,6 +6421,7 @@ lqT
 lQ
 lC
 lDG
+logback
 final
 forkJoinPool
 fail
