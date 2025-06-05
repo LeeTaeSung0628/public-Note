@@ -339,3 +339,6 @@ docker-compose up -d
 Kibana를 사용할 준비가 되었다.
 
 이후, 왼쪽의 메뉴바 에서 `Analytics` → `Discover` 메뉴로 이동
+..
+
+왜 데이터를 못가져오지..?
