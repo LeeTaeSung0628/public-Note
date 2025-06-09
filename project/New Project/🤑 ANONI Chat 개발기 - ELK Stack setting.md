@@ -84,17 +84,13 @@ dependencies {
 
     <appender name="MAIN_LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
 
-        <destination>logstash:5000</destination> <!--컨테이너 포트 5001으로 전송-->
+        <destination>logstash:5000</destination> <!--컨테이너 포트 5000으로 전송-->
 
         <encoder class="net.logstash.logback.encoder.LogstashEncoder" /> <!--JSON 형식 로그로 인코딩-->
         <keepAliveDuration>5 minutes</keepAliveDuration> <!--TCP연결 5분간 유지-->
     </appender>
 
 <!-- 추가적으로 로그 분기 가능 (ex) 
-		java.
-		Logger logger = LoggerFactory.getLogger("AuctionServiceLogger");
-        logger.info("{}", bidLogDTO);
-        
     <appender name="CUSTOM_LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
 
         <destination>logstash:5001</destination>
@@ -104,20 +100,26 @@ dependencies {
     </appender>
 -->
 
+
 	<!--전체 시스템 로그 중 INFO 이상만 콘솔 출력 (별도 logger 설정 없는 경우에 해당)-->
     <root level="info">
+	    <appender-ref ref="MAIN_LOGSTASH" />
         <appender-ref ref="CONSOLE" />
     </root>
 
 	<!--
-	클래스 또는 패키지 이름이 `AuctionServiceLogger`인 로거에 적용
+	클래스 또는 패키지 이름이 `MainServiceLogger`인 로거에 적용
 	DEBUG 이상 로그
-    additivity="false" : 루트로 로그 전파 X (CONSOLE + AUCTION_LOGSTASH만 사용)
+    additivity="false" : 루트로 로그 전파 X (CONSOLE + MAIN_LOGSTASH만 사용)
     + 콘솔 동시 출력
+      
+		--java-- 다음 코드로 사용 가능
+		Logger logger = LoggerFactory.getLogger("MainServiceLogger");
+        logger.info("{}", bidLogDTO);
 	-->
     <logger name="MainServiceLogger" level="debug" additivity="false">
 
-        <appender-ref ref="AUCTION_LOGSTASH" />
+        <appender-ref ref="MAIN_LOGSTASH" />
         <appender-ref ref="CONSOLE" />
     </logger>
 
@@ -204,7 +206,7 @@ services:
   spring:
     image: ghcr.io/anonichat/app/anonichat
     ports:
-      - "8080:8080"
+      - "8081:8080"
     environment:
       - ELASTICSEARCH_HOST=elasticsearch:9200 # Elasticsearch의 내부 주소를 환경변수로 주입
     depends_on:
@@ -275,7 +277,7 @@ filter { // 수신된 로그를 처리하기위한 전처리
 }
 
 output { // 로그 출력 설정 시작
-	if [type] == "auction_log" {
+	if [type] == "main_log" {
 	    elasticsearch {
 	      hosts => ["http://elasticsearch:9200"] // Elasticsearch로 전송
 	      index => "main_log" // 인덱스 이름: `main_log`.
@@ -332,13 +334,70 @@ docker-compose up -d
 
 `http://{‘IP주소‘}:5610 (Kibana port)` 로 접속확인
 
-![[Pasted image 20250605172823.png]]
+![[do-messenger_screenshot_2025-06-09_11_03_39.png]]
+- 로그 출력 정상 확인
+
+
+---
 
 <br>
 
-Kibana를 사용할 준비가 되었다.
+# <font color="#76923c">Jenkins file 셋팅</font>
 
-이후, 왼쪽의 메뉴바 에서 `Analytics` → `Discover` 메뉴로 이동
-..
+<br>
 
-왜 데이터를 못가져오지..?
+위 과정을 거치며, *Spring Server*가 Docker Compose로 묶이게 되었다.
+
+기존의 Jenkins파이프라인으로 Spring Server를 띄울 시 네트워크 연결이 되지 않으므로,
+새로 셋팅을 해주어야 한다.
+
+- 기존 Spring Sever 배포 파이프라인
+```bash
+try {
+	sh "docker stop ${CONTAINER_NAME} || true"
+	sh "docker rm ${CONTAINER_NAME} || true"
+	sh "docker rmi ${DOCKER_HUB_REPO}:${DOCKER_LATEST_TAG} || true"
+	sh "docker pull ${DOCKER_HUB_REPO}:${DOCKER_LATEST_TAG}"
+	sh """
+	docker run -d \
+	  --name ${CONTAINER_NAME} \
+	  --restart always \
+	  -p ${CONTAINER_PORT} \
+	  ${DOCKER_HUB_REPO}:${DOCKER_LATEST_TAG}
+	"""
+	sh "sleep 10"
+	sh "docker ps | grep ${CONTAINER_NAME}"
+} catch (Exception e) {
+	echo "❌ 배포 실패: ${e.getMessage()}"
+	throw e
+}
+```
+
+- 변경 후 파이프라인
+```bash
+
+environment {
+	COMPOSE_PATH = '/home/hello/Desktop/AnoniChat/elk-stack'
+}
+    
+...
+
+try {
+	dir("${COMPOSE_PATH}") {
+		sh """
+			docker-compose stop ${SPRING_SERVICE_NAME} || true
+			docker-compose rm -f ${SPRING_SERVICE_NAME} || true
+			docker-compose pull ${SPRING_SERVICE_NAME}
+			docker-compose up -d ${SPRING_SERVICE_NAME}
+			docker-compose ps
+		"""
+	}
+} catch (Exception e) {
+	echo "❌ 배포 실패: ${e.getMessage()}"
+	throw e
+}
+
+```
+
+<br>
+

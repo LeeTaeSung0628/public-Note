@@ -314,6 +314,7 @@ Stk
 Settings
 SRE
 Started
+Sever
 JWT
 Java
 Join
@@ -2750,6 +2751,7 @@ Drfo
 DEG
 Developer
 DockerComposeTool
+DockerCompose
 KB
 KEY
 Kill
@@ -5925,6 +5927,7 @@ MKH
 MA
 MC
 Metricbeat
+MainServiceLogger
 vs
 void
 var

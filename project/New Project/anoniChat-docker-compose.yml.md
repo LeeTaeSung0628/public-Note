@@ -36,7 +36,7 @@ services:
   spring:
     image: ghcr.io/anonichat/app/anonichat
     ports:
-      - "8080:8080"
+      - "8081:8080"
     environment:
       - ELASTICSEARCH_HOST=elasticsearch:9200
     depends_on:
