@@ -14,7 +14,7 @@
 
 ![[do-messenger_screenshot_2025-06-09_17_27_36.png|600]]
 
-찾아보니 elasticsearch 7.11+ 버전에서 발생하는 문제라고 한다.
+찾아보니 *elasticsearch 7.11+* 버전에서 발생하는 문제라고 한다.
 
 <br>
 
@@ -54,6 +54,8 @@ kibana:
     - xpack.license.self_generated.type=basic
 ```
 
+- 정상 출력
+![[Pasted image 20250609174528.png]]
 ---
 
 <br>

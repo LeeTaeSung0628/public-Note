@@ -22,6 +22,7 @@
 ---
 # [[💻 프로젝트]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
 >- ## 🍃 **Spring Batch**
+>- ## 🤑 **AnoniChat**
 >- ## 🌍 **Obsidian CI/CD**
 >- ## 💁 **infra settings**
 
