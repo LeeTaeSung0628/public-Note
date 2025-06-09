@@ -314,4 +314,5 @@ Git repo에 push시 자동적으로 통합 / 배포 할 수 있지만, 일단은
 
 # 다음에는, 해당 프로젝트에 **ELK** 를 적용해보겠다.
 
+## ▶ [[🔑 Docker Image를 Git repo로 관리하기]]
 ## ▶ [[🤑 ANONI Chat 개발기 - ELK Stack setting]]
