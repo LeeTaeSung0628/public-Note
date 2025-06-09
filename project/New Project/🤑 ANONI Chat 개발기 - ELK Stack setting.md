@@ -522,4 +522,4 @@ Finished: SUCCESS
 
 <br>
 
-## ▶ [[HTTPS 적용하기]]
+## ▶ [[Kibana오류와 HTTPS 적용하기]]
