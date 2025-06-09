@@ -378,6 +378,7 @@ try {
 
 environment {
 	COMPOSE_PATH = '/home/hello/Desktop/AnoniChat/elk-stack'
+	SPRING_SERVICE_NAME = 'spring'
 }
     
 ...
@@ -401,3 +402,118 @@ try {
 
 <br>
 
+---
+
+<br>
+
+# <font color="#76923c">테스트</font>
+
+<br>
+
+## Docker-Compose 파일을 찾지 못하는 모습... 
+```c
+🚀 최신 이미지로 배포 중...
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /home/hello/Desktop/AnoniChat/elk-stack
+[Pipeline] {
+[Pipeline] sh
++ docker-compose stop spring
+/home/hello/Desktop/AnoniChat/elk-stack@tmp/durable-7c44adc8/script.sh.copy: 2: docker-compose: not found
++ true
++ docker-compose rm -f spring
+/home/hello/Desktop/AnoniChat/elk-stack@tmp/durable-7c44adc8/script.sh.copy: 3: docker-compose: not found
++ true
++ docker-compose pull spring
+/home/hello/Desktop/AnoniChat/elk-stack@tmp/durable-7c44adc8/script.sh.copy: 4: docker-compose: not found
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] echo
+❌ 배포 실패: script returned exit code 127
+```
+
+**답 :**
+> Ubuntu서버에는 docker-compose를 설치했지만,
+> 
+> Jenkins서버(컨테이너)에 설치가 되지 않았다.
+> 
+> 이를 해결하기 위해 직접 설치해도 되지만, Jenkins docekrfile을 수정하도록 하겠다.
+
+<br>
+
+## Jenkins-dockerfile
+
+- 도커 컴포즈 다운로드 코드 추가
+```python
+# 3. Docker CLI 설치 (DooD 방식)  
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker.gpg && \  
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \  
+    > /etc/apt/sources.list.d/docker.list && \  
+    apt-get update && apt-get install -y docker-ce-cli && \  
+    # Docker Compose 설치 (v2)    DOCKER_COMPOSE_VERSION=2.24.0 && \  
+    curl -SL https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-linux-$(uname -m) \  
+    -o /usr/local/bin/docker-compose && \  
+    chmod +x /usr/local/bin/docker-compose && \  
+    ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
+---
+
+## 실행결과
+
+```c
+Running in /home/hello/Desktop/AnoniChat/elk-stack
+[Pipeline] {
+[Pipeline] sh
++ docker-compose stop spring
+no configuration file provided: not found
++ true
++ docker-compose rm -f spring
+no configuration file provided: not found
++ true
++ docker-compose pull spring
+no configuration file provided: not found
+```
+- 이번에는 `docker-compose.yml`파일을 찾을수가 없다고 한다...
+
+jenkins server에서 해당 경로로 진입시 docker-compose파일을 찾을 수 없다.
+
+<u>당연한건가??</u>
+
+![[Pasted image 20250609165033.png|500]]
+
+
+## + docker-compose파일이 있는 디렉토리 마운트
+```bash
+docker run -d \
+  --name jenkins-dood \
+  -p 8080:8080 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v jenkins_home:/home/hello \
+  -v /home/hello/Desktop/AnoniChat/elk-stack:/home/hello/Desktop/AnoniChat/elk-stack \
+  ghcr.io/anonichat/app/jenkins-dood:v0.06
+```
+
+<br>
+
+---
+
+<br>
+
+# 최종
+
+<u>기본적인 ELK CI/CD 셋팅 완료.</u>
+
+![[Pasted image 20250609170633.png|825]]
+```python
+🎉 CI/CD 파이프라인이 성공적으로 완료되었습니다!
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+```
