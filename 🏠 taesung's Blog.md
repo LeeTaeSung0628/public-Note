@@ -15,6 +15,7 @@
 
 # 🆕 <font color="#92cddc">새로 추가된 글</font>
 > ### [[🤑 ANONI Chat 개발기 - ELK Stack setting]]
+> ### [[🤑 ANONI Chat 개발기 - CICD 구성]]
 > ### [[🍧 JPA의 영속성 상태와 데이터 Log 이슈]]
 > ### [[🚞 Java 대용량 Excel 리펙토링]]
 
