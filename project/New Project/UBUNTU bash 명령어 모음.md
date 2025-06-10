@@ -1,4 +1,4 @@
-# UBUNTU sever 명령어 모음
+# UBUNTU bash 명령어 모음
 <br>
 <br>
 
@@ -148,17 +148,18 @@ docker tag "이미지ID" ghcr.io/"gitHub아이디"/"repo이름"/"이미지:태�
 
 ---
 
-# DockerCompose 실행
+# DockerCompose 실행 / 종료
 
 ```bash
 docker-compose up -d
+docker-compose down
 ```
 
 ---
 
 # **Server restart 시 컨테이너 Run 모음☘**
 
-```
+```bash
 # Jenkins run
 
 docker run -d \

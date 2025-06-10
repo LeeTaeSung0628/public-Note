@@ -8,7 +8,7 @@
 
 이전 시간에 Clude환경에 docker컨테이너를 구동시키는 것 까지 진행하였다.
 
-▶ [[☘ ANONI Chat - infra setup]]
+## ▶ [[☘ ANONI Chat - infra setup]]
 
 <br>
 
