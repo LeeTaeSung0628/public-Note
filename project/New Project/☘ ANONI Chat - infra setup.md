@@ -1,4 +1,4 @@
-# 🤑 ANONI Chat 개발기 - infra setup
+# ☘ ANONI Chat - infra setup
 
 #프로젝트 #개발 #개요 #구상 #인프라 #Vultr #docker
 
@@ -299,4 +299,4 @@ Docker는 이미지 자체가 버전 단위 배포본
 
 <br>
 
-## ▶ [[🤑 ANONI Chat 개발기 - CICD 구성]]
+## ▶ [[☘ ANONI Chat - CICD 구성]]

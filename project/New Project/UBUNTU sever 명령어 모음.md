@@ -141,7 +141,7 @@ Password: #<Pesonal Access Token> 입력
 
 ---
 
-# # git(GHCR) docker 태깅
+# git(GHCR) docker 태깅
 ```bash
 docker tag "이미지ID" ghcr.io/"gitHub아이디"/"repo이름"/"이미지:태그"
 ```
@@ -154,3 +154,24 @@ docker tag "이미지ID" ghcr.io/"gitHub아이디"/"repo이름"/"이미지:태�
 docker-compose up -d
 ```
 
+---
+
+# **Server restart 시 컨테이너 Run 모음☘**
+
+```
+# Jenkins run
+
+docker run -d \
+  --name jenkins-dood \
+  -p 8080:8080 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v jenkins_home:/home/hello \
+  -v /home/hello/Desktop/AnoniChat/elk-stack:/home/hello/Desktop/AnoniChat/elk-stack \
+  ghcr.io/anonichat/app/jenkins-dood:v0.07
+
+---
+
+# elk+Spring run
+
+docker-compose up -d
+```

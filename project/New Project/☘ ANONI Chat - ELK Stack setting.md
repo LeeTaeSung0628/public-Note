@@ -1,4 +1,4 @@
-# 🤑 ANONI Chat 개발기 - ELK Stack setting
+# ☘ ANONI Chat - ELK Stack setting
 
 #프로젝트 #개발 #인프라 #Elasticsearch #Logstash #Kibana
 
@@ -7,8 +7,8 @@
 <br>
 
 ## 이전 셋팅 보러가기
-#### ▶ [[🤑 ANONI Chat 개발기 - infra setup]]
-#### ▶ [[🤑 ANONI Chat 개발기 - CICD 구성]]
+#### ▶ [[☘ ANONI Chat - infra setup]]
+#### ▶ [[☘ ANONI Chat - CICD 구성]]
 
 ---
 
@@ -522,4 +522,6 @@ Finished: SUCCESS
 
 <br>
 
-## ▶ [[Kibana오류와 HTTPS 적용하기]]
+#### 다음단계
+
+## ▶ [[☘ ANONI Chat - NGINX(feat. Kibana오류와 HTTPS 적용하기)]]

@@ -1,4 +1,4 @@
-# 🤑 ANONI Chat 개발기 - CICD 구성
+# ☘ ANONI Chat - CICD 구성
 
 #프로젝트 #개발 #개요 #구상 #인프라 #CIDE #Jenkins #Vultr
 
@@ -8,7 +8,7 @@
 
 이전 시간에 Clude환경에 docker컨테이너를 구동시키는 것 까지 진행하였다.
 
-▶ [[🤑 ANONI Chat 개발기 - infra setup]]
+▶ [[☘ ANONI Chat - infra setup]]
 
 <br>
 
@@ -315,4 +315,4 @@ Git repo에 push시 자동적으로 통합 / 배포 할 수 있지만, 일단은
 # 다음에는, 해당 프로젝트에 **ELK** 를 적용해보겠다.
 
 ## ▶ [[🔑 Docker Image를 Git repo로 관리하기]]
-## ▶ [[🤑 ANONI Chat 개발기 - ELK Stack setting]]
+## ▶ [[☘ ANONI Chat - ELK Stack setting]]
