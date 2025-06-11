@@ -3,7 +3,8 @@
 /* 플로팅 버튼 공통 스타일 */
 #floatingMenuBtn,
 #scrollToTopBtn,
-#goBackBtn {
+#goBackBtn,
+#goHomeBtn {
     position: fixed;
     width: 60px;
     height: 60px;
@@ -23,7 +24,8 @@
 
 #floatingMenuBtn:hover,
 #scrollToTopBtn:hover,
-#goBackBtn:hover {
+#goBackBtn:hover,
+#goHomeBtn:hover {
     background-color: var(--color-accent);
     transform: scale(1.2);
 }
@@ -65,6 +67,7 @@
         const menuBtn = document.getElementById('floatingMenuBtn');
         const topBtn = document.getElementById('scrollToTopBtn');
         const backBtn = document.getElementById('goBackBtn');
+        const homeBtn = document.getElementById('goHomeBtn');
         if(!sidebar || !menuBtn) return;
         const sidebarRect = sidebar.getBoundingClientRect();
         const buttonWidth = 60;
@@ -73,6 +76,7 @@
         menuBtn.style.right = right;
         if(topBtn) topBtn.style.right = right;
         if(backBtn) backBtn.style.right = right;
+        if(homeBtn) homeBtn.style.right = right;
     }
 
     function addFloatingButtons(){
@@ -99,12 +103,19 @@
             backBtn.innerHTML = '&#8592;';
             container.appendChild(backBtn);
         }
+        let homeBtn = document.getElementById('goHomeBtn');
+        if(!homeBtn){
+            homeBtn = document.createElement('button');
+            homeBtn.id = 'goHomeBtn';
+            homeBtn.innerHTML = '&#8962;';
+            container.appendChild(homeBtn);
+        }
         menuBtn.style.position = 'fixed';
         menuBtn.style.bottom = '60px';
         menuBtn.style.right = '60px';
         menuBtn.style.opacity = '1';
         menuBtn.style.visibility = 'visible';
-        [topBtn, backBtn].forEach((btn, idx)=>{
+        [topBtn, backBtn, homeBtn].forEach((btn, idx)=>{
             btn.style.position = 'fixed';
             btn.style.bottom = `${60 + (idx + 1) * 70}px`;
             btn.style.right = '60px';
@@ -116,16 +127,16 @@
         menuBtn.onclick = ()=>{
             const visible = topBtn.style.visibility === 'visible';
             if(visible){
-                topBtn.style.opacity = '0';
-                topBtn.style.visibility = 'hidden';
-                backBtn.style.opacity = '0';
-                backBtn.style.visibility = 'hidden';
+                [topBtn, backBtn, homeBtn].forEach(btn=>{
+                    btn.style.opacity = '0';
+                    btn.style.visibility = 'hidden';
+                });
                 menuBtn.innerHTML = '+';
             }else{
-                topBtn.style.opacity = '1';
-                topBtn.style.visibility = 'visible';
-                backBtn.style.opacity = '1';
-                backBtn.style.visibility = 'visible';
+                [topBtn, backBtn, homeBtn].forEach(btn=>{
+                    btn.style.opacity = '1';
+                    btn.style.visibility = 'visible';
+                });
                 menuBtn.innerHTML = '×';
             }
         };
@@ -138,6 +149,14 @@
                 history.back();
             }else{
                 location.href = rootPath;
+            }
+        };
+        homeBtn.onclick = ()=>{
+            const homeURL = new URL(rootPath + "🏠-taesung's-blog.html", location.href);
+            if(typeof window.setActiveDocument === 'function'){
+                window.setActiveDocument(homeURL);
+            }else{
+                location.href = homeURL.href;
             }
         };
         window.addEventListener('resize', updateScrollButtonPosition);

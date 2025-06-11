@@ -176,3 +176,25 @@ docker run -d \
 
 docker-compose up -d
 ```
+
+```python
+
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./jenkins_home:/home/hello
+    networks:
+      - data
+
+networks:
+  data:
+    driver: bridge
+
+```
