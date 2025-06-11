@@ -152,7 +152,8 @@
             }
         };
         homeBtn.onclick = ()=>{
-            const homeURL = new URL(rootPath + "🏠-taesung's-blog.html", location.href);
+            const root = rootPath.endsWith('/') ? rootPath : rootPath + '/';
+            const homeURL = new URL(root + "🏠-taesung's-blog.html", location.href);
             if(typeof window.setActiveDocument === 'function'){
                 window.setActiveDocument(homeURL);
             }else{
