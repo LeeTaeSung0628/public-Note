@@ -151,13 +151,16 @@
                 location.href = rootPath;
             }
         };
-        homeBtn.onclick = ()=>{
+        homeBtn.onclick = () => {
             const root = rootPath.endsWith('/') ? rootPath : rootPath + '/';
-            const homeURL = new URL(root + "🏠-taesung's-blog.html", location.href);
-            if(typeof window.setActiveDocument === 'function'){
-                window.setActiveDocument(homeURL);
-            }else{
-                location.href = homeURL.href;
+            const href = root + "🏠-taesung's-blog.html";
+            const anchor = document.createElement('a');
+            anchor.href = href;
+            anchor.setAttribute('data-path', "🏠-taesung's-blog.html");
+            if (typeof window.setActiveDocument === 'function') {
+                window.setActiveDocument(anchor);
+            } else {
+                location.href = href;
             }
         };
         window.addEventListener('resize', updateScrollButtonPosition);
