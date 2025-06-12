@@ -132,3 +132,7 @@ volumes:
 
 #### DB추가 후 CI/CD
 ![[Pasted image 20250612143924.png]]
+
+#### DB데이터 select Test
+![[do-messenger_screenshot_2025-06-12_14_47_01 1.png]]
+![[do-messenger_screenshot_2025-06-12_14_47_40.png]]
