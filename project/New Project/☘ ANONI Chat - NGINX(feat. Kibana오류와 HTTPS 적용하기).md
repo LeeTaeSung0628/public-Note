@@ -187,4 +187,9 @@ kibana:
 
 ## NPM 셋팅하기
 
-- 추가예정.
+- NPM 셋팅 이전, DB셋팅 먼저 진행하도록 하였다.
+
+## ▶ [[ANONI Chat - DB setup]]
+
+
+이후, NPN을 다운로드 받는다.
