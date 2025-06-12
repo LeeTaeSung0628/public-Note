@@ -13,7 +13,6 @@ Splayed
 Skin
 Seminar
 Step
-SlaveStep
 SimpleAsyncTaskExecutor
 SHOW
 STATUS
@@ -94,7 +93,6 @@ Sorted
 Score
 Stream
 Sentinel
-Slave
 Switching
 Stop
 Selective
@@ -524,7 +522,6 @@ TestLogDTO
 Cookie
 Chain
 Claim
-CICD
 CI
 CD
 Cmd
@@ -2911,6 +2908,7 @@ buildingCd
 before
 below
 blocks
+basic
 there
 this
 text
