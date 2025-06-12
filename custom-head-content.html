@@ -34,6 +34,19 @@
 
 (function(){
     const rootPath = document.querySelector('meta#root-path')?.getAttribute('root-path') || './';
+    const homeDataPath = "🏠 taesung's Blog.html";
+    const homeFile = "🏠-taesung's-blog.html";
+
+    function goHome(evt){
+        if(evt) evt.preventDefault();
+        const treeLink = document.querySelector(`.tree-container a[data-path="${homeDataPath}"]`);
+        const url = (rootPath.endsWith('/') ? rootPath : rootPath + '/') + homeFile;
+        if(treeLink && typeof window.setActiveDocument === 'function'){
+            window.setActiveDocument(treeLink);
+        }else{
+            location.href = url;
+        }
+    }
     function forceDarkTheme(){
         document.body.classList.add('theme-dark');
         document.body.classList.remove('theme-light');
@@ -44,10 +57,17 @@
         }
         const topbar = document.querySelector('.topbar-content');
         if(topbar){
+            const homeUrl = (rootPath.endsWith('/') ? rootPath : rootPath + '/') + homeFile;
             topbar.innerHTML = `
-                <a class="tree-item-self is-clickable nav-file-title" href="🏠-taesung's-blog.html" data-path="🏠-taesung's-blog.html">
+                <a class="tree-item-self is-clickable nav-file-title" href="${homeUrl}" data-path="${homeDataPath}">
                     <div class="tree-item-inner nav-file-title-content">🏠 taesung's Blog</div>
                 </a>`;
+            const homeLink = topbar.querySelector('a');
+            if(homeLink){
+                homeLink.addEventListener('click', evt => {
+                    goHome(evt);
+                });
+            }
         }
     }
 
@@ -151,18 +171,7 @@
                 location.href = rootPath;
             }
         };
-        homeBtn.onclick = () => {
-            const root = rootPath.endsWith('/') ? rootPath : rootPath + '/';
-            const href = root + "🏠-taesung's-blog.html";
-            const anchor = document.createElement('a');
-            anchor.href = href;
-            anchor.setAttribute('data-path', "🏠-taesung's-blog.html");
-            if (typeof window.setActiveDocument === 'function') {
-                window.setActiveDocument(anchor);
-            } else {
-                location.href = href;
-            }
-        };
+        homeBtn.onclick = goHome;
         window.addEventListener('resize', updateScrollButtonPosition);
     }
 

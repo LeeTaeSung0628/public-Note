@@ -157,6 +157,13 @@ docker-compose down
 
 ---
 
+# 내부 컨테이너 쉘 접속
+```bash
+docker exec -it jenkins-dood bash
+```
+
+---
+
 # **Server restart 시 컨테이너 Run 모음☘**
 
 ```bash
