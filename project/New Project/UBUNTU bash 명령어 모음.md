@@ -1,4 +1,4 @@
-# UBUNTU sever 명령어 모음
+# UBUNTU bash 명령어 모음
 <br>
 <br>
 
@@ -141,16 +141,67 @@ Password: #<Pesonal Access Token> 입력
 
 ---
 
-# # git(GHCR) docker 태깅
+# git(GHCR) docker 태깅
 ```bash
 docker tag "이미지ID" ghcr.io/"gitHub아이디"/"repo이름"/"이미지:태그"
 ```
 
 ---
 
-# DockerCompose 실행
+# DockerCompose 실행 / 종료
 
 ```bash
 docker-compose up -d
+docker-compose down
 ```
 
+---
+
+# 내부 컨테이너 쉘 접속
+```bash
+docker exec -it jenkins-dood bash
+```
+
+---
+
+# **Server restart 시 컨테이너 Run 모음☘**
+
+```bash
+# Jenkins run
+
+docker run -d \
+  --name jenkins-dood \
+  -p 8080:8080 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v jenkins_home:/home/hello \
+  -v /home/hello/Desktop/AnoniChat/elk-stack:/home/hello/Desktop/AnoniChat/elk-stack \
+  ghcr.io/anonichat/app/jenkins-dood:v0.07
+
+---
+
+# elk+Spring run
+
+docker-compose up -d
+```
+
+```python
+
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./jenkins_home:/home/hello
+    networks:
+      - data
+
+networks:
+  data:
+    driver: bridge
+
+```

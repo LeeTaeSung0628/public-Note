@@ -1,7 +1,10 @@
 <style>
 
-/* 페이지 상단으로 이동하는 플로팅 버튼 */
-#scrollToTopBtn {
+/* 플로팅 버튼 공통 스타일 */
+#floatingMenuBtn,
+#scrollToTopBtn,
+#goBackBtn,
+#goHomeBtn {
     position: fixed;
     width: 60px;
     height: 60px;
@@ -19,111 +22,190 @@
     z-index: 99999;
 }
 
-#scrollToTopBtn:hover {
+#floatingMenuBtn:hover,
+#scrollToTopBtn:hover,
+#goBackBtn:hover,
+#goHomeBtn:hover {
     background-color: var(--color-accent);
     transform: scale(1.2);
 }
 </style>
-
 <script>
-(function() {
-    document.documentElement.classList.add("theme-dark");
-    document.documentElement.classList.remove("theme-light");
 
-    function forceDarkTheme() {
-        document.body.classList.add("theme-dark");
-        document.body.classList.remove("theme-light");
+(function(){
+    const rootPath = document.querySelector('meta#root-path')?.getAttribute('root-path') || './';
+    const homeDataPath = "🏠 taesung's Blog.html";
+    const homeFile = "🏠-taesung's-blog.html";
 
-        let themeToggle = document.querySelector(".theme-toggle-input");
-        if (themeToggle) {
+    function goHome(evt){
+        if(evt) evt.preventDefault();
+        const treeLink = document.querySelector(`.tree-container a[data-path="${homeDataPath}"]`);
+        const url = (rootPath.endsWith('/') ? rootPath : rootPath + '/') + homeFile;
+        if(treeLink && typeof window.setActiveDocument === 'function'){
+            window.setActiveDocument(treeLink);
+        }else{
+            location.href = url;
+        }
+    }
+    function forceDarkTheme(){
+        document.body.classList.add('theme-dark');
+        document.body.classList.remove('theme-light');
+        const themeToggle = document.querySelector('.theme-toggle-input');
+        if(themeToggle){
             themeToggle.checked = true;
             themeToggle.disabled = true;
         }
-
-        let topbar = document.querySelector(".topbar-content");
-        if (topbar) {
+        const topbar = document.querySelector('.topbar-content');
+        if(topbar){
+            const homeUrl = (rootPath.endsWith('/') ? rootPath : rootPath + '/') + homeFile;
             topbar.innerHTML = `
-                <a class="tree-item-self is-clickable nav-file-title" href="🏠-taesung's-blog.html" data-path="🏠-taesung's-blog.html">
+                <a class="tree-item-self is-clickable nav-file-title" href="${homeUrl}" data-path="${homeDataPath}">
                     <div class="tree-item-inner nav-file-title-content">🏠 taesung's Blog</div>
                 </a>`;
+            const homeLink = topbar.querySelector('a');
+            if(homeLink){
+                homeLink.addEventListener('click', evt => {
+                    goHome(evt);
+                });
+            }
         }
     }
 
-//-------------
+    function handleResize(){ updateScrollButtonPosition(); }
 
-    // 트리거 / 핸들러
-    function handleResize(entries) {
-        for (let entry of entries) {
-            updateScrollButtonPosition();
-        }
-    }
-
-    //스크롤 페이지 크기 변경 감지
-    function observeMarkdownPreviewResize() {
-        let container = document.querySelector(".sidebar-right.sidebar");
-        if (!container) return;
-
-        // ResizeObserver 인스턴스 생성
-        const resizeObserver = new ResizeObserver(handleResize);
+    let resizeObserver;
+    function observeMarkdownPreviewResize(){
+        if(resizeObserver) return;
+        const container = document.querySelector('.sidebar-right.sidebar');
+        if(!container) return;
+        resizeObserver = new ResizeObserver(handleResize);
         resizeObserver.observe(container);
     }
 
-    //페이지 크기 변경시 동적으로 위치 변경
-    function updateScrollButtonPosition() {
-        let sidebar = document.querySelector(".sidebar-right.sidebar");
-        let button = document.getElementById("scrollToTopBtn");
-        if (!sidebar || !button) return;
-
-        let sidebarRect = sidebar.getBoundingClientRect();
-        let buttonWidth = 60; // 버튼 너비
-        let padding = 90; // 우측 여백
-
-        // 버튼을 사이드바 바깥쪽 우측 하단에 배치
-        button.style.right = `${window.innerWidth - sidebarRect.left - buttonWidth + padding}px`;
+    function updateScrollButtonPosition(){
+        const sidebar = document.querySelector('.sidebar-right.sidebar');
+        const menuBtn = document.getElementById('floatingMenuBtn');
+        const topBtn = document.getElementById('scrollToTopBtn');
+        const backBtn = document.getElementById('goBackBtn');
+        const homeBtn = document.getElementById('goHomeBtn');
+        if(!sidebar || !menuBtn) return;
+        const sidebarRect = sidebar.getBoundingClientRect();
+        const buttonWidth = 60;
+        const padding = 90;
+        const right = `${window.innerWidth - sidebarRect.left - buttonWidth + padding}px`;
+        menuBtn.style.right = right;
+        if(topBtn) topBtn.style.right = right;
+        if(backBtn) backBtn.style.right = right;
+        if(homeBtn) homeBtn.style.right = right;
     }
 
-    function addScrollToTopButton() {
-        let container = document.querySelector(".sidebar-right.sidebar");
-        if (!container) return;
-        let button = document.getElementById("scrollToTopBtn");
-        if (!button) {
-            button = document.createElement("button");
-            button.id = "scrollToTopBtn";
-            button.innerHTML = "&#9650;"; // 위 화살표 아이콘
-            container.appendChild(button); // body에 추가하여 고정
+    function addFloatingButtons(){
+        const container = document.querySelector('.sidebar-right.sidebar');
+        if(!container) return;
+        let menuBtn = document.getElementById('floatingMenuBtn');
+        if(!menuBtn){
+            menuBtn = document.createElement('button');
+            menuBtn.id = 'floatingMenuBtn';
+            container.appendChild(menuBtn);
         }
-        // 버튼을 화면 우측 하단에 고정
-        button.style.position = "fixed";
-        button.style.bottom = "60px";
-        button.style.right = "60px";
-        button.style.zIndex = "99999";
-        button.style.opacity = "1";
-        button.style.visibility = "visible";
-        updateScrollButtonPosition();
-
-        // 버튼 클릭 시 최상단으로 이동
-        button.addEventListener("click", function() {
-            // 스크롤 이벤트 감지
-            let scrollContainer = document.querySelector(".markdown-preview-view");
-            if(!scrollContainer){
-               return
-            }
-            scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
+        menuBtn.innerHTML = '+'; // reset to collapsed state on page load
+        let topBtn = document.getElementById('scrollToTopBtn');
+        if(!topBtn){
+            topBtn = document.createElement('button');
+            topBtn.id = 'scrollToTopBtn';
+            topBtn.innerHTML = '&#9650;';
+            container.appendChild(topBtn);
+        }
+        let backBtn = document.getElementById('goBackBtn');
+        if(!backBtn){
+            backBtn = document.createElement('button');
+            backBtn.id = 'goBackBtn';
+            backBtn.innerHTML = '&#8592;';
+            container.appendChild(backBtn);
+        }
+        let homeBtn = document.getElementById('goHomeBtn');
+        if(!homeBtn){
+            homeBtn = document.createElement('button');
+            homeBtn.id = 'goHomeBtn';
+            homeBtn.innerHTML = '&#8962;';
+            container.appendChild(homeBtn);
+        }
+        menuBtn.style.position = 'fixed';
+        menuBtn.style.bottom = '60px';
+        menuBtn.style.right = '60px';
+        menuBtn.style.opacity = '1';
+        menuBtn.style.visibility = 'visible';
+        [topBtn, backBtn, homeBtn].forEach((btn, idx)=>{
+            btn.style.position = 'fixed';
+            btn.style.bottom = `${60 + (idx + 1) * 70}px`;
+            btn.style.right = '60px';
+            btn.style.zIndex = '99998';
+            btn.style.opacity = '0';
+            btn.style.visibility = 'hidden';
         });
-
-        window.addEventListener("resize", updateScrollButtonPosition);
+        updateScrollButtonPosition();
+        menuBtn.onclick = ()=>{
+            const visible = topBtn.style.visibility === 'visible';
+            if(visible){
+                [topBtn, backBtn, homeBtn].forEach(btn=>{
+                    btn.style.opacity = '0';
+                    btn.style.visibility = 'hidden';
+                });
+                menuBtn.innerHTML = '+';
+            }else{
+                [topBtn, backBtn, homeBtn].forEach(btn=>{
+                    btn.style.opacity = '1';
+                    btn.style.visibility = 'visible';
+                });
+                menuBtn.innerHTML = '×';
+            }
+        };
+        topBtn.onclick = ()=>{
+            const scrollContainer = document.querySelector('.markdown-preview-view');
+            if(scrollContainer) scrollContainer.scrollTo({top:0,behavior:'smooth'});
+        };
+        backBtn.onclick = ()=>{
+            if(history.length > 1){
+                history.back();
+            }else{
+                location.href = rootPath;
+            }
+        };
+        homeBtn.onclick = goHome;
+        window.addEventListener('resize', updateScrollButtonPosition);
     }
 
-    let setActiveDocument1 = window.setActiveDocument; // 기존 함수 저장
+    function initFloatingMenu(){
+        forceDarkTheme();
+        addFloatingButtons();
+        updateScrollButtonPosition();
+        observeMarkdownPreviewResize();
+    }
 
-    window.setActiveDocument = function(...args) {
-        if (typeof setActiveDocument1 === "function") {
-            setActiveDocument1.apply(this, args); // 원래 함수 실행
-            forceDarkTheme();
-            addScrollToTopButton();
-            updateScrollButtonPosition();
-            return observeMarkdownPreviewResize();
+    function patchSetActiveDocument(){
+        if(typeof window.setActiveDocument !== 'function' || window.setActiveDocument._patched) return;
+        const original = window.setActiveDocument;
+        window.setActiveDocument = function(...args){
+            const result = original.apply(this,args);
+            initFloatingMenu();
+            return result;
+        };
+        window.setActiveDocument._patched = true;
+        initFloatingMenu();
+    }
+
+    function waitForPatch(){
+        if(typeof window.setActiveDocument === 'function'){
+            patchSetActiveDocument();
+        }else{
+            setTimeout(waitForPatch,100);
         }
-    };
+    }
+
+    if(document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', waitForPatch);
+    }else{
+        waitForPatch();
+    }
 })();
 </script>

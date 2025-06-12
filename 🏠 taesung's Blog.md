@@ -14,14 +14,15 @@
 ---
 
 # 🆕 <font color="#92cddc">새로 추가된 글</font>
-> ### [[🤑 ANONI Chat 개발기 - ELK Stack setting]]
-> ### [[🤑 ANONI Chat 개발기 - CICD 구성]]
+> ### [[☘ ANONI Chat - NGINX(feat. Kibana오류와 HTTPS 적용하기)]]
+> ### [[☘ ANONI Chat - ELK Stack setting]]
 > ### [[🍧 JPA의 영속성 상태와 데이터 Log 이슈]]
 > ### [[🚞 Java 대용량 Excel 리펙토링]]
 
 ---
 # [[💻 프로젝트]] <font color="#7f7f7f" size=3.5px>🖱Click!</font>
 >- ## 🍃 **Spring Batch**
+>- ## 📀 **AnoniChat**
 >- ## 🌍 **Obsidian CI/CD**
 >- ## 💁 **infra settings**
 

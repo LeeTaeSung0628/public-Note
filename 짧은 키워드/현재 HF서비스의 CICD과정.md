@@ -52,3 +52,24 @@
 
 
 ---
+
+```c
+	            [ Client (Browser) ]'script 트리거 / REST 요청'
+	                │       │
+	         HTTP REST     WebSocket
+	                ▼       ▼
+┌─── '리버스 프록시' ─── [ NGINX ] '실질적 웹서버 / 인증 관리 등'
+│		                │
+│	      ┌─────────────┴─────┐
+│	      ▼                   ▼
+│	[ Frontend Server ]   [ Node.js WebSocket Server ]
+│	 'html, js 정적리소스제공'  │    '리얼타임 경량 서버'
+│	                          ▼
+│	          ┌───────────────┴────────────────┐
+│	          ▼                                ▼
+└──▶[ Spring Boot API Server ]         [ Redis Server ] '캐시'
+	          │        ▲                      ▲
+	          │        └─── REST or RPC ──────┘
+	          ▼
+	     [ Database Server ]
+```
