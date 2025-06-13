@@ -3569,6 +3569,9 @@ buildingCd
 before
 below
 blocks
+<<<<<<< HEAD
+basic
+=======
 bash
 based
 begin
@@ -3597,6 +3600,7 @@ basic
 browsing
 button
 buttonWidth
+>>>>>>> origin/master
 there
 this
 text
