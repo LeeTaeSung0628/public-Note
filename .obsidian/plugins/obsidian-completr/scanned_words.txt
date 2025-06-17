@@ -2735,7 +2735,6 @@ DATA
 Dirty
 Dollar
 DinD
-DooD
 DockerHub
 DeviceGray
 DCTDecode
@@ -3569,9 +3568,7 @@ buildingCd
 before
 below
 blocks
-<<<<<<< HEAD
 basic
-=======
 bash
 based
 begin
@@ -3596,10 +3593,11 @@ buB
 bTG
 bcd
 branch
-basic
 browsing
 button
 buttonWidth
+<<<<<<< HEAD
+=======
 >>>>>>> origin/master
 there
 this
