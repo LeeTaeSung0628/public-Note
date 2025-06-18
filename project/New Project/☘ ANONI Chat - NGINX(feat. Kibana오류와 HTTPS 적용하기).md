@@ -95,6 +95,15 @@ kibana:
 3. *로드 벌런싱* : 여러 백엔드 서버에 트래픽 분산
 4. *HTTPS 종단 처리* : SSL인증서를 이용해 HTTPS 연결처리
 
+>[!info] ‘리버스 프록시’라고 불리는 이유?
+>**정방향 프록시**는:  
+ >   - 사용자가 **인터넷 상의 여러 서버에 접근**할 때 → 사용자의 프라이버시 보호 목적
+ >   - 사용자 입장에서 중간에 "프록시 서버"가 있음.   
+>
+>**리버스 프록시**는:
+>- **하나의 공개된 서버(예: NGINX)**가 외부 요청을 받아 내부 여러 서버로 **"역으로" 분기**시켜줌.       
+>- 사용자는 실제 백엔드 서버의 존재를 **모름**.
+
 <br>
 
 ## HTTPS와 NGINX의 관계도
@@ -130,7 +139,10 @@ kibana:
 >**SSL 인증서 발급 자동화 도구**
 >- 만든 곳: [EFF (Electronic Frontier Foundation)](https://eff.org/)
 >- 목적: **Let's Encrypt**의 무료 인증서를 사용자 시스템에 자동으로 설치하고, NGINX/Apache 설정까지 자동으로 수정함
->- 인증서 형식: **도메인 기반 DV 인증서**
+>- **인증서 발급** - Let's Encrypt CA에서 무료 SSL 인증서 받아옴
+>- **인증서 갱신** - 만료 전 자동으로 새 인증서 발급
+>- **파일 저장** - 인증서를 특정 디렉토리에 저장
+>- **nginx 알림** - 갱신 후 nginx에게 새 인증서 사용하라고 신호
 
 <br>
 *Nginx+certbot*, *NPM* 두개는 어떠한 차이가 있는가?
@@ -175,306 +187,32 @@ kibana:
 - 고급설정에 제한적이다.
 - 커스텀 동작을 설정하는데에도 제한 있음.
 - 로드벨런싱 등 역할 수행이 제한적이다.
+- 조금더 무겁다.
 
-→ 로드 벨런싱등 고급 설정은 추후 **k8s**를 통해 구현될 예정이기 때문에 상관없다.
+→ 로드 벨런싱등 고급 설정은 추후 **k8s**를 통해 구현될 예정
 
 
-#### 위와 같은 상황을 고려했을 때, **NPM**을 선택.
+#### 위와 같은 상황을 고려했을 때, 현재는 경량화를 위해 **Nginx + certbot**을 선택.
 
 ---
 
 <br>
 
-## NPM 셋팅하기
+# <font color="#76923c">Nginx + certbot 셋팅하기</font>
 
-- NPM 셋팅 이전, DB셋팅 먼저 진행하도록 하였다.
+- NPM 셋팅 이전, <u>DB셋팅</u> 먼저 진행하도록 하였다.
 
 ## ▶ [[ANONI Chat - DB setup]]
 
+<br>
 
-이후, NPN을 다운로드 받는다.
+## 1. docker-compose.yml 수정
 
-# 
+<br>
 
-HTTPS 적용
-
-Nginx + certbot으로 https를 적용하는 과정이다.
-
-### 
-
-Nginx의 역할
-
-HTTPS 적용의 입장에서만 보면 nginx는 특정 도메인으로 들어오는 모든 요청을 HTTPS로 리다이렉트 해주는 역할을 해주고  
-리버스 프록시로서 HTTPS를 HTTP로 변경해서 서버로 전달해준다(443 > 80)  
-또한 ssl 인증서를 관리하는 역할을 수행한다.
-
-### 
-
-certbot의 역할
-
-- **인증서 발급** - Let's Encrypt CA에서 무료 SSL 인증서 받아옴
-- **인증서 갱신** - 만료 전 자동으로 새 인증서 발급
-- **파일 저장** - 인증서를 특정 디렉토리에 저장
-- **nginx 알림** - 갱신 후 nginx에게 새 인증서 사용하라고 신호
-
-certbot은 인증서를 발급/갱신하고 특정 디렉토리에 저장  
-그리고 nginx에게 알림을 주는 역할을 한다.
-
-## 
-
-적용 순서
-
-### 
-
-1. docker-compose.yml 수정
-
-기존 도커 컴포즈 파일
+기존 docker-compose.yml 파일에 *nginx*와 *certbot*을 추가한다.
 
 ```yml
-version: '3'
-
-  
-
-services:
-
-  elasticsearch:
-
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
-
-    environment:
-
-      - discovery.type=single-node
-
-      - xpack.security.enabled=false
-
-      - xpack.license.self_generated.type=basic
-
-    ports:
-
-      - "9200:9200"
-
-    networks:
-
-      - elk
-
-    volumes:
-
-      - esdata:/usr/share/elasticsearch/data
-
-  
-
-  logstash:
-
-    image: docker.elastic.co/logstash/logstash:7.12.0
-
-    ports:
-
-      - "5044:5044"
-
-      - "5000:5000"
-
-    volumes:
-
-      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-
-    networks:
-
-      - elk
-
-    depends_on:
-
-      - elasticsearch
-
-  
-
-  kibana:
-
-    image: docker.elastic.co/kibana/kibana:7.11.1
-
-    ports:
-
-      - "5601:5601"
-
-    networks:
-
-      - elk
-
-    environment:
-
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-
-      - server.host=0.0.0.0
-
-      - xpack.security.enabled=false
-
-      - xpack.license.self_generated.type=basic
-
-    depends_on:
-
-      - elasticsearch
-
-  
-
-  spring:
-
-    image: ghcr.io/anonichat/app/anonichat
-
-    ports:
-
-      - "80:8080"
-
-    environment:
-
-      - ELASTICSEARCH_HOST=elasticsearch:9200
-
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/anonichat?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
-
-      - SPRING_DATASOURCE_USERNAME=anonichat
-
-      - SPRING_DATASOURCE_PASSWORD=비번
-
-    depends_on:
-
-      - elasticsearch
-
-      - mysql
-
-    networks:
-
-      - elk
-
-      - data
-
-  
-
-  mysql:
-
-    image: mysql:8.0
-
-    container_name: mysql
-
-    restart: unless-stopped
-
-    ports:
-
-      - "3306:3306"
-
-    environment:
-
-      - MYSQL_DATABASE=anonichat
-
-      - MYSQL_ROOT_PASSWORD=비번
-      - MYSQL_USER=anonichat
-
-      - MYSQL_PASSWORD=비번
-
-    volumes:
-
-      - mysql_data:/home/hello/Desktop/AnoniChat/elk-stack/data/mysql
-
-    networks:
-
-      - elk
-
-      - data
-
-networks:
-
-  elk:
-
-  data:
-
-  
-
-volumes:
-
-  esdata:
-
-  mysql_data:
-```
-
-기존 도커 컴포즈 파일에 nginx와 certbot을 추가한다.
-
-**수정한 도커 컴포즈 파일**
-
-```yml
-version: '3'
-
-services:
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
-    environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=false
-      - xpack.license.self_generated.type=basic
-    ports:
-      - "9200:9200"
-    networks:
-      - elk
-    volumes:
-      - esdata:/usr/share/elasticsearch/data
-
-  logstash:
-    image: docker.elastic.co/logstash/logstash:7.12.0
-    ports:
-      - "5044:5044"
-      - "5000:5000"
-    volumes:
-      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-    networks:
-      - elk
-    depends_on:
-      - elasticsearch
-
-  kibana:
-    image: docker.elastic.co/kibana/kibana:7.11.1
-    ports:
-      - "5601:5601"
-    networks:
-      - elk
-    environment:
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-      - server.host=0.0.0.0
-      - xpack.security.enabled=false
-      - xpack.license.self_generated.type=basic
-    depends_on:
-      - elasticsearch
-
-  # Spring Boot 앱 (포트 변경 중요!)
-  spring:
-    image: ghcr.io/anonichat/app/anonichat
-    # 외부 포트 제거 - nginx를 통해서만 접근
-    expose:
-      - "8080"
-    environment:
-      - ELASTICSEARCH_HOST=elasticsearch:9200
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/anonichat?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
-      - SPRING_DATASOURCE_USERNAME=anonichat
-      - SPRING_DATASOURCE_PASSWORD=비번
-    depends_on:
-      - elasticsearch
-      - mysql
-    networks:
-      - elk
-      - data
-
-  mysql:
-    image: mysql:8.0
-    container_name: mysql
-    restart: unless-stopped
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_DATABASE=anonichat
-      - MYSQL_ROOT_PASSWORD=비번
-      - MYSQL_USER=anonichat
-      - MYSQL_PASSWORD=비번
-    volumes:
-      - mysql_data:/home/hello/Desktop/AnoniChat/elk-stack/data/mysql
-    networks:
-      - elk
-      - data
-
   # Nginx 리버스 프록시
   nginx:
     image: nginx:alpine
@@ -512,254 +250,167 @@ services:
         sleep 12h;
       done
       "
-
-networks:
-  elk:
-  data:
-
-volumes:
-  esdata:
-  mysql_data:
 ```
 
-**spring의 port 변경**
+<br>
+
+동일한 docker-compose.yml 파일 내의 *spring의 port 변경*
+
+#### 기존 설정
+```yml
+Spring:
+	# Spring의 기존 포트 설정
+	ports: - "80:8080" # 호스트포트:컨테이너포트
+```
+- Host의 *80포트*를 컨테이너의 *8080포트*에 연결.
+- 외부 브라우저(클라이언트)가 호스트의 *IP:8080*으로 요청보낼 수 있음.
+- 즉, *컨테이너의 내부포트(8080)* 를 외부에 공개(공유).
+
+<br><br>
+#### 변경된 설정
+```yml
+Spring:
+# Spring의 변경된 포트 설정
+	expose: - "8080" # 컨테이너포트만
+```
+- 컨테이너 내부적으로 *8080포트*를 열어두지만, 외부에 직접 노출 X
+- 다른 컨테이너가 **Docker내부 네트워크를 통해 접근만 가능.**
+- 브라우저나 외부 요청을 접속 X
+
+즉, `ports`는 외부 → 컨테이너 접근을 위해 사용하고, `expose`는 컨테이너 간 통신을 위해 사용
+
+<br><br>
 
 ```yml
-# 기존 설정
-ports: - "80:8080" # 호스트포트:컨테이너포트
+nginx:
+	# + nginx의 포트 설정
+	ports:
+	      - "80:80"
+	      - "443:443"
+```
+- 이후, nginx에서 리버스 프록시를 통하여,
+- *브라우저* → *서버(Host):80* → *nginx컨테이너:80* → *spring컨테이너:8080*
+- 의 형태로 흐름이 이어지게 된다.
 
-# 변경된 설정
-expose: - "8080" # 컨테이너포트만
+<br>
 
-# nginx의 설정
-ports:
-      - "80:80"
-      - "443:443"
+
+## 2. Nginx 설정 파일 생성 및 ssl 인증서 발급
+
+<br>
+
+#### ssl 인증서 발급
+
+```bash
+docker run --rm -it \
+  --name certbot \
+  -v $(pwd)/certbot/conf:/etc/letsencrypt \
+  -v $(pwd)/certbot/www:/var/www/certbot \
+  certbot/certbot \
+  certonly --webroot \
+  --webroot-path /var/www/certbot \
+  --email jsi50069@gmail.com \
+  --agree-tos \
+  --no-eff-email \
+  -d anonichat.world \
+  -d www.anonichat.world
+```
+- `--rm`: 컨테이너 종료 시 자동 삭제 (임시용 실행)
+- `-it`: interactive 모드
+- `-v ...:/etc/letsencrypt`: 인증서 저장 디렉토리 (호스트에 영구 저장)
+- `-v ...:/var/www/certbot`: 인증 도메인 소유 검증에 사용하는 웹 루트 경로
+- `certonly --webroot`: 웹 루트 방식으로 인증서만 발급 (nginx가 .well-known 요청을 받아줘야 함)
+- `--email`: 만료 알림용 이메일
+- `--agree-tos`: 이용약관 동의
+- `-d`: 도메인 이름으로 ssl 인증서를 받음
+
+<br>
+
+#### 인증서 확인
+
+```bash
+docker-compose exec certbot ls -la /etc/letsencrypt/live/anonichat.world/
+```
+- 실제 인증서와 키가 저장된 경로를 확인
+
+<br>
+
+#### certbot 재시작
+
+```bash
+docker-compose up -d certbot
 ```
 
-기존 설정은 외부를 통해서 컨테이너에 접근이 가능했다.  
-브라우저 → 서버:80 → Spring Boot:8080  
-이렇게 외부에서 80 포트로 요청이 들어오면 호스트(인스턴스)의 80포트를 통해 스프링 컨테이너의 8080포트로 전달해주는 방식
+<br>
 
-변경된 설정은 컨테이너의 8080만 열어놓는다.  
-이렇게 되면 호스트의 80포트로 들어오는 요청은 무조건 nginx를 거쳐서 들어오게 된다.  
-브라우저 → 서버:80 → nginx:80 → spring:8080
+#### app.conf(nginx설정 파일)
+- `./nginx/conf.d:/etc/nginx/conf.d` docker-compose의 해당되는 디렉토리에 생성
+- <u>리버스 프록시 설정</u>
 
-HTTP 요청이 프록시를 거쳐서 오게끔 구성한 설정이다.
-
-### 
-
-2. 디렉토리 생성
-
-```
-# docker-compose.yml이 있는 폴더에서 실행
-mkdir nginx
-# nginx 하위 폴더 생성
-mkdir conf.d
-
-# docker-compose.yml이 있는 폴더에서 실행
-mkdir certbot
-#certbot 하위 폴더 생성
-mkdir conf
-mkdir www
-```
-
-### 
-
-3. Nginx 설정 파일 생성 및 ssl 인증서 발급
-
-**인증서 발급 전 임시 설정**
-
-```
+```python
 upstream spring-backend {
+	#Nginx가 내부 네트워크에서 Spring 컨테이너의 8080포트로 요청을 전달
     server spring:8080;
 }
 
-# HTTP 서버 (인증서 발급 전 임시 설정)
+  
+
+# HTTP 요청은 기본적으로 **HTTPS로 리다이렉트**
+# 단, `/well-known/acme-challenge/`는 Certbot 검증을 위해 예외 허용 (정적 루트 연결)
+# 이때 certbot이 바인딩한 경로와 nginx `root` 경로가 정확히 일치해야 인증 가능
 server {
     listen 80;
     server_name anonichat.world www.anonichat.world;
-    server_tokens off;
-
-    # Let's Encrypt 도메인 인증용 경로
+    
     location /.well-known/acme-challenge/ {
         root /var/www/certbot;
     }
 
-    # AnoniChat 애플리케이션 (HTTP로 임시 서비스)
     location / {
-        proxy_pass http://spring-backend;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header X-Forwarded-Host $server_name;
-        
-        # WebSocket 지원 (채팅 기능용)
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
+        return 301 https://$host$request_uri;
     }
 }
-```
 
-**도커 컴포즈 재시작**
-
-```
-docker-compose up -d
-```
-
-**ssl 인증서 발급**
-
-```
-docker run --rm -it \                                                                                                                         --name certbot \                                               
-
-  -v $(pwd)/certbot/conf:/etc/letsencrypt \
-
-  -v $(pwd)/certbot/www:/var/www/certbot \
-
-  certbot/certbot \
-
-  certonly --webroot \
-
-  --webroot-path /var/www/certbot \
-
-  --email jsi50069@gmail.com \
-
-  --agree-tos \
-
-  --no-eff-email \
-
-  -d anonichat.world \
-
-  -d www.anonichat.world
-```
-
-certbot으로 ssl 인증서를 받음
-
-**인증서 확인**
-
-```
-docker-compose exec certbot ls -la /etc/letsencrypt/live/anonichat.world/
-```
-
-**certbot 재시작**
-
-```
-docker-compose up -d certbot
-```
-
-**nginx 설정 파일 변경**
-
-```
-upstream spring-backend {
-
-    server spring:8080;
-
-}
-
-  
-
-# HTTP → HTTPS 강제 리다이렉트
-
-server {
-
-    listen 80;
-
-    server_name anonichat.world www.anonichat.world;
-
-    server_tokens off;
-
-  
-
-    # Let's Encrypt 경로만 HTTP 허용
-
-    location /.well-known/acme-challenge/ {
-
-        root /var/www/certbot;
-
-    }
-
-  
-
-    # 나머지 모든 요청은 HTTPS로 강제 리다이렉트
-
-    location / {
-
-        return 301 https://$host$request_uri;
-
-    }
-
-}
 
   
 
 # HTTPS 서버
-
 server {
-
     listen 443 ssl;
-
     http2 on;
-
     server_name anonichat.world www.anonichat.world;
-
     server_tokens off;
-
-  
-
-    ssl_certificate /etc/letsencrypt/live/anonichat.world/fullchain.pem;
-
-    ssl_certificate_key /etc/letsencrypt/live/anonichat.world/privkey.pem;
-
-    ssl_protocols TLSv1.2 TLSv1.3;
-
-    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384;
-
-    ssl_prefer_server_ciphers off;
-
+    ssl_certificate /etc/letsencrypt/live/anonichat.world/fullchain.pem; #인증서 체인 파일
+    ssl_certificate_key /etc/letsencrypt/live/anonichat.world/privkey.pem; # 개인 키 파일
+    ssl_protocols TLSv1.2 TLSv1.3; # 지원한 TLS 버전
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384; # 강력한 암호화 스위트만 허용
+    ssl_prefer_server_ciphers off; # 재사용 가능한 세션, 캐시 설정
     ssl_session_cache shared:SSL:10m;
-
     ssl_session_timeout 10m;
-
-    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
-
-    add_header X-Frame-Options DENY always;
-
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always; # HTTPS 강제
+    add_header X-Frame-Options DENY always; # XSS 및 MIME 스니핑 방지
     add_header X-Content-Type-Options nosniff always;
 
-  
-
+	# proxy_pass 설정
     location / {
+        proxy_pass http://spring-backend; # 내부 컨테이너로 요청 포워딩
 
-        proxy_pass http://spring-backend;
-
+		# 클라이언트의 정보(IP, 프로토콜 등) Spring서버에 전달
         proxy_set_header Host $host;
-
         proxy_set_header X-Real-IP $remote_addr;
-
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
         proxy_set_header X-Forwarded-Proto $scheme;
-
         proxy_set_header X-Forwarded-Host $server_name;
-
         proxy_http_version 1.1;
-
         proxy_set_header Upgrade $http_upgrade;
-
-        proxy_set_header Connection "upgrade";
-
+        proxy_set_header Connection "upgrade"; # WebSocket 같은 프로토콜 호환성 확보
     }
-
 }
 ```
 
-### 
+<br>
 
-4. 재배포 및 테스트
-
-**nginx 설정 파일 테스트**
+#### nginx 설정 파일 테스트
 
 ```
 docker-compose exec nginx nginx -t
@@ -769,33 +420,32 @@ nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
-**nginx 재시작**
+
+#### nginx 재시작
 
 ```
 docker-compose exec nginx nginx -s reload
 ```
 
-**테스트**
 
-```
+---
+
+<br>
+
+## 테스트
+
+```bash
 curl -I http://anonichat.world
+
 # 명령어 결과
 HTTP/1.1 301 Moved Permanently
-
 **Server**: nginx
-
 **Date**: Thu, 12 Jun 2025 16:24:54 GMT
-
 **Content-Type**: text/html
-
 **Content-Length**: 162
-
 **Connection**: keep-alive
-
 **Location**: https://anonichat.world/
 ```
 
-Location을 보면 https로 전환되는것을 볼 수 있다.
-
-![Pasted image 20250613013521.png](https://kjsdevblog.netlify.app/image/pasted-image-20250613013521.png)  
-브라우저에서도 HTTPS로 변경된 것을 확인
+![[do-messenger_screenshot_2025-06-18_17_44_18.png]]
+- Location 및 브라우저에서 **HTTPS**로 변경된 것을 확인
