@@ -449,3 +449,13 @@ HTTP/1.1 301 Moved Permanently
 
 ![[do-messenger_screenshot_2025-06-18_17_44_18.png]]
 - Location 및 브라우저에서 **HTTPS**로 변경된 것을 확인
+
+<br>
+
+---
+
+<br>
+
+# 다음 포스트
+
+## ▶ [[☘ ANONI Chat - 모니터링 도구 적용(Elastic APM)]]

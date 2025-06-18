@@ -42,7 +42,7 @@
         const treeLink = document.querySelector(`.tree-container a[data-path="${homeDataPath}"]`);
         const url = (rootPath.endsWith('/') ? rootPath : rootPath + '/') + homeFile;
         if(treeLink && typeof window.setActiveDocument === 'function'){
-            window.setActiveDocument(treeLink);
+            window.setActiveDocument(treeLink, false, true);
         }else{
             location.href = url;
         }
