@@ -209,4 +209,25 @@
     }
 })();
 
+// Add Utterances comments to every page
+document.addEventListener('DOMContentLoaded', function(){
+    const section = document.querySelector('.markdown-preview-sizer.markdown-preview-section');
+    if(!section) return;
+
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = '<hr><br><br><h1>댓글추가</h1>';
+
+    const script = document.createElement('script');
+    script.src = 'https://utteranc.es/client.js';
+    script.setAttribute('repo', 'LeeTaeSung0628/publish_Note_By_Netlify');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('label', 'comments');
+    script.setAttribute('theme', 'github-dark-orange');
+    script.crossOrigin = 'anonymous';
+    script.async = true;
+
+    wrapper.appendChild(script);
+    section.appendChild(wrapper);
+});
+
 </script>
