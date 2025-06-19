@@ -643,6 +643,8 @@ TX
 Tst
 TestLogDTO
 Troubleshooting
+Trace
+Tracing
 Cookie
 Chain
 Claim
@@ -4921,6 +4923,7 @@ project
 problem
 preparation
 padding
+pplication
 git
 gitignore
 gridSize
@@ -5305,6 +5308,8 @@ entry
 experience
 exam
 entries
+elK
+erformance
 Vault
 VARIABLES
 VIEW
@@ -6005,6 +6010,7 @@ MA
 MC
 Metricbeat
 MainServiceLogger
+Metric
 vs
 void
 var
@@ -6857,6 +6863,7 @@ ogW
 ov
 organized
 overview
+onitoring
 You
 YZV
 YALM

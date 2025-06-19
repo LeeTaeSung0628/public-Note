@@ -41,8 +41,8 @@
         if(evt) evt.preventDefault();
         const treeLink = document.querySelector(`.tree-container a[data-path="${homeDataPath}"]`);
         const url = (rootPath.endsWith('/') ? rootPath : rootPath + '/') + homeFile;
-        if(treeLink && typeof window.setActiveDocument === 'function'){
-            window.setActiveDocument(treeLink, false, true);
+        if(treeLink && typeof window.loadDocument === 'function'){
+            window.loadDocument(treeLink.getAttribute('href'), true, true);
         }else{
             location.href = url;
         }
@@ -80,6 +80,32 @@
         if(!container) return;
         resizeObserver = new ResizeObserver(handleResize);
         resizeObserver.observe(container);
+    }
+
+    function addUtterancView(){
+
+        const preview = document.querySelector('.markdown-preview-view');
+        if(!preview) return;
+
+        let commentDiv = preview.querySelector('#comments');
+        if(commentDiv && commentDiv.querySelector('iframe')) return;
+        if(!commentDiv){
+            commentDiv = document.createElement('div');
+            commentDiv.id = 'comments';
+            preview.appendChild(commentDiv);
+        }else{
+            commentDiv.innerHTML = '';
+        }
+
+        const script = document.createElement('script');
+        script.src = 'https://utteranc.es/client.js';
+        script.async = true;
+        script.setAttribute('repo', 'LeeTaeSung0628/publish_Note_By_Netlify');
+        script.setAttribute('issue-term', 'pathname');
+        script.setAttribute('label', 'comments');
+        script.setAttribute('theme', 'github-dark-orange');
+        script.setAttribute('crossorigin', 'anonymous');
+        commentDiv.appendChild(script);
     }
 
     function updateScrollButtonPosition(){
@@ -180,6 +206,7 @@
         addFloatingButtons();
         updateScrollButtonPosition();
         observeMarkdownPreviewResize();
+        addUtterancView();
     }
 
     function patchSetActiveDocument(){
@@ -208,4 +235,5 @@
         waitForPatch();
     }
 })();
+
 </script>
