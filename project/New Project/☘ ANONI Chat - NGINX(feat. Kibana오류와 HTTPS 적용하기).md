@@ -458,4 +458,4 @@ HTTP/1.1 301 Moved Permanently
 
 # 다음 포스트
 
-## ▶ [[☘ ANONI Chat - 모니터링 도구 적용(Elastic APM)]]
+## ▶ [[☘ ANONI Chat - 모니터링 도구 적용(Elastic APM) + Slack알림]]

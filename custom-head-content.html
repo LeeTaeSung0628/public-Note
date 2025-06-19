@@ -82,34 +82,6 @@
         resizeObserver.observe(container);
     }
 
-    function addUtterancView(retry = 10){
-        const preview = document.querySelector('.markdown-preview-view');
-        if(!preview){
-            if(retry > 0) setTimeout(()=>addUtterancView(retry-1),100);
-            return;
-        }
-
-        let commentDiv = preview.querySelector('#comments');
-        if(!commentDiv){
-            commentDiv = document.createElement('div');
-            commentDiv.id = 'comments';
-            preview.prepend(commentDiv);
-        }
-
-        if(commentDiv.querySelector('iframe')) return;
-        commentDiv.innerHTML = '';
-
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.setAttribute('repo', 'LeeTaeSung0628/publish_Note_By_Netlify');
-        script.setAttribute('issue-term', 'pathname');
-        script.setAttribute('label', 'comments');
-        script.setAttribute('theme', 'github-dark-orange');
-        script.setAttribute('crossorigin', 'anonymous');
-        script.async = true;
-        commentDiv.appendChild(script);
-    }
-
     function updateScrollButtonPosition(){
         const sidebar = document.querySelector('.sidebar-right.sidebar');
         const menuBtn = document.getElementById('floatingMenuBtn');
@@ -208,7 +180,6 @@
         addFloatingButtons();
         updateScrollButtonPosition();
         observeMarkdownPreviewResize();
-        addUtterancView();
     }
 
     function patchSetActiveDocument(){
