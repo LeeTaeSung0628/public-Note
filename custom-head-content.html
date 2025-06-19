@@ -175,11 +175,37 @@
         window.addEventListener('resize', updateScrollButtonPosition);
     }
 
+    function addUtterances(){
+        const section = document.querySelector('.markdown-preview-sizer.markdown-preview-section');
+        if(!section) return;
+
+        const existing = document.getElementById('utterances-wrapper');
+        if(existing) existing.remove();
+
+        const wrapper = document.createElement('div');
+        wrapper.id = 'utterances-wrapper';
+        wrapper.innerHTML = '<br><br><br>';
+
+        const script = document.createElement('script');
+        script.src = 'https://utteranc.es/client.js';
+        script.setAttribute('repo', 'LeeTaeSung0628/publish_Note_By_Netlify');
+        script.setAttribute('issue-term', 'pathname');
+        script.setAttribute('label', 'comments');
+        script.setAttribute('theme', 'dark-blue');
+        script.crossOrigin = 'anonymous';
+        script.async = true;
+
+        wrapper.appendChild(script);
+        section.appendChild(wrapper);
+        console.log('Utterances added');
+    }
+
     function initFloatingMenu(){
         forceDarkTheme();
         addFloatingButtons();
         updateScrollButtonPosition();
         observeMarkdownPreviewResize();
+        addUtterances();
     }
 
     function patchSetActiveDocument(){
@@ -188,6 +214,7 @@
         window.setActiveDocument = function(...args){
             const result = original.apply(this,args);
             initFloatingMenu();
+            requestAnimationFrame(()=>requestAnimationFrame(initFloatingMenu));
             return result;
         };
         window.setActiveDocument._patched = true;
@@ -208,26 +235,4 @@
         waitForPatch();
     }
 })();
-
-// Add Utterances comments to every page
-document.addEventListener('DOMContentLoaded', function(){
-    const section = document.querySelector('.markdown-preview-sizer.markdown-preview-section');
-    if(!section) return;
-
-    const wrapper = document.createElement('div');
-    wrapper.innerHTML = '<hr><br><br><h1>댓글추가</h1>';
-
-    const script = document.createElement('script');
-    script.src = 'https://utteranc.es/client.js';
-    script.setAttribute('repo', 'LeeTaeSung0628/publish_Note_By_Netlify');
-    script.setAttribute('issue-term', 'pathname');
-    script.setAttribute('label', 'comments');
-    script.setAttribute('theme', 'github-dark-orange');
-    script.crossOrigin = 'anonymous';
-    script.async = true;
-
-    wrapper.appendChild(script);
-    section.appendChild(wrapper);
-});
-
 </script>

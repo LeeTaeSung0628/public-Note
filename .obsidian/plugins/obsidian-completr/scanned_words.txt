@@ -3963,6 +3963,7 @@ stored
 sidebarRect
 ssl
 secret
+slack
 alt
 app
 api
