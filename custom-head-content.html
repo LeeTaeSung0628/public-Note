@@ -82,29 +82,31 @@
         resizeObserver.observe(container);
     }
 
-    function addUtterancView(){
-
+    function addUtterancView(retry = 10){
         const preview = document.querySelector('.markdown-preview-view');
-        if(!preview) return;
+        if(!preview){
+            if(retry > 0) setTimeout(()=>addUtterancView(retry-1),100);
+            return;
+        }
 
         let commentDiv = preview.querySelector('#comments');
-        if(commentDiv && commentDiv.querySelector('iframe')) return;
         if(!commentDiv){
             commentDiv = document.createElement('div');
             commentDiv.id = 'comments';
-            preview.appendChild(commentDiv);
-        }else{
-            commentDiv.innerHTML = '';
+            preview.prepend(commentDiv);
         }
+
+        if(commentDiv.querySelector('iframe')) return;
+        commentDiv.innerHTML = '';
 
         const script = document.createElement('script');
         script.src = 'https://utteranc.es/client.js';
-        script.async = true;
         script.setAttribute('repo', 'LeeTaeSung0628/publish_Note_By_Netlify');
         script.setAttribute('issue-term', 'pathname');
         script.setAttribute('label', 'comments');
         script.setAttribute('theme', 'github-dark-orange');
         script.setAttribute('crossorigin', 'anonymous');
+        script.async = true;
         commentDiv.appendChild(script);
     }
 
