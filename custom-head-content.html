@@ -200,12 +200,22 @@
         console.log('Utterances added');
     }
 
+    function waitForRootPath(){
+        try{
+            if(typeof absoluteBasePath !== 'undefined' && absoluteBasePath){
+                addUtterances();
+                return;
+            }
+        }catch(err){}
+        setTimeout(waitForRootPath,100);
+    }
+
     function initFloatingMenu(){
         forceDarkTheme();
         addFloatingButtons();
         updateScrollButtonPosition();
         observeMarkdownPreviewResize();
-        addUtterances();
+        waitForRootPath();
     }
 
     function patchSetActiveDocument(){
@@ -225,7 +235,7 @@
         if(typeof window.setActiveDocument === 'function'){
             patchSetActiveDocument();
         }else{
-            setTimeout(waitForPatch,100);
+            setTimeout(waitForPatch,300);
         }
     }
 
