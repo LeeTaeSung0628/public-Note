@@ -374,72 +374,65 @@ elastic.apm.transaction-sample-rate=${ELASTIC_APM_SAMPLE_RATE:1.0}
 
 # + ERROR **Slack**연동하여 알림처리 하기
 
+<br>
+ 
 
-# 
+## 알림(Alerting) Tool 종류
 
-슬랙 알람 연동
+### 🔔 Alerting Tool 종류 비교
 
-### 
+| 항목       | ElastAlert                                                | Logstash Alerting                            | Kibana Watcher                                                      |
+| -------- | --------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------- |
+| **설명**   | Elasticsearch 기반 조건 탐지 및 알림 전송                            | Logstash 처리 파이프라인에서 조건 매칭 시 알림 전송            | Kibana 내 Watch 정의를 통한 모니터링 및 Alert                                  |
+| **설정방식** | `YAML` 설정 파일                                              | Logstash 파이프라인 설정 파일                         | Kibana GUI 또는 JSON DSL                                              |
+| **장점**   | - 간단한 설정  <br>- ES 쿼리 직접 사용  <br>- 오픈소스                   | - 로그 수집과 알림을 동시에 처리  <br>- *중간 저장 없이 실시간 처리* | - UI 기반 설정  <br>- ELK 통합 경험 우수  <br>- 시각화 및 경보 연동 용이                |
+| **단점**   | - Python 기반 설치 필요  <br>- *독립 실행 필요*  <br>- 대량 데이터 시 성능 저하 | - 알림 기능이 제한적  <br>- 조건 로직 복잡 시 관리 어려움        | - X-Pack Gold 이상 필요  <br>- 고급 조건 설정 시 DSL 복잡  <br>- 외부 연동 제약 / *유료* |
+| **기술요건** | Python 2.7/3.x, 독립 실행                                     | Logstash filter + output 설정                  | Elasticsearch Watcher (X-Pack 포함)                                   |
+| **활용 예** | 보안 이벤트 탐지, 이상 로그 패턴 경보                                    | 수집 즉시 Slack 메시지 전송                           | 특정 지표가 임계치 초과 시 Email 전송                                            |
+- 다음과 같은 특징들을 고려했을 때, <font color="#8db3e2">Logstash Alerting</font> 를 선택하였다.
+- 현재에도 인스턴스의 리소스 과부하 문제가 있기 때문에, 가벼운 녀석을 골랐다.
+1. ElastAlert은 무겁고, 독립 실행이 필요하기 때문에 리소스 과부하를 피할 수 없다.
+2. Kibana Watcher는 무료 라이센스에서의 제한적인 기능과, 고급 조건이 불가하여 추적 및 디버기에 한계가 있다.
 
-알람 연동 방법
+<br>
 
-1. Elast Alert  
-    장점  
-    a. yaml 파일로 간단한 설정  
-    b. 오픈소스  
-    c. elasticsearch 쿼리를 그대로 이용해서 복잡한 조건 설정 가능  
-    단점  
-    a. 별도 서버 필요  
-    b. python 환경 구성 필요  
-    c. 대량의 데이터나 복잡한 쿼리에서 성능 이슈
-2. Logstash 알람 전송  
-    장점  
-    a. 로그 수집과 동시에 실시간으로 알람 처리  
-    b. 데이터 수집 > 변환 > 알람 하나의 파이프 라인으로 처리  
-    단점  
-    a. 디버깅 어려움  
-    b. 전문 알람도구 대비 제한된 알람기능
-3. Kibana Watcher  
-    장점  
-    a. GUI 기반으로 간단한 설정  
-    b. ELK와 통합  
-    c. 시각적 모니터링 지원  
-    단점  
-    a. 라이센스 필요(유료)  
-    b. 제한된 커스터마이징
+Logstash는 현재 모두 구현되어 있는 상태이고 설정파일에 몇 줄만 추가하면 알림 설정을 마칠 수 있다.
 
-우선 kibana watcher는 유료라서 탈락했다.
+---
 
-Elast Alert와 Logstash 중 골랐는데 Logstash 알람을 선택했다.
+<br>
 
-**선택한 이유는 현재도 인스턴스에 리소스 과부하가 큰 문제이다.**  
-**그런데 새로운 컨테이너를 생성해서 실행하기엔 인스턴스 리소스가 부족할 것 같아 Logstash 알람 기능을 선택했다.**
+## 1. Slack *WebhookUrl* 발급
 
-Logstash는 현재 모두 구현되어 있는 상태이고 설정파일에 몇 줄만 추가하면 충분히 알람 기능을 해주기 때문에  
-Logstash를 선택했다.
+<br><br>
 
-### 
 
-slack WebhookUrl 발급
+#### 1. slack 챗팅방 개설 후 `설정` → `통합` → `앱` → `앱 추가` 접속
 
-![Pasted image 20250617201315.png](https://kjsdevblog.netlify.app/image/pasted-image-20250617201315.png)  
-slack 채팅방을 개설하고 설정 > 통합 > 앱 > 앱추가로 접속  
-  
-![Pasted image 20250617201425.png](https://kjsdevblog.netlify.app/image/pasted-image-20250617201425.png)  
-incoming webhooks 설치
+![[do-messenger_screenshot_2025-06-23_11_43_48.png|550]]    
 
-채팅방을 설정하고 웹훅 추가
+<br>
 
-![스크린샷 2025-06-17 오후 8.16.12.jpeg](https://kjsdevblog.netlify.app/image/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-2025-06-17-%EC%98%A4%ED%9B%84-8.16.12.jpeg)  
-웹훅 url을 발급받는다.
+#### 2. `incoming webhooks` 설치
 
-발급 받은 웹훅 url을 이용하여 logstash.conf를 수정하면 된다.
+![[do-messenger_screenshot_2025-06-23_11_43_55.png|775]]
 
-### 
+<br>
 
-logstash.conf 수정
+#### 3. 채팅방을 설정하고 웹훅 추가
 
-````
+![[do-messenger_screenshot_2025-06-23_11_44_05.png|800]]
+- 웹훅 url을 발급받는다.
+
+
+#### 발급 받은 웹훅 url을 이용하여 logstash.conf를 수정하면 된다.
+
+<br>
+<br>
+
+## `logstash.conf` 수정
+
+````python
 input {
     beats {
         port => 5044
@@ -463,52 +456,74 @@ filter {
 }
 
 output {
+	# 5000번 포트로 오는 모든 알림은 `main_log로 들어와 elastic에 저장`
     if [type] == "main_log" {
         elasticsearch {
             hosts => ["http://elasticsearch:9200"]
             index => "main_log"
         }
     }
+
+######################## 추가 부분 ##########################
+	# ["ERROR", "INFO", "FATAL"] 에 해당 하는 알림은 슬렉으로 output 처리
     if [alert_needed] == "true" { # error 레벨 발생 시 알려줌
         http {
-            url => "https://hooks.slack.com/services/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"
-            http_method => "post"
+            url => "https://hooks.slack.com/services/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"  # output 플러그인 사용
+            http_method => "post" # Slack Webhook URL로 `POST` 요청 전송.
             content_type => "application/json"
             format => "json"
-            mapping => {
-                "text" => "🚨 *AnoniChat 에러 발생!*
+            mapping => { # 메시지는 `%{}` 문법으로 필드 값을 문자열에 삽입:
+                "text" => 
+				"🚨 *AnoniChat 에러 발생!*```
                 레벨: %{[log.level]}
-시간: %{[@timestamp]}
-스레드: %{[process.thread.name]}
-로거: %{[log.logger]}
-메시지: %{message}
-Trace ID: %{[trace.id]}
-서비스: %{[service.name]}
-```"
+				시간: %{[@timestamp]}
+				스레드: %{[process.thread.name]}
+				로거: %{[log.logger]}
+				메시지: %{message}
+				Trace ID: %{[trace.id]}
+				서비스: %{[service.name]}
+				```"
                 "channel" => "#anonichat-error-log"
             }
         }
     }
+    
+##########################################################
 }
 ````
 
-이후에 logstash 재시작
+<br>
+
+- 이후에 logstash 재시작.
 
 ```
 docker-compose restart logstash
 ```
 
-### 
+---
 
-테스트
+<br>
 
-anonichat.world로 접속해서 테스트  
-![Pasted image 20250617203340.png](https://kjsdevblog.netlify.app/image/pasted-image-20250617203340.png)  
-코드에서 보이듯이 info 로그가 두 번 찍혀야함
+## <font color="#8db3e2">테스트</font>
 
-![Pasted image 20250617203407.png](https://kjsdevblog.netlify.app/image/pasted-image-20250617203407.png)  
-INFO 로그가 잘 나오는것을 볼 수 있다.
+<br>
 
-현재는 인프라 세팅중이라 딱히 로직을 작성한게 없어서 INFO로 확인했다.
+- anonichat.world(*APP*) 로 접속해서 -info 로그가 두 번 찍히는지 테스트
 
-**logstash.conf에서 INFO를 빼고 error 레벨만 알람이 울리도록 조정을 다시 해줬다.**
+```java
+@GetMapping(GlobalURL.MAIN_URL)  
+public ModelAndView mainView() {  
+    log.info("[MainController Log] mainView 접속 TEST");  
+  
+    List<TestEntity> list = testRepository.findAll();  
+    log.info("[MainController Log] test_table data: {}", list);  
+  
+    return new ModelAndView("main");  
+}
+```
+
+
+![[do-messenger_screenshot_2025-06-23_12_07_38.png|1125]]
+- INFO 로그가 정상 출력되는 모습. (log.info로 테스트)
+
+<u>이후 *logstash.conf*에서 INFO를 빼고 error 레벨만 알람이 울리도록 조정을 다시 해줬다.</u>
