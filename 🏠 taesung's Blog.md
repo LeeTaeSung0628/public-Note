@@ -14,8 +14,8 @@
 ---
 
 # 🆕 <font color="#92cddc">새로 추가된 글</font>
+> ### [[☘ ANONI Chat - 모니터링 도구 적용(Elastic APM) + Slack알림]]
 > ### [[☘ ANONI Chat - NGINX(feat. Kibana오류와 HTTPS 적용하기)]]
-> ### [[☘ ANONI Chat - ELK Stack setting]]
 > ### [[🍧 JPA의 영속성 상태와 데이터 Log 이슈]]
 > ### [[🚞 Java 대용량 Excel 리펙토링]]
 
