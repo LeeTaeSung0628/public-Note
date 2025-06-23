@@ -366,3 +366,12 @@ elastic.apm.transaction-sample-rate=${ELASTIC_APM_SAMPLE_RATE:1.0}
 - 테스트
 ![[do-messenger_screenshot_2025-06-19_14_08_30.png]]  
 ## kibana에서 apm이 활성화 되었음을 볼 수 있다.
+
+
+---
+
+<br>
+
+# + ERROR **Slack**연동하여 알림처리 하기
+
+
