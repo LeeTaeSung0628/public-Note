@@ -223,19 +223,29 @@ Node.js는 Next.js의 서버 사이드 로직을 실행하는 **엔진** 역할�
 - **Java**의 멀티스레드 모델은 CPU 코어를 활용한 병렬 연산에 강력하여 **고성능 연산작업**이나 **멀티스레드 처리**에 유리하다.
 - 반면, **Node.js**는 스레드 경합 없이 비동기로 I/O를 처리하므로 **대량의 동시 접속이 있는 I/O 중심 서비스** (예: 채팅, 실시간 피드)에 적합하다. 
 - **Python**은 간결한 문법과 방대한 데이터 사이언스 생태계가 강점이지만, GIL 때문에 하나의 프로세스에서 동시 멀티스레드 실행이 제한되어 **고도 병렬성** 측면에서는 한계가 있다.
-- Node.js는 이벤트 루프와 **스레드 풀**(libuv를 통한 제한적 멀티스레드)을 활용해 **논블로킹 I/O 처리의 효율성**을 극대화하지만, 반대로 하나의 프로세스가 오래 도는 구조라 메모리 누수나 블로킹 코드에 취약하므로 세심한 관리가 필요합니다.
+- Node.js는 이벤트 루프와 **스레드 풀**(libuv를 통한 제한적 멀티스레드)을 활용해 **논블로킹 I/O 처리의 효율성**을 극대화하지만, 반대로 하나의 프로세스가 오래 도는 구조라 메모리 누수나 블로킹 코드에 취약하므로 세심한 관리가 필요하다.
 
 <br>
 
 ## 성능과 속도 관점:
-- **Java**는 JIT 컴파일과 최적화된 JVM 덕분에 **CPU 연산 성능이 매우 높고** 대용량 트랜잭션 처리에 강합니다[mantralabsglobal.com](https://www.mantralabsglobal.com/blog/nodejs-vs-java-vs-python/#:~:text=As%20Java%20is%20compiled%20as,code%2C%20and%20wrong%20coding%20practices). **Node.js**도 V8 엔진 기반 JIT 컴파일로 실행되므로 인터프리터 언어치고는 매우 빠르며, 특히 **Python보다 속도가 우수**하다는 평가가 많습니다[mantralabsglobal.com](https://www.mantralabsglobal.com/blog/nodejs-vs-java-vs-python/#:~:text=NodeJs%20speed%20is%20better%20than,cores%20simultaneously%20in%20the%20background). 실제로 Node.js가 **Python보다 빠르게 실행**되는 벤치마크들이 있으며, V8 엔진의 지속적인 최적화로 **컴파일 언어와의 격차도 많이 좁혀진 상황**입니다. 다만 **Java**가 여전히 순수 연산성능에서는 Node.js를 앞서는 경우가 많고, **Python**도 C로 작성된 라이브러리(np.ndarray 등)를 활용하면 특정 연산에서 높은 성능을 낼 수 있습니다. **PHP**는 PHP7 이후 엔진 최적화로 예전보다 속도가 향상되었으나, Node.js와 비교하면 **동시 처리 효율이나 실시간 처리 면에서는 뒤처진다**는 평가가 일반적입니다[highscalability.com](https://highscalability.com/using-nodejs-paypal-doubles-rps-lowers-latency-with-fewer-de/#:~:text=1.%20Full,time%20for%20the%20same%20page). 한편 Node.js는 **Bun**, **Deno**같은 신생 JS 런타임들의 등장으로 성능 경쟁이 붙고 있지만[reddit.com](https://www.reddit.com/r/node/comments/1l7bkus/whats_the_future_of_nodejs/#:~:text=What%27s%20the%20future%20of%20NodeJS%3F,for%20Bun%20or%20Deno)[sevensquaretech.com](https://www.sevensquaretech.com/nodejs-vs-deno-bun-javascript-runtime-comparison/#:~:text=2025%20www,in), 방대한 npm 생태계와 안정성 측면에서 여전히 널리 쓰이고 있습니다.
+- **Java**는 JIT 컴파일과 최적화된 JVM 덕분에 **CPU 연산 성능이 매우 높고** 대용량 트랜잭션 처리에 강하다.
+- **Node.js**도 V8 엔진 기반 JIT 컴파일로 실행되므로 인터프리터 언어치고는 매우 빠르며, 특히 **Python보다 속도가 우수**하다는 평가가 많다. 실제로 Node.js가 **Python보다 빠르게 실행**되는 벤치마크들이 있으며, V8 엔진의 지속적인 최적화로 **컴파일 언어와의 격차도 많이 좁혀진 상황**이다.
+- 다만 **Java**가 여전히 순수 연산성능에서는 Node.js를 앞서는 경우가 많고, **Python**도 C로 작성된 라이브러리(np.ndarray 등)를 활용하면 특정 연산에서 높은 성능을 낼 수 있다.
+- **PHP**는 PHP7 이후 엔진 최적화로 예전보다 속도가 향상되었으나, Node.js와 비교하면 **동시 처리 효율이나 실시간 처리 면에서는 뒤처진다**는 평가가 일반적이다. 한편 Node.js는 **Bun**, **Deno**같은 신생 JS 런타임들의 등장으로 성능 경쟁이 붙고 있지만, 방대한 npm 생태계와 안정성 측면에서 여전히 널리 쓰이고 있다.
 
 <br>
 
 ## 개발 생산성 관점:
-- **Python**과 **PHP**는 문법이 간결하고 웹 프레임워크(Django, Laravel 등)가 체계화되어 있어 빠른 개발에 적합합니다. Node.js 역시 **경량의 Express.js** 같은 프레임워크를 사용하면 설정이 단순하고, 무엇보다 **프론트엔드와의 언어 통일로 팀 생산성이 높아지는 효과**가 있습니다[highscalability.com](https://highscalability.com/using-nodejs-paypal-doubles-rps-lowers-latency-with-fewer-de/#:~:text=1.%20Full,time%20for%20the%20same%20page). **Java**는 엄격한 OOP 패러다임과 방대한 설정(Spring 등으로 보완 가능)을 요구하여 초기 개발 속도는 느릴 수 있지만, 대규모 시스템 개발 경험이 있는 조직에서는 풍부한 도구로 안정적인 생산성을 냅니다. Node.js + React 조합은 **MERN 스택**으로 불리며, 스타트업에서 **빠른 프로토타이핑**과 **실서비스 개발**에 많이 채택됩니다. 이는 동일한 기술 스택으로 **프론트와 백엔드를 동시에 개발**하여 피드백 사이클을 단축하고, JSON을 주고받을 때 언어 간 변환이 필요 없다는 등의 이점 덕분입니다[itarch.info](https://www.itarch.info/2023/07/using-nodejs-with-reactjs-perfect-stack.html#:~:text=Developers%20don%27t%20need%20to%20master,saves%20time%2C%20money%2C%20and%20resources).
+- **Python**과 **PHP**는 문법이 간결하고 웹 프레임워크(Django, Laravel 등)가 체계화되어 있어 빠른 개발에 적합하다. Node.js 역시 **경량의 Express.js** 같은 프레임워크를 사용하면 설정이 단순하고, 무엇보다 **프론트엔드와의 언어 통일로 팀 생산성이 높아지는 효과**가 있다.
+- **Java**는 엄격한 OOP 패러다임과 방대한 설정(Spring 등으로 보완 가능)을 요구하여 초기 개발 속도는 느릴 수 있지만, 대규모 시스템 개발 경험이 있는 조직에서는 풍부한 도구로 안정적인 생산성을 낸다.
+- Node.js + React 조합은 **MERN 스택**으로 불리며, 스타트업에서 **빠른 프로토타이핑**과 **실서비스 개발**에 많이 채택된다. 이는 동일한 기술 스택으로 **프론트와 백엔드를 동시에 개발**하여 피드백 사이클을 단축하고, JSON을 주고받을 때 언어 간 변환이 필요 없다는 등의 이점 덕분이다.
 
 <br>
 
 ## 웹 아키텍처 차이 관점:
-- Java/Python/PHP 계열은 과거 **멀티페이지 서버렌더링**(Server-Side Rendering) 방식이 주류였고, Node.js+React는 **싱글페이지 애플리케이션(SPA)**과 **API 서버** 구조를 유행시켰습니다. 오늘날에는 **Next.js** 덕분에 Java/Python처럼 **SSR 방식**을 JavaScript 스택으로도 구현할 수 있게 되었고, 반대로 Java 진영도 React 등을 뷰 레이어로 사용하는 등 **혼합된 아키텍처**가 흔합니다. Node.js는 언어 레벨에서 **JSON 처리에 최적화**되어 있고, NoSQL(MongoDB)과의 궁합이 좋으며, 경량 REST API 서버 또는 **마이크로서비스**로 많이 활용됩니다. PHP는 여전히 **워드프레스**와 같은 CMS로 콘텐츠 중심 웹사이트에 강세이고, Python은 **데이터 처리/AI 파이프라인과의 연계**가 필요한 서비스(예: ML 기반 웹서비스)에 종종 쓰입니다. **요약하면**, Node.js/React 스택은 **실시간 성능과 개발 민첩성**에서, 전통 스택은 **컴퓨팅 성능과 기존 인프라 활용** 면에서 강점을 보이는 경향이 있습니다.
+- Java/Python/PHP 계열은 과거 **멀티페이지 서버렌더링**(Server-Side Rendering) 방식이 주류였다.
+- Node.js+React는 **싱글페이지 애플리케이션(SPA)과 API 서버** 구조를 유행시켰다. 
+- 오늘날에는 **Next.js** 덕분에 Java/Python처럼 **SSR 방식**을 JavaScript 스택으로도 구현할 수 있게 되었고, 반대로 Java 진영도 React 등을 뷰 레이어로 사용하는 등, **혼합된 아키텍처**가 흔하게 되었다. 
+- Node.js는 언어 레벨에서 **JSON 처리에 최적화**되어 있고, NoSQL(MongoDB)과의 궁합이 좋으며, 경량 REST API 서버 또는 **마이크로서비스**로 많이 활용된다.
+- PHP는 여전히 **워드프레스**와 같은 CMS로 콘텐츠 중심 웹사이트에 강세이고, Python은 **데이터 처리/AI 파이프라인과의 연계**가 필요한 서비스(예: ML 기반 웹서비스)에 종종 쓰인다.
+- **요약하면**, `Node.js/React` 스택은 **실시간 성능과 개발 민첩성**에서, 전통 스택은 **컴퓨팅 성능과 기존 인프라 활용** 면에서 강점을 보이는 경향이 있다.

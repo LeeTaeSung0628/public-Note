@@ -325,6 +325,7 @@ Side
 Svelte
 Solid
 SvelteKit
+Search
 JWT
 Java
 Join
@@ -917,6 +918,8 @@ Components
 CPython
 CMS
 Cloudflare
+CSR
+CDR
 Authentication
 Authorization
 AOP
@@ -1281,6 +1284,7 @@ Host
 HKhaTVF
 HFuOaqiK
 Hooks
+HTMl
 OAuth
 Obsidian
 Out
@@ -1412,6 +1416,7 @@ ObjectId
 OSWp
 Overflow
 Optimization
+Optimizaion
 LDAP
 Light
 List
@@ -5770,6 +5775,7 @@ EWKuIv
 Electron
 ESLint
 ESM
+Engine
 update
 under
 uzJl
