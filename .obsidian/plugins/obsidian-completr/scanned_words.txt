@@ -318,6 +318,13 @@ Sever
 Short
 SMz
 SWXzvGPa
+SSR
+SEO
+Serverless
+Side
+Svelte
+Solid
+SvelteKit
 JWT
 Java
 Join
@@ -469,6 +476,8 @@ JrG
 JEX
 JY
 JxiRS
+JSX
+JSP
 Tokken
 Token
 Tone
@@ -649,6 +658,12 @@ TestLogDTO
 Troubleshooting
 Trace
 Tracing
+TypeScript
+TikTok
+Twitch
+Tech
+Thymeleaf
+Turbopack
 Cookie
 Chain
 Claim
@@ -896,6 +911,12 @@ CAaDFG
 CnqaXJ
 Ccx
 CNjIZTMu
+Chrome
+Cons
+Components
+CPython
+CMS
+Cloudflare
 Authentication
 Authorization
 AOP
@@ -1103,6 +1124,8 @@ Attachments
 Alert
 Alerting
 AhbozVQt
+Angular
+Astro
 HTTP
 HttpOnly
 HTTPS
@@ -1257,6 +1280,7 @@ HyperText
 Host
 HKhaTVF
 HFuOaqiK
+Hooks
 OAuth
 Obsidian
 Out
@@ -1386,6 +1410,8 @@ OCH
 Oq
 ObjectId
 OSWp
+Overflow
+Optimization
 LDAP
 Light
 List
@@ -1550,6 +1576,8 @@ Lectures
 Location
 LDbKKf
 LftlxmMP
+Laravel
+LTS
 Bean
 Bearer
 Batch
@@ -1705,6 +1733,8 @@ BBOH
 BhR
 Beats
 BRSd
+Bun
+BFF
 URL
 UtEHFOT
 UUFF
@@ -1827,6 +1857,7 @@ UuV
 Ue
 UoKdQxNI
 UslCcOFY
+Uber
 Pointcut
 Point
 Payload
@@ -2040,6 +2071,12 @@ Projects
 Pack
 PvXmJrgJ
 PMM
+PHP
+Pros
+Promise
+PayPal
+Pure
+Pages
 Filter
 Fingers
 ForkJoinPool
@@ -2181,6 +2218,8 @@ Filebeat
 FZJ
 FYlpK
 FGPzD
+Facebook
+Frontend
 Refresh
 Redis
 RSA
@@ -2394,6 +2433,13 @@ Registry
 Real
 Ruby
 Relic
+React
+Redux
+Routes
+RPS
+Rendering
+Remix
+Regeneration
 ID
 ItemReader
 IP
@@ -2587,6 +2633,10 @@ Iob
 Info
 Issues
 Instrumentation
+Introduction
+ISR
+IoT
+Incremental
 DB
 Dev
 Deploy
@@ -2802,6 +2852,8 @@ Datadog
 Dem
 Dbl
 DgPX
+Deno
+Dahl
 KB
 KEY
 Kill
@@ -3054,6 +3106,8 @@ Watcher
 WebhookUrl
 Watch
 WebSocket
+WASI
+Workers
 contained
 css
 chunk
@@ -3522,6 +3576,7 @@ interactive
 incoming
 icQ
 iHYhnkR
+isolate
 blog
 balanceJob
 batch
@@ -3659,6 +3714,7 @@ buttonWidth
 bbj
 bEvbKJy
 bolean
+blocking
 <<<<<<< HEAD
 =======
 >>>>>>> origin/master
@@ -4021,6 +4077,7 @@ slHgOr
 seMvilAO
 shcNhLb
 sender
+second
 alt
 app
 api
@@ -4551,6 +4608,9 @@ GTj
 GHCR
 GUI
 Gold
+GIL
+Global
+Generation
 Netlify
 New
 Native
@@ -4688,6 +4748,11 @@ NPN
 NET
 NkmM
 NxrUBYbO
+Nextjs
+Netflix
+Nuxt
+Neurological
+NestJS
 repository
 return
 reader
@@ -4840,6 +4905,7 @@ reading
 referenced
 room
 ref
+requests
 pc
 public
 parallelStream
@@ -5010,6 +5076,7 @@ preparation
 padding
 pplication
 python
+per
 git
 gitignore
 gridSize
@@ -5268,6 +5335,8 @@ nginx
 naFYfYKL
 nkoas
 nUb
+npm
+ndarray
 etc
 export
 ex
@@ -5523,6 +5592,8 @@ VCBsZ
 VaV
 Vw
 Viewing
+Vercel
+Vue
 Export
 ExecutionContext
 Exception
@@ -5696,6 +5767,9 @@ Elast
 ElastAlert
 ElENK
 EWKuIv
+Electron
+ESLint
+ESM
 update
 under
 uzJl
@@ -5818,6 +5892,7 @@ uDV
 uxecZmf
 ukGYT
 uQHSehsQ
+universal
 QueueCapacity
 QuerydslPagingItemReader
 Query
@@ -6116,6 +6191,9 @@ MC
 Metricbeat
 MainServiceLogger
 Metric
+MERN
+Micro
+Meta
 vs
 void
 var
@@ -6632,6 +6710,7 @@ linked
 lecture
 lYhRmzQ
 lht
+libuv
 final
 forkJoinPool
 fail
@@ -6763,6 +6842,7 @@ floating
 folder
 filter
 fBuAD
+frontend
 kakao
 kLMRW
 kqAzM
@@ -6983,6 +7063,7 @@ organized
 overview
 onitoring
 output
+overkill
 You
 YZV
 YALM
@@ -7580,6 +7661,7 @@ ZumJKOE
 ZEqESe
 ZZP
 ZUrxxRbz
+Zig
 qo
 query
 qc
