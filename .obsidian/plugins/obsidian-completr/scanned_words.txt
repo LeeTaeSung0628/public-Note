@@ -666,6 +666,7 @@ Tech
 Thymeleaf
 Turbopack
 TailwindCSS
+Temporary
 Cookie
 Chain
 Claim
@@ -921,6 +922,9 @@ CMS
 Cloudflare
 CSR
 CDR
+CloudWatch
+Catch
+CSP
 Authentication
 Authorization
 AOP
@@ -1130,6 +1134,9 @@ Alerting
 AhbozVQt
 Angular
 Astro
+AWSKRUG
+Agentic
+Anthrophic
 HTTP
 HttpOnly
 HTTPS
@@ -1286,6 +1293,7 @@ HKhaTVF
 HFuOaqiK
 Hooks
 HTMl
+Healing
 OAuth
 Obsidian
 Out
@@ -1418,6 +1426,7 @@ OSWp
 Overflow
 Optimization
 Optimizaion
+Options
 LDAP
 Light
 List
@@ -1584,6 +1593,8 @@ LDbKKf
 LftlxmMP
 Laravel
 LTS
+Layout
+LLM
 Bean
 Bearer
 Batch
@@ -1741,6 +1752,8 @@ Beats
 BRSd
 Bun
 BFF
+Br
+Basics
 URL
 UtEHFOT
 UUFF
@@ -2084,6 +2097,9 @@ PayPal
 Pure
 Pages
 PostCSS
+Plane
+Parallel
+Permanent
 Filter
 Fingers
 ForkJoinPool
@@ -2228,6 +2244,8 @@ FGPzD
 Facebook
 Frontend
 FrontServer
+Fetching
+Frame
 Refresh
 Redis
 RSA
@@ -2448,6 +2466,7 @@ RPS
 Rendering
 Remix
 Regeneration
+RSC
 ID
 ItemReader
 IP
@@ -2645,6 +2664,8 @@ Introduction
 ISR
 IoT
 Incremental
+IAM
+Intercepting
 DB
 Dev
 Deploy
@@ -2972,6 +2993,7 @@ KCTgpx
 KX
 KDB
 KDnV
+Kubeconfig
 Web
 WAS
 WEB
@@ -3116,6 +3138,8 @@ Watch
 WebSocket
 WASI
 Workers
+Workflow
+Wildcard
 contained
 css
 chunk
@@ -3312,6 +3336,8 @@ channel
 chat
 category
 connect
+claude
+convention
 home
 height
 hello
@@ -3437,6 +3463,7 @@ head
 hMP
 hFZzgeSG
 hWGOGzQ
+headers
 index
 img
 insert
@@ -4240,6 +4267,7 @@ apm
 ama
 ankLeMOl
 aTFu
+all
 with
 width
 writer
@@ -4918,6 +4946,10 @@ referenced
 room
 ref
 requests
+routing
+redirects
+rewrites
+rewrite
 pc
 public
 parallelStream
@@ -5231,6 +5263,7 @@ global
 github
 generated
 globals
+gment
 name
 newMemberBalance
 naver
@@ -5610,6 +5643,7 @@ Vw
 Viewing
 Vercel
 Vue
+VPC
 Export
 ExecutionContext
 Exception
@@ -5787,6 +5821,8 @@ Electron
 ESLint
 ESM
 Engine
+EKS
+ELB
 update
 under
 uzJl
@@ -6211,6 +6247,8 @@ Metric
 MERN
 Micro
 Meta
+MCP
+Managed
 vs
 void
 var
@@ -6317,6 +6355,7 @@ vD
 vVH
 vault
 viewer
+vultr
 job
 jobName
 jE
@@ -6593,6 +6632,7 @@ dKiB
 deN
 djwwUCz
 datetime
+deprecated
 limit
 list
 long
@@ -6861,6 +6901,7 @@ folder
 filter
 fBuAD
 frontend
+fileSystem
 kakao
 kLMRW
 kqAzM
@@ -6971,6 +7012,7 @@ kPId
 known
 keUU
 kkTli
+kubectl
 of
 only
 oqk
