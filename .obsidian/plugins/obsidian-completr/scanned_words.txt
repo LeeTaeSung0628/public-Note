@@ -2100,6 +2100,7 @@ PostCSS
 Plane
 Parallel
 Permanent
+Profile
 Filter
 Fingers
 ForkJoinPool
@@ -3140,6 +3141,7 @@ WASI
 Workers
 Workflow
 Wildcard
+Workspace
 contained
 css
 chunk
@@ -3338,6 +3340,7 @@ category
 connect
 claude
 convention
+context
 home
 height
 hello
