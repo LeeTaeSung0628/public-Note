@@ -297,7 +297,7 @@ elastic.apm.transaction-sample-rate=${ELASTIC_APM_SAMPLE_RATE:1.0}
 ```
 
 #### 변경점 
-> 로그의 데이터 형식을 *json* 형식 > *ecs* 형식으로 변경
+> 로그의 데이터 형식을 *json* 형식  →  *ecs* 형식으로 변경
 
 <br>
 
