@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a0f02db0a7988fe9",
+        "id": "63d398f1d2abe1d0",
         "type": "tabs",
         "children": [
           {
-            "id": "999bce322c82c15d",
+            "id": "9fff5efbebe8ffc9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "🏠 taesung's Blog.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -139,9 +139,19 @@
           "icon": "lucide-list",
           "title": "개요"
         }
+      },
+      {
+        "id": "dff3fbfbf4f5179d",
+        "type": "leaf",
+        "state": {
+          "type": "git-view",
+          "state": {},
+          "icon": "git-pull-request",
+          "title": "Source Control"
+        }
       }
     ],
-    "currentTab": 0
+    "currentTab": 3
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -152,13 +162,15 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian42-brat:BRAT": false,
-      "callout-manager:Insert Callout": false
+      "callout-manager:Insert Callout": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "999bce322c82c15d",
-  "lastOpenFiles": []
+  "active": "9fff5efbebe8ffc9",
+  "lastOpenFiles": [
+    "🏠 taesung's Blog.md"
+  ]
 }
