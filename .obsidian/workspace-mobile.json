@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🏠 taesung's Blog.md",
-                "mode": "source",
+                "file": "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🏠 taesung's Blog"
+              "title": "🏹 예치금 차액 비교 Spring Batch 리펙토링"
             }
           }
         ]
@@ -171,6 +171,8 @@
   },
   "active": "9fff5efbebe8ffc9",
   "lastOpenFiles": [
-    "🏠 taesung's Blog.md"
+    "project/💻 프로젝트.md",
+    "🏠 taesung's Blog.md",
+    "study/CS/🧑‍🤝‍🧑 AWSKRUG 플랫폼엔지니어링 모임 Agentic MCP for EKS 회고.md"
   ]
 }
