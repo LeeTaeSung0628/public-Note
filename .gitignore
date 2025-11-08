@@ -30,3 +30,7 @@ config/secrets.yml
 .obsidian/plugins/obsidian-git/
 .obsidian/plugins/make-md/Spaces.mdb
 .obsidian/workspace.json
+obsidian/workspace.json
+.obsidian/workspace.json
+obsidian/workspace-mobile.json
+.obsidian/workspace-mobile.json
