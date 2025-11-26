@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
-                "mode": "preview",
+                "file": "study/CS/🧑‍🤝‍🧑 AWSKRUG 플랫폼엔지니어링 모임 Agentic MCP for EKS 회고.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🏹 예치금 차액 비교 Spring Batch 리펙토링"
+              "title": "🧑‍🤝‍🧑 AWSKRUG 플랫폼엔지니어링 모임 Agentic MCP for EKS 회고"
             }
           }
         ]
@@ -171,8 +171,14 @@
   },
   "active": "e4af8c255af23868",
   "lastOpenFiles": [
-    "project/💻 프로젝트.md",
+    "storage/emulated/0/Documents/public-vault",
+    "storage/emulated/0/Documents",
+    "storage/emulated/0",
+    "storage/emulated",
+    "storage",
     "🏠 taesung's Blog.md",
+    "project/hello Batch/🏹 예치금 차액 비교 Spring Batch 리펙토링.md",
+    "project/💻 프로젝트.md",
     "study/CS/🧑‍🤝‍🧑 AWSKRUG 플랫폼엔지니어링 모임 Agentic MCP for EKS 회고.md"
   ]
 }
