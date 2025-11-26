@@ -326,6 +326,12 @@ Svelte
 Solid
 SvelteKit
 Search
+Socket
+Socker
+ServerSocket
+Sender
+SSLSocket
+Selector
 JWT
 Java
 Join
@@ -667,6 +673,8 @@ Thymeleaf
 Turbopack
 TailwindCSS
 Temporary
+Transmission
+ThreadPool
 Cookie
 Chain
 Claim
@@ -925,6 +933,7 @@ CDR
 CloudWatch
 Catch
 CSP
+CCTV
 Authentication
 Authorization
 AOP
@@ -2101,6 +2110,7 @@ Plane
 Parallel
 Permanent
 Profile
+Port
 Filter
 Fingers
 ForkJoinPool
@@ -2247,6 +2257,7 @@ Frontend
 FrontServer
 Fetching
 Frame
+FPS
 Refresh
 Redis
 RSA
@@ -2468,6 +2479,9 @@ Rendering
 Remix
 Regeneration
 RSC
+RestApi
+Receiver
+RPC
 ID
 ItemReader
 IP
@@ -2884,6 +2898,7 @@ Dbl
 DgPX
 Deno
 Dahl
+DatagramSocket
 KB
 KEY
 Kill
@@ -4796,6 +4811,7 @@ Nuxt
 Neurological
 NestJS
 Nodejs
+NIO
 repository
 return
 reader
@@ -6253,6 +6269,9 @@ Micro
 Meta
 MCP
 Managed
+Microservice
+MOBA
+MMORPG
 vs
 void
 var
