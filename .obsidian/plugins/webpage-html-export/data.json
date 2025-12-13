@@ -47,7 +47,7 @@
   "defaultFileIcon": "lucide//file",
   "defaultFolderIcon": "lucide//folder",
   "defaultMediaIcon": "lucide//file-image",
-  "exportPath": "C:\\Users\\User\\Desktop\\ltsFiles\\obsidian_public for Netlify",
+  "exportPath": "/Users/lts/Library/Mobile Documents/iCloud~md~obsidian/Documents/publish_Note_By_Netlify",
   "filesToExport": [
     [
       "짧은 키워드",

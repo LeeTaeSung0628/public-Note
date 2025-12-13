@@ -14,6 +14,7 @@
 ---
 
 # 🆕 <font color="#92cddc">새로 추가된 글</font>
+> ### [[💁 Tech Friends Mixer 2025 회고]]
 > ### [[🧑‍🤝‍🧑 AWSKRUG 플랫폼엔지니어링 모임 Agentic MCP for EKS 회고]]
 > ### [[☘ ANONI Chat - 모니터링 도구 적용(Elastic APM) + Slack알림]]
 > ### [[🍧 JPA의 영속성 상태와 데이터 Log 이슈]]
