@@ -332,6 +332,7 @@ ServerSocket
 Sender
 SSLSocket
 Selector
+Scale
 JWT
 Java
 Join
@@ -934,6 +935,7 @@ CloudWatch
 Catch
 CSP
 CCTV
+CursorAI
 Authentication
 Authorization
 AOP
@@ -2258,6 +2260,8 @@ FrontServer
 Fetching
 Frame
 FPS
+FDS
+Friends
 Refresh
 Redis
 RSA
@@ -2482,6 +2486,7 @@ RSC
 RestApi
 Receiver
 RPC
+RPM
 ID
 ItemReader
 IP
@@ -2681,6 +2686,7 @@ IoT
 Incremental
 IAM
 Intercepting
+IDC
 DB
 Dev
 Deploy
@@ -3356,6 +3362,7 @@ connect
 claude
 convention
 context
+coding
 home
 height
 hello
@@ -4398,6 +4405,7 @@ watcher
 webhooks
 world
 waiting
+win
 marketing
 md
 main
@@ -5142,6 +5150,7 @@ python
 per
 package
 postcss
+premise
 git
 gitignore
 gridSize
@@ -5538,6 +5547,7 @@ erformance
 ecs
 eYmcQ
 eslint
+erasure
 Vault
 VARIABLES
 VIEW
@@ -5843,6 +5853,8 @@ Engine
 EKS
 ELB
 ESB
+Exabyte
+EMR
 update
 under
 uzJl
@@ -6272,6 +6284,7 @@ Managed
 Microservice
 MOBA
 MMORPG
+Mixer
 vs
 void
 var
@@ -7147,6 +7160,7 @@ overview
 onitoring
 output
 overkill
+ozone
 You
 YZV
 YALM
