@@ -326,13 +326,6 @@ Svelte
 Solid
 SvelteKit
 Search
-Socket
-Socker
-ServerSocket
-Sender
-SSLSocket
-Selector
-Scale
 JWT
 Java
 Join
@@ -674,9 +667,6 @@ Thymeleaf
 Turbopack
 TailwindCSS
 Temporary
-Transmission
-ThreadPool
-TFM
 Cookie
 Chain
 Claim
@@ -935,8 +925,6 @@ CDR
 CloudWatch
 Catch
 CSP
-CCTV
-CursorAI
 Authentication
 Authorization
 AOP
@@ -1889,7 +1877,6 @@ Ue
 UoKdQxNI
 UslCcOFY
 Uber
-Users
 Pointcut
 Point
 Payload
@@ -2114,8 +2101,6 @@ Plane
 Parallel
 Permanent
 Profile
-Port
-Pasted
 Filter
 Fingers
 ForkJoinPool
@@ -2262,9 +2247,6 @@ Frontend
 FrontServer
 Fetching
 Frame
-FPS
-FDS
-Friends
 Refresh
 Redis
 RSA
@@ -2486,10 +2468,6 @@ Rendering
 Remix
 Regeneration
 RSC
-RestApi
-Receiver
-RPC
-RPM
 ID
 ItemReader
 IP
@@ -2689,7 +2667,6 @@ IoT
 Incremental
 IAM
 Intercepting
-IDC
 DB
 Dev
 Deploy
@@ -2907,8 +2884,6 @@ Dbl
 DgPX
 Deno
 Dahl
-DatagramSocket
-Desktop
 KB
 KEY
 Kill
@@ -3366,7 +3341,6 @@ connect
 claude
 convention
 context
-coding
 home
 height
 hello
@@ -4409,7 +4383,6 @@ watcher
 webhooks
 world
 waiting
-win
 marketing
 md
 main
@@ -4823,7 +4796,6 @@ Nuxt
 Neurological
 NestJS
 Nodejs
-NIO
 repository
 return
 reader
@@ -5154,8 +5126,6 @@ python
 per
 package
 postcss
-premise
-png
 git
 gitignore
 gridSize
@@ -5552,7 +5522,6 @@ erformance
 ecs
 eYmcQ
 eslint
-erasure
 Vault
 VARIABLES
 VIEW
@@ -5858,8 +5827,6 @@ Engine
 EKS
 ELB
 ESB
-Exabyte
-EMR
 update
 under
 uzJl
@@ -6286,10 +6253,6 @@ Micro
 Meta
 MCP
 Managed
-Microservice
-MOBA
-MMORPG
-Mixer
 vs
 void
 var
@@ -7165,7 +7128,6 @@ overview
 onitoring
 output
 overkill
-ozone
 You
 YZV
 YALM
