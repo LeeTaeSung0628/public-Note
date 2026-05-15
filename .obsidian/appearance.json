@@ -6,5 +6,5 @@
   "monospaceFontFamily": "Hack",
   "baseFontSize": 17,
   "accentColor": "",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": false
 }
