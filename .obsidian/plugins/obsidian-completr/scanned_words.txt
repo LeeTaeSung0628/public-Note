@@ -327,6 +327,10 @@ Solid
 SvelteKit
 Search
 SPY
+Socket
+Socker
+ServerSocket
+Scale
 JWT
 Java
 Join
@@ -927,6 +931,7 @@ CDR
 CloudWatch
 Catch
 CSP
+CursorAI
 Authentication
 Authorization
 AOP
@@ -2105,6 +2110,7 @@ Parallel
 Permanent
 Profile
 PreparedStatement
+Port
 Filter
 Fingers
 ForkJoinPool
@@ -2252,6 +2258,8 @@ FrontServer
 Fetching
 Frame
 FALSE
+Friends
+FDS
 Refresh
 Redis
 RSA
@@ -2474,6 +2482,9 @@ Remix
 Regeneration
 RSC
 RTRIM
+RestApi
+RPC
+RPM
 ID
 ItemReader
 IP
@@ -2673,6 +2684,7 @@ IoT
 Incremental
 IAM
 Intercepting
+IDC
 DB
 Dev
 Deploy
@@ -3149,6 +3161,7 @@ Workers
 Workflow
 Wildcard
 Workspace
+Win
 contained
 css
 chunk
@@ -3348,6 +3361,7 @@ connect
 claude
 convention
 context
+coding
 home
 height
 hello
@@ -4392,6 +4406,7 @@ watcher
 webhooks
 world
 waiting
+win
 marketing
 md
 main
@@ -5136,6 +5151,7 @@ per
 package
 postcss
 padded
+premise
 git
 gitignore
 gridSize
@@ -5532,6 +5548,7 @@ erformance
 ecs
 eYmcQ
 eslint
+erasure
 Vault
 VARIABLES
 VIEW
@@ -5837,6 +5854,8 @@ Engine
 EKS
 ELB
 ESB
+Exabyte
+EMR
 update
 under
 uzJl
@@ -6263,6 +6282,8 @@ Micro
 Meta
 MCP
 Managed
+Microservice
+Mixer
 vs
 void
 var
@@ -7140,6 +7161,7 @@ onitoring
 output
 overkill
 oracle
+ozone
 You
 YZV
 YALM

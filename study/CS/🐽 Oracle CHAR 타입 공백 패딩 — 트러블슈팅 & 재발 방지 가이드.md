@@ -1,6 +1,6 @@
 # 🐽 Oracle CHAR 타입 공백 패딩 — 트러블슈팅 & 재발 방지 가이드
 
-#공부 #구조 #설계 #MSA #CloudNative
+#공부 #Oracle #DB #에러 #트러블슈팅 #CHAR
 
 ---
 <br />
