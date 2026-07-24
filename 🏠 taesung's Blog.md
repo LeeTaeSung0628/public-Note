@@ -12,6 +12,7 @@
 ---
 
 # 🆕 <font color="#92cddc">새로 추가된 글</font>
+> ### [[🏧 ATMS - ELK Stack 구축(Kafka 기반 저널 스트리밍)]]
 > ### [[🏧 ATMS - CICD 구성]]
 > ### [[🐽 Oracle CHAR 타입 공백 패딩 — 트러블슈팅 & 재발 방지 가이드]]
 > ### [[💁 Tech Friends Mixer 2025 회고]]
