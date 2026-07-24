@@ -331,6 +331,8 @@ Socket
 Socker
 ServerSocket
 Scale
+SpringSecurity
+SELinux
 JWT
 Java
 Join
@@ -484,6 +486,7 @@ JY
 JxiRS
 JSX
 JSP
+JCasC
 Tokken
 Token
 Tone
@@ -932,6 +935,13 @@ CloudWatch
 Catch
 CSP
 CursorAI
+Checkout
+Claude
+CORS
+ClaudeCode
+CorsFilter
+CRLF
+CentOS
 Authentication
 Authorization
 AOP
@@ -1435,6 +1445,8 @@ Overflow
 Optimization
 Optimizaion
 Options
+Origin
+Offering
 LDAP
 Light
 List
@@ -2903,6 +2915,7 @@ DgPX
 Deno
 Dahl
 DBA
+Denied
 KB
 KEY
 Kill
@@ -3488,6 +3501,7 @@ hMP
 hFZzgeSG
 hWGOGzQ
 headers
+httpd
 index
 img
 insert
@@ -3636,6 +3650,7 @@ incoming
 icQ
 iHYhnkR
 isolate
+internal
 blog
 balanceJob
 batch
@@ -4141,6 +4156,8 @@ shcNhLb
 sender
 second
 selectGroupList
+sshd
+sys
 alt
 app
 api
@@ -4294,6 +4311,8 @@ ama
 ankLeMOl
 aTFu
 all
+atms
+authorized
 with
 width
 writer
@@ -4977,6 +4996,7 @@ routing
 redirects
 rewrites
 rewrite
+restorecon
 pc
 public
 parallelStream
@@ -5549,6 +5569,7 @@ ecs
 eYmcQ
 eslint
 erasure
+external
 Vault
 VARIABLES
 VIEW
@@ -6507,6 +6528,7 @@ jL
 jdWGW
 joined
 jDApId
+journal
 dto
 dtoList
 double

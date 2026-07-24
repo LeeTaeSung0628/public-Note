@@ -12,6 +12,7 @@
 ---
 
 # 🆕 <font color="#92cddc">새로 추가된 글</font>
+> ### [[🏧 ATMS - CICD 구성]]
 > ### [[🐽 Oracle CHAR 타입 공백 패딩 — 트러블슈팅 & 재발 방지 가이드]]
 > ### [[💁 Tech Friends Mixer 2025 회고]]
 > ### [[🧑‍🤝‍🧑 AWSKRUG 플랫폼엔지니어링 모임 Agentic MCP for EKS 회고]]
